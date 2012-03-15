@@ -52,24 +52,16 @@ call s:InitVariable("g:PIVAutoClose", 0)
 
 " Auto expand tabs to spaces
 setlocal expandtab
-<<<<<<< HEAD
 
 " Linewidth to 80, because of the formatoptions this is only valid for
-=======
 setlocal autoindent " Auto indent after a {
 setlocal smartindent
 
 " Linewidth to 79, because of the formatoptions this is only valid for
->>>>>>> 0157e8e20979d8255259f82d7b0dc10433569b99
 " comments
 setlocal textwidth=80
 set formatoptions=qrocb
 
-<<<<<<< HEAD
-=======
-setlocal nowrap     " Do not wrap lines automatically
-
->>>>>>> 0157e8e20979d8255259f82d7b0dc10433569b99
 " Correct indentation after opening a phpdocblock and automatic * on every
 " line
 setlocal formatoptions=qroct
@@ -91,19 +83,6 @@ if !exists("g:syntax_on") | syntax on | endif
 nnoremap <silent> <plug>PIVphpDocSingle :call PhpDocSingle()<CR>
 vnoremap <silent> <plug>PIVphpDocRange :call PhpDocRange()<CR>
 vnoremap <silent> <plug>PIVphpAlign :call PhpAlign()<CR>
-<<<<<<< HEAD
-=======
-"inoremap <buffer> <leader>d :call PhpDocSingle()<CR>i
-
-" Map ; to "add ; to the end of the line, when missing"
-"noremap <buffer> ; :s/\([^;]\)$/\1;/<cr>
-
-" Map <ctrl>+p to single line mode documentation (in insert and command mode)
-"inoremap <buffer> <leader>d :call PhpDocSingle()<CR>i
-"nnoremap <buffer> <leader>d :call PhpDocSingle()<CR>
-" Map <ctrl>+p to multi line mode documentation (in visual mode)
-"vnoremap <buffer> <leader>d :call PhpDocRange()<CR>
->>>>>>> 0157e8e20979d8255259f82d7b0dc10433569b99
 
 " Map <CTRL>-H to search phpm for the function name currently under the cursor (insert mode only)
 inoremap <buffer> <C-H> <ESC>:!phpm <C-R>=expand("<cword>")<CR><CR>
