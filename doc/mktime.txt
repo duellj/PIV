@@ -1,4 +1,4 @@
-mktime -- Get Unix timestamp for a date
+*mktime* -- Get Unix timestamp for a date
 
   int mktime([int hour [, int minute [, int second [, int month [, int day [, int year [, int is_dst]]]]]]])~
 
@@ -9,15 +9,34 @@ Epoch (January 1 1970 00:00:00 GMT) and the time specified.
 Arguments may be left out in order from right to left; any arguments thus
 omitted will be set to the current value according to the local date and time.
 
-{hour} The number of the hour.
+As of PHP 5.1, when called with no arguments, |mktime| throws an E_STRICT
+notice: use the |time| function instead.
 
-{minute} The number of the minute.
+{hour} The number of the hour relevant to the start of the day determined by
+{month}, {day} and {year}. Negative values reference the hour before midnight
+of the day in question. Values greater than 23 reference the appropriate hour
+in the following day(s).
 
-{second} The number of seconds past the minute.
+{minute} The number of the minute relevant to the start of the {hour}.
+Negative values reference the minute in the previous hour. Values greater than
+59 reference the appropriate minute in the following hour(s).
 
-{month} The number of the month.
+{second} The number of seconds relevant to the start of the {minute}. Negative
+values reference the second in the previous minute. Values greater than 59
+reference the appropriate second in the following minute(s).
 
-{day} The number of the day.
+{month} The number of the month relevant to the end of the previous year.
+Values 1 to 12 reference the normal calendar months of the year in question.
+Values less than 1 (including negative values) reference the months in the
+previous year in reverse order, so 0 is December, -1 is November, etc. Values
+greater than 12 reference the appropriate month in the following year(s).
+
+{day} The number of the day relevant to the end of the previous month. Values
+1 to 28, 29, 30 or 31 (depending upon the month) reference the normal days in
+the relevant month. Values less than 1 (including negative values) reference
+the days in the previous month, so 0 is the last day of the previous month, -1
+is the day before that, etc. Values greater than the number of days in the
+relevant month reference the appropriate day in the following month(s).
 
 {year} The number of the year, may be a two or four digit value, with values
 between 0-69 mapping to 2000-2069 and 70-100 to 1970-2000. On systems where
@@ -48,8 +67,9 @@ settings or the TZ environment variable. See also |date_default_timezone_set|
 Version Description 5.3.0 |mktime| now throws E_DEPRECATED notice if the
 {is_dst} parameter is used. 5.1.0 The {is_dst} parameter became deprecated.
 Made the function return FALSE on error, instead of -1. Fixed the function to
-accept the year, month and day to be all passed as zero. 5.1.0 Now issues the
-E_STRICT and E_NOTICE time zone errors.
+accept the year, month and day to be all passed as zero. 5.1.0 When called
+with no arguments, |mktime| throws E_STRICT notice. Use the |time| function
+instead. 5.1.0 Now issues the E_STRICT and E_NOTICE time zone errors.
 
 |mktime| basic example
 
@@ -98,6 +118,6 @@ Before PHP 5.1.0, negative timestamps were not supported under any known
 version of Windows and some other systems as well. Therefore the range of
 valid years was limited to 1970 through 2038.
 
-|gmmktime| |date| |time|
+|checkdate| |gmmktime| |date| |time|
 
 vim:ft=help:

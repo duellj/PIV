@@ -1,4 +1,4 @@
-fflush -- Flushes the output to a file
+*fflush* -- Flushes the output to a file
 
   bool fflush(resource handle)~
 
@@ -8,7 +8,7 @@ by the file {handle}.
 {handle} The file pointer must be valid, and must point to a file successfully
 opened by |fopen| or |fsockopen| (and not yet closed by |fclose|).
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 File write example using |fflush|
 

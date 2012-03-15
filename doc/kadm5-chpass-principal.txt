@@ -1,4 +1,4 @@
-kadm5_chpass_principal -- Changes the principal's password
+*kadm5_chpass_principal* -- Changes the principal's password
 
   bool kadm5_chpass_principal(resource handle, string principal, string password)~
 
@@ -10,7 +10,7 @@ kadm5_chpass_principal -- Changes the principal's password
 
 {password} The new password.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Example of changing principal's password
 

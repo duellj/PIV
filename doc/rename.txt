@@ -1,4 +1,4 @@
-rename -- Renames a file or directory
+*rename* -- Renames a file or directory
 
   bool rename(string oldname, string newname [, resource context])~
 
@@ -14,11 +14,15 @@ The old name. The wrapper used in {oldname} must match the wrapper used in
 {context} Context support was added with PHP 5.0.0. For a description of
 contexts, refer to .
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
-Version Description 5.0.0 |rename| can now also be used with some URL
-wrappers. Refer to for a listing of which wrappers support |rename|. 4.3.3
-|rename| is now able to rename files across partitions on *nix based systems.
+Version Description 5.3.1 |rename| can now rename files across drives in
+Windows. 5.0.0 |rename| can now also be used with some URL wrappers. Refer to
+for a listing of which wrappers support |rename|. 4.3.3 |rename| may now be
+able to rename files across partitions on *nix based systems, provided the
+appropriate permissions are held. Warnings may be generated if the destination
+filesystem doesn't permit chown() or chmod() system calls to be made on files
+&mdash; for example, if the destination filesystem is a FAT filesystem.
 
 Example with |rename|
 

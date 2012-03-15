@@ -1,8 +1,8 @@
-PDF_add_nameddest -- Create named destination
+*PDF_add_nameddest* -- Create named destination
 
   bool PDF_add_nameddest(resource pdfdoc, string name, string optlist)~
 
 Creates a named destination on an arbitrary page in the current document.
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

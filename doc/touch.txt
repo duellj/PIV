@@ -1,4 +1,4 @@
-touch -- Sets access and modification time of file
+*touch* -- Sets access and modification time of file
 
   bool touch(string filename [, int time [, int atime]])~
 
@@ -16,7 +16,7 @@ used.
 {atime} If present, the access time of the given filename is set to the value
 of {atime}. Otherwise, it is set to {time}.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 5.3.0 It became possible to change the modification time
 of a directory under Windows.
@@ -24,10 +24,10 @@ of a directory under Windows.
 |touch| example
 
 <?php >
-  if (touch($FileName)) {
-      echo "$FileName modification time has been changed to present time";
+  if (touch($filename)) {
+      echo $filename . ' modification time has been changed to present time';
   } else {
-      echo "Sorry, could not change modification time of $FileName";
+      echo 'Sorry, could not change modification time of ' . $filename;
   }
 ?>
 
@@ -38,19 +38,13 @@ of a directory under Windows.
 |touch| using the {time} parameter
 
 <?php >
-  /* 
-   * This is the touch time, we'll set it to one hour 
-   * in the past.
-   */
+  // This is the touch time, we'll set it to one hour in the past.
   $time = time() - 3600;
   
-  /* Touch the file */
-  if(!touch('some_file.txt', $time))
-  {
+  // Touch the file
+  if (!touch('some_file.txt', $time)) {
       echo 'Whoops, something went wrong...';
-  }
-  else
-  {
+  } else {
       echo 'Touched file with success';
   }
 ?>

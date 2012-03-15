@@ -1,4 +1,4 @@
-kadm5_flush -- Flush all changes to the Kerberos database
+*kadm5_flush* -- Flush all changes to the Kerberos database
 
   bool kadm5_flush(resource handle)~
 
@@ -7,6 +7,6 @@ Kerberos admin server open.
 
 {handle} A KADM5 handle.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

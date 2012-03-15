@@ -1,10 +1,10 @@
-apc_cache_info -- Retrieves cached information from APC's data store
+*apc_cache_info* -- Retrieves cached information from APC's data store
 
   array apc_cache_info([string cache_type [, bool limited]])~
 
 Retrieves cached information and meta-data from APC's data store.
 
-Array of cached data (and meta-data), or FALSE on failure
+Array of cached data (and meta-data) or FALSE on failure
 
 |apc_cache_info| will raise a warning if it is unable to retrieve APC cache
 data. This typically occurs when APC is not enabled.
@@ -62,6 +62,7 @@ The above example will output something similar to:
 
 
 
-APC configuration directives
+APC configuration directives APCIterator::getTotalSize
+APCIterator::getTotalHits APCIterator::getTotalCount
 
 vim:ft=help:

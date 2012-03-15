@@ -1,8 +1,8 @@
-geoip_id_by_name -- Get the Internet connection speed
+*geoip_id_by_name* -- Get the Internet connection type
 
   int geoip_id_by_name(string hostname)~
 
-The |geoip_id_by_name| function will return the country and region
+The |geoip_id_by_name| function will return the Internet connection type
 corresponding to a hostname or an IP address.
 
 The return value is numeric and can be compared to the following constants:
@@ -15,11 +15,12 @@ GEOIP_CABLEDSL_SPEED
 
 GEOIP_CORPORATE_SPEED
 
-{hostname} The hostname or IP address whose net speed is to be looked-up.
+{hostname} The hostname or IP address whose connection type is to be
+looked-up.
 
-Returns the net speed.
+Returns the connection type.
 
-A |geoip_id_by_name| example This will output the net speed of the host
+A |geoip_id_by_name| example This will output the connection type of the host
 example.com.
 
 <?php >

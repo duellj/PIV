@@ -1,4 +1,4 @@
-chown -- Changes file owner
+*chown* -- Changes file owner
 
   bool chown(string filename, mixed user)~
 
@@ -9,14 +9,14 @@ superuser may change the owner of a file.
 
 {user} A user name or number.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Simple |chown| usage
 
 <?php >
   // File name and username to use
   $file_name= "foo.php";
-  $path = "/home/sites/php.net/public_html/sandbox" . $file_name ;
+  $path = "/home/sites/php.net/public_html/sandbox/" . $file_name ;
   $user_name = "root";
   
   // Set the user
@@ -29,22 +29,16 @@ Simple |chown| usage
 
 The above example will output something similar to:
 
-  array(7) {
-    ["name"]=>
-    string(13) "php.net"
-    ["passwd"]=>
-    string(1) "x"
-    ["uid"]=>
-    int(148864)
-    ["gid"]=>
-    int(148910)
-    ["gecos"]=>
-    string(13) "php.net"
-    ["dir"]=>
-    string(25) "/home/sites/php.net"
-    ["shell"]=>
-    string(13) "/sbin/nologin"
-  }
+  Array
+  (
+      [name] => root
+      [passwd] => x
+      [uid] => 0
+      [gid] => 0
+      [gecos] => root
+      [dir] => /root
+      [shell] => /bin/bash
+  )
 
 
 

@@ -1,4 +1,4 @@
-SAMMessage->__construct -- Creates a new Message object
+*SAMMessage->__construct* -- Creates a new Message object
 
 Creates a new SAMMessage object optionally specifying a message body.
 

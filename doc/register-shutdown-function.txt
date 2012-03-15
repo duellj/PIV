@@ -1,9 +1,9 @@
-register_shutdown_function -- Register a function for execution on shutdown
+*register_shutdown_function* -- Register a function for execution on shutdown
 
   void register_shutdown_function(callback function [, mixed parameter [, mixed ...]])~
 
 Registers the function named by {function} to be executed when script
-processing is complete.
+processing is complete or when |exit| is called.
 
 Multiple calls to |register_shutdown_function| can be made, and each will be
 called in the same order as they were registered. If you call |exit| within
@@ -32,19 +32,18 @@ the request. In earlier versions under Apache, the registered shutdown
 functions were called after the request has been completed (including sending
 any output buffers), so it was not possible to send output to the browser
 using |echo| or |print|, or retrieve the contents of any output buffers using
-|ob_get_contents|. Headers were also always already sent. 4.0.0 Added the
-possibility to pass parameters to the shutdown function.
+|ob_get_contents|. Headers were also always already sent.
 
 |register_shutdown_function| example
 
 <?php >
   function shutdown()
   {
-  	// This is our shutdown function, in 
-  	// here we can do any last operations
-  	// before the script is complete.
+      // This is our shutdown function, in 
+      // here we can do any last operations
+      // before the script is complete.
   
-  	echo 'Script executed with success', PHP_EOL;
+      echo 'Script executed with success', PHP_EOL;
   }
   
   register_shutdown_function('shutdown');

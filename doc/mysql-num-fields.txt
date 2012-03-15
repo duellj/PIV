@@ -1,4 +1,4 @@
-mysql_num_fields -- Get number of fields in result
+*mysql_num_fields* -- Get number of fields in result
 
   int mysql_num_fields(resource result)~
 
@@ -7,8 +7,8 @@ Retrieves the number of fields from a query.
 { result}The result resource that is being evaluated. This result comes from a
 call to |mysql_query|.
 
-Returns the number of fields in the result set resource on success, or FALSE
-on failure.
+Returns the number of fields in the result set resource on success or FALSE on
+failure.
 
 A |mysql_num_fields| example
 

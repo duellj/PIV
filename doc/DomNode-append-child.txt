@@ -1,4 +1,4 @@
-DomNode->append_child -- Adds a new child at the end of the children
+*DomNode->append_child* -- Adds a new child at the end of the children
 
   DOMNode append_child(DOMNode newnode)~
 

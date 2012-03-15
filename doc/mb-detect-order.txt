@@ -1,11 +1,11 @@
-mb_detect_order -- Set/Get character encoding detection order
+*mb_detect_order* -- Set/Get character encoding detection order
 
   mixed mb_detect_order([mixed encoding_list])~
 
 Sets the automatic character encoding detection order to {encoding_list}.
 
 {encoding_list} {encoding_list} is an array or comma separated list of
-character encoding. ("auto" is expanded to "ASCII, JIS, UTF-8, EUC-JP, SJIS")
+character encoding. See supported encodings.
 
 If {encoding_list} is omitted, it returns the current character encoding
 detection order as array.
@@ -35,7 +35,7 @@ Useless detect order example
 
 
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |mb_detect_order| examples
 

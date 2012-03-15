@@ -1,4 +1,4 @@
-ssh2_auth_pubkey_file -- Authenticate using a public key
+*ssh2_auth_pubkey_file* -- Authenticate using a public key
 
   bool ssh2_auth_pubkey_file(resource session, string username, string pubkeyfile, string privkeyfile [, string passphrase])~
 
@@ -16,7 +16,7 @@ Authenticate using a public key read from a file.
 {passphrase} If {privkeyfile} is encrypted (which it should be), the
 {passphrase} must be provided.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Authentication using a public key
 

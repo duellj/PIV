@@ -1,4 +1,4 @@
-imagestringup -- Draw a string vertically
+*imagestringup* -- Draw a string vertically
 
   bool imagestringup(resource image, int font, int x, int y, string string, int color)~
 
@@ -11,17 +11,17 @@ such as |imagecreatetruecolor|.
 higher numbers corresponding to larger fonts) or any of your own font
 identifiers registered with |imageloadfont|.
 
-{x} x-coordinate of the upper left corner.
+{x} x-coordinate of the bottom left corner.
 
-{y} y-coordinate of the upper left corner.
+{y} y-coordinate of the bottom left corner.
 
 {string} The string to be written.
 
 {color} A color identifier created with |imagecolorallocate|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
-|imagestring| example
+|imagestringup| example
 
 <?php >
   // create a 100*100 image
@@ -37,6 +37,8 @@ Returns TRUE on success or FALSE on failure.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagestringup()
 
 
 

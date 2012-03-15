@@ -1,4 +1,4 @@
-DomDocument->add_root -- Adds a root node [deprecated]
+*DomDocument->add_root* -- Adds a root node [deprecated]
 
   domelement DomDocument->add_root(string name)~
 

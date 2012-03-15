@@ -1,4 +1,4 @@
-is_numeric -- Finds whether a variable is a number or a numeric string
+*is_numeric* -- Finds whether a variable is a number or a numeric string
 
   bool is_numeric(mixed var)~
 
@@ -15,29 +15,32 @@ Returns TRUE if {var} is a number or a numeric string, FALSE otherwise.
 |is_numeric| examples
 
 <?php >
-  $tests = Array(
-  		"42", 
-  		1337, 
-  		"1e4", 
-  		"not numeric", 
-  		Array(), 
-  		9.1
-  		);
+  $tests = array(
+          "42", 
+          1337, 
+          "1e4", 
+          "not numeric", 
+          Array(), 
+          9.1
+          );
   
-  foreach($tests as $element)
-  {
-  	if(is_numeric($element))
-  	{
-  		echo "'{$element}' is numeric", PHP_EOL;
-  	}
-  	else
-  	{
-  		echo "'{$element}' is NOT numeric", PHP_EOL;
-  	}
+  foreach ($tests as $element) {
+      if (is_numeric($element)) {
+          echo "'{$element}' is numeric", PHP_EOL;
+      } else {
+          echo "'{$element}' is NOT numeric", PHP_EOL;
+      }
   }
 ?>
 
+The above example will output:
 
+  '42' is numeric
+  '1337' is numeric
+  '1e4' is numeric
+  'not numeric' is NOT numeric
+  'Array' is NOT numeric
+  '9.1' is numeric
 
 
 

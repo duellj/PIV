@@ -1,4 +1,4 @@
-enchant_broker_describe -- Enumerates the Enchant providers
+*enchant_broker_describe* -- Enumerates the Enchant providers
 
   array enchant_broker_describe(resource broker)~
 
@@ -7,7 +7,7 @@ about them. The same info is provided through phpinfo().
 
 {broker} Broker resource
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 List the backends provided by the given broker
 

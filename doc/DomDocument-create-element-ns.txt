@@ -1,4 +1,4 @@
-DomDocument->create_element_ns -- Create new element node with an associated
+*DomDocument->create_element_ns* -- Create new element node with an associated
 namespace
 
   domelement DomDocument->create_element_ns(string uri, string name [, string prefix])~

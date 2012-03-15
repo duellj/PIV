@@ -1,4 +1,4 @@
-ssh2_fingerprint -- Retrieve fingerprint of remote server
+*ssh2_fingerprint* -- Retrieve fingerprint of remote server
 
   string ssh2_fingerprint(resource session [, int flags])~
 
@@ -8,8 +8,7 @@ Returns a server hostkey hash from an active session.
 |ssh2_connect|.
 
 {flags} {flags} may be either of SSH2_FINGERPRINT_MD5 or SSH2_FINGERPRINT_SHA1
-logically ORed with SSH2_FINGERPRINT_HEX or SSH2_FINGERPRINT_RAW. Defaults to
-SSH2_FINGERPRINT_MD5 | SSH2_FINGERPRINT_HEX.
+logically ORed with SSH2_FINGERPRINT_HEX or SSH2_FINGERPRINT_RAW.
 
 Returns the hostkey hash as a string.
 

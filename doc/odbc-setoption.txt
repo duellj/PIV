@@ -1,4 +1,4 @@
-odbc_setoption -- Adjust ODBC settings
+*odbc_setoption* -- Adjust ODBC settings
 
   bool odbc_setoption(resource id, int function, int option, int param)~
 
@@ -28,7 +28,7 @@ SQLSetConnectOption() and 2 for SQLSetStmtOption().
 
 {param} The value for the given {option}.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |odbc_setoption| examples
 

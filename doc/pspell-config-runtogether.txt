@@ -1,4 +1,4 @@
-pspell_config_runtogether -- Consider run-together words as valid compounds
+*pspell_config_runtogether* -- Consider run-together words as valid compounds
 
   bool pspell_config_runtogether(int dictionary_link, bool flag)~
 
@@ -16,7 +16,7 @@ suggestions.
 {flag} TRUE if run-together words should be treated as legal compounds, FALSE
 otherwise.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |pspell_config_runtogether|
 

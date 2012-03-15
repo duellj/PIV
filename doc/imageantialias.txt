@@ -1,4 +1,4 @@
-imageantialias -- Should antialias functions be used or not
+*imageantialias* -- Should antialias functions be used or not
 
   bool imageantialias(resource image, bool enabled)~
 
@@ -18,7 +18,7 @@ such as |imagecreatetruecolor|.
 
 {enabled} Whether to enable antialiasing or not.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 A comparison of two lines, one with anti-aliasing switched on
 
@@ -50,6 +50,9 @@ A comparison of two lines, one with anti-aliasing switched on
 ?>
 
 The above example will output something similar to:
+
+Output of example : A comparison of two lines, one with anti-aliasing switched
+on
 
 
 

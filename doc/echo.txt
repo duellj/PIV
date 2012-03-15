@@ -1,4 +1,4 @@
-echo -- Output one or more strings
+*echo* -- Output one or more strings
 
   void echo(string arg1 [, string ...])~
 
@@ -77,10 +77,6 @@ No value is returned.
 
 
 
-
-For a short discussion about the differences between |print| and |echo|, see
-this FAQTs Knowledge Base Article:
-http://www.faqts.com/knowledge_base/view.phtml/aid/1/fid/40
 
 Because this is a language construct and not a function, it cannot be called
 using variable functions

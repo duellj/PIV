@@ -1,4 +1,4 @@
-SwishResults->getParsedWords -- Get an array of parsed words
+*SwishResults->getParsedWords* -- Get an array of parsed words
 
   array SwishResults->getParsedWords(string index_name)~
 

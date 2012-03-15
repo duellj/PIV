@@ -1,12 +1,12 @@
-mysqli->rpl_query_type -- Returns RPL query type
+*mysqli->rpl_query_type* -- Returns RPL query type
 
-Procedural style:
+Object oriented style
 
-  int mysqli_rpl_query_type(mysqli link, string query)~
+  int rpl_query_type(string query)~
 
-Object oriented style (method)
+Procedural style
 
-  int rpl_query_type(mysqli link, string query, string query)~
+  int mysqli_rpl_query_type(string query, mysqli link, string query)~
 
 Returns MYSQLI_RPL_MASTER, MYSQLI_RPL_SLAVE or MYSQLI_RPL_ADMIN depending on a
 query type. INSERT, UPDATE and similar are master queries, SELECT is slave,

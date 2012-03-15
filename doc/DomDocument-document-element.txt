@@ -1,4 +1,4 @@
-DomDocument->document_element -- Returns root element node
+*DomDocument->document_element* -- Returns root element node
 
   domelement DomDocument->document_element()~
 

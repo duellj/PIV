@@ -1,14 +1,14 @@
-link -- Create a hard link
+*link* -- Create a hard link
 
-  bool link(string to_path, string from_path)~
+  bool link(string target, string link)~
 
 |link| creates a hard link.
 
-{to_path} Target of the link.
+{target} Target of the link.
 
-{from_path} The link name.
+{link} The link name.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 For Windows only: This function requires PHP to run in an elevated mode or
 with the UAC disabled.
@@ -19,10 +19,10 @@ Version Description 5.3.0 This function is now available on Windows platforms
 Creating a simple hard link
 
 <?php >
-  $from_path = 'source.ext';  // This is the file that already exists
-  $to_path   = 'newfile.ext'; // This the filename that you want to link it to
+  $target = 'source.ext'; // This is the file that already exists
+  $link = 'newfile.ext'; // This the filename that you want to link it to
   
-  link($from_path, $to_path);
+  link($target, $link);
 ?>
 
 

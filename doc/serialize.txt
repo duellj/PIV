@@ -1,4 +1,4 @@
-serialize -- Generates a storable representation of a value
+*serialize* -- Generates a storable representation of a value
 
   string serialize(mixed value)~
 
@@ -50,11 +50,16 @@ be stored anywhere.
 
 
 
-Version Description 4.0.7 The object serialization process was fixed. 4.0.0
-When serializing an object, methods are not lost anymore. Please see the
-Serializing Objects for more information.
+Version Description 4.0.7 The object serialization process was fixed.
 
-It is not possible to serialize PHP built-in objects.
+Note that many built-in PHP objects cannot be serialized. However, those with
+this ability either implement the Serializable interface or the magic __sleep
+and __wakeup methods. If an internal class does not fulfill any of those
+requirements, it cannot reliably be serialized.
+
+There are some historical exceptions to the above rule, where some internal
+objects could be serialized without implementing the interface or exposing the
+methods. Notably, the ArrayObject prior to PHP 5.2.0.
 
 |unserialize| Serializing Objects
 

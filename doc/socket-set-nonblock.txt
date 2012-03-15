@@ -1,4 +1,4 @@
-socket_set_nonblock -- Sets nonblocking mode for file descriptor fd
+*socket_set_nonblock* -- Sets nonblocking mode for file descriptor fd
 
   bool socket_set_nonblock(resource socket)~
 
@@ -13,7 +13,7 @@ in a block, the called function will fail.
 {socket} A valid socket resource created with |socket_create| or
 |socket_accept|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |socket_set_nonblock| example
 

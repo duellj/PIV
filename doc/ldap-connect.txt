@@ -1,4 +1,4 @@
-ldap_connect -- Connect to an LDAP server
+*ldap_connect* -- Connect to an LDAP server
 
   resource ldap_connect([string hostname [, int port]])~
 
@@ -9,7 +9,7 @@ Establishes a connection to a LDAP server on a specified {hostname} and
 the hostname. To use LDAP with SSL, compile OpenLDAP 2.x.x with SSL support,
 configure PHP with SSL, and set this parameter as ldaps://hostname/.
 
-{port} The port to connect to. Not used when using URLs. Defaults to 389.
+{port} The port to connect to. Not used when using URLs.
 
 Returns a positive LDAP link identifier on success, or FALSE on error. When
 OpenLDAP 2.x.x is used, |ldap_connect| will always return a resource as it

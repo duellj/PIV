@@ -1,4 +1,4 @@
-pspell_config_dict_dir -- Location of the main word list
+*pspell_config_dict_dir* -- Location of the main word list
 
   bool pspell_config_dict_dir(int conf, string directory)~
 
@@ -7,6 +7,6 @@ available.
 
 
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

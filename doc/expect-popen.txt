@@ -1,4 +1,4 @@
-expect_popen -- Execute command via Bourne shell, and open the PTY stream to
+*expect_popen* -- Execute command via Bourne shell, and open the PTY stream to
 the process
 
   resource expect_popen(string command)~
@@ -7,7 +7,7 @@ Execute command via Bourne shell, and open the PTY stream to the process.
 
 {command} Command to execute.
 
-Returns an open PTY stream to the process'es stdio, stdout and stderr.
+Returns an open PTY stream to the processes stdio, stdout, and stderr.
 
 On failure this function returns FALSE.
 

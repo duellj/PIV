@@ -1,4 +1,4 @@
-print -- Output a string
+*print* -- Output a string
 
   int print(string arg)~
 
@@ -6,10 +6,6 @@ Outputs {arg}.
 
 |print| is not actually a real function (it is a language construct) so you
 are not required to use parentheses with its argument list.
-
-For a short discussion about the differences between |print| and |echo|, see
-this FAQTs Knowledge Base Article:
-http://www.faqts.com/knowledge_base/view.phtml/aid/1/fid/40
 
 {arg} The input data.
 

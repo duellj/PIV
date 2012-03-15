@@ -1,4 +1,4 @@
-DomNode->node_type -- Returns type of node
+*DomNode->node_type* -- Returns type of node
 
   int DomNode->node_type()~
 

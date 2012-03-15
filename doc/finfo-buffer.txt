@@ -1,6 +1,10 @@
-finfo_buffer -- Return information about a string buffer
+*finfo_buffer* -- Return information about a string buffer
+
+Procedural style
 
   string finfo_buffer(resource finfo, string string [, int options [, resource context]])~
+
+Object oriented style
 
   string buffer(resource finfo, string string [, int options [, resource context, string string [, int options [, resource context]]]])~
 
@@ -26,7 +30,7 @@ A |finfo_buffer| example
 
 The above example will output something similar to:
 
-  application/x-sh
+  application/x-sh; charset=us-ascii
 
 
 

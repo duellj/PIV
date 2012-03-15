@@ -1,4 +1,4 @@
-SDO_DataObject::getSequence -- Get the sequence for a data object
+*SDO_DataObject::getSequence* -- Get the sequence for a data object
 
   SDO_Sequence SDO_DataObject::getSequence()~
 

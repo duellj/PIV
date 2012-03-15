@@ -1,4 +1,4 @@
-SAMConnection->__construct -- Creates a new connection to a Messaging Server
+*SAMConnection->__construct* -- Creates a new connection to a Messaging Server
 
 Creates a new SAMConnection object.
 

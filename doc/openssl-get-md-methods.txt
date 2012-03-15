@@ -1,6 +1,6 @@
-openssl_get_md_methods -- Gets available digest methods
+*openssl_get_md_methods* -- Gets available digest methods
 
-  ReturnType openssl_get_md_methods([bool aliases])~
+  array openssl_get_md_methods([bool aliases])~
 
 Gets a list of available digest methods.
 
@@ -15,7 +15,7 @@ and also which aliases might be available.
 <?php >
   $digests             = openssl_get_md_methods();
   $digests_and_aliases = openssl_get_md_methods(true);
-  $digest_aliases      = array_diff($mds_and_aliases, $mds);
+  $digest_aliases      = array_diff($digests_and_aliases, $digests);
   
   print_r($digests);
   

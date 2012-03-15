@@ -1,13 +1,13 @@
-result->fetch_fields -- Returns an array of resources representing the fields
-in a result set
+*maxdb_result::fetch_fields* -- Returns an array of resources representing the
+fields in a result set
 
-Procedural Style:
+Procedural style
 
   mixed maxdb_fetch_fields(resource result)~
 
-Object oriented style (method):
+Object oriented style
 
-  mixed fetch_fields(resource result)~
+  mixed maxdb_result::fetch_fields(resource result)~
 
 This function serves an identical purpose to the |maxdb_fetch_field| function
 with the single difference that, instead of returning one resource at a time

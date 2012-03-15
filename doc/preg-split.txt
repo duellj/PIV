@@ -1,4 +1,4 @@
-preg_split -- Split string by a regular expression
+*preg_split* -- Split string by a regular expression
 
   array preg_split(string pattern, string subject [, int limit [, int flags]])~
 
@@ -8,13 +8,14 @@ Split the given string by a regular expression.
 
 {subject} The input string.
 
-{limit} If specified, then only substrings up to {limit} are returned, and if
-{limit} is -1, it actually means "no limit", which is useful for specifying
-the {flags}.
+{limit} If specified, then only substrings up to {limit} are returned with the
+rest of the string being placed in the last substring. A {limit} of -1, 0 or
+null means "no limit" and, as is standard across PHP, you can use null to skip
+to the {flags} parameter.
 
 {flags} {flags} can be any combination of the following flags (combined with
-bitwise | operator): PREG_SPLIT_NO_EMPTY If this flag is set, only non-empty
-pieces will be returned by |preg_split|.
+the | bitwise operator): PREG_SPLIT_NO_EMPTY If this flag is set, only
+non-empty pieces will be returned by |preg_split|.
 
 PREG_SPLIT_DELIM_CAPTURE If this flag is set, parenthesized expression in the
 delimiter pattern will be captured and returned as well.
@@ -28,7 +29,7 @@ Returns an array containing substrings of {subject} split along boundaries
 matched by {pattern}.
 
 Version Description 4.3.0 The PREG_SPLIT_OFFSET_CAPTURE was added 4.0.5 The
-PREG_SPLIT_DELIM_CAPTURE was added 4.0.0 The {flags} parameter was added
+PREG_SPLIT_DELIM_CAPTURE was added
 
 |preg_split| example : Get the parts of a search string
 
@@ -91,6 +92,7 @@ The above example will output:
 If you don't need the power of regular expressions, you can choose faster
 (albeit simpler) alternatives like |explode| or |str_split|.
 
-|spliti| |split| |implode| |preg_match| |preg_match_all| |preg_replace|
+PCRE Patterns |implode| |preg_match| |preg_match_all| |preg_replace|
+|preg_last_error|
 
 vim:ft=help:

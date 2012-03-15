@@ -1,4 +1,4 @@
-DomNode->is_blank_node -- Checks if node is blank
+*DomNode->is_blank_node* -- Checks if node is blank
 
   bool DomNode->is_blank_node()~
 

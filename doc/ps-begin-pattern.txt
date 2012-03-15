@@ -1,4 +1,4 @@
-ps_begin_pattern -- Start a new pattern
+*ps_begin_pattern* -- Start a new pattern
 
   int ps_begin_pattern(resource psdoc, float width, float height, float xstep, float ystep, int painttype)~
 
@@ -20,7 +20,7 @@ direction.
 
 {painttype} Must be 1 or 2.
 
-The identifier of the pattern or FALSE in case of an error.
+The identifier of the pattern or FALSE on failure.
 
 Creating and using a pattern
 

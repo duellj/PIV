@@ -1,4 +1,4 @@
-imagefilltoborder -- Flood fill to specific color
+*imagefilltoborder* -- Flood fill to specific color
 
   bool imagefilltoborder(resource image, int x, int y, int border, int color)~
 
@@ -18,7 +18,7 @@ such as |imagecreatetruecolor|.
 
 {color} The fill color. A color identifier created with |imagecolorallocate|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Filling an ellipse with a color
 
@@ -44,6 +44,8 @@ Filling an ellipse with a color
 ?>
 
 The above example will output something similar to:
+
+Output of example : Filling an ellipse with a color
 
 
 

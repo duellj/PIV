@@ -1,4 +1,4 @@
-fopen -- Opens file or URL
+*fopen* -- Opens file or URL
 
   resource fopen(string filename, string mode [, bool use_include_path [, resource context]])~
 
@@ -29,7 +29,7 @@ On the Windows platform, be careful to escape any backslashes used in the path
 to the file, or use forward slashes.
 
 <?php >
-  $handle = fopen("c:\\data\\info.txt", "r");
+  $handle = fopen("c:\\folder\\resource.txt", "r");
 ?>
 
 {mode} The {mode} parameter specifies the type of access you require to the
@@ -49,11 +49,16 @@ the file pointer at the beginning of the file. If the file already exists, the
 |fopen| call will fail by returning FALSE and generating an error of level
 E_WARNING. If the file does not exist, attempt to create it. This is
 equivalent to specifying O_EXCL|O_CREAT flags for the underlying open(2)
-system call. 'x+' Create and open for reading and writing; place the file
-pointer at the beginning of the file. If the file already exists, the |fopen|
-call will fail by returning FALSE and generating an error of level E_WARNING.
-If the file does not exist, attempt to create it. This is equivalent to
-specifying O_EXCL|O_CREAT flags for the underlying open(2) system call.
+system call. 'x+' Create and open for reading and writing; otherwise it has
+the same behavior as 'x'. 'c' Open the file for writing only. If the file does
+not exist, it is created. If it exists, it is neither truncated (as opposed to
+'w'), nor the call to this function fails (as is the case with 'x'). The file
+pointer is positioned on the beginning of the file. This may be useful if it's
+desired to get an advisory lock (see |flock|) before attempting to modify the
+file, as using 'w' could truncate the file before the lock was obtained (if
+truncation is desired, |ftruncate| can be used after the lock is requested).
+'c+' Open the file for reading and writing; otherwise it has the same behavior
+as 'c'.
 
 Different operating system families have different line-ending conventions.
 When you write a text file and want to insert a line break, you need to use
@@ -97,14 +102,15 @@ contexts, refer to .
 
 Returns a file pointer resource on success, or FALSE on error.
 
-If the open fails, the function an error of level E_WARNING is generated. You
-may use @ to suppress this warning.
+If the open fails, an error of level E_WARNING is generated. You may use @ to
+suppress this warning.
 
 Version Description 4.3.2 As of PHP 4.3.2, the default mode is set to binary
 for all platforms that distinguish between binary and text mode. If you are
 having problems with your scripts after upgrading, try using the 't' flag as a
-workaround until you have made your script more portable as mentioned below
-4.3.2 The 'x' and 'x+' option was added
+workaround until you have made your script more portable as mentioned before
+4.3.2 The 'x' and 'x+' options were added 5.2.6 The 'c' and 'c+' options were
+added
 
 |fopen| examples
 

@@ -1,4 +1,4 @@
-DomAttribute->specified -- Checks if attribute is specified
+*DomAttribute->specified* -- Checks if attribute is specified
 
   bool specified()~
 
@@ -6,7 +6,7 @@ Checks if the attribute was explicitly given a value in the original document.
 
 This method is not implemented yet.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 The definition of specified in the DOM Recommendations
 

@@ -1,4 +1,4 @@
-DomAttribute->value -- Returns value of attribute
+*DomAttribute->value* -- Returns value of attribute
 
   string value()~
 

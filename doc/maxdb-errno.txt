@@ -1,10 +1,10 @@
-maxdb->errno -- Returns the error code for the most recent function call
+*maxdb->errno* -- Returns the error code for the most recent function call
 
-Procedural style:
+Procedural style
 
   int maxdb_errno(resource link)~
 
-Object oriented style (property):
+Object oriented style
 
 The |maxdb_errno| function will return the last error code for the most recent
 MaxDB function call that can succeed or fail with respect to the database link

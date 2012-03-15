@@ -1,4 +1,4 @@
-mssql_next_result -- Move the internal result pointer to the next result
+*mssql_next_result* -- Move the internal result pointer to the next result
 
   bool mssql_next_result(resource result_id)~
 
@@ -16,7 +16,7 @@ Returns TRUE if an additional result set was available or FALSE otherwise.
 |mssql_next_result| example
 
 <?php >
-  // Connect MSSQL
+  // Connect to MSSQL and select the database
   $link = mssql_connect('MANGO\SQLEXPRESS', 'sa', 'phpfi');
   mssql_select_db('php', $link);
   
@@ -25,14 +25,11 @@ Returns TRUE if an additional result set was available or FALSE otherwise.
   $query = mssql_query($sql, $link);
   
   // Iterate through returned records
-  do
-  {
-  	while($row = mssql_fetch_row($query))
-  	{
-  		// Handle record ...
-  	}
-  }
-  while(mssql_next_result($query));
+  do {
+      while ($row = mssql_fetch_row($query)) {
+          // Handle record ...
+      }
+  } while (mssql_next_result($query));
   
   // Clean up
   mssql_free_result($query);

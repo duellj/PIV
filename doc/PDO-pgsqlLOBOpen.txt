@@ -1,4 +1,4 @@
-PDO::pgsqlLOBOpen -- Opens an existing large object stream
+*PDO::pgsqlLOBOpen* -- Opens an existing large object stream
 
   resource PDO::pgsqlLOBOpen(string oid [, string mode])~
 
@@ -16,7 +16,7 @@ carried out within a transaction.
 {mode} If mode is r, open the stream for reading. If mode is w, open the
 stream for writing.
 
-Returns a stream resource on success, or FALSE on failure.
+Returns a stream resource on success or FALSE on failure.
 
 A |PDO::pgsqlLOBOpen| example Following on from the |PDO::pgsqlLOBCreate|
 example, this code snippet retrieves the large object from the database and

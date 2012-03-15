@@ -1,4 +1,4 @@
-Swish::__construct -- Construct a Swish object
+*Swish::__construct* -- Construct a Swish object
 
   void Swish::__construct(string index_names)~
 

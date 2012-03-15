@@ -1,4 +1,4 @@
-xdiff_file_bdiff -- Make binary diff of two files
+*xdiff_file_bdiff* -- Make binary diff of two files
 
   bool xdiff_file_bdiff(string old_file, string new_file, string dest)~
 
@@ -13,7 +13,7 @@ later applied using |xdiff_file_bpatch|/|xdiff_string_bpatch|.
 {dest} Path of the resulting patch file. Resulting file contains differences
 between "old" and "new" files. It is in binary format and is human-unreadable.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |xdiff_file_bdiff| example The following code makes binary diff of two
 archives.

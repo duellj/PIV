@@ -1,4 +1,4 @@
-fribidi_log2vis -- Convert a logical string to a visual one
+*fribidi_log2vis* -- Convert a logical string to a visual one
 
   string fribidi_log2vis(string str, string direction, int charset)~
 
@@ -10,6 +10,6 @@ Converts a logical string to a visual one.
 
 {charset} One of the FRIBIDI_CHARSET_XXX constants.
 
-Returns the visual string on success, or FALSE on failure.
+Returns the visual string on success or FALSE on failure.
 
 vim:ft=help:

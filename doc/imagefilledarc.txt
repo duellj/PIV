@@ -1,4 +1,4 @@
-imagefilledarc -- Draw a partial arc and fill it
+*imagefilledarc* -- Draw a partial arc and fill it
 
   bool imagefilledarc(resource image, int cx, int cy, int width, int height, int start, int end, int color, int style)~
 
@@ -38,7 +38,7 @@ IMG_ARC_NOFILL, indicates that the beginning and ending angles should be
 connected to the center - this is a good way to outline (rather than fill) a
 'pie slice'.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Creating a 3D looking pie
 
@@ -46,7 +46,7 @@ Creating a 3D looking pie
   // create image
   $image = imagecreatetruecolor(100, 100);
   
-  // allocate some solors
+  // allocate some colors
   $white    = imagecolorallocate($image, 0xFF, 0xFF, 0xFF);
   $gray     = imagecolorallocate($image, 0xC0, 0xC0, 0xC0);
   $darkgray = imagecolorallocate($image, 0x90, 0x90, 0x90);
@@ -74,6 +74,8 @@ Creating a 3D looking pie
 ?>
 
 The above example will output something similar to:
+
+Output of example : Creating a 3D looking pie
 
 
 

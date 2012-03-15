@@ -1,4 +1,4 @@
-SDO_DAS_XML_Document::getRootElementURI -- Returns root element's URI string
+*SDO_DAS_XML_Document::getRootElementURI* -- Returns root element's URI string
 
   string SDO_DAS_XML_Document::getRootElementURI()~
 

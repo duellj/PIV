@@ -1,4 +1,4 @@
-apc_define_constants -- Defines a set of constants for retrieval and
+*apc_define_constants* -- Defines a set of constants for retrieval and
 mass-definition
 
   bool apc_define_constants(string key, array constants [, bool case_sensitive])~
@@ -26,7 +26,7 @@ case-sensitive; i.e. CONSTANT and Constant represent different values. If this
 parameter evaluates to FALSE the constants will be declared as
 case-insensitive symbols.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |apc_define_constants| example
 

@@ -1,4 +1,4 @@
-DomDocumentType->public_id -- Returns public id of document type
+*DomDocumentType->public_id* -- Returns public id of document type
 
   string public_id()~
 

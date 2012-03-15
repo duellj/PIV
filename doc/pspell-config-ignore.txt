@@ -1,4 +1,4 @@
-pspell_config_ignore -- Ignore words less than N characters long
+*pspell_config_ignore* -- Ignore words less than N characters long
 
   bool pspell_config_ignore(int dictionary_link, int n)~
 
@@ -10,7 +10,7 @@ spell checker.
 
 {n} Words less than {n} characters will be skipped.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |pspell_config_ignore|
 

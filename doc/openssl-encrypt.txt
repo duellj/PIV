@@ -1,6 +1,6 @@
-openssl_encrypt -- Encrypts data
+*openssl_encrypt* -- Encrypts data
 
-  ReturnType openssl_encrypt(string data, string method, string password [, bool raw_output])~
+  string openssl_encrypt(string data, string method, string password [, bool raw_output [, string iv]])~
 
 Encrypts given data with given method and key, returns a raw or base64 encoded
 string
@@ -17,7 +17,7 @@ available.
 {raw_output} Setting to TRUE will return as raw output data, otherwise the
 return value is base64 encoded.
 
-Returns the encrypted string on success, or FALSE on failure.
+Returns the encrypted string on success or FALSE on failure.
 
 Emits an E_WARNING level error if an unknown cipher algorithm is passed in via
 the {method} parameter.

@@ -1,4 +1,4 @@
-hw_api_error->reason -- Returns reason of error
+*hw_api_error->reason* -- Returns reason of error
 
   HW_API_Reason reason()~
 

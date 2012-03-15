@@ -1,4 +1,4 @@
-DomNode->clone_node -- Clones a node
+*DomNode->clone_node* -- Clones a node
 
   domelement DomNode->clone_node()~
 

@@ -1,4 +1,4 @@
-proc_nice -- Change the priority of the current process
+*proc_nice* -- Change the priority of the current process
 
   bool proc_nice(int increment)~
 
@@ -11,8 +11,8 @@ way.
 
 {increment} The increment value of the priority change.
 
-Returns TRUE on success or FALSE on failure. If an error occurs, like the user
-lacks permission to change the priority, an error of level E_WARNING is also
-generated.
+Returns TRUE on success or &false; on failure. If an error occurs, like the
+user lacks permission to change the priority, an error of level E_WARNING is
+also generated.
 
 vim:ft=help:

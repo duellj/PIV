@@ -1,4 +1,4 @@
-pg_query -- Execute a query
+*pg_query* -- Execute a query
 
   resource pg_query([resource connection, string query])~
 
@@ -23,7 +23,9 @@ transaction, unless there are explicit BEGIN/COMMIT commands included in the
 query string. However, using multiple transactions in one function call is not
 recommended.
 
-A query result resource on success, or FALSE on failure.
+Data inside the query should be properly escaped.
+
+A query result resource on success or FALSE on failure.
 
 |pg_query| example
 

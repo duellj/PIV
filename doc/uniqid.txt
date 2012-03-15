@@ -1,4 +1,4 @@
-uniqid -- Generate a unique ID
+*uniqid* -- Generate a unique ID
 
   string uniqid([string prefix [, bool more_entropy]])~
 
@@ -17,20 +17,25 @@ should make the results more unique.
 
 Returns the unique identifier, as a string.
 
-If you need a unique identifier or token and you intend to give out that token
-to the user via the network (i.e. session cookies), it is recommended that you
-use something along these lines:
-
-This will create a 32 character identifier (a 128 bit hex number) that is
-extremely difficult to predict. |uniqid| Example
+|uniqid| Example
 
 <?php >
-  // no prefix
-  // works only in PHP 5 and later versions
-  $token = md5(uniqid());
+  /* A uniqid, like: 4b3403665fea6 */
+  printf("uniqid(): %s\r\n", uniqid());
   
-  // better, difficult to guess
-  $better_token = md5(uniqid(mt_rand(), true));
+  /* We can also prefix the uniqid, this the same as 
+   * doing:
+   *
+   * $uniqid = $prefix . uniqid();
+   * $uniqid = uniqid($prefix);
+   */
+  printf("uniqid('php_'): %s\r\n", uniqid('php_'));
+  
+  /* We can also activate the more_entropy parameter, which is 
+   * required on some systems, like Cygwin. This makes uniqid()
+   * produce a value like: 4b340550242239.64159797
+   */
+  printf("uniqid('', true): %s\r\n", uniqid('', true));
 ?>
 
 

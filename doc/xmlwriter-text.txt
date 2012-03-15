@@ -1,6 +1,6 @@
-XMLWriter::text -- Write text
+*XMLWriter::text* -- Write text
 
-Oriented object style
+Object oriented style
 
   bool text(string content)~
 
@@ -16,6 +16,6 @@ modified. This resource comes from a call to |xmlwriter_open_uri| or
 
 {content} The contents of the text.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

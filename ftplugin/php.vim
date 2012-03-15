@@ -2,9 +2,9 @@
 " Description: PHP Integration for VIM plugin
 " 			   This file is a considerable fork of the original 
 " 			   PDV written by Tobias Schlitt <toby@php.net>.
-" Maintainer:  Steve Francia <steve.francia@gmail.com> <http://spf13.com>
-" Version:     0.8
-" Last Change: 23rd April 2010
+" Maintainer:  Steve Francia <piv@spf13.com> <http://spf13.com>
+" Version:     0.9
+" Last Change: 7th January 2012
 " 
 " 
 " Section: script init stuff {{{1
@@ -48,15 +48,28 @@ call s:InitVariable("g:syntax_extra_php", 'doxygen')
 call s:InitVariable("g:syntax_extra_inc", 'doxygen')
 call s:InitVariable("g:PIVCreateDefaultMappings", 1)
 call s:InitVariable("g:PIVPearStyle", 0)
+call s:InitVariable("g:PIVAutoClose", 0)
 
 " Auto expand tabs to spaces
 setlocal expandtab
+<<<<<<< HEAD
 
 " Linewidth to 80, because of the formatoptions this is only valid for
+=======
+setlocal autoindent " Auto indent after a {
+setlocal smartindent
+
+" Linewidth to 79, because of the formatoptions this is only valid for
+>>>>>>> 0157e8e20979d8255259f82d7b0dc10433569b99
 " comments
 setlocal textwidth=80
 set formatoptions=qrocb
 
+<<<<<<< HEAD
+=======
+setlocal nowrap     " Do not wrap lines automatically
+
+>>>>>>> 0157e8e20979d8255259f82d7b0dc10433569b99
 " Correct indentation after opening a phpdocblock and automatic * on every
 " line
 setlocal formatoptions=qroct
@@ -78,17 +91,44 @@ if !exists("g:syntax_on") | syntax on | endif
 nnoremap <silent> <plug>PIVphpDocSingle :call PhpDocSingle()<CR>
 vnoremap <silent> <plug>PIVphpDocRange :call PhpDocRange()<CR>
 vnoremap <silent> <plug>PIVphpAlign :call PhpAlign()<CR>
+<<<<<<< HEAD
+=======
+"inoremap <buffer> <leader>d :call PhpDocSingle()<CR>i
+
+" Map ; to "add ; to the end of the line, when missing"
+"noremap <buffer> ; :s/\([^;]\)$/\1;/<cr>
+
+" Map <ctrl>+p to single line mode documentation (in insert and command mode)
+"inoremap <buffer> <leader>d :call PhpDocSingle()<CR>i
+"nnoremap <buffer> <leader>d :call PhpDocSingle()<CR>
+" Map <ctrl>+p to multi line mode documentation (in visual mode)
+"vnoremap <buffer> <leader>d :call PhpDocRange()<CR>
+>>>>>>> 0157e8e20979d8255259f82d7b0dc10433569b99
 
 " Map <CTRL>-H to search phpm for the function name currently under the cursor (insert mode only)
 inoremap <buffer> <C-H> <ESC>:!phpm <C-R>=expand("<cword>")<CR><CR>
 
 " }}}
 
-" {{{ Dictionary completion
+" {{{ Automatic close char mapping
+if g:PIVAutoClose
+    if g:PIVPearStyle
+        inoremap <buffer>  { {<CR>}<C-O>O
+        inoremap <buffer> ( (  )<LEFT><LEFT>
+    else
+        inoremap  { {<CR>}<C-O>O
+        inoremap ( ()<LEFT>
+    endif
 
-" The completion dictionary is provided by Rasmus:
-" http://lerdorf.com/funclist.txt
-setlocal dictionary-=/home/dotxp/funclist.txt dictionary+=/home/dotxp/funclist.txt
+    inoremap <buffer> [ []<LEFT>
+    inoremap <buffer> " ""<LEFT>
+    inoremap <buffer> ' ''<LEFT>
+endif
+" }}} Automatic close char mapping
+
+" {{{ Dictionary completion
+setlocal dictionary-=$VIMRUNTIME/bundle/PIV/misc/funclist.txt dictionary+=$VIMRUNTIME/bundle/PIV/misc/funclist.txt
+
 " Use the dictionary completion
 setlocal complete-=k complete+=k
 

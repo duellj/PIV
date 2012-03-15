@@ -1,4 +1,4 @@
-OCI-Lob->append -- Appends data from the large object to another large object
+*OCI-Lob->append* -- Appends data from the large object to another large object
 
   bool append(OCI-Lob lob_from)~
 
@@ -10,6 +10,6 @@ to flush buffers with before disabling buffering.
 
 {lob_from} The copied LOB.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

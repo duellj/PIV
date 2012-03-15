@@ -1,4 +1,4 @@
-imagettftext -- Write text to the image using TrueType fonts
+*imagettftext* -- Write text to the image using TrueType fonts
 
   array imagettftext(resource image, float size, float angle, int x, int y, int color, string fontfile, string text)~
 
@@ -68,7 +68,7 @@ Returns an array with 8 elements representing four points making the bounding
 box of the text. The order of the points is lower left, lower right, upper
 right, upper left. The points are relative to the text regardless of the
 angle, so "upper left" means in the top left-hand corner when you see the text
-horizontally.
+horizontally. Returns FALSE on error.
 
 Version Description 5.2.0 It is now possible to specify an hexadecimal entity
 in {text}.
@@ -107,6 +107,8 @@ Arial.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagettftext()
 
 
 

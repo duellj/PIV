@@ -1,4 +1,4 @@
-substr_replace -- Replace text within a portion of a string
+*substr_replace* -- Replace text within a portion of a string
 
   mixed substr_replace(mixed string, string replacement, int start [, int length])~
 
@@ -52,6 +52,6 @@ The result string is returned. If {string} is an array then array is returned.
 
 This function is binary-safe.
 
-|str_replace| |substr|
+|str_replace| |substr| String access and modification by character
 
 vim:ft=help:

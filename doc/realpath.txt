@@ -1,9 +1,9 @@
-realpath -- Returns canonicalized absolute pathname
+*realpath* -- Returns canonicalized absolute pathname
 
   string realpath(string path)~
 
 |realpath| expands all symbolic links and resolves references to '/./', '/../'
-and extra '/' characters in the input {path}. and return the canonicalized
+and extra '/' characters in the input {path} and return the canonicalized
 absolute pathname.
 
 {path} The path being checked.
@@ -13,8 +13,11 @@ will have no symbolic link, '/./' or '/../' components.
 
 |realpath| returns FALSE on failure, e.g. if the file does not exist.
 
+The running script must have executable permissions on all directories in the
+hierarchy, otherwise |realpath| will return FALSE.
+
 Version Description 5.3.0 Prior to this release |realpath| would not fail on
-*BSD systems if only the last last {path} component did not exist.
+*BSD systems if only the last {path} component did not exist.
 
 |realpath| example
 

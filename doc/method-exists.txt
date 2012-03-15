@@ -1,4 +1,4 @@
-method_exists -- Checks if the class method exists
+*method_exists* -- Checks if the class method exists
 
   bool method_exists(mixed object, string method_name)~
 
@@ -10,6 +10,9 @@ Checks if the class method exists in the given {object}.
 
 Returns TRUE if the method given by {method_name} has been defined for the
 given {object}, FALSE otherwise.
+
+Using this function will use any registered autoloaders if the class is not
+already known.
 
 |method_exists| example
 
@@ -34,6 +37,6 @@ The above example will output:
 
 
 
-|function_exists| |is_callable|
+|function_exists| |is_callable| |class_exists|
 
 vim:ft=help:

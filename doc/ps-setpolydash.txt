@@ -1,4 +1,4 @@
-ps_setpolydash -- Sets appearance of a dashed line
+*ps_setpolydash* -- Sets appearance of a dashed line
 
   bool ps_setpolydash(resource psdoc, float arr)~
 
@@ -10,7 +10,7 @@ Sets the length of the black and white portions of a dashed line.
 {arr} {arr} is a list of length elements alternately for the black and white
 portion.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Drawing a dashed line
 

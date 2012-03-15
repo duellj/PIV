@@ -1,4 +1,4 @@
-fbsql_data_seek -- Move internal result pointer
+*fbsql_data_seek* -- Move internal result pointer
 
   bool fbsql_data_seek(resource result, int row_number)~
 
@@ -11,7 +11,7 @@ The next call to |fbsql_fetch_row| would return that row.
 
 {row_number} The row number. Starts at 0.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |fbsql_data_seek| example
 

@@ -1,4 +1,4 @@
-imagerotate -- Rotate an image with a given angle
+*imagerotate* -- Rotate an image with a given angle
 
   resource imagerotate(resource image, float angle, int bgd_color [, int ignore_transparent])~
 
@@ -19,7 +19,7 @@ such as |imagecreatetruecolor|.
 {ignore_transparent} If set and non-zero, transparent colors are ignored
 (otherwise kept).
 
-
+Returns an image resource for the rotated image, or FALSE on failure.
 
 Version Description 5.1.0 {ignore_transparent} was added.
 
@@ -45,6 +45,8 @@ down.
 ?>
 
 The above example will output something similar to:
+
+Output of example : Rotate an image 180 degrees
 
 
 

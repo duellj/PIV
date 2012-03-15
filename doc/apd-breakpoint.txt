@@ -1,4 +1,4 @@
-apd_breakpoint -- Stops the interpreter and waits on a CR from the socket
+*apd_breakpoint* -- Stops the interpreter and waits on a CR from the socket
 
   bool apd_breakpoint(int debug_level)~
 
@@ -15,7 +15,7 @@ to be accurate. ASSIGNMENT_TRACE is not implemented yet.
 To turn on all functional traces (TIMING, FUNCTIONS, ARGS SUMMARY (like strace
 -c)) use the value 99
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Typical session using tcplisten
 

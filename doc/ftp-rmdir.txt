@@ -1,4 +1,4 @@
-ftp_rmdir -- Removes a directory
+*ftp_rmdir* -- Removes a directory
 
   bool ftp_rmdir(resource ftp_stream, string directory)~
 
@@ -9,7 +9,7 @@ Removes the specified {directory} on the FTP server.
 {directory} The directory to delete. This must be either an absolute or
 relative path to an empty directory.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ftp_rmdir| example
 

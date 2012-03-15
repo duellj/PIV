@@ -1,4 +1,4 @@
-mb_strtoupper -- Make a string uppercase
+*mb_strtoupper* -- Make a string uppercase
 
   string mb_strtoupper(string str [, string encoding])~
 
@@ -25,6 +25,18 @@ property, such as a-umlaut (&auml;).
   $str = "Mary Had A Little Lamb and She LOVED It So";
   $str = mb_strtoupper($str);
   echo $str; // Prints MARY HAD A LITTLE LAMB AND SHE LOVED IT SO
+?>
+
+
+
+
+
+|mb_strtoupper| example with non-Latin UTF-8 text
+
+<?php >
+  $str = "Τάχιστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός";
+  $str = mb_strtoupper($str, 'UTF-8');
+  echo $str; // Prints ΤΆΧΙΣΤΗ ΑΛΏΠΗΞ ΒΑΦΉΣ ΨΗΜΈΝΗ ΓΗ, ΔΡΑΣΚΕΛΊΖΕΙ ΥΠΈΡ ΝΩΘΡΟΎ ΚΥΝΌΣ
 ?>
 
 

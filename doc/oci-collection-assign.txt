@@ -1,4 +1,4 @@
-OCI-Collection->assign -- Assigns a value to the collection from another
+*OCI-Collection->assign* -- Assigns a value to the collection from another
 existing collection
 
   bool assign(OCI-Collection from)~
@@ -9,6 +9,6 @@ them.
 
 {from} An instance of OCI-Collection.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

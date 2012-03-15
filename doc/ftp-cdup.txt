@@ -1,4 +1,4 @@
-ftp_cdup -- Changes to the parent directory
+*ftp_cdup* -- Changes to the parent directory
 
   bool ftp_cdup(resource ftp_stream)~
 
@@ -6,7 +6,7 @@ Changes to the parent directory.
 
 {ftp_stream} The link identifier of the FTP connection.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ftp_cdup| example
 

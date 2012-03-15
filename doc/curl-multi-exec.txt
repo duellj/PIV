@@ -1,4 +1,4 @@
-curl_multi_exec -- Run the sub-connections of the current cURL handle
+*curl_multi_exec* -- Run the sub-connections of the current cURL handle
 
   int curl_multi_exec(resource mh, int still_running)~
 
@@ -59,6 +59,6 @@ to a multi handle, and then run them in parallel.
 
 
 
-|curl_multi_init| |curl_exec|
+|curl_multi_init| |curl_multi_select| |curl_exec|
 
 vim:ft=help:

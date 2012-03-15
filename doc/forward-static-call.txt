@@ -1,10 +1,10 @@
-forward_static_call -- Call a static method
+*forward_static_call* -- Call a static method
 
   mixed forward_static_call(callback function [, mixed parameter [, mixed ...]])~
 
 Calls a user defined function or method given by the {function} parameter,
 with the following arguments. This function must be called within a method
-context, et can't be used outside a class.
+context, it can't be used outside a class. It uses the late static binding.
 
 {function} The function or method to be called. This parameter may be an
 array, with the name of the class, and the method, or a string, with a
@@ -19,30 +19,30 @@ Returns the function result, or FALSE on error.
 <?php >
   class A
   {
-  	const NAME = 'A';
-  	public static function test() {
-  	    $args = func_get_args();
-  		echo static::NAME, " ".join(',', $args)." \n";
-  	}
+      const NAME = 'A';
+      public static function test() {
+          $args = func_get_args();
+          echo static::NAME, " ".join(',', $args)." \n";
+      }
   }
   
   class B extends A
   {
-  	const NAME = 'B';
+      const NAME = 'B';
   
-  	public static function test() {
-  		echo self::NAME, "\n";
-  		forward_static_call(array('A', 'test'), 'more', 'args');
-  		forward_static_call( 'test', 'other', 'args');
-  	}
+      public static function test() {
+          echo self::NAME, "\n";
+          forward_static_call(array('A', 'test'), 'more', 'args');
+          forward_static_call( 'test', 'other', 'args');
+      }
   }
   
   B::test('foo');
   
   function test() {
-  	    $args = func_get_args();
-  		echo "C ".join(',', $args)." \n";
-  	}
+          $args = func_get_args();
+          echo "C ".join(',', $args)." \n";
+      }
 ?>
 
 The above example will output:

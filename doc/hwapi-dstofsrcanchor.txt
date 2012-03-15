@@ -1,4 +1,4 @@
-hw_api->dstofsrcanchor -- Returns destination of a source anchor
+*hw_api->dstofsrcanchor* -- Returns destination of a source anchor
 
   hw_api_object dstofsrcanchor(array parameter)~
 

@@ -1,4 +1,4 @@
-settype -- Set the type of a variable
+*settype* -- Set the type of a variable
 
   bool settype(mixed var, string type)~
 
@@ -21,7 +21,7 @@ variant "double")
 
 "null" (since PHP 4.2.0)
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |settype| example
 

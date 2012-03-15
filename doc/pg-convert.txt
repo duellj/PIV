@@ -1,9 +1,9 @@
-pg_convert -- Convert associative array values into suitable for SQL statement
+*pg_convert* -- Convert associative array values into suitable for SQL statement
 
   array pg_convert(resource connection, string table_name, array assoc_array [, int options])~
 
 |pg_convert| checks and converts the values in {assoc_array} into suitable
-values for use in a SQL statement. Precondition for |pg_convert| is the
+values for use in an SQL statement. Precondition for |pg_convert| is the
 existence of a table {table_name} which has at least as many columns as
 {assoc_array} has elements. The fieldnames in {table_name} must match the
 indices in {assoc_array} and the corresponding datatypes must be compatible.

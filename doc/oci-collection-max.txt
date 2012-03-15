@@ -1,4 +1,4 @@
-OCI-Collection->max -- Returns the maximum number of elements in the
+*OCI-Collection->max* -- Returns the maximum number of elements in the
 collection
 
   int max()~

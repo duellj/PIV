@@ -1,11 +1,11 @@
-imagecolorstotal -- Find out the number of colors in an image's palette
+*imagecolorstotal* -- Find out the number of colors in an image's palette
 
   int imagecolorstotal(resource image)~
 
 Returns the number of colors in an image palette.
 
-{ image}An image resource, returned by one of the image creation functions,
-such as |imagecreatetruecolor|.
+{image} An image resource, returned by one of the image creation functions,
+such as |imagecreatefromgif|.
 
 Returns the number of colors in the specified image's palette or 0 for
 truecolor images.

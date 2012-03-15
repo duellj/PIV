@@ -1,6 +1,6 @@
-win32_delete_service -- Deletes a service entry from the SCM database
+*win32_delete_service* -- Deletes a service entry from the SCM database
 
-  int win32_delete_service(string servicename [, string machine])~
+  mixed win32_delete_service(string servicename [, string machine])~
 
 Attempts to delete a service from the SCM database. Administrative privileges
 are required for this to succeed.
@@ -16,7 +16,8 @@ with that name will also fail.
 {machine} The optional machine name. If omitted, the local machine will be
 used.
 
-Returns TRUE on success, or a win32 error code on failure.
+Returns WIN32_NO_ERROR on success, &false; if there is a problem with the
+parameters or a Win32 Error Code on failure.
 
 A |win32_delete_service| example Deletes the dummyphp service.
 
@@ -25,5 +26,7 @@ A |win32_delete_service| example Deletes the dummyphp service.
 ?>
 
 
+
+|win32_create_service| Win32 Error Codes
 
 vim:ft=help:

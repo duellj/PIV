@@ -1,4 +1,4 @@
-DomNode->owner_document -- Returns the document this node belongs to
+*DomNode->owner_document* -- Returns the document this node belongs to
 
   domdocument DomNode->owner_document()~
 

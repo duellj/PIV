@@ -1,4 +1,4 @@
-printer_start_page -- Start a new page
+*printer_start_page* -- Start a new page
 
   bool printer_start_page(resource printer_handle)~
 
@@ -7,6 +7,6 @@ The function creates a new page in the active document. For an example see
 
 {printer_handle} {printer_handle} must be a valid printer handle.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

@@ -1,12 +1,5 @@
-timezone_open -- Returns new DateTimeZone object
+*timezone_open* -- Alias of DateTimeZone::__construct
 
-  DateTimeZone timezone_open(string timezone)~
-
-  DateTimeZone DateTimeZone::__construct(string timezone, string timezone)~
-
-{timezone} Time zone identifier as full name (e.g. Europe/Prague) or
-abbreviation (e.g. CET).
-
-Returns DateTimeZone object on success or FALSE on failure.
+This function is an alias of: DateTimeZone::__construct
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-sybase_set_message_handler -- Sets the handler called when a server message is
+*sybase_set_message_handler* -- Sets the handler called when a server message is
 raised
 
   bool sybase_set_message_handler(callback handler [, resource connection])~
@@ -14,7 +14,7 @@ an ordinary error message.
 
 {connection}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 4.3.5 The {connection} parameter was added.
 

@@ -1,4 +1,4 @@
-enchant_broker_list_dicts -- Returns a list of available dictionaries
+*enchant_broker_list_dicts* -- Returns a list of available dictionaries
 
   mixed enchant_broker_list_dicts(resource broker)~
 
@@ -6,7 +6,7 @@ Returns a list of available dictionaries with their details.
 
 {broker} Broker resource
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 List all available dictionaries for one broker
 

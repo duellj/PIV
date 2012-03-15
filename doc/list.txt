@@ -1,13 +1,13 @@
-list -- Assign variables as if they were an array
+*list* -- Assign variables as if they were an array
 
-  void list(mixed varname [, mixed ...])~
+  array list(mixed varname [, mixed ...])~
 
 Like |array|, this is not really a function, but a language construct. |list|
 is used to assign a list of variables in one operation.
 
 {varname} A variable.
 
-No value is returned.
+Returns the assigned array.
 
 |list| examples
 

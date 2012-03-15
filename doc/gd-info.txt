@@ -1,4 +1,4 @@
-gd_info -- Retrieve information about the currently installed GD library
+*gd_info* -- Retrieve information about the currently installed GD library
 
   array gd_info()~
 
@@ -15,11 +15,13 @@ freetype', 'with TTF library', and 'with unknown library'. This element will
 only be defined if Freetype Support evaluated to TRUE. T1Lib Support boolean
 value. TRUE if T1Lib support is included. GIF Read Support boolean value. TRUE
 if support for reading GIF images is included. GIF Create Support boolean
-value. TRUE if support for creating GIF images is included. JPG Support
-boolean value. TRUE if JPG support is included. PNG Support boolean value.
+value. TRUE if support for creating GIF images is included. JPEG Support
+boolean value. TRUE if JPEG support is included. PNG Support boolean value.
 TRUE if PNG support is included. WBMP Support boolean value. TRUE if WBMP
 support is included. XBM Support boolean value. TRUE if XBM support is
 included.
+
+Previous to PHP 5.3.0, the JPEG Support attribute was named JPG Support.
 
 Using |gd_info|
 
@@ -40,7 +42,7 @@ The above example will output something similar to:
     bool(true)
     ["GIF Create Support"]=>
     bool(false)
-    ["JPG Support"]=>
+    ["JPEG Support"]=>
     bool(false)
     ["PNG Support"]=>
     bool(true)
@@ -51,6 +53,8 @@ The above example will output something similar to:
   }
 
 
+
+Version Description 5.3.0 JPG Support attribute renamed to JPEG Support.
 
 |imagepng| |imagejpeg| |imagegif| |imagewbmp| |imagetypes|
 

@@ -1,4 +1,4 @@
-lchown -- Changes user ownership of symlink
+*lchown* -- Changes user ownership of symlink
 
   bool lchown(string filename, mixed user)~
 
@@ -10,7 +10,7 @@ Only the superuser may change the owner of a symlink.
 
 {user} User name or number.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Changing the owner of a symbolic link
 

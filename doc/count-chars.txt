@@ -1,4 +1,4 @@
-count_chars -- Return information about characters used in a string
+*count_chars* -- Return information about characters used in a string
 
   mixed count_chars(string string [, int mode])~
 
@@ -7,7 +7,7 @@ returns it in various ways.
 
 {string} The examined string.
 
-{mode} The optional parameter {mode} defaults to 0.
+{mode} See return values.
 
 Depending on {mode} |count_chars| returns one of the following: 0 - an array
 with the byte-value as key and the frequency of every byte as value.

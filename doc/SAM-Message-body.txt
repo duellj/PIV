@@ -1,4 +1,4 @@
-SAMMessage->body -- The body of the message.
+*SAMMessage->body* -- The body of the message.
 
 The "body" property contains the actual body of the message. It may not always
 be set.

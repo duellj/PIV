@@ -1,4 +1,4 @@
-imagesetbrush -- Set the brush image for line drawing
+*imagesetbrush* -- Set the brush image for line drawing
 
   bool imagesetbrush(resource image, resource brush)~
 
@@ -11,7 +11,7 @@ such as |imagecreatetruecolor|.
 
 {brush} An image resource.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagesetbrush| example
 
@@ -41,6 +41,8 @@ Returns TRUE on success or FALSE on failure.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagesetbrush()
 
 
 

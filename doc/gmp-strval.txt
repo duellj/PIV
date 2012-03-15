@@ -1,4 +1,4 @@
-gmp_strval -- Convert GMP number to string
+*gmp_strval* -- Convert GMP number to string
 
   string gmp_strval(resource gmpnumber [, int base])~
 
@@ -11,9 +11,15 @@ It can be either a GMP number resource, or a numeric string given that it is
 possible to convert the latter to a number.
 
 {base} The base of the returned number. The default base is 10. Allowed values
-for the base are from 2 to 36.
+for the base are from 2 to 62 and -2 to -36.
 
 The number, as a string.
+
+Version Description 5.3.2 The {base} was extended from 2 to 36, to 2 to 62 and
+-2 to -36.
+
+To use the extended base introduced in PHP 5.3.2, then PHP must be compiled
+against GMP 4.2.0 or greater.
 
 Converting a GMP number to a string
 

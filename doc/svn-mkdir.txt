@@ -1,12 +1,12 @@
-svn_mkdir -- Creates a directory in a working copy or repository
+*svn_mkdir* -- Creates a directory in a working copy or repository
 
-  bool svn_mkdir(string path)~
+  bool svn_mkdir(string path [, string log_message])~
 
 Creates a directory in a working copy or repository.
 
 {path} The path to the working copy or repository.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |svn_add| |svn_copy|
 

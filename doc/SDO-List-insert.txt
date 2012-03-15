@@ -1,4 +1,4 @@
-SDO_List::insert -- Insert into a list
+*SDO_List::insert* -- Insert into a list
 
   void SDO_List::insert(mixed value [, int index])~
 

@@ -1,10 +1,10 @@
-maxdb_stmt->errno -- Returns the error code for the most recent statement call
+*maxdb_stmt->errno* -- Returns the error code for the most recent statement call
 
-Procedural style :
+Procedural style
 
   int maxdb_stmt_errno(resource stmt)~
 
-Object oriented style (property):
+Object oriented style
 
 For the statement specified by stmt, |maxdb_stmt_errno| returns the error code
 for the most recently invoked statement function that can succeed or fail.

@@ -1,4 +1,4 @@
-fbsql_connect -- Open a connection to a FrontBase Server
+*fbsql_connect* -- Open a connection to a FrontBase Server
 
   resource fbsql_connect([string hostname [, string username [, string password]]])~
 
@@ -11,11 +11,11 @@ opened link will be returned.
 The link to the server will be closed as soon as the execution of the script
 ends, unless it's closed earlier by explicitly calling |fbsql_close|.
 
-{hostname} The server host name. Defaults to 'NULL'.
+{hostname} The server host name.
 
-{username} The user name for the connection. Defaults to _SYSTEM.
+{username} The user name for the connection.
 
-{password} The password for the connection. Defaults to the empty string.
+{password} The password for the connection.
 
 Returns a positive FrontBase link identifier on success, or FALSE on errors.
 

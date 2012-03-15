@@ -1,4 +1,4 @@
-mysql_field_seek -- Set result pointer to a specified field offset
+*mysql_field_seek* -- Set result pointer to a specified field offset
 
   bool mysql_field_seek(resource result, int field_offset)~
 
@@ -12,7 +12,7 @@ call to |mysql_query|.
 { field_offset}The numerical field offset. The {field_offset} starts at 0. If
 {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |mysql_fetch_field|
 

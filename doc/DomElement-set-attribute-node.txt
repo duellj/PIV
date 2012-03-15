@@ -1,4 +1,4 @@
-DomElement->set_attribute_node -- Adds new attribute
+*DomElement->set_attribute_node* -- Adds new attribute
 
   DomNode set_attribute_node(DomNode attr)~
 

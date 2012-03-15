@@ -1,27 +1,26 @@
-session_start -- Initialize session data
+*session_start* -- Initialize session data
 
   bool session_start()~
 
-|session_start| creates a session or resumes the current one based on the
-current session id that's being passed via a request, such as GET, POST, or a
-cookie.
+|session_start| creates a session or resumes the current one based on a
+session identifier passed via a GET or POST request, or passed via a cookie.
 
-If you want to use a named session, you must call |session_name| before
-calling |session_start|.
+To use a named session, call |session_name| before calling |session_start|.
 
-|session_start| will register internal output handler for URL rewriting when
-trans-sid is enabled. If a user uses ob_gzhandler or like with |ob_start|, the
-order of output handler is important for proper output. For example, user must
-register ob_gzhandler before session start.
+When session.use_trans_sid is enabled, the |session_start| function will
+register an internal output handler for URL rewriting.
 
-This function returns TRUE if session was started with success otherwise
+If a user uses ob_gzhandler or similar with |ob_start|, the function order is
+important for proper output. For example, ob_gzhandler must be registered
+before starting the session.
+
+This function returns TRUE if a session was successfully started, otherwise
 FALSE.
 
-Version Description 5.3.0 If session fails to start for some reason, then
-FALSE is returned where previously TRUE always was returned. 4.3.3 As of now,
-calling |session_start| while the session has already been started will result
-in an error of level E_NOTICE. Also, the second session start will simply be
-ignored.
+Version Description 5.3.0 If a session fails to start, then FALSE is returned.
+Previously TRUE was returned. 4.3.3 As of PHP 4.3.3, calling |session_start|
+after the session was previously started will result in an error of level
+E_NOTICE. Also, the second session start will simply be ignored.
 
 A session example: page1.php
 
@@ -72,13 +71,13 @@ A session example: page2.php
 
 
 
-If you are using cookie-based sessions, you must call |session_start| before
-anything is outputted to the browser.
+To use cookie-based sessions, |session_start| must be called before outputing
+anything to the browser.
 
-Use of zlib.output_compression is recommended rather than |ob_gzhandler|
+Use of zlib.output_compression is recommended instead of |ob_gzhandler|
 
-This function will send out several HTTP headers depending on the
-configuration. See |session_cache_limiter| to customize these headers.
+This function sends out several HTTP headers depending on the configuration.
+See |session_cache_limiter| to customize these headers.
 
 $_SESSION The session.auto_start configuration directive |session_id|
 

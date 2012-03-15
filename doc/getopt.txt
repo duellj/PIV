@@ -1,4 +1,4 @@
-getopt -- Gets options from the command line argument list
+*getopt* -- Gets options from the command line argument list
 
   array getopt(string options [, array longopts])~
 
@@ -9,6 +9,8 @@ matched against options passed to the script starting with a single hyphen
 (-).
 
 For example, an option string "x" recognizes an option -x.
+
+Only a-z, A-Z and 0-9 are allowed.
 
 {longopts} An array of options. Each element in this array will be used as
 option strings and matched against options passed to the script starting with
@@ -32,6 +34,9 @@ option).
 
 This function will return an array of option / argument pairs or FALSE on
 failure.
+
+The parsing of options will end at the first non-option found, anything that
+follows is discarded.
 
 Version Description 5.3.0 Added support for "=" as argument/value separator.
 5.3.0 Added support for optional values (specified with "::"). 5.3.0 This

@@ -1,4 +1,4 @@
-pspell_config_mode -- Change the mode number of suggestions returned
+*pspell_config_mode* -- Change the mode number of suggestions returned
 
   bool pspell_config_mode(int dictionary_link, int mode)~
 
@@ -16,7 +16,7 @@ PSPELL_NORMAL - Normal mode (more suggestions)
 
 PSPELL_BAD_SPELLERS - Slow mode (a lot of suggestions)
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |pspell_config_mode| Example
 

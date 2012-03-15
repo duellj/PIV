@@ -1,4 +1,4 @@
-mb_strpos -- Find position of first occurrence of string in a string
+*mb_strpos* -- Find position of first occurrence of string in a string
 
   int mb_strpos(string haystack, string needle [, int offset [, string encoding]])~
 
@@ -10,7 +10,8 @@ so on.
 
 {haystack} The string being checked.
 
-{needle} The position counted from the beginning of {haystack}.
+{needle} The string to find in {haystack}. In contrast with |strpos|, numeric
+values are not applied as the ordinal value of a character.
 
 {offset} The search offset. If it is not specified, 0 is used.
 

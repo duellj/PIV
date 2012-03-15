@@ -1,4 +1,4 @@
-gzgetss -- Get line from gz-file pointer and strip HTML tags
+*gzgetss* -- Get line from gz-file pointer and strip HTML tags
 
   string gzgetss(resource zp, int length [, string allowable_tags])~
 
@@ -14,8 +14,6 @@ successfully opened by |gzopen|.
 should not be stripped.
 
 The uncompressed and striped string, or FALSE on error.
-
-Version Description 4.0.0 {allowable_tags} was added.
 
 |gzgetss| example
 

@@ -1,4 +1,4 @@
-mssql_pconnect -- Open persistent MS SQL connection
+*mssql_pconnect* -- Open persistent MS SQL connection
 
   resource mssql_pconnect([string servername [, string username [, string password [, bool new_link]]]])~
 
@@ -35,7 +35,7 @@ error.
 |mssql_pconnect| using the {new_link} parameter
 
 <?php >
-  // Connect to the database server
+  // Connect to MSSQL and select the database
   $link1 = mssql_pconnect('MANGO\SQLEXPRESS', 'sa', 'phpfi');
   mssql_select_db('php', $link1);
   

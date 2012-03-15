@@ -1,4 +1,4 @@
-ps_translate -- Sets translation
+*ps_translate* -- Sets translation
 
   bool ps_translate(resource psdoc, float x, float y)~
 
@@ -10,7 +10,7 @@ Sets a new initial point of the coordinate system.
 
 {y} y-coordinate of the origin of the translated coordinate system.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Translation of the coordinate system
 
@@ -63,7 +63,7 @@ The above example demonstrates two possible ways to place a graphic (in this
 case just a rectangle) at any position on the page, while the graphic itself
 uses its own coordinate system. The trick is to change the origin of the
 current coordinate system before drawing the rectangle. The translation has to
-undone after the graphic has been drawn.
+be undone after the graphic has been drawn.
 
 On the second page a slightly different and more elegant approach is applied.
 Instead of undoing the translation with a second call of |ps_translate| the

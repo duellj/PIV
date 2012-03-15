@@ -1,4 +1,4 @@
-ps_setfont -- Sets font to use for following output
+*ps_setfont* -- Sets font to use for following output
 
   bool ps_setfont(resource psdoc, int fontid, float size)~
 
@@ -11,7 +11,7 @@ without setting a font results in an error.
 
 {size} The size of the font.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_findfont| |ps_set_text_pos| for an example.
 

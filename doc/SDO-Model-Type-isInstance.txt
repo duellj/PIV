@@ -1,4 +1,4 @@
-SDO_Model_Type::isInstance -- Test for an SDO_DataObject being an instance of
+*SDO_Model_Type::isInstance* -- Test for an SDO_DataObject being an instance of
 this SDO_Model_Type
 
   bool SDO_Model_Type::isInstance(SDO_DataObject data_object)~

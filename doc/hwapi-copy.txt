@@ -1,4 +1,4 @@
-hw_api->copy -- Copies physically
+*hw_api->copy* -- Copies physically
 
   hw_api_content copy(array parameter)~
 

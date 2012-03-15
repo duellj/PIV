@@ -1,4 +1,4 @@
-is_subclass_of -- Checks if the object has this class as one of its parents
+*is_subclass_of* -- Checks if the object has this class as one of its parents
 
   bool is_subclass_of(mixed object, string class_name)~
 
@@ -62,6 +62,9 @@ The above example will output:
   yes, WidgetFactory_Child is a subclass of WidgetFactory
 
 
+
+Using this function will use any registered autoloaders if the class is not
+already known.
 
 |get_class| |get_parent_class| |is_a|
 

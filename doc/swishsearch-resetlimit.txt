@@ -1,4 +1,4 @@
-SwishSearch->resetLimit -- Reset the search limits
+*SwishSearch->resetLimit* -- Reset the search limits
 
   void SwishSearch->resetLimit()~
 

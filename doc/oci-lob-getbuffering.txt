@@ -1,4 +1,4 @@
-OCI-Lob->getBuffering -- Returns current state of buffering for the large
+*OCI-Lob->getBuffering* -- Returns current state of buffering for the large
 object
 
   bool getBuffering()~

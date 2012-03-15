@@ -1,4 +1,4 @@
-SQLiteDatabase->arrayQuery -- Execute a query against a given database and
+*SQLiteDatabase->arrayQuery* -- Execute a query against a given database and
 returns an array
 
   array sqlite_array_query(resource dbhandle, string query [, int result_type [, bool decode_binary]])~
@@ -19,6 +19,8 @@ you have more data than that, it is recommended that you write your scripts to
 use |sqlite_unbuffered_query| instead for more optimal performance.
 
 {query} The query to be executed.
+
+Data inside the query should be properly escaped.
 
 {dbhandle} The SQLite Database resource; returned from |sqlite_open| when used
 procedurally. This parameter is not required when using the object-oriented

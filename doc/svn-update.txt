@@ -1,4 +1,4 @@
-svn_update -- Update working copy
+*svn_update* -- Update working copy
 
   int svn_update(string path [, int revno [, bool recurse]])~
 
@@ -13,7 +13,7 @@ directory, use |realpath| or dirname(__FILE__).
 
 {revno} Revision number to update to, default is SVN_REVISION_HEAD.
 
-{recurse} Whether or not to recursively update directories, default is TRUE.
+{recurse} Whether or not to recursively update directories.
 
 Returns new revision number on success, returns FALSE on failure.
 

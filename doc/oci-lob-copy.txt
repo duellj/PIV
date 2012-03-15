@@ -1,4 +1,4 @@
-oci_lob_copy -- Copies large object
+*oci_lob_copy* -- Copies large object
 
   bool oci_lob_copy(OCI-Lob lob_to, OCI-Lob lob_from [, int length])~
 
@@ -14,6 +14,6 @@ LOB, use |oci_lob_seek| to move LOB internal pointers.
 
 {length} Indicates the length of data to be copied.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

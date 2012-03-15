@@ -1,12 +1,11 @@
-filter_input_array -- Gets external variables and optionally filters them
+*filter_input_array* -- Gets external variables and optionally filters them
 
   mixed filter_input_array(int type [, mixed definition])~
 
 This function is useful for retrieving many values without repetitively
 calling |filter_input|.
 
-{type} One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, INPUT_ENV,
-INPUT_SESSION, or INPUT_REQUEST.
+{type} One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV.
 
 {definition} An array defining the arguments. A valid key is a string
 containing a variable name and a valid value is either a filter type, or an
@@ -93,6 +92,9 @@ The above example will output:
   }
 
 
+
+There is no REQUEST_TIME key in INPUT_SERVER array because it is inserted into
+the $_SERVER later.
 
 |filter_input| |filter_var_array|
 

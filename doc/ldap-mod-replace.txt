@@ -1,4 +1,4 @@
-ldap_mod_replace -- Replace attribute values with new ones
+*ldap_mod_replace* -- Replace attribute values with new ones
 
   bool ldap_mod_replace(resource link_identifier, string dn, array entry)~
 
@@ -12,7 +12,7 @@ Object-level modifications are done by the |ldap_modify| function.
 
 {entry}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 This function is binary-safe.
 

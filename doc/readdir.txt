@@ -1,4 +1,4 @@
-readdir -- Read entry from directory handle
+*readdir* -- Read entry from directory handle
 
   string readdir([resource dir_handle])~
 
@@ -9,7 +9,7 @@ returned in the order in which they are stored by the filesystem.
 If the directory handle is not specified, the last link opened by |opendir| is
 assumed.
 
-Returns the filename on success, or FALSE on failure.
+Returns the filename on success or FALSE on failure.
 
 This function may return Boolean FALSE, but may also return a non-Boolean
 value which evaluates to FALSE, such as 0 or "". Please read the section on
@@ -24,8 +24,6 @@ directory entry whose name evaluates to FALSE will stop the loop (e.g. a
 directory named "0").
 
 <?php >
-  // Note that !== did not exist until 4.0.0-RC2
-  
   if ($handle = opendir('/path/to/files')) {
       echo "Directory handle: $handle\n";
       echo "Files:\n";

@@ -1,4 +1,4 @@
-SAMConnection->errno -- Contains the unique numeric error code of the last
+*SAMConnection->errno* -- Contains the unique numeric error code of the last
 executed SAM operation.
 
 Contains the numeric error code of the last executed SAM operation on this

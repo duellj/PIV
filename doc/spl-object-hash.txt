@@ -1,4 +1,4 @@
-spl_object_hash -- Return hash id for given object
+*spl_object_hash* -- Return hash id for given object
 
   string spl_object_hash(object obj)~
 
@@ -7,8 +7,8 @@ as a hash key for storing objects or for identifying an object.
 
 {object} Any object.
 
-A string that is unique for each object and is always the same for the same
-object.
+A string that is unique for each currently existing object and is always the
+same for each object.
 
 A |spl_object_hash| example
 
@@ -20,5 +20,7 @@ A |spl_object_hash| example
 
 
 
+
+When an object is destroyed, its hash may be reused for other objects.
 
 vim:ft=help:

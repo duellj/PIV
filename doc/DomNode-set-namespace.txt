@@ -1,4 +1,4 @@
-DomNode->set_namespace -- Sets namespace of a node
+*DomNode->set_namespace* -- Sets namespace of a node
 
   void DomNode->set_namespace(string uri [, string prefix])~
 

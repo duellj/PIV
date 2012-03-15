@@ -1,4 +1,4 @@
-px_update_record -- Updates record in paradox database
+*px_update_record* -- Updates record in paradox database
 
   bool px_update_record(resource pxdoc, array data, int num)~
 
@@ -19,7 +19,7 @@ This function is only available if pxlib >= 0.6.0 is used.
 {num} The record number is an artificial number counting records in the order
 as they are stored in the database. The first record has number 0.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |px_insert_record|
 

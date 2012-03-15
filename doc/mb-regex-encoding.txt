@@ -1,4 +1,4 @@
-mb_regex_encoding -- Returns current encoding for multibyte regex as string
+*mb_regex_encoding* -- Returns current encoding for multibyte regex as string
 
   mixed mb_regex_encoding([string encoding])~
 

@@ -1,4 +1,4 @@
-xml_set_object -- Use XML Parser within an object
+*xml_set_object* -- Use XML Parser within an object
 
   bool xml_set_object(resource parser, object object)~
 
@@ -6,11 +6,11 @@ This function allows to use {parser} inside {object}. All callback functions
 could be set with |xml_set_element_handler| etc and assumed to be methods of
 {object}.
 
-{parser}
+{parser} A reference to the XML parser to use inside the object.
 
-{object}
+{object} The object where to use the XML parser.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |xml_set_object| example
 

@@ -1,4 +1,4 @@
-DomDocumentType->notations -- Returns list of notations
+*DomDocumentType->notations* -- Returns list of notations
 
   array notations()~
 

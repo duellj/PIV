@@ -1,4 +1,4 @@
-ncurses_erase -- Erase terminal screen
+*ncurses_erase* -- Erase terminal screen
 
   bool ncurses_erase()~
 
@@ -10,7 +10,7 @@ Fills the terminal screen with blanks.
 
 Created blanks have the current background rendition, set by |ncurses_bkgd|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ncurses_bkgd| |ncurses_clear|
 

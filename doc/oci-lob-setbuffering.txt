@@ -1,4 +1,4 @@
-OCI-Lob->setBuffering -- Changes current state of buffering for the large
+*OCI-Lob->setBuffering* -- Changes current state of buffering for the large
 object
 
   bool setBuffering(bool on_off)~
@@ -13,7 +13,7 @@ finished working with the large object.
 
 {on_off} TRUE for on and FALSE for off.
 
-Returns TRUE on success or FALSE on failure. Repeated calls to this method
+Returns TRUE on success or &false; on failure. Repeated calls to this method
 with the same flag will return TRUE.
 
 vim:ft=help:

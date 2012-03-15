@@ -1,4 +1,4 @@
-stat -- Gives information about a file
+*stat* -- Gives information about a file
 
   array stat(string filename)~
 
@@ -16,8 +16,8 @@ mode 3 nlink number of links 4 uid userid of owner * 5 gid groupid of owner *
 6 rdev device type, if inode device 7 size size in bytes 8 atime time of last
 access (Unix timestamp) 9 mtime time of last modification (Unix timestamp) 10
 ctime time of last inode change (Unix timestamp) 11 blksize blocksize of
-filesystem IO ** 12 blocks number of blocks allocated ** * On Windows this
-will always be 0.
+filesystem IO ** 12 blocks number of 512-byte blocks allocated ** * On Windows
+this will always be 0.
 
 ** Only valid on systems supporting the st_blksize type - other systems (e.g.
 Windows) return -1.
@@ -37,7 +37,7 @@ each parameter
   $stat = stat('C:\php\php.exe');
   
   /*
-   * Print file access file, this is the same 
+   * Print file access time, this is the same 
    * as calling fileatime()
    */
   echo 'Access time: ' . $stat['atime'];
@@ -50,6 +50,7 @@ each parameter
   
   /* Print the device number */
   echo 'Device number: ' . $stat['dev'];
+?>
 
 
 
@@ -59,29 +60,23 @@ Using |stat| information together with |touch|
 
 <?php >
   /* Get file stat */
-  $stat = @stat('C:\php\php.exe');
+  $stat = stat('C:\php\php.exe');
   
-  /* Did we failed to get stat information ? */
-  if(!$stat)
-  {
-      echo 'Stat call failed...';
-  }
-  else
-  {
+  /* Did we failed to get stat information? */
+  if (!$stat) {
+      echo 'stat() call failed...';
+  } else {
       /*
        * We want the access time to be 1 week 
-       * before the current access time.
+       * after the current access time.
        */
       $atime = $stat['atime'] + 604800;
   
       /* Touch the file */
-      if(!@touch('some_file.txt', time(), $atime))
-      {
+      if (!touch('some_file.txt', time(), $atime)) {
           echo 'Failed to touch file...';
-      }
-      else
-      {
-          echo 'Touch returned success...';
+      } else {
+          echo 'touch() returned success...';
       }
   }
 ?>

@@ -1,4 +1,4 @@
-rename_function -- Renames orig_name to new_name in the global function table
+*rename_function* -- Renames orig_name to new_name in the global function table
 
   bool rename_function(string original_name, string new_name)~
 
@@ -9,7 +9,7 @@ temporarily overriding built-in functions.
 
 {new_name} The new name for the {original_name} function.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |rename_function| example
 

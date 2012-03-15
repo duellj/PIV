@@ -1,4 +1,4 @@
-hw_api_object->assign -- Clones object
+*hw_api_object->assign* -- Clones object
 
   bool assign(array parameter)~
 
@@ -6,6 +6,6 @@ Clones the attributes of an object.
 
 {parameter}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

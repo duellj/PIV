@@ -1,4 +1,4 @@
-ftp_nb_get -- Retrieves a file from the FTP server and writes it to a local
+*ftp_nb_get* -- Retrieves a file from the FTP server and writes it to a local
 file (non-blocking)
 
   int ftp_nb_get(resource ftp_stream, string local_file, string remote_file, int mode [, int resumepos])~
@@ -19,7 +19,7 @@ exists).
 
 {mode} The transfer mode. Must be either FTP_ASCII or FTP_BINARY.
 
-{resumepos}
+{resumepos} The position in the remote file to start downloading from.
 
 Returns FTP_FAILED or FTP_FINISHED or FTP_MOREDATA.
 

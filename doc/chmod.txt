@@ -1,4 +1,4 @@
-chmod -- Changes file mode
+*chmod* -- Changes file mode
 
   bool chmod(string filename, int mode)~
 
@@ -39,7 +39,7 @@ chmod' and 'man 2 chmod'.
   chmod("/somedir/somefile", 0750);
 ?>
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 The current user is the user under which PHP runs. It is probably not the same
 user you use for normal shell or FTP access. The mode can be changed only by

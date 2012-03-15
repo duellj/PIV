@@ -1,4 +1,4 @@
-kadm5_delete_principal -- Deletes a kerberos principal
+*kadm5_delete_principal* -- Deletes a kerberos principal
 
   bool kadm5_delete_principal(resource handle, string principal)~
 
@@ -8,7 +8,7 @@ Removes the {principal} from the Kerberos database.
 
 {principal} The removed principal.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |kadm5_delete_principal| example
 

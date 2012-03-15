@@ -1,4 +1,4 @@
-simplexml_import_dom -- Get a SimpleXMLElement object from a DOM node.
+*simplexml_import_dom* -- Get a SimpleXMLElement object from a DOM node.
 
   SimpleXMLElement simplexml_import_dom(DOMNode node [, string class_name])~
 
@@ -25,10 +25,12 @@ Importing DOM
   
   $s = simplexml_import_dom($dom);
   
-  echo $s->book[0]->title; // blah
+  echo $s->book[0]->title;
 ?>
 
+The above example will output:
 
+  blah
 
 
 

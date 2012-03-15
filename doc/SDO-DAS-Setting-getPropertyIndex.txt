@@ -1,4 +1,4 @@
-SDO_DAS_Setting::getPropertyIndex -- Get the property index for a changed
+*SDO_DAS_Setting::getPropertyIndex* -- Get the property index for a changed
 property
 
   int SDO_DAS_Setting::getPropertyIndex()~

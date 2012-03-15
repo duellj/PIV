@@ -1,4 +1,4 @@
-SDO_DAS_DataFactory::getDataFactory -- Get a data factory instance
+*SDO_DAS_DataFactory::getDataFactory* -- Get a data factory instance
 
   SDO_DAS_DataFactory SDO_DAS_DataFactory::getDataFactory()~
 

@@ -1,4 +1,4 @@
-odbc_binmode -- Handling of binary column data
+*odbc_binmode* -- Handling of binary column data
 
   bool odbc_binmode(resource result_id, int mode)~
 
@@ -31,6 +31,6 @@ ODBC_BINMODE_RETURN: Return as is
 
 ODBC_BINMODE_CONVERT: Convert to char and return
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

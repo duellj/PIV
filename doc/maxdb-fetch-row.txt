@@ -1,12 +1,12 @@
-result->fetch_row -- Get a result row as an enumerated array
+*maxdb_result::fetch_row* -- Get a result row as an enumerated array
 
-Procedural style:
+Procedural style
 
   mixed maxdb_fetch_row(resource result)~
 
-Object oriented style (method):
+Object oriented style
 
-  mixed fetch_row(resource result)~
+  mixed maxdb_result::fetch_row(resource result)~
 
 Returns an array that corresponds to the fetched row, or NULL if there are no
 more rows.

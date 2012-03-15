@@ -1,4 +1,4 @@
-SQLiteDatabase->exec -- Executes a result-less query against a given database
+*SQLiteDatabase->exec* -- Executes a result-less query against a given database
 
   bool sqlite_exec(resource dbhandle, string query [, string error_msg])~
 
@@ -20,6 +20,8 @@ procedurally. This parameter is not required when using the object-oriented
 method.
 
 {query} The query to be executed.
+
+Data inside the query should be properly escaped.
 
 {error_msg} The specified variable will be filled if an error occurs. This is
 specially important because SQL syntax errors can't be fetched using the

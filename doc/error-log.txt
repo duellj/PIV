@@ -1,8 +1,8 @@
-error_log -- Send an error message somewhere
+*error_log* -- Send an error message somewhere
 
   bool error_log(string message [, int message_type [, string destination [, string extra_headers]]])~
 
-Sends an error message to the web server's error log, a TCP port or to a file.
+Sends an error message to the web server's error log or to a file.
 
 {message} The error message that should be logged.
 
@@ -24,7 +24,7 @@ parameter as described above.
 {extra_headers} The extra headers. It's used when the {message_type} parameter
 is set to 1. This message type uses the same internal function as |mail| does.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 5.2.7 The possible value of 4 was added to {message_type}.
 

@@ -1,4 +1,4 @@
-DomDocument->doctype -- Returns the document type
+*DomDocument->doctype* -- Returns the document type
 
   domdocumenttype DomDocument->doctype()~
 

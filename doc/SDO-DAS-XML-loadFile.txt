@@ -1,4 +1,4 @@
-SDO_DAS_XML::loadFile -- Returns SDO_DAS_XML_Document object for a given path
+*SDO_DAS_XML::loadFile* -- Returns SDO_DAS_XML_Document object for a given path
 to xml instance document
 
   SDO_XMLDocument SDO_DAS_XML::loadFile(string xml_file)~

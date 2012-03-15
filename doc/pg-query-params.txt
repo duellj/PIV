@@ -1,4 +1,4 @@
-pg_query_params -- Submits a command to the server and waits for the result,
+*pg_query_params* -- Submits a command to the server and waits for the result,
 with the ability to pass parameters separately from the SQL command text.
 
   resource pg_query_params([resource connection, string query, array params])~
@@ -33,7 +33,7 @@ parameters are used, they are referred to as $1, $2, etc.
 placeholders in the original prepared query string. The number of elements in
 the array must match the number of placeholders.
 
-A query result resource on success, or FALSE on failure.
+A query result resource on success or FALSE on failure.
 
 Using |pg_query_params|
 

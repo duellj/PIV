@@ -1,12 +1,12 @@
-result->fetch_field_direct -- Fetch meta-data for a single field
+*maxdb_result::fetch_field_direct* -- Fetch meta-data for a single field
 
-Procedural style:
+Procedural style
 
   mixed maxdb_fetch_field_direct(resource result, int fieldnr)~
 
-Object oriented style (method):
+Object oriented style
 
-  mixed fetch_field_direct(resource result, int fieldnr, int fieldnr)~
+  mixed maxdb_result::fetch_field_direct(resource result, int fieldnr, int fieldnr)~
 
 |maxdb_fetch_field_direct| returns an resource which contains field definition
 information from specified resultset. The value of fieldnr must be in the

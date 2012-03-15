@@ -1,4 +1,4 @@
-fbsql_drop_db -- Drop (delete) a FrontBase database
+*fbsql_drop_db* -- Drop (delete) a FrontBase database
 
   bool fbsql_drop_db(string database_name [, resource link_identifier])~
 
@@ -14,7 +14,7 @@ If optional and not specified, the function will try to find an open link to
 the FrontBase server and if no such link is found it will try to create one as
 if |fbsql_connect| was called with no arguments.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |fbsql_create_db|
 

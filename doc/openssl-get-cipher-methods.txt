@@ -1,6 +1,6 @@
-openssl_get_cipher_methods -- Gets available cipher methods
+*openssl_get_cipher_methods* -- Gets available cipher methods
 
-  ReturnType openssl_get_cipher_methods([bool aliases])~
+  array openssl_get_cipher_methods([bool aliases])~
 
 Gets a list of available cipher methods.
 

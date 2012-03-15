@@ -1,4 +1,4 @@
-DomDocument->dump_mem -- Dumps the internal XML tree back into a string
+*DomDocument->dump_mem* -- Dumps the internal XML tree back into a string
 
   string DomDocument->dump_mem([bool format [, string encoding]])~
 

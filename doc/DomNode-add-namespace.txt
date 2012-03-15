@@ -1,4 +1,4 @@
-DomNode->add_namespace -- Adds a namespace declaration to a node
+*DomNode->add_namespace* -- Adds a namespace declaration to a node
 
   bool add_namespace(string uri, string prefix)~
 
@@ -10,7 +10,7 @@ This method is not part of the DOM specification.
 
 {prefix} The namespace prefix of the node.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 You can set the namespace URI and prefix of a DOMElement or a DOMAttr at
 creation time by using or .

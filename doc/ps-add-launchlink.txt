@@ -1,4 +1,4 @@
-ps_add_launchlink -- Adds link which launches file
+*ps_add_launchlink* -- Adds link which launches file
 
   bool ps_add_launchlink(resource psdoc, float llx, float lly, float urx, float ury, string filename)~
 
@@ -23,7 +23,7 @@ Ghostview.
 
 {filename} The path of the program to be started, when the link is clicked on.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_add_locallink| |ps_add_pdflink| |ps_add_weblink|
 

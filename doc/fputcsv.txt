@@ -1,4 +1,4 @@
-fputcsv -- Format line as CSV and write to file pointer
+*fputcsv* -- Format line as CSV and write to file pointer
 
   int fputcsv(resource handle, array fields [, string delimiter [, string enclosure]])~
 
@@ -11,32 +11,36 @@ opened by |fopen| or |fsockopen| (and not yet closed by |fclose|).
 {fields} An array of values.
 
 {delimiter} The optional {delimiter} parameter sets the field delimiter (one
-character only). Defaults as a comma: ,.
+character only).
 
 {enclosure} The optional {enclosure} parameter sets the field enclosure (one
-character only) and defaults to a double quotation mark: ".
+character only).
 
-Returns the length of the written string, or FALSE on failure.
+Returns the length of the written string or FALSE on failure.
 
 |fputcsv| example
 
 <?php >
   $list = array (
-      'aaa,bbb,ccc,dddd',
-      '123,456,789',
-      '"aaa","bbb"'
+      array('aaa', 'bbb', 'ccc', 'dddd'),
+      array('123', '456', '789'),
+      array('"aaa"', '"bbb"')
   );
   
   $fp = fopen('file.csv', 'w');
   
-  foreach ($list as $line) {
-      fputcsv($fp, split(',', $line));
+  foreach ($list as $fields) {
+      fputcsv($fp, $fields);
   }
   
   fclose($fp);
 ?>
 
+The above example will write the following to file.csv:
 
+  aaa,bbb,ccc,dddd
+  123,456,789
+  """aaa""","""bbb"""
 
 
 

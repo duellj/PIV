@@ -1,4 +1,4 @@
-mysql_connect -- Open a connection to a MySQL Server
+*mysql_connect* -- Open a connection to a MySQL Server
 
   resource mysql_connect([string server [, string username [, string password [, bool new_link [, int client_flags]]]]])~
 
@@ -32,7 +32,7 @@ MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE or MYSQL_CLIENT_INTERACTIVE.
 Read the section about for further information. In SQL safe mode, this
 parameter is ignored.
 
-Returns a MySQL link identifier on success, or FALSE on failure.
+Returns a MySQL link identifier on success or FALSE on failure.
 
 Version Description 4.3.0 Added the {client_flags} parameter. 4.2.0 Added the
 {new_link} parameter.

@@ -1,4 +1,4 @@
-SDO_DAS_XML_Document::getRootDataObject -- Returns the root SDO_DataObject
+*SDO_DAS_XML_Document::getRootDataObject* -- Returns the root SDO_DataObject
 
   SDO_DataObject SDO_DAS_XML_Document::getRootDataObject()~
 

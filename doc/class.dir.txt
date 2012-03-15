@@ -1,4 +1,4 @@
-dir -- Return an instance of the Directory class
+*dir* -- Return an instance of the Directory class
 
   string Directory::read()~
 

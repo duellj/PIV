@@ -1,11 +1,12 @@
-array_fill -- Fill an array with values
+*array_fill* -- Fill an array with values
 
   array array_fill(int start_index, int num, mixed value)~
 
 Fills an array with {num} entries of the value of the {value} parameter, keys
 starting at the {start_index} parameter.
 
-{start_index} The first index of the returned array
+{start_index} The first index of the returned array. Supports non-negative
+indexes only.
 
 {num} Number of elements to insert
 

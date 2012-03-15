@@ -1,4 +1,4 @@
-mb_strtolower -- Make a string lowercase
+*mb_strtolower* -- Make a string lowercase
 
   string mb_strtolower(string str [, string encoding])~
 
@@ -25,6 +25,18 @@ property, such as A-umlaut (&Auml;).
   $str = "Mary Had A Little Lamb and She LOVED It So";
   $str = mb_strtolower($str);
   echo $str; // Prints mary had a little lamb and she loved it so
+?>
+
+
+
+
+
+|mb_strtolower| example with non-Latin UTF-8 text
+
+<?php >
+  $str = "Τάχιστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός";
+  $str = mb_strtolower($str, 'UTF-8');
+  echo $str; // Prints τάχιστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός
 ?>
 
 

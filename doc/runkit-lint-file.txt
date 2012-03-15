@@ -1,4 +1,4 @@
-runkit_lint_file -- Check the PHP syntax of the specified file
+*runkit_lint_file* -- Check the PHP syntax of the specified file
 
   bool runkit_lint_file(string filename)~
 
@@ -13,7 +13,7 @@ README file included in the runkit package for more information.
 
 {filename} File containing PHP Code to be lint checked
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |runkit_lint|
 

@@ -1,4 +1,4 @@
-imagestring -- Draw a string horizontally
+*imagestring* -- Draw a string horizontally
 
   bool imagestring(resource image, int font, int x, int y, string string, int color)~
 
@@ -19,7 +19,7 @@ identifiers registered with |imageloadfont|.
 
 {color} A color identifier created with |imagecolorallocate|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagestring| example
 
@@ -42,6 +42,8 @@ Returns TRUE on success or FALSE on failure.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagestring()
 
 
 

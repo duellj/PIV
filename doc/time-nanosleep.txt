@@ -1,4 +1,4 @@
-time_nanosleep -- Delay for a number of seconds and nanoseconds
+*time_nanosleep* -- Delay for a number of seconds and nanoseconds
 
   mixed time_nanosleep(int seconds, int nanoseconds)~
 
@@ -8,7 +8,7 @@ Delays program execution for the given number of {seconds} and {nanoseconds}.
 
 {nanoseconds} Must be a positive integer less than 1 billion.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 If the delay was interrupted by a signal, an associative array will be
 returned with the components: seconds - number of seconds remaining in the

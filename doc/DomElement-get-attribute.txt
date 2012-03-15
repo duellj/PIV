@@ -1,4 +1,4 @@
-DomElement->get_attribute -- Returns the value of the given attribute
+*DomElement->get_attribute* -- Returns the value of the given attribute
 
   string get_attribute(string name)~
 

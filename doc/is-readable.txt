@@ -1,8 +1,8 @@
-is_readable -- Tells whether the filename is readable
+*is_readable* -- Tells whether a file exists and is readable
 
   bool is_readable(string filename)~
 
-Tells whether the filename is readable.
+Tells whether a file exists and is readable.
 
 {filename} Path to the file.
 
@@ -23,6 +23,8 @@ readable, FALSE otherwise.
 
 
 
+
+Upon failure, an E_WARNING is emitted.
 
 Keep in mind that PHP may be accessing the file as the user id that the web
 server runs as (often 'nobody'). Safe mode limitations are not taken into

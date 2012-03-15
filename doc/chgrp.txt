@@ -1,4 +1,4 @@
-chgrp -- Changes file group
+*chgrp* -- Changes file group
 
   bool chgrp(string filename, mixed group)~
 
@@ -11,7 +11,7 @@ change the group of a file to any group of which that user is a member.
 
 {group} A group name or number.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Changing a file's group
 
@@ -20,6 +20,7 @@ Changing a file's group
   $format = "%s's Group ID @ %s: %d\n";
   printf($format, $filename, date('r'), filegroup($filename));
   chgrp($filename, 8);
+  clearstatcache(); // do not cache filegroup() results
   printf($format, $filename, date('r'), filegroup($filename));
 ?>
 

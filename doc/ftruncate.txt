@@ -1,4 +1,4 @@
-ftruncate -- Truncates a file to a given length
+*ftruncate* -- Truncates a file to a given length
 
   bool ftruncate(resource handle, int size)~
 
@@ -10,11 +10,11 @@ The {handle} must be open for writing.
 
 {size} The size to truncate to.
 
-If {size} is larger than the file it is extended with null bytes.
+If {size} is larger than the file then the file is extended with null bytes.
 
-If {size} is smaller than the extra data will be lost.
+If {size} is smaller than the file then the file is truncated to that size.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description PHP 4.3.3 Prior to this release |ftruncate| returned an
 integer value of 1 on success, instead of boolean TRUE.

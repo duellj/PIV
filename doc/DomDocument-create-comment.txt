@@ -1,4 +1,4 @@
-DomDocument->create_comment -- Create new comment node
+*DomDocument->create_comment* -- Create new comment node
 
   domcomment DomDocument->create_comment(string content)~
 

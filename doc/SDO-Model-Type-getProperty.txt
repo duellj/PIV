@@ -1,4 +1,4 @@
-SDO_Model_Type::getProperty -- Get an SDO_Model_Property of the type
+*SDO_Model_Type::getProperty* -- Get an SDO_Model_Property of the type
 
   SDO_Model_Property SDO_Model_Type::getProperty(mixed identifier)~
 

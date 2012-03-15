@@ -1,4 +1,4 @@
-nsapi_virtual -- Perform an NSAPI sub-request
+*nsapi_virtual* -- Perform an NSAPI sub-request
 
   bool nsapi_virtual(string uri)~
 
@@ -22,6 +22,6 @@ experience this problem.
 
 {uri} The URI of the script.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

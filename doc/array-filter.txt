@@ -1,4 +1,4 @@
-array_filter -- Filters elements of an array using a callback function
+*array_filter* -- Filters elements of an array using a callback function
 
   array array_filter(array input [, callback callback])~
 
@@ -20,11 +20,13 @@ Returns the filtered array.
 <?php >
   function odd($var)
   {
+      // returns whether the input integer is odd
       return($var &amp; 1);
   }
   
   function even($var)
   {
+      // returns whether the input integer is even
       return(!($var &amp; 1));
   }
   

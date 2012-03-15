@@ -1,8 +1,12 @@
-spl_classes -- Return available SPL classes
+*spl_classes* -- Return available SPL classes
 
   array spl_classes()~
 
 This function returns an array with the current available SPL classes.
+
+This function has no parameters.
+
+Returns an array containing the currently available SPL classes.
 
 |spl_classes| example
 

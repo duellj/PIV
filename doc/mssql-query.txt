@@ -1,11 +1,11 @@
-mssql_query -- Send MS SQL query
+*mssql_query* -- Send MS SQL query
 
   mixed mssql_query(string query [, resource link_identifier [, int batch_size]])~
 
 |mssql_query| sends a query to the currently active database on the server
 that's associated with the specified link identifier.
 
-{query} A SQL query.
+{query} An SQL query.
 
 {link_identifier} A MS SQL link identifier, returned by |mssql_connect| or
 |mssql_pconnect|.
@@ -25,9 +25,8 @@ FALSE on error.
   // Connect to MSSQL
   $link = mssql_connect('KALLESPC\SQLEXPRESS', 'sa', 'phpfi');
   
-  if(!$link || !mssql_select_db('php', $link))
-  {
-  	die('Unable to connect or select database!');
+  if (!$link || !mssql_select_db('php', $link)) {
+      die('Unable to connect or select database!');
   }
   
   // Do a simple query, select the version of 

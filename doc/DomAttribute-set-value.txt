@@ -1,4 +1,4 @@
-DomAttribute->set_value -- Sets the value of an attribute
+*DomAttribute->set_value* -- Sets the value of an attribute
 
   bool set_value(string content)~
 
@@ -6,7 +6,7 @@ This function sets the value of an attribute.
 
 {content} The new value.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Set the value property of DOMAttr.
 

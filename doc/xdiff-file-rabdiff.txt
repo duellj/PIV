@@ -1,4 +1,4 @@
-xdiff_file_rabdiff -- Make binary diff of two files using the Rabin's
+*xdiff_file_rabdiff* -- Make binary diff of two files using the Rabin's
 polynomial fingerprinting algorithm
 
   bool xdiff_file_rabdiff(string old_file, string new_file, string dest)~
@@ -19,7 +19,7 @@ libxdiff website.
 {dest} Path of the resulting patch file. Resulting file contains differences
 between "old" and "new" files. It is in binary format and is human-unreadable.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |xdiff_file_rabdiff| example The following code makes binary diff of two
 archives.

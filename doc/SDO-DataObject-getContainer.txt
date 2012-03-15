@@ -1,4 +1,4 @@
-SDO_DataObject::getContainer -- Get a data object's container
+*SDO_DataObject::getContainer* -- Get a data object's container
 
   SDO_DataObject SDO_DataObject::getContainer()~
 

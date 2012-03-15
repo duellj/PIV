@@ -1,4 +1,4 @@
-imagegammacorrect -- Apply a gamma correction to a GD image
+*imagegammacorrect* -- Apply a gamma correction to a GD image
 
   bool imagegammacorrect(resource image, float inputgamma, float outputgamma)~
 
@@ -12,7 +12,7 @@ such as |imagecreatetruecolor|.
 
 {outputgamma} The output gamma.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagegammacorrect| usage
 

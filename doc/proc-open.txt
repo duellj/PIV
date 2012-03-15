@@ -1,4 +1,4 @@
-proc_open -- Execute a command and open file pointers for input/output
+*proc_open* -- Execute a command and open file pointers for input/output
 
   resource proc_open(string cmd, array descriptorspec, array pipes [, string cwd [, array env [, array other_options]]])~
 
@@ -46,10 +46,8 @@ mode, instead of using the usual stream_encoding
 Returns a resource representing the process, which should be freed using
 |proc_close| when you are finished with it. On failure returns FALSE.
 
-Version Description 6.0.0 Added the context and binary_pipes options to the
-{other_options} parameter. 5.2.1 Added the bypass_shell option to the
-{other_options} parameter. 5.0.0 Added the {cwd}, {env} and {other_options}
-parameters.
+Version Description 5.2.1 Added the bypass_shell option to the {other_options}
+parameter. 5.0.0 Added the {cwd}, {env} and {other_options} parameters.
 
 A |proc_open| example
 

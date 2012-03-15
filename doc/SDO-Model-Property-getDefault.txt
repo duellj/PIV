@@ -1,4 +1,4 @@
-SDO_Model_Property::getDefault -- Get the default value for the property
+*SDO_Model_Property::getDefault* -- Get the default value for the property
 
   mixed SDO_Model_Property::getDefault()~
 

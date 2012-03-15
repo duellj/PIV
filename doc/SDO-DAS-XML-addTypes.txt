@@ -1,4 +1,4 @@
-SDO_DAS_XML::addTypes -- To load a second or subsequent schema file to a
+*SDO_DAS_XML::addTypes* -- To load a second or subsequent schema file to a
 SDO_DAS_XML object
 
   void SDO_DAS_XML::addTypes(string xsd_file)~

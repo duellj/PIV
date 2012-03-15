@@ -1,4 +1,5 @@
-OCI-Lob->tell -- Returns current position of internal pointer of large object
+*OCI-Lob->tell* -- Returns the current position of internal pointer of large
+object
 
   int tell()~
 

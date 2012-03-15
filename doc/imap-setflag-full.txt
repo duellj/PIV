@@ -1,4 +1,4 @@
-imap_setflag_full -- Sets flags on messages
+*imap_setflag_full* -- Sets flags on messages
 
   bool imap_setflag_full(resource imap_stream, string sequence, string flag [, int options])~
 
@@ -17,7 +17,7 @@ and \Draft as defined by RFC2060.
 {options} A bit mask that may contain the single option: ST_UID - The sequence
 argument contains UIDs instead of sequence numbers
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imap_setflag_full| example
 

@@ -1,4 +1,4 @@
-hw_api->userlist -- Returns a list of all logged in users
+*hw_api->userlist* -- Returns a list of all logged in users
 
   array userlist(array parameter)~
 

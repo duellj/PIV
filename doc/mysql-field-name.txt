@@ -1,4 +1,4 @@
-mysql_field_name -- Get the name of the specified field in a result
+*mysql_field_name* -- Get the name of the specified field in a result
 
   string mysql_field_name(resource result, int field_offset)~
 
@@ -10,7 +10,7 @@ call to |mysql_query|.
 { field_offset}The numerical field offset. The {field_offset} starts at 0. If
 {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-The name of the specified field index on success, or FALSE on failure.
+The name of the specified field index on success or FALSE on failure.
 
 |mysql_field_name| example
 

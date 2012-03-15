@@ -1,4 +1,4 @@
-SAMConnection->receive -- Receive a message from a queue or subscription.
+*SAMConnection->receive* -- Receive a message from a queue or subscription.
 
   SAMMessage receive(string target [, array properties])~
 

@@ -1,4 +1,4 @@
-SQLiteDatabase->fetchColumnTypes -- Return an array of column types from a
+*SQLiteDatabase->fetchColumnTypes* -- Return an array of column types from a
 particular table
 
   array sqlite_fetch_column_types(string table_name, resource dbhandle [, int result_type])~
@@ -38,7 +38,7 @@ Procedural example
   $cols = sqlite_fetch_column_types('foo', $db, SQLITE_ASSOC);
   
   foreach ($cols as $column => $type) {
-      echo "Column: $column  Type: $type";
+      echo "Column: $column  Type: $type\n";
   }
 ?>
 
@@ -54,7 +54,7 @@ Object-oriented example
   $cols = $db->fetchColumnTypes('foo', SQLITE_ASSOC);
   
   foreach ($cols as $column => $type) {
-      echo "Column: $column  Type: $type";
+      echo "Column: $column  Type: $type\n";
   }
 ?>
 

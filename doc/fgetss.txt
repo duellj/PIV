@@ -1,9 +1,9 @@
-fgetss -- Gets line from file pointer and strip HTML tags
+*fgetss* -- Gets line from file pointer and strip HTML tags
 
   string fgetss(resource handle [, int length [, string allowable_tags]])~
 
-Identical to |fgets|, except that |fgetss| attempts to strip any HTML and PHP
-tags from the text it reads.
+Identical to |fgets|, except that |fgetss| attempts to strip any NUL bytes,
+HTML and PHP tags from the text it reads.
 
 {handle} The file pointer must be valid, and must point to a file successfully
 opened by |fopen| or |fsockopen| (and not yet closed by |fclose|).
@@ -14,12 +14,11 @@ opened by |fopen| or |fsockopen| (and not yet closed by |fclose|).
 which should not be stripped.
 
 Returns a string of up to {length} - 1 bytes read from the file pointed to by
-{handle}, with all HTML and PHP code striped.
+{handle}, with all HTML and PHP code stripped.
 
 If an error occurs, returns FALSE.
 
-Version Description 5.0.0 The {length} parameter is optional 4.0.0 The
-{allowable_tags} parameter was added,
+Version Description 5.0.0 The {length} parameter is optional
 
 Reading a PHP file line-by-line
 

@@ -1,4 +1,4 @@
-hw_api->srcsofdst -- Returns source of a destination object
+*hw_api->srcsofdst* -- Returns source of a destination object
 
   array srcsofdst(array parameter)~
 

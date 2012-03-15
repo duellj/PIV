@@ -1,4 +1,4 @@
-SDO_DAS_Setting::getPropertyName -- Get the property name for a changed
+*SDO_DAS_Setting::getPropertyName* -- Get the property name for a changed
 property
 
   string SDO_DAS_Setting::getPropertyName()~

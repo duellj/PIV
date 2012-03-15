@@ -1,4 +1,4 @@
-curl_multi_close -- Close a set of cURL handles
+*curl_multi_close* -- Close a set of cURL handles
 
   void curl_multi_close(resource mh)~
 
@@ -33,7 +33,7 @@ to a multi handle, and then run them in parallel.
   //execute the handles
   do {
       curl_multi_exec($mh,$running);
-  } while ($running > 0)
+  } while ($running > 0);
   
   //close the handles
   curl_multi_remove_handle($mh, $ch1);

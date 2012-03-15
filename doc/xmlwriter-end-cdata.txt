@@ -1,6 +1,6 @@
-XMLWriter::endCData -- End current CDATA
+*XMLWriter::endCData* -- End current CDATA
 
-Oriented object style
+Object oriented style
 
   bool endCData()~
 
@@ -14,7 +14,7 @@ Ends the current CDATA section.
 modified. This resource comes from a call to |xmlwriter_open_uri| or
 |xmlwriter_open_memory|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 XMLWriter::startCData XMLWriter::writeCData
 

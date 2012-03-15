@@ -1,4 +1,4 @@
-array_map -- Applies the callback to the elements of the given arrays
+*array_map* -- Applies the callback to the elements of the given arrays
 
   array array_map(callback callback, array arr1 [, array ...])~
 
@@ -40,6 +40,8 @@ This makes $b have:
       [3] => 64
       [4] => 125
   )
+
+
 
 |array_map| using a lambda function (as of PHP 5.3.0)
 

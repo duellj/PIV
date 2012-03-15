@@ -1,4 +1,4 @@
-DomNode->prefix -- Returns name space prefix of node
+*DomNode->prefix* -- Returns name space prefix of node
 
   string DomNode->prefix()~
 

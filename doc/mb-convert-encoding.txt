@@ -1,4 +1,4 @@
-mb_convert_encoding -- Convert character encoding
+*mb_convert_encoding* -- Convert character encoding
 
   string mb_convert_encoding(string str, string to_encoding [, mixed from_encoding])~
 
@@ -13,7 +13,7 @@ optionally {from_encoding}.
 either an array, or a comma separated enumerated list. If {from_encoding} is
 not specified, the internal encoding will be used.
 
-"auto" may be used, which expands to "ASCII,JIS,UTF-8,EUC-JP,SJIS".
+See supported encodings.
 
 The encoded string.
 

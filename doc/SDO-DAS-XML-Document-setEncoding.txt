@@ -1,4 +1,4 @@
-SDO_DAS_XML_Document::setEncoding -- Sets the given string as encoding
+*SDO_DAS_XML_Document::setEncoding* -- Sets the given string as encoding
 
   void SDO_DAS_XML_Document::setEncoding(string encoding)~
 

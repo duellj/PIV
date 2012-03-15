@@ -1,6 +1,6 @@
-XMLWriter::flush -- Flush current buffer
+*XMLWriter::flush* -- Flush current buffer
 
-Oriented object style
+Object oriented style
 
   mixed flush([bool empty])~
 

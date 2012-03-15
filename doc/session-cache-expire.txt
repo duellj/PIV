@@ -1,11 +1,11 @@
-session_cache_expire -- Return current cache expire
+*session_cache_expire* -- Return current cache expire
 
   int session_cache_expire([string new_cache_expire])~
 
 |session_cache_expire| returns the current setting of session.cache_expire.
 
 The cache expire is reset to the default value of 180 stored in
-session.cache_limiter at request startup time. Thus, you need to call
+session.cache_expire at request startup time. Thus, you need to call
 |session_cache_expire| for every request (and before |session_start| is
 called).
 

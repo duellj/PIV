@@ -1,4 +1,4 @@
-SDO_DAS_ChangeSummary::isLogging -- Test to see whether change logging is
+*SDO_DAS_ChangeSummary::isLogging* -- Test to see whether change logging is
 switched on
 
   bool SDO_DAS_ChangeSummary::isLogging()~

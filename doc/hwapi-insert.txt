@@ -1,4 +1,4 @@
-hw_api->insert -- Inserts a new object
+*hw_api->insert* -- Inserts a new object
 
   hw_api_object insert(array parameter)~
 

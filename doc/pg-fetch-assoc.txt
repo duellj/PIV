@@ -1,4 +1,4 @@
-pg_fetch_assoc -- Fetch a row as an associative array
+*pg_fetch_assoc* -- Fetch a row as an associative array
 
   array pg_fetch_assoc(resource result [, int row])~
 
@@ -18,7 +18,7 @@ significantly easier to use.
 |pg_query_params| or |pg_execute| (among others).
 
 {row} Row number in result to fetch. Rows are numbered from 0 upwards. If
-omitted, next row is fetched.
+omitted or NULL, the next row is fetched.
 
 An array indexed associatively (by field name). Each value in the array is
 represented as a string. Database NULL values are returned as NULL.

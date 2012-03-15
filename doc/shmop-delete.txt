@@ -1,4 +1,4 @@
-shmop_delete -- Delete shared memory block
+*shmop_delete* -- Delete shared memory block
 
   bool shmop_delete(int shmid)~
 
@@ -6,7 +6,7 @@ shmop_delete -- Delete shared memory block
 
 {shmid} The shared memory block identifier created by |shmop_open|
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Deleting shared memory block
 

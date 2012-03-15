@@ -1,17 +1,17 @@
-maxdb->multi_query -- Performs a query on the database
+*maxdb::multi_query* -- Performs a query on the database
 
-Procedural style:
+Procedural style
 
   bool maxdb_multi_query(resource link, string query)~
 
-Object oriented style (method):
+Object oriented style
 
-  bool multi_query(resource link, string query, string query)~
+  bool maxdb::multi_query(resource link, string query, string query)~
 
 The |maxdb_multi_query| works like the function |maxdb_query|. Multiple
 queries are not yet supported.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

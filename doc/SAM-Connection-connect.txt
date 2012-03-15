@@ -1,4 +1,4 @@
-SAMConnection->connect -- Establishes a connection to a Messaging Server
+*SAMConnection->connect* -- Establishes a connection to a Messaging Server
 
   bool connect(string protocol [, array properties])~
 

@@ -1,4 +1,4 @@
-DomElement->set_attribute -- Sets the value of an attribute
+*DomElement->set_attribute* -- Sets the value of an attribute
 
   DomAttribute set_attribute(string name, string value)~
 

@@ -1,4 +1,4 @@
-hw_api->link -- Creates a link to an object
+*hw_api->link* -- Creates a link to an object
 
   bool link(array parameter)~
 

@@ -1,4 +1,4 @@
-runkit_function_add -- Add a new function, similar to create_function
+*runkit_function_add* -- Add a new function, similar to create_function
 
   bool runkit_function_add(string funcname, string arglist, string code)~
 
@@ -8,7 +8,7 @@ runkit_function_add -- Add a new function, similar to create_function
 
 {code} Code making up the function
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 A |runkit_function_add| example
 

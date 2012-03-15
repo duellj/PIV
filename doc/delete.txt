@@ -1,4 +1,4 @@
-delete -- See unlink or unset
+*delete* -- See unlink or unset
 
   void delete()~
 
@@ -7,6 +7,6 @@ This is a dummy manual entry to satisfy those people who are looking for
 
 No value is returned.
 
-|unlink| to delete files |unset| to delete variables
+|unlink| |unset|
 
 vim:ft=help:

@@ -1,10 +1,10 @@
-array_intersect_key -- Computes the intersection of arrays using keys for
+*array_intersect_key* -- Computes the intersection of arrays using keys for
 comparison
 
   array array_intersect_key(array array1, array array2 [, array ...])~
 
-|array_intersect_key| returns an array containing all the values of {array1}
-which have matching keys that are present in all the arguments.
+|array_intersect_key| returns an array containing all the entries of {array1}
+which have keys that are present in all the arguments.
 
 {array1} The array with master keys to check.
 
@@ -12,8 +12,8 @@ which have matching keys that are present in all the arguments.
 
 {array} A variable list of arrays to compare.
 
-Returns an associative array containing all the values of {array1} which have
-matching keys that are present in all arguments.
+Returns an associative array containing all the entries of {array1} which have
+keys that are present in all arguments.
 
 |array_intersect_key| example
 

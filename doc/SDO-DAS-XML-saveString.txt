@@ -1,4 +1,4 @@
-SDO_DAS_XML::saveString -- Saves the SDO_DAS_XML_Document object to a string
+*SDO_DAS_XML::saveString* -- Saves the SDO_DAS_XML_Document object to a string
 
   string SDO_DAS_XML::saveString(SDO_XMLDocument xdoc [, int indent])~
 

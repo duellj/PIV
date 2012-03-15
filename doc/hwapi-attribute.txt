@@ -1,4 +1,4 @@
-hw_api_attribute -- Creates instance of class hw_api_attribute
+*hw_api_attribute* -- Creates instance of class hw_api_attribute
 
   HW_API_Attribute hw_api_attribute([string name [, string value]])~
 

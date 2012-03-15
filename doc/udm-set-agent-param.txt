@@ -1,4 +1,4 @@
-udm_set_agent_param -- Set mnoGoSearch agent session parameters
+*udm_set_agent_param* -- Set mnoGoSearch agent session parameters
 
   bool udm_set_agent_param(resource agent, int var, string val)~
 
@@ -149,7 +149,7 @@ of mnoGoSearch installation is used. Can have only string values.
 
 Version Description 4.1.0 UDM_PARAM_VARDIR was added.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Crosswords are supported only in mnoGoSearch 3.1.11 or later.
 

@@ -1,4 +1,4 @@
-session_encode -- Encodes the current session data as a string
+*session_encode* -- Encodes the current session data as a string
 
   string session_encode()~
 

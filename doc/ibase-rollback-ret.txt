@@ -1,4 +1,4 @@
-ibase_rollback_ret -- Roll back a transaction without closing it
+*ibase_rollback_ret* -- Roll back a transaction without closing it
 
   bool ibase_rollback_ret([resource link_or_trans_identifier])~
 
@@ -12,6 +12,6 @@ corresponding transaction will be rolled back. The transaction context will be
 retained, so statements executed from within this transaction will not be
 invalidated.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

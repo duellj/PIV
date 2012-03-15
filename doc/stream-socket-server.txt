@@ -1,4 +1,4 @@
-stream_socket_server -- Create an Internet or Unix domain server socket
+*stream_socket_server* -- Create an Internet or Unix domain server socket
 
   resource stream_socket_server(string local_socket [, int errno [, string errstr [, int flags [, resource context]]]])~
 
@@ -30,8 +30,7 @@ always be passed by reference.
 {errstr} See {errno} description.
 
 {flags} A bitmask field which may be set to any combination of socket creation
-flags. The default value of flags is STREAM_SERVER_BIND |
-STREAM_SERVER_LISTEN.
+flags.
 
 For UDP sockets, you must use STREAM_SERVER_BIND as the {flags} parameter.
 
@@ -82,6 +81,6 @@ Using UDP server sockets
 
 
 When specifying a numerical IPv6 address (e.g. fe80::1), you must enclose the
-IP in square bracketsâfor example, tcp://[fe80::1]:80.
+IP in square brackets—for example, tcp://[fe80::1]:80.
 
 vim:ft=help:

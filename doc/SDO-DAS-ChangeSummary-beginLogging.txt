@@ -1,4 +1,4 @@
-SDO_DAS_ChangeSummary::beginLogging -- Begin change logging
+*SDO_DAS_ChangeSummary::beginLogging* -- Begin change logging
 
   void SDO_DAS_ChangeSummary::beginLogging()~
 

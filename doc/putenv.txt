@@ -1,4 +1,4 @@
-putenv -- Sets the value of an environment variable
+*putenv* -- Sets the value of an environment variable
 
   bool putenv(string setting)~
 
@@ -21,7 +21,7 @@ is set to allow to change them.
 
 {setting} The setting, like "FOO=BAR"
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Setting an environment variable
 
@@ -33,7 +33,8 @@ Setting an environment variable
 
 
 
-These directives have only effect when safe-mode itself is enabled!
+The safe_mode_allowed_env_vars and safe_mode_protected_env_vars directives
+only take effect when safe_mode is enabled.
 
 |getenv|
 

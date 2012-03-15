@@ -1,4 +1,4 @@
-VARIANT -- VARIANT class
+*VARIANT* -- VARIANT class
 
 The VARIANT is COM's equivalent of the PHP zval; it is a structure that can
 contain a value with a range of different possible types. The VARIANT class

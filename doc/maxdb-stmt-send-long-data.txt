@@ -1,12 +1,12 @@
-stmt->send_long_data -- Send data in blocks
+*maxdb_stmt::send_long_data* -- Send data in blocks
 
-Procedural style:
+Procedural style
 
   bool maxdb_stmt_send_long_data(resource stmt, int param_nr, string data)~
 
-Object oriented style (method)
+Object oriented style
 
-  bool stmt_send_long_data(resource stmt, int param_nr, string data, int param_nr, string data)~
+  bool maxdb_stmt::stmt_send_long_data(resource stmt, int param_nr, string data, int param_nr, string data)~
 
 Allows to send parameter data to the server in pieces (or chunks). This
 function can be called multiple times to send the parts of a character or
@@ -20,7 +20,7 @@ For efficiency reasons, this function should be used after calling
 |maxdb_execute|. In this case, the data is not stored on the client side. The
 end of the sequence must end with a call to |maxdb_stmt_close_long_data|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |maxdb_prepare| |maxdb_stmt_bind_param|
 

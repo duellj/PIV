@@ -1,4 +1,4 @@
-DomXsltStylesheet->result_dump_file -- Dumps the result from a
+*DomXsltStylesheet->result_dump_file* -- Dumps the result from a
 XSLT-Transformation into a file
 
   string result_dump_file(DomDocument xmldoc, string filename)~

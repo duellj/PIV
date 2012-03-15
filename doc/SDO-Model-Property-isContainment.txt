@@ -1,4 +1,4 @@
-SDO_Model_Property::isContainment -- Test to see if the property defines a
+*SDO_Model_Property::isContainment* -- Test to see if the property defines a
 containment relationship
 
   bool SDO_Model_Property::isContainment()~

@@ -1,12 +1,12 @@
-result->free -- Frees the memory associated with a result
+*maxdb_result::free* -- Frees the memory associated with a result
 
-Procedural style:
+Procedural style
 
   void maxdb_free_result(resource result)~
 
-Object oriented style (method):
+Object oriented style
 
-  void free(resource result)~
+  void maxdb_result::free(resource result)~
 
 The |maxdb_free_result| function frees the memory associated with the result
 represented by the {result} parameter, which was allocated by |maxdb_query|,

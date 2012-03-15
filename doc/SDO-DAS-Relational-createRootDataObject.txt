@@ -1,4 +1,4 @@
-SDO_DAS_Relational::createRootDataObject -- Returns the special root object in
+*SDO_DAS_Relational::createRootDataObject* -- Returns the special root object in
 an otherwise empty data graph. Used when creating a data graph from scratch.
 
   SDODataObject SDO_DAS_Relational::createRootDataObject()~

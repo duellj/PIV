@@ -1,4 +1,4 @@
-import_request_variables -- Import GET/POST/Cookie variables into the global
+*import_request_variables* -- Import GET/POST/Cookie variables into the global
 scope
 
   bool import_request_variables(string types [, string prefix])~
@@ -29,7 +29,7 @@ error if you specify no prefix, or specify an empty string as a prefix. This
 is a possible security hazard. Notice level errors are not displayed using the
 default error reporting level.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |import_request_variables| example
 

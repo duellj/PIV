@@ -1,4 +1,4 @@
-ps_open_file -- Opens a file for output
+*ps_open_file* -- Opens a file for output
 
   bool ps_open_file(resource psdoc [, string filename])~
 
@@ -11,7 +11,7 @@ file will be closed when |ps_close| is called.
 document will be created in memory and all output will go straight to the
 browser.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_close|
 

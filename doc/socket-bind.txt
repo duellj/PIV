@@ -1,4 +1,4 @@
-socket_bind -- Binds a name to a socket
+*socket_bind* -- Binds a name to a socket
 
   bool socket_bind(resource socket, string address [, int port])~
 
@@ -14,11 +14,10 @@ dotted-quad notation (e.g. 127.0.0.1).
 If the socket is of the AF_UNIX family, the {address} is the path of a
 Unix-domain socket (e.g. /tmp/my.sock).
 
-{port} (Optional) The {port} parameter is only used when connecting to an
-AF_INET socket, and designates the port on the remote host to which a
-connection should be made.
+{port} (Optional) The {port} parameter is only used when binding an AF_INET
+socket, and designates the port on which to listen for connections.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 The error code can be retrieved with |socket_last_error|. This code may be
 passed to |socket_strerror| to get a textual explanation of the error.

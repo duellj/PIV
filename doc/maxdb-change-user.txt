@@ -1,12 +1,12 @@
-maxdb->change_user -- Changes the user of the specified database connection
+*maxdb::change_user* -- Changes the user of the specified database connection
 
-Procedural style:
+Procedural style
 
   bool maxdb_change_user(resource link, string user, string password, string database)~
 
-Object oriented style (method):
+Object oriented style
 
-  bool change_user(resource link, string user, string password, string database, string user, string password, string database)~
+  bool maxdb::change_user(resource link, string user, string password, string database, string user, string password, string database)~
 
 |maxdb_change_user| is used to change the user of the specified database
 connection as given by the {link} parameter and to set the current database to
@@ -23,7 +23,7 @@ was completed successfully. This reset includes performing a rollback on any
 active transactions, closing all temporary tables, and unlocking all locked
 tables.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

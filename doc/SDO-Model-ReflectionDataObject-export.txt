@@ -1,4 +1,4 @@
-SDO_Model_ReflectionDataObject::export -- Get a string describing the
+*SDO_Model_ReflectionDataObject::export* -- Get a string describing the
 SDO_DataObject.
 
   mixed SDO_Model_ReflectionDataObject::export(SDO_Model_ReflectionDataObject rdo [, bool return])~

@@ -1,4 +1,4 @@
-DomElement->tagname -- Returns the name of the current element
+*DomElement->tagname* -- Returns the name of the current element
 
   string tagname()~
 

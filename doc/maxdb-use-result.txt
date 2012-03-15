@@ -1,16 +1,16 @@
-maxdb->use_result -- Initiate a result set retrieval
+*maxdb::use_result* -- Initiate a result set retrieval
 
-Procedural style:
+Procedural style
 
   resource maxdb_use_result(resource link)~
 
-Object oriented style (method):
+Object oriented style
 
-  resource use_result(resource link)~
+  resource maxdb::use_result(resource link)~
 
 |maxdb_use_result| has no effect.
 
-Returns result or FALSE in case of error.
+Returns result or FALSE on failure.
 
 Object oriented style
 

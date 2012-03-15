@@ -1,4 +1,4 @@
-openssl_private_encrypt -- Encrypts data with private key
+*openssl_private_encrypt* -- Encrypts data with private key
 
   bool openssl_private_encrypt(string data, string crypted, mixed key [, int padding])~
 
@@ -15,10 +15,9 @@ not written by someone else.
 
 {key}
 
-{padding} {padding} defaults to OPENSSL_PKCS1_PADDING, but can also be
-OPENSSL_NO_PADDING.
+{padding} {padding} can be one of OPENSSL_PKCS1_PADDING, OPENSSL_NO_PADDING.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |openssl_public_encrypt| |openssl_public_decrypt|
 

@@ -1,12 +1,12 @@
-maxdb->field_count -- Returns the number of columns for the most recent query
+*maxdb::field_count* -- Returns the number of columns for the most recent query
 
-Procedural style:
+Procedural style
 
   int maxdb_field_count(resource link)~
 
-Object oriented style (method):
+Object oriented style
 
-  int field_count(resource link)~
+  int maxdb::field_count(resource link)~
 
 Returns the number of columns for the most recent query on the connection
 represented by the {link} parameter. This function can be useful when using

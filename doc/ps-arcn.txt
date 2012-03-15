@@ -1,4 +1,4 @@
-ps_arcn -- Draws an arc clockwise
+*ps_arcn* -- Draws an arc clockwise
 
   bool ps_arcn(resource psdoc, float x, float y, float radius, float alpha, float beta)~
 
@@ -19,7 +19,7 @@ starts on the arc at angle {beta} and ends on the arc at angle {alpha}.
 
 {beta} The end angle given in degrees.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_arc|
 

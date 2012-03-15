@@ -1,4 +1,4 @@
-hash -- Generate a hash value (message digest)
+*hash* -- Generate a hash value (message digest)
 
   string hash(string algo, string data [, bool raw_output])~
 
@@ -7,8 +7,8 @@ etc..)
 
 {data} Message to be hashed.
 
-{raw_output} When set to TRUE, outputs raw binary data. Default value (FALSE)
-outputs lowercase hexits.
+{raw_output} When set to TRUE, outputs raw binary data. FALSE outputs
+lowercase hexits.
 
 Returns a string containing the calculated message digest as lowercase hexits
 unless {raw_output} is set to true in which case the raw binary representation

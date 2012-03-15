@@ -1,13 +1,11 @@
-snmp_set_oid_numeric_print -- Return all objects including their respective
+*snmp_set_oid_numeric_print* -- Return all objects including their respective
 object id within the specified one
 
-  void snmp_set_oid_numeric_print(int oid_numeric_print)~
+  void snmp_set_oid_numeric_print(int oid_format)~
 
-This function is currently not documented; only its argument list is
-available.
+This function is an alias of: |snmp_set_oid_output_format|.
 
-Version Description 5.2.0 Since PHP 5.2.0, This function is an alias of:
-|snmp_set_oid_output_format|.
+Version Description 5.2.0 Since PHP 5.2.0.
 
 |snmp_set_oid_output_format|
 

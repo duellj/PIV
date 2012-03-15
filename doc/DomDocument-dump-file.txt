@@ -1,4 +1,4 @@
-DomDocument->dump_file -- Dumps the internal XML tree back into a file
+*DomDocument->dump_file* -- Dumps the internal XML tree back into a file
 
   string DomDocument->dump_file(string filename [, bool compressionmode [, bool format]])~
 

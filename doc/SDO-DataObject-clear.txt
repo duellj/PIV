@@ -1,4 +1,4 @@
-SDO_DataObject::clear -- Clear an SDO_DataObject's properties
+*SDO_DataObject::clear* -- Clear an SDO_DataObject's properties
 
   void SDO_DataObject::clear()~
 

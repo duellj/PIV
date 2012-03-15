@@ -1,4 +1,4 @@
-ldap_get_entries -- Get all result entries
+*ldap_get_entries* -- Get all result entries
 
   array ldap_get_entries(resource link_identifier, resource result_identifier)~
 
@@ -22,7 +22,7 @@ when used as array indices.)
   return_value[i]["dn"] =  DN of the ith entry in the result
   
   return_value[i]["count"] = number of attributes in ith entry
-  return_value[i][j] = jth attribute in the ith entry in the result
+  return_value[i][j] = NAME of the jth attribute in the ith entry in the result
   
   return_value[i]["attribute"]["count"] = number of values for
                                           attribute in ith entry

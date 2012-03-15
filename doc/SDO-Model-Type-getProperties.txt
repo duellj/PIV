@@ -1,4 +1,4 @@
-SDO_Model_Type::getProperties -- Get the SDO_Model_Property objects defined
+*SDO_Model_Type::getProperties* -- Get the SDO_Model_Property objects defined
 for the type
 
   array SDO_Model_Type::getProperties()~

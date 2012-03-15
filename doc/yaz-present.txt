@@ -1,4 +1,4 @@
-yaz_present -- Prepares for retrieval (Z39.50 present)
+*yaz_present* -- Prepares for retrieval (Z39.50 present)
 
   bool yaz_present(resource id)~
 
@@ -9,6 +9,6 @@ the range of records to be retrieved.
 
 {id} The connection resource returned by |yaz_connect|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

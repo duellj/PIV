@@ -1,4 +1,4 @@
-is_uploaded_file -- Tells whether the file was uploaded via HTTP POST
+*is_uploaded_file* -- Tells whether the file was uploaded via HTTP POST
 
   bool is_uploaded_file(string filename)~
 
@@ -13,11 +13,11 @@ even to other users on the same system.
 
 For proper working, the function |is_uploaded_file| needs an argument like
 $_FILES['userfile']['tmp_name'], - the name of the uploaded file on the
-clients machine $_FILES['userfile']['name'] does not work.
+client's machine $_FILES['userfile']['name'] does not work.
 
 {filename} The filename being checked.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |is_uploaded_file| example
 
@@ -36,7 +36,7 @@ Returns TRUE on success or FALSE on failure.
 
 
 
-|move_uploaded_file| $_FILES See Handling file uploadsfor a simple usage
+|move_uploaded_file| $_FILES See Handling file uploads for a simple usage
 example.
 
 vim:ft=help:

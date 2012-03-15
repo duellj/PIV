@@ -1,4 +1,4 @@
-openlog -- Open connection to system logger
+*openlog* -- Open connection to system logger
 
   bool openlog(string ident, int option, int facility)~
 
@@ -34,7 +34,7 @@ generic user-level messages LOG_UUCP UUCP subsystem
 
 LOG_USER is the only valid log type under Windows operating systems
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |syslog| |closelog|
 

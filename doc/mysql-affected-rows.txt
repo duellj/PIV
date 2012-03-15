@@ -1,4 +1,4 @@
-mysql_affected_rows -- Get number of affected rows in previous MySQL operation
+*mysql_affected_rows* -- Get number of affected rows in previous MySQL operation
 
   int mysql_affected_rows([resource link_identifier])~
 
@@ -8,8 +8,8 @@ query associated with {link_identifier}.
 { link_identifier}The MySQL connection. If the link identifier is not
 specified, the last link opened by |mysql_connect| is assumed. If no such link
 is found, it will try to create one as if |mysql_connect| was called with no
-arguments. If by chance no connection is found or established, an E_WARNING
-level error is generated.
+arguments. If no connection is found or established, an E_WARNING level error
+is generated.
 
 Returns the number of affected rows on success, and -1 if the last query
 failed.
@@ -78,6 +78,9 @@ your INSERT, UPDATE, or DELETE query, not after the COMMIT.
 
 To retrieve the number of rows returned by a SELECT, it is possible to use
 |mysql_num_rows|.
+
+|mysql_affected_rows| does not count rows affected implicitly through the use
+of ON DELETE CASCADE and/or ON UPDATE CASCADE in foreign key constraints.
 
 |mysql_num_rows| |mysql_info|
 

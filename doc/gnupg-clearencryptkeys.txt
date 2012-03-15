@@ -1,11 +1,11 @@
-gnupg_clearencryptkeys -- Removes all keys which were set for encryption
+*gnupg_clearencryptkeys* -- Removes all keys which were set for encryption
 before
 
   bool gnupg_clearencryptkeys(resource identifier)~
 
 {identifier} The gnupg identifier, from a call to |gnupg_init| or gnupg.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Procedural |gnupg_clearencryptkeys| example
 

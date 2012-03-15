@@ -1,4 +1,4 @@
-bzcompress -- Compress a string into bzip2 encoded data
+*bzcompress* -- Compress a string into bzip2 encoded data
 
   mixed bzcompress(string source [, int blocksize [, int workfactor]])~
 
@@ -8,11 +8,11 @@ bzcompress -- Compress a string into bzip2 encoded data
 
 {blocksize} Specifies the blocksize used during compression and should be a
 number from 1 to 9 with 9 giving the best compression, but using more
-resources to do so. {blocksize} defaults to 4.
+resources to do so.
 
 {workfactor} Controls how the compression phase behaves when presented with
 worst case, highly repetitive, input data. The value can be between 0 and 250
-with 0 being a special case and the default value.
+with 0 being a special case.
 
 Regardless of the {workfactor}, the generated output is the same.
 

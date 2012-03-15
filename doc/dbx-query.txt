@@ -1,4 +1,4 @@
-dbx_query -- Send a query and fetch all results (if any)
+*dbx_query* -- Send a query and fetch all results (if any)
 
   mixed dbx_query(object link_identifier, string sql_statement [, int flags])~
 
@@ -7,6 +7,8 @@ Sends a query and fetch all results.
 {link_identifier} The DBX link object returned by |dbx_connect|
 
 {sql_statement} SQL statement.
+
+Data inside the query should be properly escaped.
 
 {flags} The {flags} parameter is used to control the amount of information
 that is returned. It may be any combination of the following constants with

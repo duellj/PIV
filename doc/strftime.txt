@@ -1,4 +1,4 @@
-strftime -- Format a local time/date according to locale settings
+*strftime* -- Format a local time/date according to locale settings
 
   string strftime(string format [, int timestamp])~
 
@@ -20,14 +20,15 @@ string {format} Description Example returned values Day --- --- %a An
 abbreviated textual representation of the day Sun through Sat %A A full
 textual representation of the day Sunday through Saturday %d Two-digit day of
 the month (with leading zeros) 01 to 31 %e Day of the month, with a space
-preceding single digits 1 to 31 %j Day of the year, 3 digits with leading
-zeros 001 to 366 %u ISO-8601 numeric representation of the day of the week 1
-(for Monday) though 7 (for Sunday) %w Numeric representation of the day of the
-week 0 (for Sunday) through 6 (for Saturday) Week --- --- %U Week number of
-the given year, starting with the the first Sunday as the first week 13 (for
-the 13th full week of the year) %V ISO-8601:1988 week number of the given
-year, starting with the first week of the year with at least 4 weekdays, with
-Monday being the start of the week 01 through 53 (where 53 accounts for an
+preceding single digits. Not implemented as described on Windows. See below
+for more information. 1 to 31 %j Day of the year, 3 digits with leading zeros
+001 to 366 %u ISO-8601 numeric representation of the day of the week 1 (for
+Monday) though 7 (for Sunday) %w Numeric representation of the day of the week
+0 (for Sunday) through 6 (for Saturday) Week --- --- %U Week number of the
+given year, starting with the first Sunday as the first week 13 (for the 13th
+full week of the year) %V ISO-8601:1988 week number of the given year,
+starting with the first week of the year with at least 4 weekdays, with Monday
+being the start of the week 01 through 53 (where 53 accounts for an
 overlapping week) %W A numeric representation of the week of the year,
 starting with the first Monday as the first week 46 (for the 46th week of the
 year beginning with a Monday) Month --- --- %b Abbreviated month name, based
@@ -56,7 +57,7 @@ abbreviation (depends on operating system) Example: -0500 or EST for Eastern
 Time %Z The time zone offset/abbreviation option NOT given by %z (depends on
 operating system) Example: -0500 or EST for Eastern Time Time and Date Stamps
 --- --- %c Preferred date and time stamp based on local Example: Tue Feb 5
-00:45:10 2009 for February 4, 2009 at 12:45:10 AM %D Same as "%m/%d/%y"
+00:45:10 2009 for February 5, 2009 at 12:45:10 AM %D Same as "%m/%d/%y"
 Example: 02/05/09 for February 5, 2009 %F Same as "%Y-%m-%d" (commonly used in
 database datestamps) Example: 2009-02-05 for February 5, 2009 %s Unix Epoch
 Time timestamp (same as the |time| function) Example: 305815200 for September
@@ -67,8 +68,16 @@ percentage character ("%") ---
 
 Maximum length of this parameter is 1023 characters.
 
-Contrary to ISO-9889:1999, Sun Solaris starts with Sunday as 1. As a result,
+Contrary to ISO-9899:1999, Sun Solaris starts with Sunday as 1. As a result,
 %u may not function as described in this manual.
+
+Windows only: The %e modifier is not supported in the Windows implementation
+of this function. To achieve this value, the %#d modifier can be used instead.
+The example below illustrates how to write a cross platform compatible
+function.
+
+Mac OS X only: The %P modifier is not supported in the Mac OS X implementation
+of this function.
 
 {timestamp} The optional {timestamp} parameter is an integer Unix timestamp
 that defaults to the current local time if a {timestamp} is not given. In
@@ -82,6 +91,12 @@ other language-dependent strings respect the current locale set with
 Every call to a date/time function will generate a E_NOTICE if the time zone
 is not valid, and/or a E_STRICT or E_WARNING message if using the system
 settings or the TZ environment variable. See also |date_default_timezone_set|
+
+As the output is dependent upon the underlying C library, some conversion
+specifiers are not supported. On Windows, supplying unknown conversion
+specifiers will result in 5 E_WARNING messages and return FALSE. On other
+operating systems you may not get any E_WARNING messages and the output may
+contain the conversion specifiers unconverted.
 
 Version Description 5.1.0 Now issues the E_STRICT and E_NOTICE time zone
 errors.
@@ -99,6 +114,8 @@ system. |strftime| locale examples
   setlocale(LC_TIME, "de_DE");
   echo strftime(" in German %A.\n");
 ?>
+
+
 
 
 
@@ -151,6 +168,166 @@ ISO 8601:1988 week number example
 ?>
 
 
+
+
+
+Cross platform compatible example using the %e modifier
+
+<?php >
+  // Jan 1: results in: '%e%1%' (%%, e, %%, %e, %%)
+  $format = '%%e%%%e%%';
+  
+  // Check for Windows to find and replace the %e 
+  // modifier correctly
+  if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') {
+      $format = preg_replace('#(?<!%)((?:%%)*)%e#', '\1%#d', $format);
+  }
+  
+  echo strftime($format);
+?>
+
+
+
+
+
+Display all known and unknown formats.
+
+<?php >
+  // Describe the formats.
+  $strftimeFormats = array(
+      'A' => 'A full textual representation of the day',
+      'B' => 'Full month name, based on the locale',
+      'C' => 'Two digit representation of the century (year divided by 100, truncated to an integer)',
+      'D' => 'Same as "%m/%d/%y"',
+      'E' => '',
+      'F' => 'Same as "%Y-%m-%d"',
+      'G' => 'The full four-digit version of %g',
+      'H' => 'Two digit representation of the hour in 24-hour format',
+      'I' => 'Two digit representation of the hour in 12-hour format',
+      'J' => '',
+      'K' => '',
+      'L' => '',
+      'M' => 'Two digit representation of the minute',
+      'N' => '',
+      'O' => '',
+      'P' => 'lower-case "am" or "pm" based on the given time',
+      'Q' => '',
+      'R' => 'Same as "%H:%M"',
+      'S' => 'Two digit representation of the second',
+      'T' => 'Same as "%H:%M:%S"',
+      'U' => 'Week number of the given year, starting with the first Sunday as the first week',
+      'V' => 'ISO-8601:1988 week number of the given year, starting with the first week of the year with at least 4 weekdays, with Monday being the start of the week',
+      'W' => 'A numeric representation of the week of the year, starting with the first Monday as the first week',
+      'X' => 'Preferred time representation based on locale, without the date',
+      'Y' => 'Four digit representation for the year',
+      'Z' => 'The time zone offset/abbreviation option NOT given by %z (depends on operating system)',
+      'a' => 'An abbreviated textual representation of the day',
+      'b' => 'Abbreviated month name, based on the locale',
+      'c' => 'Preferred date and time stamp based on local',
+      'd' => 'Two-digit day of the month (with leading zeros)',
+      'e' => 'Day of the month, with a space preceding single digits',
+      'f' => '',
+      'g' => 'Two digit representation of the year going by ISO-8601:1988 standards (see %V)',
+      'h' => 'Abbreviated month name, based on the locale (an alias of %b)',
+      'i' => '',
+      'j' => 'Day of the year, 3 digits with leading zeros',
+      'k' => '',
+      'l' => 'Hour in 12-hour format, with a space preceeding single digits',
+      'm' => 'Two digit representation of the month',
+      'n' => 'A newline character ("\n")',
+      'o' => '',
+      'p' => 'UPPER-CASE "AM" or "PM" based on the given time',
+      'q' => '',
+      'r' => 'Same as "%I:%M:%S %p"',
+      's' => 'Unix Epoch Time timestamp',
+      't' => 'A Tab character ("\t")',
+      'u' => 'ISO-8601 numeric representation of the day of the week',
+      'v' => '',
+      'w' => 'Numeric representation of the day of the week',
+      'x' => 'Preferred date representation based on locale, without the time',
+      'y' => 'Two digit representation of the year',
+      'z' => 'Either the time zone offset from UTC or the abbreviation (depends on operating system)',
+      '%' => 'A literal percentage character ("%")',
+  );
+  
+  // Results.
+  $strftimeValues = array();
+  
+  // Evaluate the formats whilst suppressing any errors.
+  foreach($strftimeFormats as $format => $description){
+      if (False !== ($value = @strftime("%{$format}"))){
+          $strftimeValues[$format] = $value;
+      }
+  }
+  
+  // Find the longest value.
+  $maxValueLength = 2 + max(array_map('strlen', $strftimeValues));
+  
+  // Report known formats.
+  foreach($strftimeValues as $format => $value){
+      echo "Known format   : '{$format}' = ", str_pad("'{$value}'", $maxValueLength), " ( {$strftimeFormats[$format]} )\n";
+  }
+  
+  // Report unknown formats.
+  foreach(array_diff_key($strftimeFormats, $strftimeValues) as $format => $description){
+      echo "Unknown format : '{$format}'   ", str_pad(' ', $maxValueLength), ($description ? " ( {$description} )" : ''), "\n";
+  }
+
+The above example will output something similar to:
+
+  Known format   : 'A' = 'Friday'            ( A full textual representation of the day )
+  Known format   : 'B' = 'December'          ( Full month name, based on the locale )
+  Known format   : 'H' = '11'                ( Two digit representation of the hour in 24-hour format )
+  Known format   : 'I' = '11'                ( Two digit representation of the hour in 12-hour format )
+  Known format   : 'M' = '24'                ( Two digit representation of the minute )
+  Known format   : 'S' = '44'                ( Two digit representation of the second )
+  Known format   : 'U' = '48'                ( Week number of the given year, starting with the first Sunday as the first week )
+  Known format   : 'W' = '48'                ( A numeric representation of the week of the year, starting with the first Monday as the first week )
+  Known format   : 'X' = '11:24:44'          ( Preferred time representation based on locale, without the date )
+  Known format   : 'Y' = '2010'              ( Four digit representation for the year )
+  Known format   : 'Z' = 'GMT Standard Time' ( The time zone offset/abbreviation option NOT given by %z (depends on operating system) )
+  Known format   : 'a' = 'Fri'               ( An abbreviated textual representation of the day )
+  Known format   : 'b' = 'Dec'               ( Abbreviated month name, based on the locale )
+  Known format   : 'c' = '12/03/10 11:24:44' ( Preferred date and time stamp based on local )
+  Known format   : 'd' = '03'                ( Two-digit day of the month (with leading zeros) )
+  Known format   : 'j' = '337'               ( Day of the year, 3 digits with leading zeros )
+  Known format   : 'm' = '12'                ( Two digit representation of the month )
+  Known format   : 'p' = 'AM'                ( UPPER-CASE "AM" or "PM" based on the given time )
+  Known format   : 'w' = '5'                 ( Numeric representation of the day of the week )
+  Known format   : 'x' = '12/03/10'          ( Preferred date representation based on locale, without the time )
+  Known format   : 'y' = '10'                ( Two digit representation of the year )
+  Known format   : 'z' = 'GMT Standard Time' ( Either the time zone offset from UTC or the abbreviation (depends on operating system) )
+  Known format   : '%' = '%'                 ( A literal percentage character ("%") )
+  Unknown format : 'C'                       ( Two digit representation of the century (year divided by 100, truncated to an integer) )
+  Unknown format : 'D'                       ( Same as "%m/%d/%y" )
+  Unknown format : 'E'
+  Unknown format : 'F'                       ( Same as "%Y-%m-%d" )
+  Unknown format : 'G'                       ( The full four-digit version of %g )
+  Unknown format : 'J'
+  Unknown format : 'K'
+  Unknown format : 'L'
+  Unknown format : 'N'
+  Unknown format : 'O'
+  Unknown format : 'P'                       ( lower-case "am" or "pm" based on the given time )
+  Unknown format : 'Q'
+  Unknown format : 'R'                       ( Same as "%H:%M" )
+  Unknown format : 'T'                       ( Same as "%H:%M:%S" )
+  Unknown format : 'V'                       ( ISO-8601:1988 week number of the given year, starting with the first week of the year with at least 4 weekdays, with Monday being the start of the week )
+  Unknown format : 'e'                       ( Day of the month, with a space preceding single digits )
+  Unknown format : 'f'
+  Unknown format : 'g'                       ( Two digit representation of the year going by ISO-8601:1988 standards (see %V) )
+  Unknown format : 'h'                       ( Abbreviated month name, based on the locale (an alias of %b) )
+  Unknown format : 'i'
+  Unknown format : 'k'
+  Unknown format : 'l'                       ( Hour in 12-hour format, with a space preceeding single digits )
+  Unknown format : 'n'                       ( A newline character ("\n") )
+  Unknown format : 'o'
+  Unknown format : 'q'
+  Unknown format : 'r'                       ( Same as "%I:%M:%S %p" )
+  Unknown format : 's'                       ( Unix Epoch Time timestamp )
+  Unknown format : 't'                       ( A Tab character ("\t") )
+  Unknown format : 'u'                       ( ISO-8601 numeric representation of the day of the week )
+  Unknown format : 'v'
 
 
 

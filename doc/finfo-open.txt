@@ -1,4 +1,4 @@
-finfo->__construct -- Create a new fileinfo resource
+*finfo->__construct* -- Create a new fileinfo resource
 
 Procedural style
 
@@ -14,6 +14,8 @@ This function opens a magic database and returns its resource.
 /path/to/magic.mime. If not specified, the MAGIC environment variable is used.
 If this variable is not set either, /usr/share/misc/magic is used by default.
 A .mime and/or .mgc suffix is added if needed.
+
+Passing NULL or an empty string will be equivalent to the default value.
 
 Returns a magic database resource on success or FALSE on failure.
 
@@ -58,7 +60,7 @@ The above example will output:
 
 
 
-  text/plain
+  text/plain; charset=us-ascii
 
 |finfo_close|
 

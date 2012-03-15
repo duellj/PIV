@@ -1,4 +1,4 @@
-idn_to_ascii -- Convert UTF-8 encoded domain name to ASCII
+*idn_to_ascii* -- Convert UTF-8 encoded domain name to ASCII
 
   string idn_to_ascii(string utf8_domain [, int errorcode])~
 
@@ -12,7 +12,7 @@ ACE encoded "xn--" string. It will not be the one you expected though!
 
 {errorcode} Will be set to the IDNA error code.
 
-The ACE encoded version of the domain name or FALSE in case of an error.
+The ACE encoded version of the domain name or FALSE on failure.
 
 If an error occurs FALSE is returned and the optional errorcode is set. In
 addition a E_WARNING message is printed.
@@ -22,7 +22,7 @@ catch errors.
 
 <?php >
   // ISO-8859-1 encoded string
-  echo idn_to_ascii(utf8_encode('täst.de'))); 
+  echo idn_to_ascii(utf8_encode('täst.de'));
   
   // Cannot convert a domain name to ASCII that contains non-ASCII chars but already starts with "xn--"
   $ascii = idn_to_ascii("xn--".chr(0xC3).chr(0xA4), $errorcode);

@@ -1,4 +1,5 @@
-sqlite_factory -- Opens a SQLite database and returns a SQLiteDatabase object
+*sqlite_factory* -- Opens an SQLite database and returns an SQLiteDatabase
+object
 
   SQLiteDatabase sqlite_factory(string filename [, int mode [, string error_message]])~
 
@@ -17,7 +18,7 @@ value.
 {error_message} Passed by reference and is set to hold a descriptive error
 message explaining why the database could not be opened if there was an error.
 
-Returns a SQLiteDatabase object on success, NULL on error.
+Returns an SQLiteDatabase object on success, NULL on error.
 
 |sqlite_factory| example
 

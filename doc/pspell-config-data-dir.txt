@@ -1,4 +1,4 @@
-pspell_config_data_dir -- location of language data files
+*pspell_config_data_dir* -- location of language data files
 
   bool pspell_config_data_dir(int conf, string directory)~
 
@@ -7,6 +7,6 @@ available.
 
 
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-apd_echo -- Echo to the debugging socket
+*apd_echo* -- Echo to the debugging socket
 
   bool apd_echo(string output)~
 
@@ -6,7 +6,7 @@ Usually sent via the socket to request information about the running script.
 
 {output} The debugged variable.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |apd_echo| example
 

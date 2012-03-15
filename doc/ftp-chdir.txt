@@ -1,4 +1,4 @@
-ftp_chdir -- Changes the current directory on a FTP server
+*ftp_chdir* -- Changes the current directory on a FTP server
 
   bool ftp_chdir(resource ftp_stream, string directory)~
 
@@ -8,8 +8,8 @@ Changes the current directory to the specified one.
 
 {directory} The target directory.
 
-Returns TRUE on success or FALSE on failure. If changing directory fails, PHP
-will also throw a warning.
+Returns TRUE on success or &false; on failure. If changing directory fails,
+PHP will also throw a warning.
 
 |ftp_chdir| example
 

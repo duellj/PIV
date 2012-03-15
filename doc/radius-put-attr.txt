@@ -1,11 +1,11 @@
-radius_put_attr -- Attaches a binary attribute
+*radius_put_attr* -- Attaches a binary attribute
 
   bool radius_put_attr(resource radius_handle, int type, string value)~
 
 This function is currently not documented; only its argument list is
 available.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |radius_put_attr| example
 

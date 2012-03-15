@@ -1,4 +1,4 @@
-ps_closepath -- Closes path
+*ps_closepath* -- Closes path
 
   bool ps_closepath(resource psdoc)~
 
@@ -7,7 +7,7 @@ be used for stroking, filling, clipping, etc..
 
 {psdoc} Resource identifier of the postscript file as returned by |ps_new|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_clip| |ps_closepath_stroke|
 

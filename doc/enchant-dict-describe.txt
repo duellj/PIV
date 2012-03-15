@@ -1,4 +1,4 @@
-enchant_dict_describe -- Describes an individual dictionary
+*enchant_dict_describe* -- Describes an individual dictionary
 
   mixed enchant_dict_describe(resource dict)~
 
@@ -6,7 +6,7 @@ Returns the details of the dictionary.
 
 {dict} Dictinaray resource
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 A |enchant_dict_describe| example Check if a dictionary exists using
 |enchant_broker_dict_exists| and show the detail of it.

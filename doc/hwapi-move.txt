@@ -1,4 +1,4 @@
-hw_api->move -- Moves object between collections
+*hw_api->move* -- Moves object between collections
 
   bool move(array parameter)~
 
@@ -6,7 +6,7 @@ Moves object between collections.
 
 {parameter}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |hw_objrec2array|
 

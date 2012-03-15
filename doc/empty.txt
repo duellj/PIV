@@ -1,4 +1,4 @@
-empty -- Determine whether a variable is empty
+*empty* -- Determine whether a variable is empty
 
   bool empty(mixed var)~
 
@@ -20,8 +20,6 @@ an integer) "0" (0 as a string) NULL FALSE array() (an empty array) var $var;
 
 Version Description PHP 5 As of PHP 5, objects with no properties are no
 longer considered empty.
-
-PHP 4 As of PHP 4, The string value "0" is considered empty.
 
 A simple |empty| / |isset| comparison.
 

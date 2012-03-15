@@ -1,4 +1,4 @@
-OCI-Lob->erase -- Erases a specified portion of the internal LOB data
+*OCI-Lob->erase* -- Erases a specified portion of the internal LOB data
 
   int erase([int offset [, int length]])~
 
@@ -12,7 +12,6 @@ zero-bytes. For CLOBs, the existing LOB value is overwritten with spaces.
 
 {length}
 
-Returns the actual number of characters/bytes erased or FALSE in case of
-error.
+Returns the actual number of characters/bytes erased or FALSE on failure.
 
 vim:ft=help:

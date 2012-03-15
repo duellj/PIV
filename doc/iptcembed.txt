@@ -1,4 +1,4 @@
-iptcembed -- Embeds binary IPTC data into a JPEG image
+*iptcembed* -- Embeds binary IPTC data into a JPEG image
 
   mixed iptcembed(string iptcdata, string jpeg_file_name [, int spool])~
 
@@ -64,11 +64,16 @@ Embedding IPTC data into a JPEG
   foreach($iptc as $tag => $string)
   {
       $tag = substr($tag, 2);
-      $data .= iptc_make_tag(2, substr($tag, 2), $string);
+      $data .= iptc_make_tag(2, $tag, $string);
   }
   
   // Embed the IPTC data
   $content = iptcembed($data, $path);
+  
+  // Write the new image data out to the file.
+  $fp = fopen($path, "wb");
+  fwrite($fp, $content);
+  fclose($fp);
 ?>
 
 

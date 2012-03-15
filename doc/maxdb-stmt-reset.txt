@@ -1,12 +1,12 @@
-stmt->reset -- Resets a prepared statement
+*maxdb_stmt::reset* -- Resets a prepared statement
 
-Procedural style:
+Procedural style
 
   bool maxdb_stmt_reset(resource stmt)~
 
-Object oriented style (method):
+Object oriented style
 
-  bool reset(resource stmt)~
+  bool maxdb_stmt::reset(resource stmt)~
 
 This function is currently not documented; only its argument list is
 available.

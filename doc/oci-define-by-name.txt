@@ -1,48 +1,59 @@
-oci_define_by_name -- Uses a PHP variable for the define-step during a SELECT
+*oci_define_by_name* -- Associates a PHP variable with a column for query
+fetches
 
   bool oci_define_by_name(resource statement, string column_name, mixed variable [, int type])~
 
-Defines PHP variables for fetches of SQL-Columns.
+Associates a PHP variable with a column for query fetches using |oci_fetch|.
 
-{statement} A valid OCI statement identifier.
+The |oci_define_by_name| call must occur before executing |oci_execute|.
 
-{column_name} The column name. Must be uppercased.
+{statement} A valid OCI8 statement identifier created by |oci_parse| and
+executed by |oci_execute|, or a REF CURSOR statement identifier.
 
-Take into consideration that Oracle uses ALL-UPPERCASE column names, whereby
-in your select you can also use lowercase. If you define a variable that
-doesn't exists in your select statement, no error will be issued.
+{column_name} The column name used in the query.
 
-{variable} The PHP variable.
+Use uppercase for Oracle's default, non-case sensitive column names. Use the
+exact column name case for case-sensitive column names.
 
-{type}
+{variable} The PHP variable that will contain the returned column value.
 
-If you need to define an abstract datatype (LOB/ROWID/BFILE) you must allocate
-it first using |oci_new_descriptor|. See also the |oci_bind_by_name| function.
+{type} The data type to be returned. Generally not needed. Note that
+Oracle-style data conversions are not performed. For example, SQLT_INT will be
+ignored and the returned data type will still be SQLT_CHR.
 
-Returns TRUE on success or FALSE on failure.
+You can optionally use |oci_new_descriptor| to allocate LOB/ROWID/BFILE
+descriptors.
+
+Returns TRUE on success or &false; on failure.
 
 |oci_define_by_name| example
 
 <?php >
-  /* oci_define_by_name example - thies at thieso dot net (980219) */
-  
-  $conn = oci_connect("scott", "tiger");
-  
-  $stmt = oci_parse($conn, "SELECT empno, ename FROM emp");
-  
-  /* the define MUST be done BEFORE oci_execute! */
-  
-  oci_define_by_name($stmt, "EMPNO", $empno);
-  oci_define_by_name($stmt, "ENAME", $ename);
-  
-  oci_execute($stmt);
-  
-  while (oci_fetch($stmt)) {
-      echo "empno:" . $empno . "\n";
-      echo "ename:" . $ename . "\n";
+  $conn = oci_connect('hr', 'welcome', 'localhost/XE');
+  if (!$conn) {
+      $e = oci_error();
+      trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
   }
   
-  oci_free_statement($stmt);
+  $sql = 'SELECT location_id, city FROM locations WHERE location_id < 1200';
+  $stid = oci_parse($conn, $sql);
+  
+  // The defines MUST be done before executing
+  oci_define_by_name($stid, 'LOCATION_ID', $locid);
+  oci_define_by_name($stid, 'CITY', $city);
+  
+  oci_execute($stid);
+  
+  // Each fetch populates the previously defined variables with the next row's data
+  while (oci_fetch($stid)) {
+      echo "Location id $locid is $city<br>\n";
+  }
+  
+  // Displays:
+  //   Location id 1000 is Roma
+  //   Location id 1100 is Venice
+  
+  oci_free_statement($stid);
   oci_close($conn);
 ?>
 
@@ -50,8 +61,137 @@ Returns TRUE on success or FALSE on failure.
 
 
 
-In PHP versions before 5.0.0 you must use |ocidefinebyname| instead. This name
-still can be used, it was left as alias of |oci_define_by_name| for downwards
-compatability. This, however, is deprecated and not recommended.
+|oci_define_by_name| with case sensitive column names
+
+<?php >
+  /*
+    Before running, create the table with a case sensitive column name:
+      CREATE TABLE mytab (id NUMBER, "MyDescription" VARCHAR2(30));
+      INSERT INTO mytab (id, "MyDescription") values (1, 'Iced Coffee');
+      COMMIT;
+  */
+  
+  $conn = oci_connect('hr', 'welcome', 'localhost/XE');
+  if (!$conn) {
+      $e = oci_error();
+      trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+  }
+  
+  $stid = oci_parse($conn, 'SELECT * FROM mytab');
+  
+  // Use uppercase for non case-sensitive column names
+  oci_define_by_name($stid, 'ID', $id);
+  
+  // Use the exact case for case-sensitive column names
+  oci_define_by_name($stid, 'MyDescription', $mydesc);
+  
+  oci_execute($stid);
+  
+  while (oci_fetch($stid)) {
+      echo "id $id is $mydesc<br>\n";
+  }
+  
+  // Displays:
+  //   id 1 is Iced Coffee
+  
+  oci_free_statement($stid);
+  oci_close($conn);
+?>
+
+
+
+
+
+|oci_define_by_name| with LOB columns
+
+<?php >
+  /*
+    Before running, create the table:
+      CREATE TABLE mytab (id NUMBER, fruit CLOB);
+      INSERT INTO mytab (id, fruit) values (1, 'apple');
+      INSERT INTO mytab (id, fruit) values (2, 'orange');
+      COMMIT;
+  */
+  
+  $conn = oci_connect('hr', 'welcome', 'localhost/XE');
+  if (!$conn) {
+      $e = oci_error();
+      trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+  }
+  
+  $stid = oci_parse($conn, 'SELECT * FROM mytab');
+  
+  // The defines MUST be done before executing
+  oci_define_by_name($stid, 'ID', $id);
+  oci_define_by_name($stid, 'FRUIT', $fruit);  // $fruit will become a LOB descriptor
+  
+  oci_execute($stid);
+  
+  while (oci_fetch($stid)) {
+      echo $id . " is " . $fruit->load(100) . "<br>\n";
+  }
+  
+  // Displays:
+  //   1 is apple
+  //   2 is orange
+  
+  $fruit->free();
+  oci_free_statement($stid);
+  oci_close($conn);
+?>
+
+
+
+
+
+|oci_define_by_name| with an explicit type
+
+<?php >
+  /*
+    Before running, create the table:
+      CREATE TABLE mytab (id NUMBER, fruit CLOB);
+      INSERT INTO mytab (id, fruit) values (1, 'apple');
+      INSERT INTO mytab (id, fruit) values (2, 'orange');
+      COMMIT;
+  */
+  
+  $conn = oci_connect('hr', 'welcome', 'localhost/XE');
+  if (!$conn) {
+      $e = oci_error();
+      trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+  }
+  
+  $stid = oci_parse($conn, 'SELECT * FROM mytab');
+  
+  // The defines MUST be done before executing
+  oci_define_by_name($stid, 'ID', $id);
+  
+  $fruit = oci_new_descriptor($conn, OCI_D_LOB);
+  oci_define_by_name($stid, 'FRUIT', $fruit, OCI_D_CLOB);
+  
+  oci_execute($stid);
+  
+  while (oci_fetch($stid)) {
+      echo $id . " is " . $fruit->load(100) . "<br>\n";
+  }
+  
+  // Displays:
+  //   1 is apple
+  //   2 is orange
+  
+  $fruit->free();
+  oci_free_statement($stid);
+  oci_close($conn);
+?>
+
+
+
+
+
+In PHP versions before 5.0.0 use |ocidefinebyname| instead. The old function
+name can still be used in current versions, however it is deprecated and not
+recommended.
+
+|oci_fetch| |oci_new_descriptor|
 
 vim:ft=help:

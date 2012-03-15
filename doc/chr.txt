@@ -1,4 +1,4 @@
-chr -- Return a specific character
+*chr* -- Return a specific character
 
   string chr(int ascii)~
 
@@ -9,8 +9,6 @@ This function complements |ord|.
 {ascii} The ascii code.
 
 Returns the specified character.
-
-Version Description 6.0.0 This function now uses codepoint as input.
 
 |chr| example
 

@@ -1,6 +1,6 @@
-imagecolorset -- Set the color for the specified palette index
+*imagecolorset* -- Set the color for the specified palette index
 
-  void imagecolorset(resource image, int index, int red, int green, int blue)~
+  void imagecolorset(resource image, int index, int red, int green, int blue [, int alpha])~
 
 This sets the specified index in the palette to the specified color. This is
 useful for creating flood-fill-like effects in palleted images without the
@@ -16,6 +16,11 @@ such as |imagecreatetruecolor|.
 {green} Value of green component.
 
 {blue} Value of blue component.
+
+{alpha} Value of alpha component.
+
+This change exists in the development version of PHP, and will probably exist
+after 5.3.
 
 No value is returned.
 
@@ -35,7 +40,7 @@ No value is returned.
   imagecolorset($im, $bg, 0, 0, 255);
   
   // Output the image to the browser
-  //header('Content-type: image/png');
+  header('Content-type: image/png');
   
   imagepng($im);
   imagedestroy($im);

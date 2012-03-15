@@ -1,4 +1,4 @@
-SDO_Model_Property::isMany -- Test to see if the property is many-valued
+*SDO_Model_Property::isMany* -- Test to see if the property is many-valued
 
   bool SDO_Model_Property::isMany()~
 

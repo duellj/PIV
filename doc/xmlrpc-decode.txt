@@ -1,4 +1,4 @@
-xmlrpc_decode -- Decodes XML into native PHP types
+*xmlrpc_decode* -- Decodes XML into native PHP types
 
   mixed xmlrpc_decode(string xml [, string encoding])~
 
@@ -8,7 +8,7 @@ PHP. This function should be used at your own risk.
 
 {xml} XML response returned by XMLRPC method.
 
-{encoding} Input encoding supported by iconv (defaults to "iso-8859-1").
+{encoding} Input encoding supported by iconv.
 
 Returns either an array, or an integer, or a string, or a boolean according to
 the response returned by the XMLRPC method.

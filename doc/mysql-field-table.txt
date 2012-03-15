@@ -1,4 +1,4 @@
-mysql_field_table -- Get name of the table the specified field is in
+*mysql_field_table* -- Get name of the table the specified field is in
 
   string mysql_field_table(resource result, int field_offset)~
 

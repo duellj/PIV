@@ -1,4 +1,4 @@
-assert_options -- Set/get the various assert flags
+*assert_options* -- Set/get the various assert flags
 
   mixed assert_options(int what [, mixed value])~
 
@@ -23,19 +23,19 @@ Returns the original setting of any option or FALSE on errors.
   // assert failures
   function assert_failure()
   {
-  	echo 'Assert failed';
+      echo 'Assert failed';
   }
   
   // This is our test function
   function test_assert($parameter)
   {
-  	assert(is_bool($parameter));
+      assert(is_bool($parameter));
   }
   
   // Set our assert options
-  assert_options(ASSERT_ACTIVE,	true);
-  assert_options(ASSERT_BAIL, 	true);
-  assert_options(ASSERT_WARNING, 	false);
+  assert_options(ASSERT_ACTIVE,   true);
+  assert_options(ASSERT_BAIL,     true);
+  assert_options(ASSERT_WARNING,  false);
   assert_options(ASSERT_CALLBACK, 'assert_failure');
   
   // Make an assert that would fail

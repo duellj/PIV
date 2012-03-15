@@ -1,12 +1,13 @@
-result->fetch_object -- Returns the current row of a result set as an object
+*maxdb_result::fetch_object* -- Returns the current row of a result set as an
+object
 
-Procedural style:
+Procedural style
 
   object maxdb_fetch_object(object result)~
 
-Object oriented style (method):
+Object oriented style
 
-  object fetch_object(object result)~
+  object maxdb_result::fetch_object(object result)~
 
 The |maxdb_fetch_object| will return the current row result set as an object
 where the attributes of the object represent the names of the fields found

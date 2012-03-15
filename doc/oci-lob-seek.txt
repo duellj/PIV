@@ -1,4 +1,4 @@
-OCI-Lob->seek -- Sets the internal pointer of the large object
+*OCI-Lob->seek* -- Sets the internal pointer of the large object
 
   bool seek(int offset [, int whence])~
 
@@ -12,6 +12,6 @@ OCI_SEEK_CUR - adds {offset} bytes to the current position OCI_SEEK_END - adds
 {offset} bytes to the end of large object (use negative value to move to a
 position before the end of large object)
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

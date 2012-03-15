@@ -1,4 +1,4 @@
-checkdnsrr -- Check DNS records corresponding to a given Internet host name or
+*checkdnsrr* -- Check DNS records corresponding to a given Internet host name or
 IP address
 
   bool checkdnsrr(string host [, string type])~
@@ -9,7 +9,7 @@ Searches DNS for records of type {type} corresponding to {host}.
 name.
 
 {type} {type} may be any one of: A, MX, NS, SOA, PTR, CNAME, AAAA, A6, SRV,
-NAPTR, TXT or ANY. The default is MX.
+NAPTR, TXT or ANY.
 
 Returns TRUE if any records are found; returns FALSE if no records were found
 or if an error occurred.

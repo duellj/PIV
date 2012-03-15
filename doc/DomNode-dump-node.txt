@@ -1,4 +1,4 @@
-DomNode->dump_node -- Dumps a single node
+*DomNode->dump_node* -- Dumps a single node
 
   string DomNode->dump_node()~
 

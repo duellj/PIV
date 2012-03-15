@@ -1,4 +1,4 @@
-SAMConnection->rollback -- Cancels (rolls back) an in-flight unit of work.
+*SAMConnection->rollback* -- Cancels (rolls back) an in-flight unit of work.
 
   bool rollback()~
 

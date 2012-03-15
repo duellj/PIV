@@ -1,13 +1,13 @@
-maxdb->ping -- Pings a server connection, or tries to reconnect if the
+*maxdb::ping* -- Pings a server connection, or tries to reconnect if the
 connection has gone down
 
-Procedural style:
+Procedural style
 
   bool maxdb_ping(resource link)~
 
-Object oriented style (method):
+Object oriented style
 
-  bool ping(resource link)~
+  bool maxdb::ping(resource link)~
 
 Checks whether the connection to the server is working. If it has gone down,
 and global option maxdb.reconnect is enabled an automatic reconnection is
@@ -16,7 +16,7 @@ attempted.
 This function can be used by clients that remain idle for a long while, to
 check whether the server has closed the connection and reconnect if necessary.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

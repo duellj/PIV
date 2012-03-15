@@ -1,12 +1,12 @@
-maxdb->fetch_assoc -- Fetch a result row as an associative array
+*maxdb_result::fetch_assoc* -- Fetch a result row as an associative array
 
-Procedural style:
+Procedural style
 
   array maxdb_fetch_assoc(resource result)~
 
-Object oriented style (method):
+Object oriented style
 
-  array fetch_assoc(resource result)~
+  array maxdb_result::fetch_assoc(resource result)~
 
 Returns an associative array that corresponds to the fetched row or NULL if
 there are no more rows.

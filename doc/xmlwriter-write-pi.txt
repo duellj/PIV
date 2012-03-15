@@ -1,6 +1,6 @@
-XMLWriter::writePI -- Writes a PI
+*XMLWriter::writePI* -- Writes a PI
 
-Oriented object style
+Object oriented style
 
   bool writePI(string target, string content)~
 
@@ -18,7 +18,7 @@ modified. This resource comes from a call to |xmlwriter_open_uri| or
 
 {content} The content of the processing instruction.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 XMLWriter::startPI XMLWriter::endPI
 

@@ -1,4 +1,4 @@
-ftp_nb_fput -- Stores a file from an open file to the FTP server
+*ftp_nb_fput* -- Stores a file from an open file to the FTP server
 (non-blocking)
 
   int ftp_nb_fput(resource ftp_stream, string remote_file, resource handle, int mode [, int startpos])~
@@ -18,7 +18,7 @@ while the file is being uploaded.
 
 {mode} The transfer mode. Must be either FTP_ASCII or FTP_BINARY.
 
-{startpos}
+{startpos} The position in the remote file to start uploading to.
 
 Returns FTP_FAILED or FTP_FINISHED or FTP_MOREDATA.
 

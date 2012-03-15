@@ -1,4 +1,4 @@
-imagesetstyle -- Set the style for line drawing
+*imagesetstyle* -- Set the style for line drawing
 
   bool imagesetstyle(resource image, array style)~
 
@@ -12,7 +12,7 @@ such as |imagecreatetruecolor|.
 {style} An array of pixel colors. You can use the IMG_COLOR_TRANSPARENT
 constant to add a transparent pixel.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Following example script draws a dashed line from upper left to lower right
 corner of the canvas: |imagesetstyle| example
@@ -43,6 +43,8 @@ corner of the canvas: |imagesetstyle| example
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagesetstyle()
 
 
 

@@ -1,4 +1,4 @@
-hw_api_object->title -- Returns the title attribute
+*hw_api_object->title* -- Returns the title attribute
 
   string title(array parameter)~
 

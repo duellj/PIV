@@ -1,15 +1,15 @@
-get_magic_quotes_gpc -- Gets the current configuration setting of magic quotes
-gpc
+*get_magic_quotes_gpc* -- Gets the current configuration setting of
+magic_quotes_gpc
 
   int get_magic_quotes_gpc()~
 
 Returns the current configuration setting of magic_quotes_gpc
 
-Keep in mind that the setting magic_quotes_gpc will not work at runtime.
+Keep in mind that attempting to set magic_quotes_gpc at runtime will not work.
 
 For more information about magic_quotes, see this security section.
 
-Returns 0 if magic quotes gpc are off, 1 otherwise.
+Returns 0 if magic_quotes_gpc is off, 1 otherwise.
 
 |get_magic_quotes_gpc| example
 
@@ -18,11 +18,15 @@ Returns 0 if magic quotes gpc are off, 1 otherwise.
   echo $_POST['lastname'];             // O\'reilly
   echo addslashes($_POST['lastname']); // O\\\'reilly
   
-  if (!get_magic_quotes_gpc()) {
-      $lastname = addslashes($_POST['lastname']);
-  } else {
+  if (get_magic_quotes_gpc()) {
+      $lastname = stripslashes($_POST['lastname']);
+  }
+  else {
       $lastname = $_POST['lastname'];
   }
+  
+  // If using MySQL
+  $lastname = mysql_real_escape_string($lastname);
   
   echo $lastname; // O\'reilly
   $sql = "INSERT INTO lastnames (lastname) VALUES ('$lastname')";

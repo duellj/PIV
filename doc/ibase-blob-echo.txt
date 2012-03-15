@@ -1,4 +1,4 @@
-ibase_blob_echo -- Output blob contents to browser
+*ibase_blob_echo* -- Output blob contents to browser
 
   bool ibase_blob_echo(string blob_id)~
 
@@ -12,7 +12,7 @@ link is assumed.
 
 {blob_id}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ibase_blob_open| |ibase_blob_close| |ibase_blob_get|
 

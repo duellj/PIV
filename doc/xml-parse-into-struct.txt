@@ -1,18 +1,19 @@
-xml_parse_into_struct -- Parse XML data into an array structure
+*xml_parse_into_struct* -- Parse XML data into an array structure
 
   int xml_parse_into_struct(resource parser, string data, array values [, array index])~
 
-This function parses an XML file into 2 parallel array structures, one
+This function parses an XML string into 2 parallel array structures, one
 ({index}) containing pointers to the location of the appropriate values in the
 {values} array. These last two parameters must be passed by reference.
 
-{parser}
+{parser} A reference to the XML parser.
 
-{data}
+{data} A string containing the XML data.
 
-{values}
+{values} An array containing the values of the XML data
 
-{index}
+{index} An array containing pointers to the location of the appropriate values
+in the $values.
 
 |xml_parse_into_struct| returns 0 for failure and 1 for success. This is not
 the same as FALSE and TRUE, be careful with operators such as ===.

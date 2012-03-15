@@ -1,4 +1,4 @@
-hw_api_object->attreditable -- Checks whether an attribute is editable
+*hw_api_object->attreditable* -- Checks whether an attribute is editable
 
   bool attreditable(array parameter)~
 

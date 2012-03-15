@@ -1,4 +1,4 @@
-ps_delete -- Deletes all resources of a PostScript document
+*ps_delete* -- Deletes all resources of a PostScript document
 
   bool ps_delete(resource psdoc)~
 
@@ -10,7 +10,7 @@ the document and adding the bookmark hierarchy.
 
 {psdoc} Resource identifier of the postscript file as returned by |ps_new|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_close|
 

@@ -1,11 +1,7 @@
-log1p -- Returns log(1 + number), computed in a way that is accurate even when
+*log1p* -- Returns log(1 + number), computed in a way that is accurate even when
 the value of number is close to zero
 
   float log1p(float number)~
-
-This function is EXPERIMENTAL. The behaviour of this function, its name, and
-surrounding documentation may change without notice in a future release of
-PHP. This function should be used at your own risk.
 
 |log1p| returns log(1 + {number}) computed in a way that is accurate even when
 the value of {number} is close to zero. |log| might only return log(1) in this

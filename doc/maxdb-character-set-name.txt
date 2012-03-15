@@ -1,13 +1,13 @@
-maxdb->character_set_name -- Returns the default character set for the
+*maxdb::character_set_name* -- Returns the default character set for the
 database connection
 
-Procedural style:
+Procedural style
 
   string maxdb_character_set_name(resource link)~
 
-Object oriented style (method):
+Object oriented style
 
-  string character_set_name(resource link)~
+  string maxdb::character_set_name(resource link)~
 
 Returns the current character set for the database connection specified by the
 {link} parameter.

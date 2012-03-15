@@ -1,4 +1,4 @@
-hw_api->remove -- Delete an object
+*hw_api->remove* -- Delete an object
 
   bool remove(array parameter)~
 
@@ -20,6 +20,6 @@ immediately. In removelinks mode all references to and from the objects will
 be deleted as well. In nonrecursive the deletion is not performed recursive.
 Removing a collection which is not empty will cause an error.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

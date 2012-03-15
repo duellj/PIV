@@ -1,6 +1,6 @@
-XMLWriter::startDocument -- Create document tag
+*XMLWriter::startDocument* -- Create document tag
 
-Oriented object style
+Object oriented style
 
   bool startDocument([string version [, string encoding [, string standalone]]])~
 
@@ -20,9 +20,9 @@ Defaults to 1.0.
 {encoding} The encoding of the document as part of the XML declaration. NULL
 by default.
 
-{standalone} yes or no. NULL by default.
+{standalone} yes or no.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 XMLWriter::endDocument
 

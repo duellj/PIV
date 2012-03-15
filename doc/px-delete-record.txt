@@ -1,4 +1,4 @@
-px_delete_record -- Deletes record from paradox database
+*px_delete_record* -- Deletes record from paradox database
 
   bool px_delete_record(resource pxdoc, int num)~
 
@@ -13,6 +13,6 @@ This function is only available if pxlib >= 0.6.0 is used.
 {num} The record number is an artificial number counting records in the order
 as they are stored in the database. The first record has number 0.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

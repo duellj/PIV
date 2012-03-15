@@ -1,4 +1,4 @@
-shuffle -- Shuffle an array
+*shuffle* -- Shuffle an array
 
   bool shuffle(array array)~
 
@@ -6,7 +6,7 @@ This function shuffles (randomizes the order of the elements in) an array.
 
 {array} The array.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |shuffle| example
 

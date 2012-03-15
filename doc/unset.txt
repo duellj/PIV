@@ -1,4 +1,4 @@
-unset -- Unset a given variable
+*unset* -- Unset a given variable
 
   void unset(mixed var [, mixed var [, mixed ...]])~
 
@@ -27,8 +27,8 @@ The above example will output:
 
   bar
 
-If you would like to |unset| a global variable inside of a function, you can
-use the $GLOBALS array to do so:
+To |unset| a global variable inside of a function, then use the $GLOBALS array
+to do so:
 
 <?php >
   function foo() 
@@ -97,8 +97,7 @@ The above example will output:
 
 No value is returned.
 
-Version Description 4.0.1 Added support for multiple arguments. 4.0.0 |unset|
-became an expression. (In PHP 3, |unset| would always return 1).
+Version Description 4.0.1 Added support for multiple arguments.
 
 |unset| example
 

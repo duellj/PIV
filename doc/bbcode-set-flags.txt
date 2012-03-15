@@ -1,4 +1,4 @@
-bbcode_set_flags -- Set or alter parser options
+*bbcode_set_flags* -- Set or alter parser options
 
   bool bbcode_set_flags(resource bbcode_container, int flags [, int mode])~
 
@@ -11,7 +11,7 @@ Set or alter parser options
 {mode} One of the BBCODE_SET_FLAGS_* constant to set, unset a specific flag
 set or to replace the flag set by flags.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |bbcode_set_flags| usage example
 

@@ -1,4 +1,4 @@
-ps_show2 -- Output a text at current position
+*ps_show2* -- Output a text at current position
 
   bool ps_show2(resource psdoc, string text, int len)~
 
@@ -13,6 +13,6 @@ available.
 
 {len}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

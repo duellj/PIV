@@ -1,6 +1,6 @@
-file_get_contents -- Reads entire file into a string
+*file_get_contents* -- Reads entire file into a string
 
-  string file_get_contents(string filename [, int flags [, resource context [, int offset [, int maxlen]]]])~
+  string file_get_contents(string filename [, bool use_include_path [, resource context [, int offset [, int maxlen]]]])~
 
 This function is similar to |file|, except that |file_get_contents| returns
 the file in a string, starting at the specified {offset} up to {maxlen} bytes.
@@ -15,29 +15,26 @@ encode the URI with |urlencode|.
 
 {filename} Name of the file to read.
 
-{flags} Prior to PHP 6, this parameter is called {use_include_path} and is a
-bool. As of PHP 5 the FILE_USE_INCLUDE_PATH can be used to trigger include
-path search.
-
-The value of {flags} can be any combination of the following flags (with some
-restrictions), joined with the binary OR (|) operator.
-
-Available flags Flag Description FILE_USE_INCLUDE_PATH Search for {filename}
-in the include directory. See include_path for more information. FILE_TEXT As
-of PHP 6, the default encoding of the read data is UTF-8. You can specify a
-different encoding by creating a custom context or by changing the default
-using |stream_default_encoding|. This flag cannot be used with FILE_BINARY.
-FILE_BINARY With this flag, the file is read in binary mode. This is the
-default setting and cannot be used with FILE_TEXT.
+{use_include_path} As of PHP 5 the FILE_USE_INCLUDE_PATH can be used to
+trigger include path search.
 
 {context} A valid context resource created with |stream_context_create|. If
 you don't need to use a custom context, you can skip this parameter by NULL.
 
-{offset} The offset where the reading starts.
+{offset} The offset where the reading starts on the original stream.
 
-{maxlen} Maximum length of data read.
+Seeking ({offset}) is not supported with remote files. Attempting to seek on
+non-local files may work with small offsets, but this is unpredictable because
+it works on the buffered stream.
+
+{maxlen} Maximum length of data read. The default is to read until end of file
+is reached. Note that this parameter is applied to the stream processed by the
+filters.
 
 The function returns the read data or FALSE on failure.
+
+An E_WARNING level error is generated if either {maxlength} is less than zero,
+or if {offset} exceeds the length of the stream.
 
 Get and output the source of the homepage of a website
 
@@ -93,15 +90,16 @@ Using stream contexts
 
 
 
-Version Description 6.0.0 The {use_include_path} parameter was replaced by the
-{flags} parameter. 5.1.0 Added the {offset} and {maxlen} parameters. 5.0.0
+Version Description 5.1.0 Added the {offset} and {maxlen} parameters. 5.0.0
 Added context support.
 
 This function is binary-safe.
 
 A URL can be used as a filename with this function if the fopen wrappers have
-been enabled. See |fopen| for more details on how to specify the filename and
-for a list of supported URL protocols.
+been enabled. See |fopen| for more details on how to specify the filename. See
+the for links to information about what abilities the various wrappers have,
+notes on their usage, and information on any predefined variables they may
+provide.
 
 When using SSL, Microsoft IIS will violate the protocol by closing the
 connection without sending a close_notify indicator. PHP will report this as
@@ -113,6 +111,6 @@ warning. When using |fsockopen| to create an ssl:// socket, the developer is
 responsible for detecting and suppressing this warning.
 
 |file| |fgets| |fread| |readfile| |file_put_contents| |stream_get_contents|
-|stream_context_create|
+|stream_context_create| $http_response_header
 
 vim:ft=help:

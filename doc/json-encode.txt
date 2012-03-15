@@ -1,4 +1,4 @@
-json_encode -- Returns the JSON representation of a value
+*json_encode* -- Returns the JSON representation of a value
 
   string json_encode(mixed value [, int options])~
 
@@ -9,12 +9,12 @@ Returns a string containing the JSON representation of {value}.
 This function only works with UTF-8 encoded data.
 
 {options} Bitmask consisting of JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP,
-JSON_HEX_APOS, JSON_FORCE_OBJECT. Defaults to 0.
+JSON_HEX_APOS, JSON_FORCE_OBJECT.
 
 Returns a JSON encoded string on success.
 
 Version Description 5.3.0 The {options} parameter was added. 5.2.1 Added
-support to JSON encode basic types.
+support for JSON encoding of basic types.
 
 A |json_encode| example
 
@@ -49,6 +49,11 @@ A |json_encode| example showing all the options in action
   
   echo "Non-associative array output as array: ", json_encode($c), "\n";
   echo "Non-associative array output as object: ", json_encode($c, JSON_FORCE_OBJECT), "\n\n";
+  
+  $d = array('foo' => 'bar', 'baz' => 'long');
+  
+  echo "Associative array always output as object: ", json_encode($d), "\n";
+  echo "Associative array always output as object: ", json_encode($d, JSON_FORCE_OBJECT), "\n\n";
 ?>
 
 The above example will output:
@@ -65,6 +70,9 @@ The above example will output:
   
   Non-associative array output as array: [[1,2,3]]
   Non-associative array output as object: {"0":{"0":1,"1":2,"2":3}}
+  
+  Associative array always output as object: {"foo":"bar","baz":"long"}
+  Associative array always output as object: {"foo":"bar","baz":"long"}
 
 
 

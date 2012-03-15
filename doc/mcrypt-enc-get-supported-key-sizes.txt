@@ -1,4 +1,4 @@
-mcrypt_enc_get_supported_key_sizes -- Returns an array with the supported
+*mcrypt_enc_get_supported_key_sizes* -- Returns an array with the supported
 keysizes of the opened algorithm
 
   array mcrypt_enc_get_supported_key_sizes(resource td)~
@@ -18,7 +18,7 @@ between 1 and |mcrypt_enc_get_key_size| are supported by the algorithm.
       var_dump(mcrypt_enc_get_supported_key_sizes($td));
 ?>
 
-This will print:
+The above example will output:
 
   array(3) {
     [0]=>

@@ -1,4 +1,4 @@
-SAMConnection->send -- Send a message to a queue or publish an item to a
+*SAMConnection->send* -- Send a message to a queue or publish an item to a
 topic.
 
   string send(string target, SAMMessage msg [, array properties])~

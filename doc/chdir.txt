@@ -1,4 +1,4 @@
-chdir -- Change directory
+*chdir* -- Change directory
 
   bool chdir(string directory)~
 
@@ -6,7 +6,7 @@ Changes PHP's current directory to {directory}.
 
 {directory} The new current directory
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |chdir| example
 

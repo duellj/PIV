@@ -1,11 +1,11 @@
-radius_put_int -- Attaches an integer attribute
+*radius_put_int* -- Attaches an integer attribute
 
   bool radius_put_int(resource radius_handle, int type, int value)~
 
 This function is currently not documented; only its argument list is
 available.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |radius_put_int| example
 

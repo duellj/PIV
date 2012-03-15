@@ -1,4 +1,4 @@
-simplexml_load_string -- Interprets a string of XML into an object
+*simplexml_load_string* -- Interprets a string of XML into an object
 
   object simplexml_load_string(string data [, string class_name [, int options [, string ns [, bool is_prefix]]]])~
 
@@ -20,6 +20,11 @@ parameter to specify additional Libxml parameters.
 Returns an object of class SimpleXMLElement with properties containing the
 data held within the xml document. On errors, it will return FALSE.
 
+Produces an E_WARNING error message for each error found in the XML data.
+
+Use |libxml_use_internal_errors| to suppress all XML errors, and
+|libxml_get_errors| to iterate over them afterwards.
+
 Interpret an XML string
 
 <?php >
@@ -37,7 +42,7 @@ Interpret an XML string
   
   $xml = simplexml_load_string($string);
   
-  var_dump($xml);
+  print_r($xml);
 ?>
 
 The above example will output:
@@ -58,5 +63,6 @@ At this point, you can go about using $xml->body and such.
 
 
 |simplexml_load_file| SimpleXMLElement::__construct
+|libxml_use_internal_errors|
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-gnupg_addencryptkey -- Add a key for encryption
+*gnupg_addencryptkey* -- Add a key for encryption
 
   bool gnupg_addencryptkey(resource identifier, string fingerprint)~
 
@@ -6,7 +6,7 @@ gnupg_addencryptkey -- Add a key for encryption
 
 {fingerprint} The fingerprint key.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Procedural |gnupg_addencryptkey| example
 

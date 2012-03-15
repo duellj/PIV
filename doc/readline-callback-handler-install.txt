@@ -1,4 +1,4 @@
-readline_callback_handler_install -- Initializes the readline callback
+*readline_callback_handler_install* -- Initializes the readline callback
 interface and terminal, prints the prompt and returns immediately
 
   bool readline_callback_handler_install(string prompt, callback callback)~
@@ -15,7 +15,7 @@ interleaving of IO and user input, unlike |readline|.
 {callback} The {callback} function takes one parameter; the user input
 returned.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Readline Callback Interface Example
 

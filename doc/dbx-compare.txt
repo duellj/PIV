@@ -1,4 +1,4 @@
-dbx_compare -- Compare two rows for sorting purposes
+*dbx_compare* -- Compare two rows for sorting purposes
 
   int dbx_compare(array row_a, array row_b, string column_key [, int flags])~
 
@@ -23,8 +23,7 @@ DBX_CMP_TEXT - compare items as strings
 DBX_CMP_NUMBER - compare items numerically
 
 One of the direction and one of the type constant can be combined with bitwise
-OR operator (|). The default value for the {flags} parameter is DBX_CMP_ASC |
-DBX_CMP_NATIVE.
+OR operator (|).
 
 Returns 0 if the row_a[$column_key] is equal to row_b[$column_key], and 1 or
 -1 if the former is greater or is smaller than the latter one, respectively,

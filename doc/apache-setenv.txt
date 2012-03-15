@@ -1,4 +1,4 @@
-apache_setenv -- Set an Apache subprocess_env variable
+*apache_setenv* -- Set an Apache subprocess_env variable
 
   bool apache_setenv(string variable, string value [, bool walk_to_top])~
 
@@ -15,7 +15,7 @@ variable is not changed.
 {walk_to_top} Whether to set the top-level variable available to all Apache
 layers.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Setting an Apache environment variable using |apache_setenv|
 

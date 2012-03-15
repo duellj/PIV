@@ -1,4 +1,4 @@
-wddx_unserialize -- Unserializes a WDDX packet
+*wddx_unserialize* -- Unserializes a WDDX packet
 
   mixed wddx_unserialize(string packet)~
 

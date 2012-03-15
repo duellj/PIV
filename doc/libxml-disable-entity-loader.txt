@@ -1,6 +1,6 @@
-libxml_disable_entity_loader -- Disable the ability to load external entities
+*libxml_disable_entity_loader* -- Disable the ability to load external entities
 
-  ReturnType libxml_disable_entity_loader([bool disable])~
+  bool libxml_disable_entity_loader([bool disable])~
 
 Disable/enable the ability to load external entities.
 

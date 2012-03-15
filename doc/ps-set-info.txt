@@ -1,4 +1,4 @@
-ps_set_info -- Sets information fields of document
+*ps_set_info* -- Sets information fields of document
 
   bool ps_set_info(resource p, string key, string val)~
 
@@ -30,7 +30,7 @@ right corner.
 Up to version 0.2.6 of pslib, the BoundingBox and Orientation will be
 overwritten by |ps_begin_page|, unless |ps_findfont| has been called before.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_findfont| |ps_begin_page|
 

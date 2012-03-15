@@ -1,10 +1,10 @@
-date_parse -- Returns associative array with detailed info about given date
+*date_parse* -- Returns associative array with detailed info about given date
 
   array date_parse(string date)~
 
 {date} Date in format accepted by |strtotime|.
 
-Returns array with information about the parsed date on success, or FALSE on
+Returns array with information about the parsed date on success or FALSE on
 failure.
 
 In case the date format has an error, the element 'errors' will contains the
@@ -36,6 +36,6 @@ The above example will output:
 
 
 
-|getdate|
+|checkdate| |getdate|
 
 vim:ft=help:

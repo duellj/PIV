@@ -1,14 +1,21 @@
-db2_pconnect -- Returns a persistent connection to a database
+*db2_pconnect* -- Returns a persistent connection to a database
 
   resource db2_pconnect(string database, string username, string password [, array options])~
 
 Returns a persistent connection to an IBM DB2 Universal Database, IBM
-Cloudscape, or Apache Derby database. For more information on persistent
-connections, refer to .
+Cloudscape, or Apache Derby database.
+
+For more information on persistent connections, refer to .
 
 Calling |db2_close| on a persistent connection always returns TRUE, but the
 underlying DB2 client connection remains open and waiting to serve the next
 matching |db2_pconnect| request.
+
+Users running version 1.9.0 or later of ibm_db2 should be aware that the
+extension will perform a transaction rollback on persistent connections at the
+end of a request, thus ending the transaction. This prevents the transaction
+block from carrying over to the next request which uses that connection if
+script execution ends before the transaction block does.
 
 {database} The database alias in the DB2 client catalog.
 

@@ -1,10 +1,10 @@
-oci_result -- Returns field's value from the fetched row
+*oci_result* -- Returns field's value from the fetched row
 
   mixed oci_result(resource statement, mixed field)~
 
 Returns the data from {field} in the current row, fetched by |oci_fetch|.
 
-For details on the data type mapping performed by the oci8 driver, see the
+For details on the data type mapping performed by the OCI8 extension, see the
 datatypes supported by the driver
 
 {statement}

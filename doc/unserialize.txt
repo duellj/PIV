@@ -1,4 +1,4 @@
-unserialize -- Creates a PHP value from a stored representation
+*unserialize* -- Creates a PHP value from a stored representation
 
   mixed unserialize(string str)~
 
@@ -26,8 +26,7 @@ In case the passed string is not unserializeable, FALSE is returned and
 E_NOTICE is issued.
 
 Version Description 4.2.0 The directive unserialize_callback_func became
-available. 4.0.0 When serializing an object, methods are not lost anymore.
-Please see the Serializing Objects for more information.
+available.
 
 |unserialize| example
 

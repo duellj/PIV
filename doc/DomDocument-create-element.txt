@@ -1,4 +1,4 @@
-DomDocument->create_element -- Create new element node
+*DomDocument->create_element* -- Create new element node
 
   domelement DomDocument->create_element(string name)~
 

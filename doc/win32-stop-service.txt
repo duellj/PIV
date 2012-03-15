@@ -1,4 +1,4 @@
-win32_stop_service -- Stops a service
+*win32_stop_service* -- Stops a service
 
   int win32_stop_service(string servicename [, string machine])~
 
@@ -8,8 +8,9 @@ Stops a named service. Requires administrative privileges.
 
 {machine} Optional machine name. If omitted, the local machine is used.
 
-Returns WIN32_NO_ERROR on success, or a win32 error code on failure.
+Returns WIN32_NO_ERROR on success, &false; if there is a problem with the
+parameters or a Win32 Error Code on failure.
 
-|win32_start_service|
+|win32_start_service| Win32 Error Codes
 
 vim:ft=help:

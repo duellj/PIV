@@ -1,4 +1,4 @@
-hw_api->checkin -- Checks in an object
+*hw_api->checkin* -- Checks in an object
 
   bool checkin(array parameter)~
 
@@ -28,6 +28,6 @@ check-in.
 
 {parameter}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

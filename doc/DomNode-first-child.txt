@@ -1,4 +1,4 @@
-DomNode->first_child -- Returns first child of node
+*DomNode->first_child* -- Returns first child of node
 
   domelement DomNode->first_child()~
 

@@ -1,4 +1,4 @@
-ldap_mod_add -- Add attribute values to current attributes
+*ldap_mod_add* -- Add attribute values to current attributes
 
   bool ldap_mod_add(resource link_identifier, string dn, array entry)~
 
@@ -12,7 +12,7 @@ Object-level additions are done by the |ldap_add| function.
 
 {entry}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 This function is binary-safe.
 

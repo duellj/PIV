@@ -1,4 +1,4 @@
-SCA_LocalProxy::createDataObject -- create an SDO
+*SCA_LocalProxy::createDataObject* -- create an SDO
 
   SDO_DataObject SCA_LocalProxy::createDataObject(string type_namespace_uri, string type_name)~
 

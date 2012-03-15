@@ -1,4 +1,4 @@
-DomNode->get_content -- Gets content of node
+*DomNode->get_content* -- Gets content of node
 
   string DomNode->get_content()~
 

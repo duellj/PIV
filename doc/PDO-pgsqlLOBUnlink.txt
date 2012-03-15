@@ -1,4 +1,4 @@
-PDO::pgsqlLOBUnlink -- Deletes the large object
+*PDO::pgsqlLOBUnlink* -- Deletes the large object
 
   bool PDO::pgsqlLOBUnlink(string oid)~
 
@@ -8,7 +8,7 @@ This function must be called within a transaction.
 
 {oid} A large object identifier
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 A |PDO::pgsqlLOBUnlink| example This example unlinks a large object from the
 database prior to deleting the row that references it from the blobs table

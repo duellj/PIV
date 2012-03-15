@@ -1,4 +1,4 @@
-hw_api->dstanchors -- Returns a list of all destination anchors
+*hw_api->dstanchors* -- Returns a list of all destination anchors
 
   array dstanchors(array parameter)~
 

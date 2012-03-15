@@ -1,4 +1,4 @@
-ldap_bind -- Bind to LDAP directory
+*ldap_bind* -- Bind to LDAP directory
 
   bool ldap_bind(resource link_identifier [, string bind_rdn [, string bind_password]])~
 
@@ -13,7 +13,7 @@ Binds to the LDAP directory with specified RDN and password.
 If {bind_rdn} and {bind_password} are not specified, an anonymous bind is
 attempted.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Using LDAP Bind
 

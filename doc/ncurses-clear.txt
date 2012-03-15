@@ -1,4 +1,4 @@
-ncurses_clear -- Clear screen
+*ncurses_clear* -- Clear screen
 
   bool ncurses_clear()~
 
@@ -12,7 +12,7 @@ Note: |ncurses_clear| clears the screen without setting blanks, which have the
 current background rendition. To clear screen with blanks, use
 |ncurses_erase|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ncurses_erase|
 

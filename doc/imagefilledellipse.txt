@@ -1,4 +1,4 @@
-imagefilledellipse -- Draw a filled ellipse
+*imagefilledellipse* -- Draw a filled ellipse
 
   bool imagefilledellipse(resource image, int cx, int cy, int width, int height, int color)~
 
@@ -17,7 +17,7 @@ such as |imagecreatetruecolor|.
 
 {color} The fill color. A color identifier created with |imagecolorallocate|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagefilledellipse| example
 
@@ -40,6 +40,8 @@ Returns TRUE on success or FALSE on failure.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagefilledellipse()
 
 
 

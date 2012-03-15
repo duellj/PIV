@@ -1,4 +1,4 @@
-SAMConnection->unsubscribe -- Cancel a subscription to a specified topic.
+*SAMConnection->unsubscribe* -- Cancel a subscription to a specified topic.
 
   bool unsubscribe(string subscriptionId [, string targetTopic])~
 

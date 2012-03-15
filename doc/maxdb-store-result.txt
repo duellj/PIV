@@ -1,12 +1,12 @@
-maxdb->store_result -- Transfers a result set from the last query
+*maxdb::store_result* -- Transfers a result set from the last query
 
-Procedural style:
+Procedural style
 
   resource maxdb_store_result(resource link)~
 
-Object oriented style (method):
+Object oriented style
 
-  object store_result(resource link)~
+  object maxdb::store_result(resource link)~
 
 This function has no functionally effect.
 

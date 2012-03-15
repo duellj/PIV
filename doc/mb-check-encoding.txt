@@ -1,4 +1,4 @@
-mb_check_encoding -- Check if the string is valid for the specified encoding
+*mb_check_encoding* -- Check if the string is valid for the specified encoding
 
   bool mb_check_encoding([string var [, string encoding]])~
 
@@ -12,6 +12,6 @@ input from the beginning of the request.
 
 {encoding} The expected encoding.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

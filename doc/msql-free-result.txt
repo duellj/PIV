@@ -1,4 +1,4 @@
-msql_free_result -- Free result memory
+*msql_free_result* -- Free result memory
 
   bool msql_free_result(resource result)~
 
@@ -10,6 +10,6 @@ while the script is running.
 { result}The result resource that is being evaluated. This result comes from a
 call to |msql_query|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

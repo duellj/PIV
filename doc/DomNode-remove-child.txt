@@ -1,4 +1,4 @@
-DomNode->remove_child -- Removes child from list of children
+*DomNode->remove_child* -- Removes child from list of children
 
   domtext DomNode->remove_child(domtext oldchild)~
 

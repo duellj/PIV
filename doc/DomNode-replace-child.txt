@@ -1,4 +1,4 @@
-DomNode->replace_child -- Replaces a child
+*DomNode->replace_child* -- Replaces a child
 
   domelement DomNode->replace_child(domelement newnode, domelement oldnode)~
 

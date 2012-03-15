@@ -1,4 +1,4 @@
-mb_ereg_search_regs -- Returns the matched part of a multibyte regular
+*mb_ereg_search_regs* -- Returns the matched part of a multibyte regular
 expression
 
   array mb_ereg_search_regs([string pattern [, string option]])~
@@ -7,7 +7,7 @@ Returns the matched part of a multibyte regular expression.
 
 {pattern} The search pattern.
 
-{option} The search option. Defaults to 'ms'.
+{option} The search option.
 
 |mb_ereg_search_regs| executes the multibyte regular expression match, and if
 there are some matched part, it returns an array including substring of

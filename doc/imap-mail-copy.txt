@@ -1,4 +1,4 @@
-imap_mail_copy -- Copy specified messages to a mailbox
+*imap_mail_copy* -- Copy specified messages to a mailbox
 
   bool imap_mail_copy(resource imap_stream, string msglist, string mailbox [, int options])~
 
@@ -16,7 +16,7 @@ numbers contain UIDS
 
 CP_MOVE - Delete the messages from the current mailbox after copying
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imap_mail_move|
 

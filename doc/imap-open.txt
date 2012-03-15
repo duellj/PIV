@@ -1,6 +1,6 @@
-imap_open -- Open an IMAP stream to a mailbox
+*imap_open* -- Open an IMAP stream to a mailbox
 
-  resource imap_open(string mailbox, string username, string password [, int options [, int n_retries]])~
+  resource imap_open(string mailbox, string username, string password [, int options [, int n_retries [, array params]]])~
 
 Opens an IMAP stream to a {mailbox}.
 
@@ -73,9 +73,13 @@ OP_SECURE - Don't do non-secure authentication
 
 {n_retries} Number of maximum connect attempts
 
+{params} Connection parameters, the following (string) keys maybe used to set
+one or more connection parameters: DISABLE_AUTHENTICATOR - Disable
+authentication properties
+
 Returns an IMAP stream on success or FALSE on error.
 
-Version Description 5.2.0 {n_retries} added
+Version Description 5.3.2 {params} added 5.2.0 {n_retries} added
 
 Different use of |imap_open|
 

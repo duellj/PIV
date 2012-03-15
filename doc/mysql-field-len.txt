@@ -1,4 +1,4 @@
-mysql_field_len -- Returns the length of the specified field
+*mysql_field_len* -- Returns the length of the specified field
 
   int mysql_field_len(resource result, int field_offset)~
 
@@ -10,7 +10,7 @@ call to |mysql_query|.
 { field_offset}The numerical field offset. The {field_offset} starts at 0. If
 {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-The length of the specified field index on success, or FALSE on failure.
+The length of the specified field index on success or FALSE on failure.
 
 |mysql_field_len| example
 

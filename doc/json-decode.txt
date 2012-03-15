@@ -1,17 +1,27 @@
-json_decode -- Decodes a JSON string
+*json_decode* -- Decodes a JSON string
 
-  mixed json_decode(string json [, bool assoc [, int depth]])~
+  mixed json_decode(string json [, bool assoc [, int depth [, int options]]])~
 
 Takes a JSON encoded string and converts it into a PHP variable.
 
 {json} The {json} string being decoded.
 
+This function only works with UTF-8 encoded data.
+
 {assoc} When TRUE, returned objects will be converted into associative arrays.
 
-{depth} User specified nesting limit.
+{depth} User specified recursion depth.
 
-Returns an object or if the optional {assoc} parameter is TRUE, an associative
-array is instead returned.
+{options} Bitmask of JSON decode options. Currently only JSON_BIGINT_AS_STRING
+is supported (default is to cast large integers as floats)
+
+This change exists in the development version of PHP, and will probably exist
+after 5.3.
+
+Returns the value encoded in {json} in appropriate PHP type. Values true,
+false and null (case-insensitive) are returned as TRUE, FALSE and NULL
+respectively. NULL is returned if the {json} cannot be decoded or if the
+encoded data is deeper than the recursion limit.
 
 |json_decode| examples
 
@@ -72,16 +82,91 @@ common mistakes using |json_decode|
 
 
 
+{depth} errors
+
+<?php >
+  // Encode the data.
+  $json = json_encode(
+      array(
+          1 => array(
+              'English' => array(
+                  'One',
+                  'January'
+              ),
+              'French' => array(
+                  'Une',
+                  'Janvier'
+              )
+          )
+      )
+  );
+  
+  // Define the errors.
+  $json_errors = array(
+      JSON_ERROR_NONE => 'No error has occurred',
+      JSON_ERROR_DEPTH => 'The maximum stack depth has been exceeded',
+      JSON_ERROR_CTRL_CHAR => 'Control character error, possibly incorrectly encoded',
+      JSON_ERROR_SYNTAX => 'Syntax error',
+  );
+  
+  // Show the errors for different depths.
+  foreach(range(4, 3, -1) as $depth) {
+      var_dump(json_decode($json, True, $depth));
+      echo 'Last error : ', $json_errors[json_last_error()], PHP_EOL, PHP_EOL;
+      }
+?>
+
+The above example will output:
+
+  array(1) {
+    [1]=>
+    array(2) {
+      ["English"]=>
+      array(2) {
+        [0]=>
+        string(3) "One"
+        [1]=>
+        string(7) "January"
+      }
+      ["French"]=>
+      array(2) {
+        [0]=>
+        string(3) "Une"
+        [1]=>
+        string(7) "Janvier"
+      }
+    }
+  }
+  Last error : No error has occurred
+  
+  NULL
+  Last error : The maximum stack depth has been exceeded
+
+|json_decode| of large integers
+
+<?php >
+  $json = '12345678901234567890';
+  
+  var_dump(json_decode($json));
+  var_dump(json_decode($json, false, 512, JSON_BIGINT_AS_STRING));
+?>
+
+The above example will output:
+
+  float(1.2345678901235E+19)
+  string(20) "12345678901234567890"
+
 
 
 The JSON spec is not JavaScript, but a subset of JavaScript.
 
-This function will return FALSE if the JSON encoded data is deeper than 127
-elements.
+In the event of a failure to decode, |json_last_error| can be used to
+determine the exact nature of the error.
 
-Version Description 5.3.0 Added the optional {depth} 5.2.3 The nesting limit
-was increased from 20 to 128
+Version Description Future The {options} parameter was added. 5.3.0 Added the
+optional {depth}. The default recursion depth was increased from 128 to 512
+5.2.3 The nesting limit was increased from 20 to 128
 
-|json_encode|
+|json_encode| |json_last_error|
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-DomNode->last_child -- Returns last child of node
+*DomNode->last_child* -- Returns last child of node
 
   domelement DomNode->last_child()~
 

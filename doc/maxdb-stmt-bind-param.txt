@@ -1,20 +1,21 @@
-stmt->bind_param -- Binds variables to a prepared statement as parameters
+*maxdb_stmt::bind_param* -- Binds variables to a prepared statement as
+parameters
 
-Procedural style:
+Procedural style
 
   bool maxdb_stmt_bind_param(resource stmt, string types, mixed var1 [, mixed ...])~
 
-Object oriented style (method):
+Object oriented style
 
-  bool bind_param(resource stmt, string types, mixed var1 [, mixed ..., string types, mixed var1 [, mixed ...]])~
+  bool maxdb_stmt::bind_param(resource stmt, string types, mixed var1 [, mixed ..., string types, mixed var1 [, mixed ...]])~
 
 Procedural style (extended syntax):
 
   bool maxdb_stmt_bind_param(resource stmt, string types, mixed var1 [, mixed ..., string types, mixed var1 [, mixed ..., resource stmt, string types, array var]])~
 
-Object oriented style (method) (extended syntax):
+Object oriented style (extended syntax):
 
-  bool bind_param(resource stmt, string types, mixed var1 [, mixed ..., string types, mixed var1 [, mixed ..., resource stmt, string types, array var, string types, array var]])~
+  bool maxdb_stmt::bind_param(resource stmt, string types, mixed var1 [, mixed ..., string types, mixed var1 [, mixed ..., resource stmt, string types, array var, string types, array var]])~
 
 |maxdb_stmt_bind_param| is used to bind variables for the parameter markers in
 the SQL statement that was passed to |maxdb_prepare|. The string {types}
@@ -32,7 +33,7 @@ Variables for SELECT INTO SQL statements can also be bound using
 |maxdb_stmt_bind_param|. See the examples how to use |maxdb_stmt_bind_param|
 in this cases.
 
-If a variable bound as INTO variable to a SQL statement was used before, the
+If a variable bound as INTO variable to an SQL statement was used before, the
 content of this variable is overwritten by the data of the SELECT INTO
 statement. A reference to this variable will be invalid after a call to
 |maxdb_stmt_bind_param|.
@@ -47,7 +48,7 @@ type integer d corresponding variable has type double s corresponding variable
 has type string b corresponding variable is a blob and will be sent in
 packages
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

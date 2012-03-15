@@ -1,4 +1,4 @@
-hw_api->info -- Returns information about server configuration
+*hw_api->info* -- Returns information about server configuration
 
   array info(array parameter)~
 

@@ -1,4 +1,4 @@
-mcrypt_generic_deinit -- This function deinitializes an encryption module
+*mcrypt_generic_deinit* -- This function deinitializes an encryption module
 
   bool mcrypt_generic_deinit(resource td)~
 
@@ -9,7 +9,7 @@ script.)
 
 {td} The encryption descriptor.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |mcrypt_module_open| |mcrypt_generic_init|
 

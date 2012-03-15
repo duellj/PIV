@@ -1,4 +1,4 @@
-SDO_DataObject::getTypeName -- Return the name of the type for a data object.
+*SDO_DataObject::getTypeName* -- Return the name of the type for a data object.
 
   string SDO_DataObject::getTypeName()~
 

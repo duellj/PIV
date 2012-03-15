@@ -1,4 +1,4 @@
-OCI-Lob->eof -- Tests for end-of-file on a large object's descriptor
+*OCI-Lob->eof* -- Tests for end-of-file on a large object's descriptor
 
   bool eof()~
 

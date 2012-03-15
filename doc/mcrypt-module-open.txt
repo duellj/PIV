@@ -1,4 +1,4 @@
-mcrypt_module_open -- Opens the module of the algorithm and the mode to be
+*mcrypt_module_open* -- Opens the module of the algorithm and the mode to be
 used
 
   resource mcrypt_module_open(string algorithm, string algorithm_directory, string mode, string mode_directory)~
@@ -10,20 +10,25 @@ the MCRYPT_ciphername constants. The module is closed by calling
 
 {algorithm} The algorithm to be used.
 
-{algorithm_directory} The {algorithm_directory} and {mode_directory} are used
-to locate the encryption modules. When you supply a directory name, it is
-used. When you set one of these to the empty string (""), the value set by the
-{mcrypt.algorithms_dir} or {mcrypt.modes_dir} ini-directive is used. When
-these are not set, the default directories that are used are the ones that
-were compiled in into libmcrypt (usually /usr/local/lib/libmcrypt).
+{algorithm_directory} The {algorithm_directory} parameter is used to locate
+the encryption module. When you supply a directory name, it is used. When you
+set it to an empty string (""), the value set by the mcrypt.algorithms_dir
+php.ini directive is used. When it is not set, the default directory that is
+used is the one that was compiled into libmcrypt (usually
+/usr/local/lib/libmcrypt).
 
 {mode} The mode to be used.
 
-{mode_directory}
+{mode_directory} The {mode_directory} parameter is used to locate the
+encryption module. When you supply a directory name, it is used. When you set
+it to an empty string (""), the value set by the mcrypt.modes_dir php.ini
+directive is used. When it is not set, the default directory that is used is
+the one that was compiled-in into libmcrypt (usually
+/usr/local/lib/libmcrypt).
 
 Normally it returns an encryption descriptor, or FALSE on error.
 
-|mcrypt_module_open| examples
+|mcrypt_module_open| Examples
 
 <?php >
       $td = mcrypt_module_open(MCRYPT_DES, '',

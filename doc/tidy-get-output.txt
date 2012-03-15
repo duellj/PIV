@@ -1,4 +1,4 @@
-tidy_get_output -- Return a string representing the parsed tidy markup
+*tidy_get_output* -- Return a string representing the parsed tidy markup
 
   string tidy_get_output(tidy object)~
 
@@ -14,7 +14,7 @@ Returns the parsed tidy markup.
   $html = '<p>paragraph</i>';
   $tidy = tidy_parse_string($html);
   
-  $tidy->CleanRepair();
+  $tidy->cleanRepair();
   
   echo tidy_get_output($tidy);
 ?>

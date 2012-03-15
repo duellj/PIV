@@ -1,4 +1,4 @@
-assert -- Checks if assertion is FALSE
+*assert* -- Checks if assertion is FALSE
 
   bool assert(mixed assertion)~
 

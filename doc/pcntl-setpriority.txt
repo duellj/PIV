@@ -1,4 +1,4 @@
-pcntl_setpriority -- Change the priority of any process
+*pcntl_setpriority* -- Change the priority of any process
 
   bool pcntl_setpriority(int priority [, int pid [, int process_identifier]])~
 
@@ -13,7 +13,7 @@ please see your system's setpriority(2) man page for specific details.
 
 {process_identifier} One of PRIO_PGRP, PRIO_USER or PRIO_PROCESS.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |pcntl_getpriority|
 

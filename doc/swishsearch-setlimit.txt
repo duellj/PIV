@@ -1,4 +1,4 @@
-SwishSearch->setLimit -- Set the search limits
+*SwishSearch->setLimit* -- Set the search limits
 
   void SwishSearch->setLimit(string property, string low, string high)~
 

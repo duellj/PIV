@@ -1,4 +1,4 @@
-call_user_func -- Call a user function given by the first parameter
+*call_user_func* -- Call a user function given by the first parameter
 
   mixed call_user_func(callback function [, mixed parameter [, mixed ...]])~
 
@@ -37,6 +37,10 @@ The above example will output:
 
 
 Returns the function result, or FALSE on error.
+
+Version Description 5.3.0 The interpretation of object oriented keywords like
+parent and self has changed. Previously, calling them using the double colon
+syntax would emit an E_STRICT warning because they were interpreted as static.
 
 |call_user_func| example
 
@@ -111,6 +115,10 @@ The above example will output:
   [test]
 
 
+
+Callbacks registered with functions such as |call_user_func| and
+|call_user_func_array| will not be called if there is an uncaught exception
+thrown in a previous callback.
 
 |call_user_func_array| |is_callable| information about the callback type
 

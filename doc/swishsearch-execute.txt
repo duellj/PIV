@@ -1,4 +1,4 @@
-SwishSearch->execute -- Execute the search and get the results
+*SwishSearch->execute* -- Execute the search and get the results
 
   object SwishSearch->execute([string query])~
 

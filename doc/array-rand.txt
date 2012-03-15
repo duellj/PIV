@@ -1,14 +1,14 @@
-array_rand -- Pick one or more random entries out of an array
+*array_rand* -- Pick one or more random entries out of an array
 
   mixed array_rand(array input [, int num_req])~
 
-|array_rand| is rather useful when you want to pick one or more random entries
-out of an array.
+Picks one or more random entries out of an array, and returns the key (or
+keys) of the random entries.
 
 {input} The input array.
 
-{num_req} Specifies how many entries you want to pick - if not specified,
-defaults to 1.
+{num_req} Specifies how many entries you want to pick. Trying to pick more
+elements than there are in the array will result in an E_WARNING level error.
 
 If you are picking only one entry, |array_rand| returns the key for a random
 entry. Otherwise, it returns an array of keys for the random entries. This is

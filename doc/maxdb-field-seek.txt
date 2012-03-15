@@ -1,12 +1,12 @@
-result->field_seek -- Set result pointer to a specified field offset
+*maxdb_result::field_seek* -- Set result pointer to a specified field offset
 
-Procedural style:
+Procedural style
 
   bool maxdb_field_seek(resource result, int fieldnr)~
 
-Object oriented style (method):
+Object oriented style
 
-  bool field_seek(resource result, int fieldnr, int fieldnr)~
+  bool maxdb_result::field_seek(resource result, int fieldnr, int fieldnr)~
 
 Sets the field cursor to the given offset. The next call to
 |maxdb_fetch_field| will retrieve the field definition of the column

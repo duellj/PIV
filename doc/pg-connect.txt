@@ -1,4 +1,4 @@
-pg_connect -- Open a PostgreSQL connection
+*pg_connect* -- Open a PostgreSQL connection
 
   resource pg_connect(string connection_string [, int connect_type])~
 
@@ -21,9 +21,13 @@ Single quotes and backslashes within the value must be escaped with a
 backslash, i.e., \' and \\.
 
 The currently recognized parameter keywords are: {host}, {hostaddr}, {port},
-{dbname}, {user}, {password}, {connect_timeout}, {options}, {tty} (ignored),
-{sslmode}, {requiressl} (deprecated in favor of {sslmode}), and {service}.
-Which of these arguments exist depends on your PostgreSQL version.
+{dbname} (defaults to value of {user}), {user}, {password}, {connect_timeout},
+{options}, {tty} (ignored), {sslmode}, {requiressl} (deprecated in favor of
+{sslmode}), and {service}. Which of these arguments exist depends on your
+PostgreSQL version.
+
+The {options} parameter can be used to set command line parameters to be
+invoked by the server.
 
 {connect_type} If PGSQL_CONNECT_FORCE_NEW is passed, then a new connection is
 created, even if the {connection_string} is identical to an existing
@@ -46,6 +50,9 @@ Using |pg_connect|
   $conn_string = "host=sheep port=5432 dbname=test user=lamb password=bar";
   $dbconn4 = pg_connect($conn_string);
   //connect to a database named "test" on the host "sheep" with a username and password
+  
+  $dbconn5 = pg_connect("host=localhost options='--client_encoding=UTF8'");
+  //connect to a database on "localhost" and set the command line parameter which tells the encoding is in UTF-8
 ?>
 
 

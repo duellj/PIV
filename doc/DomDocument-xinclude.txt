@@ -1,4 +1,4 @@
-DomDocument->xinclude -- Substitutes XIncludes in a DomDocument Object
+*DomDocument->xinclude* -- Substitutes XIncludes in a DomDocument Object
 
   int DomDocument->xinclude()~
 

@@ -1,4 +1,4 @@
-SDO_Model_ReflectionDataObject::getContainmentProperty -- Get the property
+*SDO_Model_ReflectionDataObject::getContainmentProperty* -- Get the property
 which defines the containment relationship to the data object
 
   SDO_Model_Property SDO_Model_ReflectionDataObject::getContainmentProperty()~

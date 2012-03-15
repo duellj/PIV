@@ -1,4 +1,4 @@
-SDO_Model_Type::isSequencedType -- Test to see if this is a sequenced type
+*SDO_Model_Type::isSequencedType* -- Test to see if this is a sequenced type
 
   bool SDO_Model_Type::isSequencedType()~
 

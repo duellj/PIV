@@ -1,4 +1,4 @@
-hw_api->objectbyanchor -- Returns the object an anchor belongs to
+*hw_api->objectbyanchor* -- Returns the object an anchor belongs to
 
   hw_api_object objectbyanchor(array parameter)~
 

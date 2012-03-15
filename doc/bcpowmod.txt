@@ -1,4 +1,4 @@
-bcpowmod -- Raise an arbitrary precision number to another, reduced by a
+*bcpowmod* -- Raise an arbitrary precision number to another, reduced by a
 specified modulus
 
   string bcpowmod(string left_operand, string right_operand, string modulus [, int scale])~
@@ -18,8 +18,8 @@ functions by using |bcscale|.
 
 Returns the result as a string, or NULL if {modulus} is 0.
 
-Because this method uses the modulus operation, non-natural numbers may give
-unexpected results. A natural number is any positive non-zero integer.
+Because this method uses the modulus operation, numbers which are not positive
+integers may give unexpected results.
 
 The following two statements are functionally identical. The |bcpowmod|
 version however, executes in less time and can accept larger parameters.

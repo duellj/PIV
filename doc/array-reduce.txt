@@ -1,7 +1,7 @@
-array_reduce -- Iteratively reduce the array to a single value using a
+*array_reduce* -- Iteratively reduce the array to a single value using a
 callback function
 
-  mixed array_reduce(array input, callback function [, int initial])~
+  mixed array_reduce(array input, callback function [, mixed initial])~
 
 |array_reduce| applies iteratively the {function} function to the elements of
 the array {input}, so as to reduce the array to a single value.
@@ -17,6 +17,9 @@ Returns the resulting value.
 
 If the array is empty and {initial} is not passed, |array_reduce| returns
 NULL.
+
+Version Description 5.3.0 Changed {initial} to allow mixed, previously
+integer.
 
 |array_reduce| example
 
@@ -37,11 +40,11 @@ NULL.
   $x = array();
   $b = array_reduce($a, "rsum");
   $c = array_reduce($a, "rmul", 10);
-  $d = array_reduce($x, "rsum", 1);
+  $d = array_reduce($x, "rsum", "No data to reduce");
 ?>
 
 This will result in $b containing 15, $c containing 1200 (= 10*1*2*3*4*5), and
-$d containing 1.
+$d containing No data to reduce.
 
 
 

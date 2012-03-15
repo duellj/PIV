@@ -1,4 +1,4 @@
-SDO_DataObject::createDataObject -- Create a child SDO_DataObject
+*SDO_DataObject::createDataObject* -- Create a child SDO_DataObject
 
   SDO_DataObject SDO_DataObject::createDataObject(mixed identifier)~
 

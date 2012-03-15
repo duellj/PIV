@@ -1,4 +1,4 @@
-DomDocument->create_text_node -- Create new text node
+*DomDocument->create_text_node* -- Create new text node
 
   domtext DomDocument->create_text_node(string content)~
 

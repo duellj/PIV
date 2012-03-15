@@ -1,11 +1,15 @@
-debug_backtrace -- Generates a backtrace
+*debug_backtrace* -- Generates a backtrace
 
-  array debug_backtrace([bool provide_object])~
+  array debug_backtrace([int options])~
 
 |debug_backtrace| generates a PHP backtrace.
 
-{provide_object} Whether or not to populate the "object" index. Defaults to
-TRUE.
+{options} Since 5.3.6, this parameter is a bitmask for the following options:
+|debug_backtrace| options DEBUG_BACKTRACE_PROVIDE_OBJECT Whether or not to
+populate the "object" index. DEBUG_BACKTRACE_IGNORE_ARGS Whether or not to
+omit the "args" index and thus all the method arguments to save memory. Before
+5.3.6, only value recognized is TRUE or FALSE, which is the same as setting
+and unsetting DEBUG_BACKTRACE_PROVIDE_OBJECT option.
 
 Returns an associative array. The possible returned elements are as follows:
 
@@ -19,8 +23,10 @@ function call, nothing is returned. args array If inside a function, this
 lists the functions arguments. If inside an included file, this lists the
 included file name(s).
 
-Version Description 5.2.5 Added the optional parameter {provide_object}. 5.1.1
-Added the current object as a possible return element.
+Version Description 5.3.6 The parameter {provide_object} changed to {options}
+and additional option DEBUG_BACKTRACE_IGNORE_ARGS is added. 5.2.5 Added the
+optional parameter {provide_object}. 5.1.1 Added the current object as a
+possible return element.
 
 |debug_backtrace| example
 

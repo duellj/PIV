@@ -1,10 +1,10 @@
-gnupg_clearsignkeys -- Removes all keys which were set for signing before
+*gnupg_clearsignkeys* -- Removes all keys which were set for signing before
 
   bool gnupg_clearsignkeys(resource identifier)~
 
 {identifier} The gnupg identifier, from a call to |gnupg_init| or gnupg.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Procedural |gnupg_clearsignkeys| example
 

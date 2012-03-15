@@ -1,4 +1,4 @@
-DomDocument->html_dump_mem -- Dumps the internal XML tree back into a string
+*DomDocument->html_dump_mem* -- Dumps the internal XML tree back into a string
 as HTML
 
   string DomDocument->html_dump_mem()~

@@ -1,4 +1,4 @@
-DomProcessingInstruction->data -- Returns the data of ProcessingInstruction
+*DomProcessingInstruction->data* -- Returns the data of ProcessingInstruction
 node
 
   string data()~

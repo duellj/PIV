@@ -1,4 +1,4 @@
-ctype_digit -- Check for numeric character(s)
+*ctype_digit* -- Check for numeric character(s)
 
   bool ctype_digit(string text)~
 
@@ -50,8 +50,8 @@ A |ctype_digit| example comparing strings with integers
 
 
 
-This function require a string to be useful, so for example passing in an
-integer will always return FALSE. However, also note that HTML Forms will
+This function requires a string to be useful, so for example passing in an
+integer will always return FALSE. However, also note that HTML forms will
 result in numeric strings and not integers. See also the types section of the
 manual.
 

@@ -1,4 +1,4 @@
-pg_cancel_query -- Cancel an asynchronous query
+*pg_cancel_query* -- Cancel an asynchronous query
 
   bool pg_cancel_query(resource connection)~
 
@@ -8,7 +8,7 @@ executed using |pg_query|.
 
 {connection} PostgreSQL database connection resource.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |pg_cancel_query| example
 

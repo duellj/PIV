@@ -1,4 +1,4 @@
-ftp_fget -- Downloads a file from the FTP server and saves to an open file
+*ftp_fget* -- Downloads a file from the FTP server and saves to an open file
 
   bool ftp_fget(resource ftp_stream, resource handle, string remote_file, int mode [, int resumepos])~
 
@@ -15,7 +15,7 @@ given file pointer.
 
 {resumepos} The position in the remote file to start downloading from.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ftp_fget| example
 

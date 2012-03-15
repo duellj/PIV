@@ -1,4 +1,4 @@
-ifx_errormsg -- Returns error message of last Informix call
+*ifx_errormsg* -- Returns error message of last Informix call
 
   string ifx_errormsg([int errorcode])~
 
@@ -12,7 +12,9 @@ Return the error message, as a string.
 
 |ifx_errormsg| example
 
+<?php >
   printf("%s\n<br>", ifx_errormsg(-201));
+?>
 
 
 

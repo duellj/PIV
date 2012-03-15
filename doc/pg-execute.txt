@@ -1,4 +1,4 @@
-pg_execute -- Sends a request to execute a prepared statement with given
+*pg_execute* -- Sends a request to execute a prepared statement with given
 parameters, and waits for the result.
 
   resource pg_execute([resource connection, string stmtname, array params])~
@@ -31,7 +31,7 @@ the array must match the number of placeholders.
 
 Elements are converted to strings by calling this function.
 
-A query result resource on success, or FALSE on failure.
+A query result resource on success or FALSE on failure.
 
 Using |pg_execute|
 

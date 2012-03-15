@@ -1,4 +1,4 @@
-define -- Defines a named constant
+*define* -- Defines a named constant
 
   bool define(string name, mixed value [, bool case_insensitive])~
 
@@ -15,7 +15,9 @@ unpredictable behavior.
 case-insensitive. The default behavior is case-sensitive; i.e. CONSTANT and
 Constant represent different values.
 
-Returns TRUE on success or FALSE on failure.
+Case-insensitive constants are stored as lower-case.
+
+Returns TRUE on success or &false; on failure.
 
 Defining Constants
 

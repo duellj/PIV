@@ -1,4 +1,4 @@
-xattr_set -- Set an extended attribute
+*xattr_set* -- Set an extended attribute
 
   bool xattr_set(string filename, string name, string value [, int flags])~
 
@@ -23,7 +23,7 @@ attribute doesn't exist. XATTR_DONTFOLLOW Do not follow the symbolic link but
 operate on symbolic link itself. XATTR_ROOT Set attribute in root (trusted)
 namespace. Requires root privileges.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Sets extended attributes on .wav file
 

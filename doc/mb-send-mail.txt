@@ -1,4 +1,4 @@
-mb_send_mail -- Send encoded mail
+*mb_send_mail* -- Send encoded mail
 
   bool mb_send_mail(string to, string subject, string message [, string additional_headers [, string additional_parameter]])~
 
@@ -21,7 +21,7 @@ are separated with a newline ("\n").
 {additional_parameter} {additional_parameter} is a MTA command line parameter.
 It is useful when setting the correct Return-Path header when using sendmail.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 5.0.0 The Content-Type and Content-Transfer-Encoding
 headers may be redefined as of PHP 5.0.0. Before this time, the values defined

@@ -1,10 +1,10 @@
-maxdb->server_info -- Returns the version of the MaxDB server
+*maxdb->server_info* -- Returns the version of the MaxDB server
 
-Procedural style:
+Procedural style
 
   string maxdb_get_server_info(resource link)~
 
-Object oriented style (property):
+Object oriented style
 
 Returns a string representing the version of the MaxDB server that the MaxDB
 extension is connected to (represented by the {link} parameter).

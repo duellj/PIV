@@ -1,13 +1,17 @@
-maxdb->rollback -- Rolls back current transaction
+*maxdb::rollback* -- Rolls back current transaction
+
+Procedural style
 
   bool maxdb_rollback(resource link)~
 
-  bool rollback(resource link)~
+Object oriented style
+
+  bool maxdb::rollback(resource link)~
 
 Rollbacks the current transaction for the database specified by the {link}
 parameter.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

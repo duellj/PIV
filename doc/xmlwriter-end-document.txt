@@ -1,6 +1,6 @@
-XMLWriter::endDocument -- End current document
+*XMLWriter::endDocument* -- End current document
 
-Oriented object style
+Object oriented style
 
   bool endDocument()~
 
@@ -14,7 +14,7 @@ Ends the current document.
 modified. This resource comes from a call to |xmlwriter_open_uri| or
 |xmlwriter_open_memory|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 XMLWriter::startDocument
 

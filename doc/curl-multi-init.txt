@@ -1,12 +1,12 @@
-curl_multi_init -- Returns a new cURL multi handle
+*curl_multi_init* -- Returns a new cURL multi handle
 
   resource curl_multi_init()~
 
 Allows the processing of multiple cURL handles in parallel.
 
-{mh} A cURL multi handle returned by |curl_multi_init|.
+This function has no parameters.
 
-Returns a cURL on handle on success, FALSE on failure.
+Returns a cURL multi handle resource on success, FALSE on failure.
 
 |curl_multi_init| example This example will create two cURL handles, add them
 to a multi handle, and then run them in parallel.
@@ -32,6 +32,7 @@ to a multi handle, and then run them in parallel.
   $running=null;
   //execute the handles
   do {
+      usleep(10000);
       curl_multi_exec($mh,$running);
   } while ($running > 0);
   

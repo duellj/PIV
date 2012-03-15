@@ -1,4 +1,4 @@
-SDO_Model_Type::getNamespaceURI -- Get the namespace URI of the type
+*SDO_Model_Type::getNamespaceURI* -- Get the namespace URI of the type
 
   string SDO_Model_Type::getNamespaceURI()~
 

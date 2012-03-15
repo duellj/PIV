@@ -1,11 +1,10 @@
-maxdb_get_server_version -- Returns the version of the MaxDB server as an
-integer
+*maxdb->server_version* -- Returns the version of the MaxDB server as an integer
 
-Procedural style:
+Procedural style
 
   int maxdb_get_server_version(resource link)~
 
-Object oriented style (property):
+Object oriented style
 
 The |maxdb_get_server_version| function returns the version of the server
 connected to (represented by the {link} parameter) as an integer.

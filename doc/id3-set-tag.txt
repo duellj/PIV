@@ -1,4 +1,4 @@
-id3_set_tag -- Update information stored in an ID3 tag
+*id3_set_tag* -- Update information stored in an ID3 tag
 
   bool id3_set_tag(string filename, array tag [, int version])~
 
@@ -23,7 +23,7 @@ integer between 0 and 255 v1.1
 {version} Allows you to specify the version of the tag as MP3 files may
 contain both, version 1.x and version 2.x tags
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |id3_set_tag| example
 

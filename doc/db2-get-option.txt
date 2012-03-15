@@ -1,4 +1,4 @@
-db2_get_option -- Retrieves an option value for a statement resource or a
+*db2_get_option* -- Retrieves an option value for a statement resource or a
 connection resource
 
   string db2_get_option(resource resource, string option)~
@@ -11,7 +11,7 @@ valid connection resource as returned from |db2_connect| or |db2_pconnect|.
 
 {option} A valid statement or connection options. The following new options
 are available as of ibm_db2 version 1.6.0. They provide useful tracking
-information that can be set during execution with |db2_get_option|. Note Prior
+information that can be set during execution with |db2_get_option|. Prior
 versions of ibm_db2 do not support these new options.
 
 When the value in each option is being set, some servers might not handle the
@@ -23,24 +23,24 @@ transmitted to a host system, use only the characters A through Z, 0 through
 
 {userid} SQL_ATTR_INFO_USERID - A pointer to a null-terminated character
 string used to identify the client user ID sent to the host database server
-when using DB2 Connect. Note DB2 for z/OS and OS/390 servers support up to a
-length of 16 characters. This user-id is not to be confused with the
-authentication user-id, it is for identification purposes only and is not used
-for any authorization.
+when using DB2 Connect. DB2 for z/OS and OS/390 servers support up to a length
+of 16 characters. This user-id is not to be confused with the authentication
+user-id, it is for identification purposes only and is not used for any
+authorization.
 
 {acctstr} SQL_ATTR_INFO_ACCTSTR - A pointer to a null-terminated character
 string used to identify the client accounting string sent to the host database
-server when using DB2 Connect. Note DB2 for z/OS and OS/390 servers support up
-to a length of 200 characters.
+server when using DB2 Connect. DB2 for z/OS and OS/390 servers support up to a
+length of 200 characters.
 
 {applname} SQL_ATTR_INFO_APPLNAME - A pointer to a null-terminated character
 string used to identify the client application name sent to the host database
-server when using DB2 Connect. Note DB2 for z/OS and OS/390 servers support up
-to a length of 32 characters.
+server when using DB2 Connect. DB2 for z/OS and OS/390 servers support up to a
+length of 32 characters.
 
 {wrkstnname} SQL_ATTR_INFO_WRKSTNNAME - A pointer to a null-terminated
 character string used to identify the client workstation name sent to the host
-database server when using DB2 Connect. Note DB2 for z/OS and OS/390 servers
+database server when using DB2 Connect. DB2 for z/OS and OS/390 servers
 support up to a length of 18 characters.
 
 The following table specifies which options are compatible with the available

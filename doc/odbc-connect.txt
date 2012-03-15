@@ -1,4 +1,4 @@
-odbc_connect -- Connect to a datasource
+*odbc_connect* -- Connect to a datasource
 
   resource odbc_connect(string dsn, string user, string password [, int cursor_type])~
 
@@ -12,7 +12,7 @@ anything other than a single select statement in it". Using SQL_CUR_USE_ODBC
 may avoid that error. Also, some drivers don't support the optional row_number
 parameter in |odbc_fetch_row|. SQL_CUR_USE_ODBC might help in that case, too.
 
-{dsn} The database source name for the connection. Alternatively, a DNS-less
+{dsn} The database source name for the connection. Alternatively, a DSN-less
 connection string can be used.
 
 {user} The username.
@@ -31,11 +31,9 @@ SQL_CUR_USE_ODBC
 
 SQL_CUR_USE_DRIVER
 
-SQL_CUR_DEFAULT
-
 Returns an ODBC connection id or 0 (FALSE) on error.
 
-DNS-less connections
+DSN-less connections
 
 <?php >
   // Microsoft SQL Server using the SQL Native Client 10.0 ODBC Driver - allows connection to SQL 7, 2000, 2005 and 2008

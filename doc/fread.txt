@@ -1,4 +1,4 @@
-fread -- Binary-safe file read
+*fread* -- Binary-safe file read
 
   string fread(resource handle, int length)~
 
@@ -8,16 +8,19 @@ fread -- Binary-safe file read
 
 EOF (end of file) is reached
 
-a packet becomes available (for network streams)
+a packet becomes available or the socket timeout occurs (for network streams)
 
-8192 bytes have been read (after opening userspace stream)
+if the stream is read buffered and it does not represent a plain file, at most
+one read of up to a number of bytes equal to the chunk size (usually 8192) is
+made; depending on the previously buffered data, the size of the returned data
+may be larger than the chunk size.
 
 {handle} A file system pointer resource that is typically created using
 |fopen|.
 
 {length} Up to {length} number of bytes read.
 
-Returns the read string or FALSE in case of error.
+Returns the read string or FALSE on failure.
 
 A simple |fread| example
 

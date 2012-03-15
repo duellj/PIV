@@ -1,4 +1,4 @@
-fwrite -- Binary-safe file write
+*fwrite* -- Binary-safe file write
 
   int fwrite(resource handle, string string [, int length])~
 
@@ -27,8 +27,8 @@ value of |fwrite| may be checked:
   function fwrite_stream($fp, $string) {
       for ($written = 0; $written < strlen($string); $written += $fwrite) {
           $fwrite = fwrite($fp, substr($string, $written));
-          if (!$fwrite) {
-              return $fwrite;
+          if ($fwrite === false) {
+              return $written;
           }
       }
       return $written;

@@ -1,4 +1,4 @@
-ldap_get_option -- Get the current value for given option
+*ldap_get_option* -- Get the current value for given option
 
   bool ldap_get_option(resource link_identifier, int option, mixed retval)~
 
@@ -15,7 +15,7 @@ string LDAP_OPT_SERVER_CONTROLS array LDAP_OPT_CLIENT_CONTROLS array
 
 {retval} This will be set to the option value.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Check protocol version
 

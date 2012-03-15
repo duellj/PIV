@@ -1,4 +1,4 @@
-ini_get -- Gets the value of a configuration option
+*ini_get* -- Gets the value of a configuration option
 
   string ini_get(string varname)~
 
@@ -7,7 +7,8 @@ Returns the value of the configuration option on success.
 {varname} The configuration option name.
 
 Returns the value of the configuration option as a string on success, or an
-empty string on failure or for null values.
+empty string for null values. Returns FALSE if the configuration option
+doesn't exist.
 
 A few |ini_get| examples
 

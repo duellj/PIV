@@ -1,4 +1,4 @@
-SAMConnection->isConnected -- Queries whether a connection is established to a
+*SAMConnection->isConnected* -- Queries whether a connection is established to a
 Messaging Server
 
   bool isConnected()~

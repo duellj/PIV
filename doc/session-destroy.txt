@@ -1,4 +1,4 @@
-session_destroy -- Destroys all data registered to a session
+*session_destroy* -- Destroys all data registered to a session
 
   bool session_destroy()~
 
@@ -12,7 +12,7 @@ id must also be unset. If a cookie is used to propagate the session id
 (default behavior), then the session cookie must be deleted. |setcookie| may
 be used for that.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Destroying a session with $_SESSION
 
@@ -26,8 +26,12 @@ Destroying a session with $_SESSION
   
   // If it's desired to kill the session, also delete the session cookie.
   // Note: This will destroy the session, and not just the session data!
-  if (isset($_COOKIE[session_name()])) {
-      setcookie(session_name(), '', time()-42000, '/');
+  if (ini_get("session.use_cookies")) {
+      $params = session_get_cookie_params();
+      setcookie(session_name(), '', time() - 42000,
+          $params["path"], $params["domain"],
+          $params["secure"], $params["httponly"]
+      );
   }
   
   // Finally, destroy the session.

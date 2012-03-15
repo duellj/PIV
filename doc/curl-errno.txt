@@ -1,4 +1,4 @@
-curl_errno -- Return the last error number
+*curl_errno* -- Return the last error number
 
   int curl_errno(resource ch)~
 
@@ -21,7 +21,7 @@ Returns the error number or 0 (zero) if no error occurred.
   // Check if any error occured
   if(curl_errno($ch))
   {
-  	echo 'Curl error: ' . curl_error($ch);
+      echo 'Curl error: ' . curl_error($ch);
   }
   
   // Close handle

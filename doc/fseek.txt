@@ -1,4 +1,4 @@
-fseek -- Seeks on a file pointer
+*fseek* -- Seeks on a file pointer
 
   int fseek(resource handle, int offset [, int whence])~
 
@@ -6,22 +6,25 @@ Sets the file position indicator for the file referenced by {handle}. The new
 position, measured in bytes from the beginning of the file, is obtained by
 adding {offset} to the position specified by {whence}.
 
+In general, it is allowed to seek past the end-of-file; if data is then
+written, reads in any unwritten region between the end-of-file and the sought
+position will yield bytes with value 0. However, certain streams may not
+support this behavior, especially when they have an underlying fixed size
+storage.
+
 {handle} A file system pointer resource that is typically created using
 |fopen|.
 
 {offset} The offset.
 
 To move to a position before the end-of-file, you need to pass a negative
-value in {offset}.
+value in {offset} and set {whence} to SEEK_END.
 
 {whence} {whence} values are: SEEK_SET - Set position equal to {offset} bytes.
 SEEK_CUR - Set position to current location plus {offset}. SEEK_END - Set
 position to end-of-file plus {offset}.
 
-If {whence} is not specified, it is assumed to be SEEK_SET.
-
-Upon success, returns 0; otherwise, returns -1. Note that seeking past EOF is
-not considered an error.
+Upon success, returns 0; otherwise, returns -1.
 
 |fseek| example
 
@@ -40,12 +43,13 @@ not considered an error.
 
 
 
-If you have opened the file in append ("a" or "a+") mode, any data you write
-to the file will always be appended, regardless of the file position.
+If you have opened the file in append (a or a+) mode, any data you write to
+the file will always be appended, regardless of the file position, and the
+result of calling |fseek| will be undefined.
 
-May not be used on file pointers returned by |fopen| if they use the "http://"
-or "ftp://" formats. |fseek| gives also undefined results for append-only
-streams (opened with "a" flag).
+Not all streams support seeking. For those that do not support seeking,
+forward seeking from the current position is accomplished by reading and
+discarding data; other forms of seeking will fail.
 
 |ftell| |rewind|
 

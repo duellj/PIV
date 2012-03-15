@@ -1,4 +1,4 @@
-Swish->prepare -- Prepare a search query
+*Swish->prepare* -- Prepare a search query
 
   object Swish->prepare([string query])~
 

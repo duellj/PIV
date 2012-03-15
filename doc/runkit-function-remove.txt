@@ -1,4 +1,4 @@
-runkit_function_remove -- Remove a function definition
+*runkit_function_remove* -- Remove a function definition
 
   bool runkit_function_remove(string funcname)~
 
@@ -8,7 +8,7 @@ runkit.internal_override setting in php.ini.
 
 {funcname} Name of function to be deleted
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |runkit_function_add| |runkit_function_copy| |runkit_function_redefine|
 |runkit_function_rename|

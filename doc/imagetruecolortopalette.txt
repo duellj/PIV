@@ -1,4 +1,4 @@
-imagetruecolortopalette -- Convert a true color image to a palette image
+*imagetruecolortopalette* -- Convert a true color image to a palette image
 
   bool imagetruecolortopalette(resource image, bool dither, int ncolors)~
 
@@ -20,13 +20,13 @@ better color approximation.
 {ncolors} Sets the maximum number of colors that should be retained in the
 palette.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Converting a true color image to a palette-based image
 
 <?php >
   // Create a new true color image
-  $im = new imagecreatetruecolor(100, 100);
+  $im = imagecreatetruecolor(100, 100);
   
   // Convert to palette-based with no dithering and 255 colors
   imagetruecolortopalette($im, false, 255);

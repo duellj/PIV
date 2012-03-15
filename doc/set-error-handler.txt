@@ -1,4 +1,4 @@
-set_error_handler -- Sets a user-defined error handler function
+*set_error_handler* -- Sets a user-defined error handler function
 
   mixed set_error_handler(callback error_handler [, int error_types])~
 
@@ -10,11 +10,12 @@ data/files when a critical error happens, or when you need to trigger an error
 under certain conditions (using |trigger_error|).
 
 It is important to remember that the standard PHP error handler is completely
-bypassed. |error_reporting| settings will have no effect and your error
-handler will be called regardless - however you are still able to read the
-current value of error_reporting and act appropriately. Of particular note is
-that this value will be 0 if the statement that caused the error was prepended
-by the @ error-control operator.
+bypassed for the error types specified by {error_types} unless the callback
+function returns FALSE. |error_reporting| settings will have no effect and
+your error handler will be called regardless - however you are still able to
+read the current value of error_reporting and act appropriately. Of particular
+note is that this value will be 0 if the statement that caused the error was
+prepended by the @ error-control operator.
 
 Also note that it is your responsibility to |die| if necessary. If the
 error-handler function returns, script execution will continue with the next
@@ -83,6 +84,11 @@ them with a user defined function:
   // error handler function
   function myErrorHandler($errno, $errstr, $errfile, $errline)
   {
+      if (!(error_reporting() &amp; $errno)) {
+          // This error code is not included in error_reporting
+          return;
+      }
+  
       switch ($errno) {
       case E_USER_ERROR:
           echo "<b>My ERROR</b> [$errno] $errstr<br />\n";

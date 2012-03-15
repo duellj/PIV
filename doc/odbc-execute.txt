@@ -1,4 +1,4 @@
-odbc_execute -- Execute a prepared statement
+*odbc_execute* -- Execute a prepared statement
 
   bool odbc_execute(resource result_id [, array parameters_array])~
 
@@ -21,7 +21,7 @@ taken as a file name. If this is not an option, then you must use another
 mechanism to store the string, such as executing the query directly with
 |odbc_exec|).
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |odbc_execute| and |odbc_prepare| example In the following code, $success will
 only be TRUE if all three parameters to myproc are IN parameters:

@@ -1,4 +1,4 @@
-DomProcessingInstruction->target -- Returns the target of a
+*DomProcessingInstruction->target* -- Returns the target of a
 ProcessingInstruction node
 
   string target()~

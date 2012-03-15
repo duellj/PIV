@@ -1,4 +1,4 @@
-debug_print_backtrace -- Prints a backtrace
+*debug_print_backtrace* -- Prints a backtrace
 
   void debug_print_backtrace()~
 
@@ -38,10 +38,6 @@ No value is returned.
 
 The above example will output something similar to:
 
-  #0  eval() called at [/tmp/include.php:5]
-  #1  a() called at [/tmp/include.php:17]
-  #2  include(/tmp/include.php) called at [/tmp/test.php:3]
-  
   #0  c() called at [/tmp/include.php:10]
   #1  b() called at [/tmp/include.php:6]
   #2  a() called at [/tmp/include.php:17]

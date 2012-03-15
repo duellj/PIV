@@ -1,4 +1,4 @@
-udm_free_res -- Free mnoGoSearch result
+*udm_free_res* -- Free mnoGoSearch result
 
   bool udm_free_res(resource res)~
 
@@ -6,6 +6,6 @@ Freeing up memory allocated for results.
 
 {res} A link to a result identifier, received after call to |udm_find|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

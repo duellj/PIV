@@ -1,4 +1,4 @@
-SDO_Exception::getCause -- Get the cause of the exception.
+*SDO_Exception::getCause* -- Get the cause of the exception.
 
   mixed SDO_Exception::getCause()~
 

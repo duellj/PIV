@@ -1,10 +1,10 @@
-result->current_field -- Get current field offset of a result pointer
+*maxdb_result->current_field* -- Get current field offset of a result pointer
 
-Procedural style:
+Procedural style
 
   int maxdb_field_tell(resource result)~
 
-Object oriented style (property):
+Object oriented style
 
 Returns the position of the field cursor used for the last |maxdb_fetch_field|
 call. This value can be used as an argument to |maxdb_field_seek|.

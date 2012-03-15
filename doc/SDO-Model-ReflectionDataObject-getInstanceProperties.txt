@@ -1,4 +1,4 @@
-SDO_Model_ReflectionDataObject::getInstanceProperties -- Get the instance
+*SDO_Model_ReflectionDataObject::getInstanceProperties* -- Get the instance
 properties of the SDO_DataObject
 
   array SDO_Model_ReflectionDataObject::getInstanceProperties()~

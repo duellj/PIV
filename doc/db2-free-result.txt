@@ -1,4 +1,4 @@
-db2_free_result -- Frees resources associated with a result set
+*db2_free_result* -- Frees resources associated with a result set
 
   bool db2_free_result(resource stmt)~
 
@@ -9,7 +9,7 @@ of the script.
 
 {stmt} A valid statement resource.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |db2_free_stmt|
 

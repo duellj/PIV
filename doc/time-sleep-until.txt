@@ -1,4 +1,4 @@
-time_sleep_until -- Make the script sleep until the specified time
+*time_sleep_until* -- Make the script sleep until the specified time
 
   bool time_sleep_until(float timestamp)~
 
@@ -6,7 +6,7 @@ Makes the script sleep until the specified {timestamp}.
 
 {timestamp} The timestamp when the script should wake.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 5.3.0 This function is now available on Windows platforms.
 
@@ -20,7 +20,7 @@ A |time_sleep_until| example
   var_dump(time_sleep_until(time()-1));
   
   // may only work on faster computers, will sleep up to 0.2 seconds
-  var_dump(time_sleep_until(time()+0.2));
+  var_dump(time_sleep_until(microtime(true)+0.2));
 ?>
 
 

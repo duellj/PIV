@@ -1,4 +1,4 @@
-phpinfo -- Outputs lots of PHP information
+*phpinfo* -- Outputs information about PHP's configuration
 
   bool phpinfo([int what])~
 
@@ -29,9 +29,9 @@ INFO_MODULES 8 Loaded modules and their respective settings. See also
 that's also available in $_ENV. INFO_VARIABLES 32 Shows all predefined
 variables from EGPCS (Environment, GET, POST, Cookie, Server). INFO_LICENSE 64
 PHP License information. See also the license FAQ. INFO_ALL -1 Shows all of
-the above. This is the default value.
+the above.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 5.2.2 The "Loaded Configuration File" information was
 added, when before only "Configuration File (php.ini) Path" existed.

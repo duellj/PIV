@@ -1,5 +1,5 @@
-mysql_real_escape_string -- Escapes special characters in a string for use in
-a SQL statement
+*mysql_real_escape_string* -- Escapes special characters in a string for use in
+an SQL statement
 
   string mysql_real_escape_string(string unescaped_string [, resource link_identifier])~
 
@@ -19,8 +19,8 @@ before sending a query to MySQL.
 { link_identifier}The MySQL connection. If the link identifier is not
 specified, the last link opened by |mysql_connect| is assumed. If no such link
 is found, it will try to create one as if |mysql_connect| was called with no
-arguments. If by chance no connection is found or established, an E_WARNING
-level error is generated.
+arguments. If no connection is found or established, an E_WARNING level error
+is generated.
 
 Returns the escaped string, or FALSE on error.
 
@@ -44,13 +44,13 @@ Simple |mysql_real_escape_string| example
 An example SQL Injection Attack
 
 <?php >
-  // Query database to check if there are any matching users
-  $query = "SELECT * FROM users WHERE user='{$_POST['username']}' AND password='{$_POST['password']}'";
-  mysql_query($query);
-  
   // We didn't check $_POST['password'], it could be anything the user wanted! For example:
   $_POST['username'] = 'aidan';
   $_POST['password'] = "' OR ''='";
+  
+  // Query database to check if there are any matching users
+  $query = "SELECT * FROM users WHERE user='{$_POST['username']}' AND password='{$_POST['password']}'";
+  mysql_query($query);
   
   // This means the query sent to MySQL would be:
   echo $query;

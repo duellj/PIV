@@ -1,4 +1,4 @@
-yaz_close -- Close YAZ connection
+*yaz_close* -- Close YAZ connection
 
   bool yaz_close(resource id)~
 
@@ -9,7 +9,7 @@ the persistent option to FALSE with |yaz_connect|.
 
 {id} The connection resource returned by |yaz_connect|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |yaz_connect|
 

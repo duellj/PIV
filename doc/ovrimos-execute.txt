@@ -1,4 +1,4 @@
-ovrimos_execute -- Executes a prepared SQL statement
+*ovrimos_execute* -- Executes a prepared SQL statement
 
   bool ovrimos_execute(int result_id [, array parameters_array])~
 
@@ -10,7 +10,7 @@ Executes a prepared statement.
 marks in the statement), the correct number of parameters should be passed in
 an array.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ovrimos_prepare|
 

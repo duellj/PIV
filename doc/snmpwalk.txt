@@ -1,11 +1,11 @@
-snmpwalk -- Fetch all the SNMP objects from an agent
+*snmpwalk* -- Fetch all the SNMP objects from an agent
 
   array snmpwalk(string hostname, string community, string object_id [, int timeout [, int retries]])~
 
 |snmpwalk| function is used to read all the values from an SNMP agent
 specified by the {hostname}.
 
-{hostname} The SNMP agent.
+{hostname} The SNMP agent (server).
 
 {community} The read community.
 
@@ -15,9 +15,9 @@ and all objects under that tree are returned as an array.
 If {object_id} is specified, all the SNMP objects below that {object_id} are
 returned.
 
-{timeout}
+{timeout} The number of microseconds until the first timeout.
 
-{retries}
+{retries} The number of retries in case timeouts occur.
 
 Returns an array of SNMP object values starting from the {object_id} as root
 or FALSE on error.
@@ -39,6 +39,6 @@ or FALSE on error.
 Above function call would return all the SNMP objects from the SNMP agent
 running on localhost. One can step through the values with a loop
 
-|snmpwalkoid|
+|snmprealwalk|
 
 vim:ft=help:

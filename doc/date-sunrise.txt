@@ -1,4 +1,4 @@
-date_sunrise -- Returns time of sunrise for a given day and location
+*date_sunrise* -- Returns time of sunrise for a given day and location
 
   mixed date_sunrise(int timestamp [, int format [, float latitude [, float longitude [, float zenith [, float gmt_offset]]]]])~
 
@@ -22,7 +22,7 @@ date.default_longitude
 
 {gmtoffset} Specified in hours.
 
-Returns the sunrise time in a specified {format} on success, or FALSE on
+Returns the sunrise time in a specified {format} on success or FALSE on
 failure.
 
 Every call to a date/time function will generate a E_NOTICE if the time zone

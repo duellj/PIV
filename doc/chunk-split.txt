@@ -1,4 +1,4 @@
-chunk_split -- Split a string into smaller chunks
+*chunk_split* -- Split a string into smaller chunks
 
   string chunk_split(string body [, int chunklen [, string end]])~
 
@@ -8,9 +8,9 @@ converting |base64_encode| output to match RFC 2045 semantics. It inserts
 
 {body} The string to be chunked.
 
-{chunklen} The chunk length. Defaults to 76.
+{chunklen} The chunk length.
 
-{end} The line ending sequence. Defaults to "\r\n".
+{end} The line ending sequence.
 
 Returns the chunked string.
 

@@ -1,4 +1,4 @@
-ps_end_pattern -- End a pattern
+*ps_end_pattern* -- End a pattern
 
   bool ps_end_pattern(resource psdoc)~
 
@@ -7,7 +7,7 @@ been ended, it can be used like a color to fill areas.
 
 {psdoc} Resource identifier of the postscript file as returned by |ps_new|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_begin_pattern|
 

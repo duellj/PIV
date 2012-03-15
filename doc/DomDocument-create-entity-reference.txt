@@ -1,4 +1,4 @@
-DomDocument->create_entity_reference -- Create an entity reference
+*DomDocument->create_entity_reference* -- Create an entity reference
 
   domentityreference DomDocument->create_entity_reference(string content)~
 

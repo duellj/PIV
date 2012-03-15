@@ -1,4 +1,4 @@
-openssl_pkcs7_verify -- Verifies the signature of an S/MIME signed message
+*openssl_pkcs7_verify* -- Verifies the signature of an S/MIME signed message
 
   mixed openssl_pkcs7_verify(string filename, int flags [, string outfilename [, array cainfo [, string extracerts [, string content]]]])~
 
@@ -29,5 +29,8 @@ message has been tampered with, or the signing certificate is invalid), or -1
 on error.
 
 Version Description 5.1.0 The {content} parameter was added.
+
+As specified in RFC 2045, lines may not be longer than 76 characters in the
+{filename} parameter.
 
 vim:ft=help:

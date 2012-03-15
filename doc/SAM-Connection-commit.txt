@@ -1,4 +1,4 @@
-SAMConnection->commit -- Commits (completes) the current unit of work.
+*SAMConnection->commit* -- Commits (completes) the current unit of work.
 
   bool commit()~
 

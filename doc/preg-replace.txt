@@ -1,4 +1,4 @@
-preg_replace -- Perform a regular expression search and replace
+*preg_replace* -- Perform a regular expression search and replace
 
   mixed preg_replace(mixed pattern, mixed replacement, mixed subject [, int limit [, int count]])~
 
@@ -8,10 +8,8 @@ Searches {subject} for matches to {pattern} and replaces them with
 {pattern} The pattern to search for. It can be either a string or an array
 with strings.
 
-The e modifier makes |preg_replace| treat the {replacement} parameter as PHP
-code after the appropriate references substitution is done. Tip: make sure
-that {replacement} constitutes a valid PHP code string, otherwise PHP will
-complain about a parse error at the line containing |preg_replace|.
+Several PCRE modifiers are also available, including 'e' (PREG_REPLACE_EVAL),
+which is specific to this function.
 
 {replacement} The string or an array with strings to replace. If this
 parameter is a string and the {pattern} parameter is an array, all patterns
@@ -41,8 +39,7 @@ When using the e modifier, this function escapes some characters (namely ', ",
 \ and NULL) in the strings that replace the backreferences. This is done to
 ensure that no syntax errors arise from backreference usage with either single
 or double quotes (e.g. 'strlen(\'$1\')+strlen("$2")'). Make sure you are aware
-of PHP's string syntax to know exactly how the interpreted string will look
-like.
+of PHP's string syntax to know exactly how the interpreted string will look.
 
 {subject} The string or an array with strings to search and replace.
 
@@ -83,9 +80,11 @@ Using indexed arrays with |preg_replace|
 
 <?php >
   $string = 'The quick brown fox jumped over the lazy dog.';
+  $patterns = array();
   $patterns[0] = '/quick/';
   $patterns[1] = '/brown/';
   $patterns[2] = '/fox/';
+  $replacements = array();
   $replacements[2] = 'bear';
   $replacements[1] = 'black';
   $replacements[0] = 'slow';
@@ -172,6 +171,7 @@ numerical index order. If you use indexes to identify which {pattern} should
 be replaced by which {replacement}, you should perform a |ksort| on each array
 prior to calling |preg_replace|.
 
-|preg_filter| |preg_match| |preg_replace_callback| |preg_split|
+PCRE Patterns |preg_filter| |preg_match| |preg_replace_callback| |preg_split|
+|preg_last_error|
 
 vim:ft=help:

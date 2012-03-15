@@ -1,4 +1,4 @@
-fdf_get_ap -- Get the appearance of a field
+*fdf_get_ap* -- Get the appearance of a field
 
   bool fdf_get_ap(resource fdf_document, string field, int face, string filename)~
 
@@ -14,6 +14,6 @@ or |fdf_open_string|.
 
 {filename} The appearance will be stored in this parameter.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

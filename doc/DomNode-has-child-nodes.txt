@@ -1,4 +1,4 @@
-DomNode->has_child_nodes -- Checks if node has children
+*DomNode->has_child_nodes* -- Checks if node has children
 
   bool DomNode->has_child_nodes()~
 

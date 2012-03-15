@@ -1,4 +1,4 @@
-DomDocument->get_element_by_id -- Searches for an element with a certain id
+*DomDocument->get_element_by_id* -- Searches for an element with a certain id
 
   domelement DomDocument->get_element_by_id(string id)~
 

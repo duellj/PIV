@@ -1,4 +1,4 @@
-Swish->query -- Execute a query and return results object
+*Swish->query* -- Execute a query and return results object
 
   object Swish->query(string query)~
 

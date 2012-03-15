@@ -1,4 +1,4 @@
-iconv_get_encoding -- Retrieve internal configuration variables of iconv
+*iconv_get_encoding* -- Retrieve internal configuration variables of iconv
 extension
 
   mixed iconv_get_encoding([string type])~
@@ -8,8 +8,8 @@ Retrieve internal configuration variables of iconv extension.
 {type} The value of the optional {type} can be: all input_encoding
 output_encoding internal_encoding
 
-Returns the current value of the internal configuration variable if
-successful, or FALSE on failure.
+Returns the current value of the internal configuration variable if successful
+or FALSE on failure.
 
 If {type} is omitted or set to "all", |iconv_get_encoding| returns an array
 that stores all these variables.

@@ -1,4 +1,4 @@
-mssql_fetch_row -- Get row as enumerated array
+*mssql_fetch_row* -- Get row as enumerated array
 
   array mssql_fetch_row(resource result)~
 
@@ -18,17 +18,16 @@ more rows.
 |mssql_fetch_row| example
 
 <?php >
-  // Connect to server and database
+  // Connect to MSSQL and select the database
   $link = mssql_connect('MANGO\SQLEXPRESS', 'sa', 'phpfi');
   mssql_select_db('php', $link);
   
   // Query to execute
   $query = mssql_query('SELECT [id], [quote] FROM [quotes] WHERE [id] = \'42\'', $link);
   
-  // Did the query failed?
-  if(!$query)
-  {
-  	die('MSSQL error: ' . mssql_get_last_message());
+  // Did the query fail?
+  if (!$query) {
+      die('MSSQL error: ' . mssql_get_last_message());
   }
   
   // Fetch the row

@@ -1,4 +1,4 @@
-yaz_search -- Prepares for a search
+*yaz_search* -- Prepares for a search
 
   bool yaz_search(resource id, string type, string query)~
 
@@ -33,7 +33,7 @@ Maintenance Agency site.
 If you would like to use a more friendly notation, use the CCL parser -
 functions |yaz_ccl_conf| and |yaz_ccl_parse|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Query Examples You can search for simple terms, like this:
 

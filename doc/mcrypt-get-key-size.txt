@@ -1,4 +1,4 @@
-mcrypt_get_key_size -- Get the key size of the specified cipher
+*mcrypt_get_key_size* -- Gets the key size of the specified cipher
 
   int mcrypt_get_key_size(int cipher)~
 
@@ -10,23 +10,24 @@ linked against libmcrypt 2.4.x or 2.5.x.
 |mcrypt_get_key_size| is used to get the size of a key of the specified
 {cipher} (in combination with an encryption mode).
 
-This example shows how to use this function when linked against libmcrypt
-2.4.x and 2.5.x. It is more useful to use the |mcrypt_enc_get_key_size|
-function as this uses the resource returned by |mcrypt_module_open|.
-|mcrypt_get_key_size| example
+It is more useful to use the |mcrypt_enc_get_key_size| function as this uses
+the resource returned by |mcrypt_module_open|.
+
+|mcrypt_get_key_size| Example
 
 <?php >
       echo mcrypt_get_key_size('tripledes', 'ecb');
 ?>
-  
-  Prints:
+
+The example above shows how to use this function when linked against libmcrypt
+2.4.x or 2.5.x.
+
+The above example will output:
+
   24
 
 
 
-
-
-See also: |mcrypt_get_block_size|, |mcrypt_enc_get_key_size| and
-|mcrypt_encrypt|.
+|mcrypt_get_block_size| |mcrypt_enc_get_key_size| |mcrypt_encrypt|
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-msg_send -- Send a message to a message queue
+*msg_send* -- Send a message to a message queue
 
   bool msg_send(resource queue, int msgtype, mixed message [, bool serialize [, bool blocking [, int errorcode]]])~
 
@@ -27,7 +27,7 @@ should try to send your message again a little later on.
 
 {errorcode}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Upon successful completion the message queue data structure is updated as
 follows: {msg_lspid} is set to the process-ID of the calling process,

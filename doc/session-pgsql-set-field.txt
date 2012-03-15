@@ -1,4 +1,4 @@
-session_pgsql_set_field -- Set custom field value
+*session_pgsql_set_field* -- Set custom field value
 
   bool session_pgsql_set_field(string value)~
 
@@ -7,7 +7,7 @@ available.
 
 {value}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |session_pgsql_get_field|
 

@@ -1,10 +1,10 @@
-maxdb->info -- Retrieves information about the most recently executed query
+*maxdb->info* -- Retrieves information about the most recently executed query
 
-Procedural style:
+Procedural style
 
   string maxdb_info(resource link)~
 
-Object oriented style (property)
+Object oriented style
 
 The |maxdb_info| function returns a string providing information about the
 last query executed. The nature of this string is provided below:

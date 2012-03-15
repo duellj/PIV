@@ -1,4 +1,4 @@
-SDO_DAS_Relational::applyChanges -- Applies the changes made to a data graph
+*SDO_DAS_Relational::applyChanges* -- Applies the changes made to a data graph
 back to the database.
 
   void SDO_DAS_Relational::applyChanges(PDO database_handle, SDODataObject root_data_object)~
@@ -39,9 +39,9 @@ changes and will commit the transaction only if they are all successful. The
 Relational DAS generates qualified update and delete statements which contain
 a where clause that specifies that the row to be updated or deleted must
 contain the same values that it did when the data was first retrieved. This is
-how the the optimistic concurrency is implemented. If any of the qualified
-update or delete statements fails to update or delete their target row, it may
-be because the data has been altered in the database in the meantime. In any
+how the optimistic concurrency is implemented. If any of the qualified update
+or delete statements fails to update or delete their target row, it may be
+because the data has been altered in the database in the meantime. In any
 event, if any update fails for any reason, the transaction is rolled back and
 an exception thrown. The exception will contain the generated SQL statement
 that failed.

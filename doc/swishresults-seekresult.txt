@@ -1,4 +1,4 @@
-SwishResults->seekResult -- Set current seek pointer to the given position
+*SwishResults->seekResult* -- Set current seek pointer to the given position
 
   int SwishResults->seekResult(int position)~
 

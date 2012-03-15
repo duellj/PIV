@@ -1,4 +1,4 @@
-imagerectangle -- Draw a rectangle
+*imagerectangle* -- Draw a rectangle
 
   bool imagerectangle(resource image, int x1, int y1, int x2, int y2, int color)~
 
@@ -17,7 +17,7 @@ such as |imagecreatetruecolor|.
 
 {color} A color identifier created with |imagecolorallocate|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Simple |imagerectangle| example
 
@@ -43,6 +43,8 @@ Simple |imagerectangle| example
 ?>
 
 The above example will output something similar to:
+
+Output of example : Simple imagerectangle() example
 
 
 

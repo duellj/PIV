@@ -1,4 +1,4 @@
-ob_start -- Turn on output buffering
+*ob_start* -- Turn on output buffering
 
   bool ob_start([callback output_callback [, int chunk_size [, bool erase]]])~
 
@@ -56,9 +56,10 @@ exceed {chunk_size}. Default value 0 means that the function is called only in
 the end, other special value 1 sets {chunk_size} to 4096.
 
 {erase} If the optional parameter {erase} is set to FALSE, the buffer will not
-be deleted until the script finishes.
+be deleted until the script finishes. This causes that flushing and cleaning
+functions would issue a notice and return FALSE if called.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 4.3.2 This function was changed to return FALSE in case
 the passed {output_callback} can not be executed. 4.2.0 Added the {erase}

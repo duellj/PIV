@@ -1,10 +1,10 @@
-maxdb->sqlstate -- Returns the SQLSTATE error from previous MaxDB operation
+*maxdb->sqlstate* -- Returns the SQLSTATE error from previous MaxDB operation
 
-Procedural style:
+Procedural style
 
   string maxdb_sqlstate(resource link)~
 
-Object oriented style (property):
+Object oriented style
 
 Returns a string containing the SQLSTATE error code for the last error. The
 error code consists of five characters. '00000' means no error. The values are

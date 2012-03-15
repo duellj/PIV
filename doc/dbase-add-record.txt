@@ -1,4 +1,4 @@
-dbase_add_record -- Adds a record to a database
+*dbase_add_record* -- Adds a record to a database
 
   bool dbase_add_record(int dbase_identifier, array record)~
 
@@ -13,7 +13,7 @@ number of fields in the database, otherwise |dbase_add_record| will fail.
 If you're using |dbase_get_record| return value for this parameter, remember
 to reset the key named deleted.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Inserting a record in a dBase database
 

@@ -1,4 +1,4 @@
-ps_setoverprintmode -- Sets overprint mode
+*ps_setoverprintmode* -- Sets overprint mode
 
   bool ps_setoverprintmode(resource psdoc, int mode)~
 
@@ -11,6 +11,6 @@ available.
 
 {mode}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-SDO_DAS_XML::createDataObject -- Creates SDO_DataObject for a given namespace
+*SDO_DAS_XML::createDataObject* -- Creates SDO_DataObject for a given namespace
 URI and type name
 
   SDO_DataObject SDO_DAS_XML::createDataObject(string namespace_uri, string type_name)~

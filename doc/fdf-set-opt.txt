@@ -1,4 +1,4 @@
-fdf_set_opt -- Sets an option of a field
+*fdf_set_opt* -- Sets an option of a field
 
   bool fdf_set_opt(resource fdf_document, string fieldname, int element, string str1, string str2)~
 
@@ -15,7 +15,7 @@ or |fdf_open_string|.
 
 {str2}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |fdf_set_flags|
 

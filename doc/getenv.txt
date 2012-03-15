@@ -1,12 +1,12 @@
-getenv -- Gets the value of an environment variable
+*getenv* -- Gets the value of an environment variable
 
   string getenv(string varname)~
 
 Gets the value of an environment variable.
 
-You can see a list of all the environmental variables by using |phpinfo|. You
-can find out what many of them mean by taking a look at the CGI specification,
-specifically the page on environmental variables.
+You can see a list of all the environmental variables by using |phpinfo|. Many
+of these variables are listed within RFC 3875, specifically section 4.1,
+"Request Meta-Variables".
 
 {varname} The variable name.
 

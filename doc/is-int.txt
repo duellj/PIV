@@ -1,4 +1,4 @@
-is_int -- Find whether the type of a variable is integer
+*is_int* -- Find whether the type of a variable is integer
 
   bool is_int(mixed var)~
 
@@ -15,9 +15,9 @@ Returns TRUE if {var} is an integer, FALSE otherwise.
 
 <?php >
   if (is_int(23)) {
-   echo "is integer\n";
+      echo "is integer\n";
   } else {
-   echo "is not an integer\n";
+      echo "is not an integer\n";
   }
   var_dump(is_int(23));
   var_dump(is_int("23"));

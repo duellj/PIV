@@ -1,4 +1,4 @@
-xml_set_unparsed_entity_decl_handler -- Set up unparsed entity declaration
+*xml_set_unparsed_entity_decl_handler* -- Set up unparsed entity declaration
 handler
 
   bool xml_set_unparsed_entity_decl_handler(resource parser, callback handler)~
@@ -17,7 +17,8 @@ declaration with an NDATA declaration, like the following:
 See section 4.2.2 of the XML 1.0 spec for the definition of notation declared
 external entities.
 
-{parser}
+{parser} A reference to the XML parser to set up unparsed entity declaration
+handler function.
 
 {handler} {handler} is a string containing the name of a function that must
 exist when |xml_parse| is called for {parser}.
@@ -46,6 +47,6 @@ question is disabled.
 Instead of a function name, an array containing an object reference and a
 method name can also be supplied.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

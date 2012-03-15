@@ -1,4 +1,4 @@
-quotemeta -- Quote meta characters
+*quotemeta* -- Quote meta characters
 
   string quotemeta(string str)~
 
@@ -16,6 +16,6 @@ Returns the string with meta characters quoted.
 This function is binary-safe.
 
 |addslashes| |addcslashes| |htmlentities| |htmlspecialchars| |nl2br|
-|stripslashes| |stripcslashes| |preg_match|
+|stripslashes| |stripcslashes| |preg_match| |preg_quote|
 
 vim:ft=help:

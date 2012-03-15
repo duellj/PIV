@@ -1,4 +1,4 @@
-msql_field_seek -- Set field offset
+*msql_field_seek* -- Set field offset
 
   bool msql_field_seek(resource result, int field_offset)~
 
@@ -10,7 +10,7 @@ call to |msql_query|.
 
 { field_offset}The numerical field offset. The {field_offset} starts at 1.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |msql_fetch_field|
 

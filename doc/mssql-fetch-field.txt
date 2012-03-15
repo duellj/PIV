@@ -1,4 +1,4 @@
-mssql_fetch_field -- Get field information
+*mssql_fetch_field* -- Get field information
 
   object mssql_fetch_field(resource result [, int field_offset])~
 
@@ -30,7 +30,7 @@ type - the column type.
 |mssql_fetch_field| example
 
 <?php >
-  // Connect MSSQL
+  // Connect to MSSQL and select the database
   mssql_connect('MANGO\SQLEXPRESS', 'sa', 'phpfi');
   mssql_select_db('php');
   
@@ -53,17 +53,16 @@ type - the column type.
   // Dump all fields
   echo '<tbody>';
   
-  for($i = 0; $i < mssql_num_fields($query); ++$i)
-  {
-  	// Fetch the field information
-  	$field = mssql_fetch_field($query, $i);
+  for ($i = 0; $i < mssql_num_fields($query); ++$i) {
+      // Fetch the field information
+      $field = mssql_fetch_field($query, $i);
   
-  	// Print the row
-  	echo '<tr>';
-  	echo '<td>' . $field->name . '</td>';
-  	echo '<td>' . strtoupper($field->type) . '</td>';
-  	echo '<td>' . $field->max_length . '</td>';
-  	echo '</tr>';
+      // Print the row
+      echo '<tr>';
+      echo '<td>' . $field->name . '</td>';
+      echo '<td>' . strtoupper($field->type) . '</td>';
+      echo '<td>' . $field->max_length . '</td>';
+      echo '</tr>';
   }
   
   echo '</tbody>';

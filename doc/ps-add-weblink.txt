@@ -1,4 +1,4 @@
-ps_add_weblink -- Adds link to a web location
+*ps_add_weblink* -- Adds link to a web location
 
   bool ps_add_weblink(resource psdoc, float llx, float lly, float urx, float ury, string url)~
 
@@ -24,7 +24,7 @@ Ghostview.
 {url} The url of the hyperlink to be opened when clicking on this link, e.g.
 http://www.php.net.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_add_launchlink| |ps_add_locallink| |ps_add_pdflink|
 

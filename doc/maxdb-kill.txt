@@ -1,17 +1,17 @@
-maxdb->kill -- Disconnects from a MaxDB server
+*maxdb::kill* -- Disconnects from a MaxDB server
 
-Procedural style:
+Procedural style
 
   bool maxdb_kill(resource link, int processid)~
 
-Object oriented style (method)
+Object oriented style
 
-  bool kill(resource link, int processid, int processid)~
+  bool maxdb::kill(resource link, int processid, int processid)~
 
 This function is used to disconnect from a MaxDB server specified by the
 {processid} parameter.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

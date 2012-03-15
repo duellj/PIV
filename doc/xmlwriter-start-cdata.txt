@@ -1,6 +1,6 @@
-XMLWriter::startCData -- Create start CDATA tag
+*XMLWriter::startCData* -- Create start CDATA tag
 
-Oriented object style
+Object oriented style
 
   bool startCData()~
 
@@ -14,7 +14,7 @@ Starts a CDATA.
 modified. This resource comes from a call to |xmlwriter_open_uri| or
 |xmlwriter_open_memory|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 XMLWriter::endCData XMLWriter::writeCData
 

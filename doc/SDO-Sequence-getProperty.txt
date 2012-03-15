@@ -1,4 +1,4 @@
-SDO_Sequence::getProperty -- Return the property for the specified sequence
+*SDO_Sequence::getProperty* -- Return the property for the specified sequence
 index.
 
   SDO_Model_Property SDO_Sequence::getProperty(int sequence_index)~

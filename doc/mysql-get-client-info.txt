@@ -1,4 +1,4 @@
-mysql_get_client_info -- Get MySQL client info
+*mysql_get_client_info* -- Get MySQL client info
 
   string mysql_get_client_info()~
 

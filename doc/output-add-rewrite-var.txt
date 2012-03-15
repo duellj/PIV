@@ -1,4 +1,4 @@
-output_add_rewrite_var -- Add URL rewriter values
+*output_add_rewrite_var* -- Add URL rewriter values
 
   bool output_add_rewrite_var(string name, string value)~
 
@@ -18,7 +18,7 @@ active already.
 
 {value} The variable value.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |output_add_rewrite_var| example
 

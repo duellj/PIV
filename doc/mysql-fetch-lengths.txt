@@ -1,4 +1,4 @@
-mysql_fetch_lengths -- Get the length of each output in a result
+*mysql_fetch_lengths* -- Get the length of each output in a result
 
   array mysql_fetch_lengths(resource result)~
 
@@ -12,7 +12,7 @@ returned by |mysql_fetch_row|, |mysql_fetch_assoc|, |mysql_fetch_array|, and
 { result}The result resource that is being evaluated. This result comes from a
 call to |mysql_query|.
 
-An array of lengths on success, or FALSE on failure.
+An array of lengths on success or FALSE on failure.
 
 A |mysql_fetch_lengths| example
 

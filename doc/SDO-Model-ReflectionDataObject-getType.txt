@@ -1,4 +1,4 @@
-SDO_Model_ReflectionDataObject::getType -- Get the SDO_Model_Type for the
+*SDO_Model_ReflectionDataObject::getType* -- Get the SDO_Model_Type for the
 SDO_DataObject
 
   SDO_Model_Type SDO_Model_ReflectionDataObject::getType()~

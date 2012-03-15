@@ -1,4 +1,4 @@
-hw_api_error->count -- Returns number of reasons
+*hw_api_error->count* -- Returns number of reasons
 
   int count()~
 

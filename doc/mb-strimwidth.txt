@@ -1,4 +1,4 @@
-mb_strimwidth -- Get truncated string with specified width
+*mb_strimwidth* -- Get truncated string with specified width
 
   string mb_strimwidth(string str, int start, int width [, string trimmarker [, string encoding]])~
 
@@ -23,7 +23,8 @@ return value.
 |mb_strimwidth| example
 
 <?php >
-  $str = mb_strimwidth($str, 0, 40, "..>");
+  echo mb_strimwidth("Hello World", 0, 10, "...");
+  // outputs Hello W...
 ?>
 
 

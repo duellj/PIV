@@ -1,4 +1,4 @@
-mb_strstr -- Finds first occurrence of a string within another
+*mb_strstr* -- Finds first occurrence of a string within another
 
   string mb_strstr(string haystack, string needle [, bool part [, string encoding]])~
 
@@ -12,7 +12,7 @@ the portion of {haystack}. If {needle} is not found, it returns FALSE.
 {part} Determines which portion of {haystack} this function returns. If set to
 TRUE, it returns all of {haystack} from the beginning to the first occurrence
 of {needle}. If set to FALSE, it returns all of {haystack} from the first
-occurrence of {needle} to the end, Default value is FALSE.
+occurrence of {needle} to the end,
 
 {encoding} Character encoding name to use. If it is omitted, internal
 character encoding is used.

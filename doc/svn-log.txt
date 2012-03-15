@@ -1,4 +1,4 @@
-svn_log -- Returns the commit log messages of a repository URL
+*svn_log* -- Returns the commit log messages of a repository URL
 
   array svn_log(string repos_url [, int start_revision [, int end_revision [, int limit [, int flags]]]])~
 
@@ -23,7 +23,7 @@ SVN_REVISION_HEAD to retrieve the log from the most recent revision.
 {limit} Number of logs to retrieve.
 
 {flags} Any combination of SVN_OMIT_MESSAGES, SVN_DISCOVER_CHANGED_PATHS and
-SVN_STOP_ON_COPY, defaults to SVN_DISCOVER_CHANGED_PATHS | SVN_STOP_ON_COPY.
+SVN_STOP_ON_COPY.
 
 On success, this function returns an array file listing in the format of:
 

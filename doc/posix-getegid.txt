@@ -1,4 +1,4 @@
-posix_getegid -- Return the effective group ID of the current process
+*posix_getegid* -- Return the effective group ID of the current process
 
   int posix_getegid()~
 
@@ -21,8 +21,6 @@ once it is changed with |posix_setegid|.
 |posix_getegid| is different than |posix_getgid| because effective group ID
 can be changed by a calling process using |posix_setegid|.
 
-|posix_getgrgid| for information on how to convert this into a useable group
-name |posix_getgid| get real group id. |posix_setgid| change the effective
-group id
+|posix_getgrgid| |posix_getgid| |posix_setgid|
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-DomNode->unlink_node -- Deletes node
+*DomNode->unlink_node* -- Deletes node
 
   void DomNode->unlink_node()~
 

@@ -1,4 +1,4 @@
-hash_file -- Generate a hash value using the contents of a given file
+*hash_file* -- Generate a hash value using the contents of a given file
 
   string hash_file(string algo, string filename [, bool raw_output])~
 
@@ -8,8 +8,8 @@ etc..)
 {filename} URL describing location of file to be hashed; Supports fopen
 wrappers.
 
-{raw_output} When set to TRUE, outputs raw binary data. Default value (FALSE)
-outputs lowercase hexits.
+{raw_output} When set to TRUE, outputs raw binary data. FALSE outputs
+lowercase hexits.
 
 Returns a string containing the calculated message digest as lowercase hexits
 unless {raw_output} is set to true in which case the raw binary representation

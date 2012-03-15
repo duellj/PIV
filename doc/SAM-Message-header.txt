@@ -1,4 +1,4 @@
-SAMMessage->header -- The header properties of the message.
+*SAMMessage->header* -- The header properties of the message.
 
 The header property is a container for any system or user properties that area
 associated with the message.

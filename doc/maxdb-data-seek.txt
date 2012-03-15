@@ -1,20 +1,20 @@
-result->data_seek -- Adjusts the result pointer to an arbitary row in the
-result
+*maxdb_result::data_seek* -- Adjusts the result pointer to an arbitary row in
+the result
 
-Procedural style:
+Procedural style
 
   bool maxdb_data_seek(resource result, int offset)~
 
-Object oriented style (method):
+Object oriented style
 
-  bool data_seek(resource result, int offset, int offset)~
+  bool maxdb_result::data_seek(resource result, int offset, int offset)~
 
 The |maxdb_data_seek| function seeks to an arbitrary result pointer specified
 by the {offset} in the result set represented by {result}. The {offset}
 parameter must be between zero and the total number of rows minus one
 (0..|maxdb_num_rows| - 1).
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

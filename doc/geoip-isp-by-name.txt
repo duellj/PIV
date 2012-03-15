@@ -1,4 +1,4 @@
-geoip_isp_by_name -- Get the Internet Service Provider (ISP) name
+*geoip_isp_by_name* -- Get the Internet Service Provider (ISP) name
 
   string geoip_isp_by_name(string hostname)~
 
@@ -26,7 +26,7 @@ example.com.
 
 The above example will output:
 
-  This host IP is allocated to: ICANN c/o Internet Assigned Numbers Authority
+  This host IP is from ISP: ICANN c/o Internet Assigned Numbers Authority
 
 
 

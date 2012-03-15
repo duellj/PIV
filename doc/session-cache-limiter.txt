@@ -1,4 +1,4 @@
-session_cache_limiter -- Get and/or set the current cache limiter
+*session_cache_limiter* -- Get and/or set the current cache limiter
 
   string session_cache_limiter([string cache_limiter])~
 
@@ -26,8 +26,8 @@ limiter is changed to the new value.
 
 Possible values Value Headers sent public
 
-  Expires: (sometime in the future, according session.cache_expires)
-  Cache-Control: public, max-age=(sometime in the future, according to session.cache_expire
+  Expires: (sometime in the future, according session.cache_expire)
+  Cache-Control: public, max-age=(sometime in the future, according to session.cache_expire)
   Last-Modified: (the timestamp of when the session was last saved)
 
 private_no_expire

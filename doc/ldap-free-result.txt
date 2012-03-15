@@ -1,4 +1,4 @@
-ldap_free_result -- Free result memory
+*ldap_free_result* -- Free result memory
 
   bool ldap_free_result(resource result_identifier)~
 
@@ -12,6 +12,6 @@ memory usage by the script low.
 
 {result_identifier}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

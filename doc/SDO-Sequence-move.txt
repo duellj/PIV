@@ -1,4 +1,4 @@
-SDO_Sequence::move -- Move an item to another sequence position
+*SDO_Sequence::move* -- Move an item to another sequence position
 
   void SDO_Sequence::move(int toIndex, int fromIndex)~
 

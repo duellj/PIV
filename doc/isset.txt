@@ -1,4 +1,4 @@
-isset -- Determine if a variable is set and is not NULL
+*isset* -- Determine if a variable is set and is not NULL
 
   bool isset(mixed var [, mixed var [, mixed ...]])~
 
@@ -18,7 +18,7 @@ soon as an unset variable is encountered.
 
 {...}
 
-Returns TRUE if {var} exists; FALSE otherwise.
+Returns TRUE if {var} exists and has value other than NULL, FALSE otherwise.
 
 |isset| Examples
 

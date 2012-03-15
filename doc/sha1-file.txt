@@ -1,14 +1,15 @@
-sha1_file -- Calculate the sha1 hash of a file
+*sha1_file* -- Calculate the sha1 hash of a file
 
   string sha1_file(string filename [, bool raw_output])~
 
-Calculates the sha1 hash of {filename} using the US Secure Hash Algorithm 1,
-and returns that hash. The hash is a 40-character hexadecimal number.
+Calculates the sha1 hash of the file specified by {filename} using the US
+Secure Hash Algorithm 1, and returns that hash. The hash is a 40-character
+hexadecimal number.
 
-{filename} The filename
+{filename} The filename of the file to hash.
 
 {raw_output} When TRUE, returns the digest in raw binary format with a length
-of 20. Defaults to FALSE.
+of 20.
 
 Returns a string on success, FALSE otherwise.
 
@@ -17,12 +18,12 @@ Returns a string on success, FALSE otherwise.
 <?php >
   foreach(glob('/home/Kalle/myproject/*.php') as $ent)
   {
-  	if(is_dir($ent))
-  	{
-  		continue;
-  	}
+      if(is_dir($ent))
+      {
+          continue;
+      }
   
-  	echo $ent . ' (SHA1: ' . sha1_file($ent) . ')', PHP_EOL;
+      echo $ent . ' (SHA1: ' . sha1_file($ent) . ')', PHP_EOL;
   }
 ?>
 

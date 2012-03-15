@@ -1,4 +1,4 @@
-ip2long -- Converts a string containing an (IPv4) Internet Protocol dotted
+*ip2long* -- Converts a string containing an (IPv4) Internet Protocol dotted
 address into a proper address
 
   int ip2long(string ip_address)~
@@ -14,7 +14,9 @@ for more info.
 
 Returns the IPv4 address or FALSE if {ip_address} is invalid.
 
-Version Description 5.0.0 Prior to this version, |ip2long| returned -1 on
+Version Description 5.2.10 Prior to this version, |ip2long| would sometimes
+return a valid number even if passed an value which was not an (IPv4) Internet
+Protocol dotted address. 5.0.0 Prior to this version, |ip2long| returned -1 on
 failure.
 
 |ip2long| Example
@@ -62,7 +64,8 @@ Combine it with |long2ip|:
 
 
 Because PHP's integer type is signed, and many IP addresses will result in
-negative integers, you need to use the "%u" formatter of |sprintf| or |printf|
-to get the string representation of the unsigned IP address.
+negative integers on 32-bit architectures, you need to use the "%u" formatter
+of |sprintf| or |printf| to get the string representation of the unsigned IP
+address.
 
 vim:ft=help:

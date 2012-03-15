@@ -1,4 +1,4 @@
-mssql_result -- Get result data
+*mssql_result* -- Get result data
 
   string mssql_result(resource result, int row, mixed field)~
 
@@ -25,16 +25,12 @@ Returns the contents of the specified cell.
   $query = mssql_query('SELECT [username] FROM [php].[dbo].[userlist]');
   
   // Check if there were any records
-  if(!mssql_num_rows($query))
-  {
-  	echo 'No records found';
-  }
-  else
-  {
-  	for($i = 0; $i < mssql_num_rows($query); ++$i)
-  	{
-  		echo mssql_result($query, $i, 'username'), PHP_EOL;
-  	}
+  if (!mssql_num_rows($query)) {
+      echo 'No records found';
+  } else {
+      for ($i = 0; $i < mssql_num_rows($query); ++$i) {
+          echo mssql_result($query, $i, 'username'), PHP_EOL;
+      }
   }
   
   // Free the query result
@@ -57,16 +53,12 @@ Faster alternative to above example
   $query = mssql_query('SELECT [username] FROM [php].[dbo].[userlist]');
   
   // Check if there were any records
-  if(!mssql_num_rows($query))
-  {
-  	echo 'No records found';
-  }
-  else
-  {
-  	while($row = mssql_fetch_array($query))
-  	{
-  		echo $row['username'], PHP_EOL;
-  	}
+  if (!mssql_num_rows($query)) {
+      echo 'No records found';
+  } else {
+      while ($row = mssql_fetch_array($query)) {
+          echo $row['username'], PHP_EOL;
+      }
   }
   
   // Free the query result

@@ -1,4 +1,4 @@
-get_loaded_extensions -- Returns an array with the names of all modules
+*get_loaded_extensions* -- Returns an array with the names of all modules
 compiled and loaded
 
   array get_loaded_extensions([bool zend_extensions])~
@@ -6,8 +6,8 @@ compiled and loaded
 This function returns the names of all the modules compiled and loaded in the
 PHP interpreter.
 
-{zend_extensions} Return zend_extensions or not, defaults to FALSE (do not
-list zend_extensions).
+{zend_extensions} Only return Zend extensions, if not then regular extensions,
+like mysqli are listed. Defaults to FALSE (return regular extensions).
 
 Returns an indexed array of all the modules names.
 

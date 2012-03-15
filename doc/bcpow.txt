@@ -1,4 +1,4 @@
-bcpow -- Raise an arbitrary precision number to another
+*bcpow* -- Raise an arbitrary precision number to another
 
   string bcpow(string left_operand, string right_operand [, int scale])~
 
@@ -19,6 +19,19 @@ Returns the result as a string.
 <?php >
   echo bcpow('4.2', '3', 2); // 74.08
 ?>
+
+
+
+|bcpow| may return a result with fewer digits after the decimal point than the
+{scale} parameter would indicate. This only occurs when the result doesn't
+require all of the precision allowed by the {scale}. For example: |bcpow|
+scale example
+
+<?php >
+  echo bcpow('5', '2', 2);     // prints "25", not "25.00"
+?>
+
+
 
 
 

@@ -1,4 +1,4 @@
-msql_close -- Close mSQL connection
+*msql_close* -- Close mSQL connection
 
   bool msql_close([resource link_identifier])~
 
@@ -13,7 +13,7 @@ resources.
 by |msql_connect| is assumed. If no such link is found, the function will try
 to establish a link as if |msql_connect| was called, and use it.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |msql_connect| |msql_pconnect|
 

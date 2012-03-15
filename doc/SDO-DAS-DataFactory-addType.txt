@@ -1,4 +1,4 @@
-SDO_DAS_DataFactory::addType -- Add a new type to a model
+*SDO_DAS_DataFactory::addType* -- Add a new type to a model
 
   void SDO_DAS_DataFactory::addType(string type_namespace_uri, string type_name [, array options])~
 

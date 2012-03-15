@@ -1,6 +1,6 @@
-imap_append -- Append a string message to a specified mailbox
+*imap_append* -- Append a string message to a specified mailbox
 
-  bool imap_append(resource imap_stream, string mailbox, string message [, string options])~
+  bool imap_append(resource imap_stream, string mailbox, string message [, string options [, string internal_date]])~
 
 Appends a string {message} to the specified {mailbox}.
 
@@ -15,7 +15,13 @@ terminator instead of "\n" or the operation will fail
 
 {options} If provided, the {options} will also be written to the {mailbox}
 
-Returns TRUE on success or FALSE on failure.
+{internal_date} If this parameter is set, it will set the INTERNALDATE on the
+appended message. The parameter should be a date string that conforms to the
+rfc2060 specifications for a date_time value.
+
+Returns TRUE on success or &false; on failure.
+
+Version Description 5.3.2 Added INTERNALDATE support to imap_append.
 
 |imap_append| example
 

@@ -1,9 +1,13 @@
-ignore_user_abort -- Set whether a client disconnect should abort script
+*ignore_user_abort* -- Set whether a client disconnect should abort script
 execution
 
   int ignore_user_abort([string value])~
 
 Sets whether a client disconnect should cause a script to be aborted.
+
+When running PHP as a command line script, and the script's tty goes away
+without the script being terminated then the script will die the next time it
+tries to write anything, unless {value} is set to TRUE
 
 {value} If set, this function will set the ignore_user_abort ini setting to
 the given {value}. If not, this function will only return the previous setting
@@ -26,14 +30,14 @@ A |ignore_user_abort| example
   // page or click the "Stop" button.
   while(1)
   {
-  	// Did the connection fail?
-  	if(connection_status() != CONNECTION_NORMAL)
-  	{
-  		break;
-  	}
+      // Did the connection fail?
+      if(connection_status() != CONNECTION_NORMAL)
+      {
+          break;
+      }
   
-  	// Sleep for 10 seconds
-  	sleep(10);
+      // Sleep for 10 seconds
+      sleep(10);
   }
   
   // If this is reached, then the 'break' 

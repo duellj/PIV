@@ -1,4 +1,4 @@
-hw_api->insertanchor -- Inserts a new object of type anchor
+*hw_api->insertanchor* -- Inserts a new object of type anchor
 
   hw_api_object insertanchor(array parameter)~
 

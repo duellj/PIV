@@ -1,4 +1,4 @@
-ncurses_newwin -- Create a new window
+*ncurses_newwin* -- Create a new window
 
   resource ncurses_newwin(int rows, int cols, int y, int x)~
 
@@ -15,9 +15,9 @@ for available space, as terminal size is individual and may vary.
 
 {cols} Number of columns
 
-{y} y-ccordinate of the origin
+{y} y-coordinate of the origin
 
-{x} x-ccordinate of the origin
+{x} x-coordinate of the origin
 
 Returns a resource ID for the new window.
 

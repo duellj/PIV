@@ -1,4 +1,4 @@
-posix_getpwnam -- Return info about a user by username
+*posix_getpwnam* -- Return info about a user by username
 
   array posix_getpwnam(string username)~
 
@@ -6,7 +6,7 @@ Returns an array of information about the given user.
 
 {username} An alphanumeric username.
 
-On success an array with the following elements are returned, else FALSE is
+On success an array with the following elements is returned, else FALSE is
 returned: The user information array Element Description name The name element
 contains the username of the user. This is a short, usually less than 16
 character "handle" of the user, not the real, full name. This should be the

@@ -1,4 +1,4 @@
-curl_error -- Return a string containing the last error for the current
+*curl_error* -- Return a string containing the last error for the current
 session
 
   string curl_error(resource ch)~
@@ -18,11 +18,11 @@ Returns the error message or '' (the empty string) if no error occurred.
   
   if(curl_exec($ch) === false)
   {
-  	echo 'Curl error: ' . curl_error($ch);
+      echo 'Curl error: ' . curl_error($ch);
   }
   else
   {
-  	echo 'Operation completed without any errors';
+      echo 'Operation completed without any errors';
   }
   
   // Close handle

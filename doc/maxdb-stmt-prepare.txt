@@ -1,12 +1,12 @@
-stmt->prepare -- Prepare a SQL statement for execution
+*maxdb_stmt::prepare* -- Prepare an SQL statement for execution
 
-Procedure style:
+Procedural style
 
   bool maxdb_stmt_prepare(resource stmt, string query)~
 
-Object oriented style (method)
+Object oriented style
 
-  mixed prepare(resource stmt, string query, string query)~
+  mixed maxdb_stmt::prepare(resource stmt, string query, string query)~
 
 |maxdb_stmt_prepare| prepares the SQL query pointed to by the null-terminated
 string query. The statement resource has to be allocated by |maxdb_stmt_init|.
@@ -35,7 +35,7 @@ The parameter markers must be bound to application variables using
 |maxdb_stmt_bind_param| and/or |maxdb_stmt_bind_result| before executing the
 statement or fetching rows.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

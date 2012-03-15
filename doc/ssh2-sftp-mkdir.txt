@@ -1,4 +1,4 @@
-ssh2_sftp_mkdir -- Create a directory
+*ssh2_sftp_mkdir* -- Create a directory
 
   bool ssh2_sftp_mkdir(resource sftp, string dirname [, int mode [, bool recursive]])~
 
@@ -15,7 +15,7 @@ This function is similar to using |mkdir| with the ssh2.sftp:// wrapper.
 {recursive} If {recursive} is TRUE any parent directories required for
 {dirname} will be automatically created as well.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Creating a directory on a remote server
 

@@ -1,4 +1,4 @@
-SDO_DAS_DataFactory::addPropertyToType -- Adds a property to a type
+*SDO_DAS_DataFactory::addPropertyToType* -- Adds a property to a type
 
   void SDO_DAS_DataFactory::addPropertyToType(string parent_type_namespace_uri, string parent_type_name, string property_name, string type_namespace_uri, string type_name [, array options])~
 

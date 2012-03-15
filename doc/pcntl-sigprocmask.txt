@@ -1,4 +1,4 @@
-pcntl_sigprocmask -- Sets and retrieves blocked signals
+*pcntl_sigprocmask* -- Sets and retrieves blocked signals
 
   bool pcntl_sigprocmask(int how, array set [, array oldset])~
 
@@ -15,7 +15,7 @@ blocked signals by the given list of signals.
 {oldset} The {oldset} parameter is set to an array containing the list of the
 previously blocked signals.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |pcntl_sigprocmask| example
 

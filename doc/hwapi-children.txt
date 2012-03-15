@@ -1,4 +1,4 @@
-hw_api->children -- Returns children of an object
+*hw_api->children* -- Returns children of an object
 
   array children(array parameter)~
 

@@ -1,4 +1,4 @@
-stream_set_timeout -- Set timeout period on a stream
+*stream_set_timeout* -- Set timeout period on a stream
 
   bool stream_set_timeout(resource stream, int seconds [, int microseconds])~
 
@@ -14,7 +14,7 @@ When the stream times out, the 'timed_out' key of the array returned by
 
 {microseconds} The microseconds part of the timeout to be set.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 4.3.0 As of PHP 4.3, this function can (potentially) work
 on any kind of stream. In PHP 4.3, socket based streams are still the only

@@ -1,4 +1,4 @@
-fdf_set_encoding -- Sets FDF character encoding
+*fdf_set_encoding* -- Sets FDF character encoding
 
   bool fdf_set_encoding(resource fdf_document, string encoding)~
 
@@ -13,6 +13,6 @@ or |fdf_open_string|.
 An empty string resets the encoding to the default PDFDocEncoding/Unicode
 scheme.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

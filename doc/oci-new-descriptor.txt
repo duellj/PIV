@@ -1,4 +1,4 @@
-oci_new_descriptor -- Initializes a new empty LOB or FILE descriptor
+*oci_new_descriptor* -- Initializes a new empty LOB or FILE descriptor
 
   OCI-Lob oci_new_descriptor(resource connection [, int type])~
 
@@ -115,5 +115,7 @@ Returns a new LOB or FILE descriptor on success, FALSE on error.
 In PHP versions before 5.0.0 you must use |ocinewdescriptor| instead. This
 name still can be used, it was left as alias of |oci_new_descriptor| for
 downwards compatability. This, however, is deprecated and not recommended.
+
+|oci_bind_by_name|
 
 vim:ft=help:

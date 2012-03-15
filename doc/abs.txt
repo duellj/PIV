@@ -1,4 +1,4 @@
-abs -- Absolute value
+*abs* -- Absolute value
 
   number abs(mixed number)~
 
@@ -21,5 +21,7 @@ bigger value range than integer).
 
 
 
+
+|gmp_abs| |gmp_sign|
 
 vim:ft=help:

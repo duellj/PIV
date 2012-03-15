@@ -1,4 +1,4 @@
-SDO_DAS_XML::loadString -- Returns SDO_DAS_XML_Document for a given xml
+*SDO_DAS_XML::loadString* -- Returns SDO_DAS_XML_Document for a given xml
 instance string
 
   SDO_DAS_XML_Document SDO_DAS_XML::loadString(string xml_string)~

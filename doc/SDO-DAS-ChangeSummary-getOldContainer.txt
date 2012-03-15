@@ -1,4 +1,4 @@
-SDO_DAS_ChangeSummary::getOldContainer -- Get the old container for a deleted
+*SDO_DAS_ChangeSummary::getOldContainer* -- Get the old container for a deleted
 SDO_DataObject
 
   SDO_DataObject SDO_DAS_ChangeSummary::getOldContainer(SDO_DataObject data_object)~

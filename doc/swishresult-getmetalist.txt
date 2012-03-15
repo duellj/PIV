@@ -1,4 +1,4 @@
-SwishResult->getMetaList -- Get a list of meta entries
+*SwishResult->getMetaList* -- Get a list of meta entries
 
   array SwishResult->getMetaList()~
 

@@ -1,4 +1,4 @@
-printer_end_doc -- Close document
+*printer_end_doc* -- Close document
 
   bool printer_end_doc(resource printer_handle)~
 
@@ -7,6 +7,6 @@ printing. For an example see |printer_start_doc|.
 
 {printer_handle} {printer_handle} must be a valid handle to a printer.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

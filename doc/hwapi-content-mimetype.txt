@@ -1,4 +1,4 @@
-hw_api_content->mimetype -- Returns mimetype
+*hw_api_content->mimetype* -- Returns mimetype
 
   string mimetype()~
 

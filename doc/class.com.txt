@@ -1,4 +1,4 @@
-COM -- COM class
+*COM* -- COM class
 
 The COM class allows you to instantiate an OLE compatible COM object and call
 its methods and access its properties.

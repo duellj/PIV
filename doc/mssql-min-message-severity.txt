@@ -1,4 +1,4 @@
-mssql_min_message_severity -- Sets the minimum message severity
+*mssql_min_message_severity* -- Sets the minimum message severity
 
   void mssql_min_message_severity(int severity)~
 
@@ -14,7 +14,7 @@ No value is returned.
   // Connect to MSSQL
   mssql_connect('KALLESPC\SQLEXPRESS', 'sa', 'phpfi');
   
-  // Set the minimum message severity to 17, this 
+  // Set the minimum message severity to 17, this
   // will not show any messages issued by the underlaying
   // API when we select a non-existent database below
   mssql_min_message_severity(17);

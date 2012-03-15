@@ -1,6 +1,6 @@
-htmlspecialchars -- Convert special characters to HTML entities
+*htmlspecialchars* -- Convert special characters to HTML entities
 
-  string htmlspecialchars(string string [, int quote_style [, string charset [, bool double_encode]]])~
+  string htmlspecialchars(string string [, int flags [, string charset [, bool double_encode]]])~
 
 Certain characters have special significance in HTML, and should be
 represented by HTML entities if they are to preserve their meanings. This

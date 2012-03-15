@@ -1,4 +1,4 @@
-m_completeauthorizations -- Number of complete authorizations in queue,
+*m_completeauthorizations* -- Number of complete authorizations in queue,
 returning an array of their identifiers
 
   int m_completeauthorizations(resource conn, int array)~
@@ -11,6 +11,6 @@ available.
 {array} Its description
 
 What the function returns, first on success, then on failure. See also the
-Returns &true; on success or &false; on failure. entity
+Returns &true; on success&return.falseforfailure;. entity
 
 vim:ft=help:

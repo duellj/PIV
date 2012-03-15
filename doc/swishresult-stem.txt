@@ -1,4 +1,4 @@
-SwishResult->stem -- Stems the given word
+*SwishResult->stem* -- Stems the given word
 
   array SwishResult->stem(string word)~
 

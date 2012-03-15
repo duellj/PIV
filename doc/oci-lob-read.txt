@@ -1,4 +1,4 @@
-OCI-Lob->read -- Reads part of the large object
+*OCI-Lob->read* -- Reads part of the large object
 
   string read(int length)~
 
@@ -10,6 +10,6 @@ bytes read.
 
 {length} The length of data to read, in bytes.
 
-Returns the contents as a string, or FALSE in case of error.
+Returns the contents as a string, or FALSE on failure.
 
 vim:ft=help:

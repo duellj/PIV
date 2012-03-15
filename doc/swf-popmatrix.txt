@@ -1,8 +1,8 @@
-swf_popmatrix -- Restore a previous transformation matrix
+*swf_popmatrix* -- Restore a previous transformation matrix
 
   void swf_popmatrix()~
 
-Pushes the current transformation matrix back onto the stack.
+Restores a previous transformation matrix.
 
 No value is returned.
 

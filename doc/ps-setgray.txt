@@ -1,4 +1,4 @@
-ps_setgray -- Sets gray value
+*ps_setgray* -- Sets gray value
 
   bool ps_setgray(resource psdoc, float gray)~
 
@@ -8,7 +8,7 @@ Sets the gray value for all following drawing operations.
 
 {gray} The value must be between 0 (white) and 1 (black).
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_setcolor|
 

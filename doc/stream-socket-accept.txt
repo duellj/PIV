@@ -1,9 +1,11 @@
-stream_socket_accept -- Accept a connection on a socket created by
+*stream_socket_accept* -- Accept a connection on a socket created by
 stream_socket_server
 
   resource stream_socket_accept(resource server_socket [, float timeout [, string peername]])~
 
 Accept a connection on a socket previously created by |stream_socket_server|.
+
+{server_socket} The server socket to accept a connection from.
 
 {timeout} Override the default socket accept timeout. Time should be given in
 seconds.
@@ -13,7 +15,7 @@ included and available from the selected transport.
 
 Can also be determined later using |stream_socket_get_name|.
 
-Returns TRUE on success or FALSE on failure.
+Returns a stream to the accepted socket connection or FALSE on failure.
 
 This function should not be used with UDP server sockets. Instead, use
 |stream_socket_recvfrom| and |stream_socket_sendto|.

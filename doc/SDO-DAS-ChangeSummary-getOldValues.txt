@@ -1,4 +1,4 @@
-SDO_DAS_ChangeSummary::getOldValues -- Get the old values for a given changed
+*SDO_DAS_ChangeSummary::getOldValues* -- Get the old values for a given changed
 SDO_DataObject
 
   SDO_List SDO_DAS_ChangeSummary::getOldValues(SDO_DataObject data_object)~

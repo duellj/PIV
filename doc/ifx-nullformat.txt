@@ -1,4 +1,4 @@
-ifx_nullformat -- Sets the default return value on a fetch row
+*ifx_nullformat* -- Sets the default return value on a fetch row
 
   bool ifx_nullformat(int mode)~
 
@@ -6,6 +6,6 @@ Sets the default return value of a NULL-value on a fetch row.
 
 {mode} Mode "0" returns "", and mode "1" returns "NULL".
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-SAMConnection::setDebug -- Turn on or off additional debugging output.
+*SAMConnection::setDebug* -- Turn on or off additional debugging output.
 
 The "setdebug" method is used to turn on or off additional debugging output.
 The SAM framework will provide method/function entry and exit trace data plus

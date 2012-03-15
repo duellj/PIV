@@ -1,7 +1,7 @@
-snmp_set_quick_print -- Set the value of quick_print within the UCD SNMP
+*snmp_set_quick_print* -- Set the value of quick_print within the UCD SNMP
 library
 
-  void snmp_set_quick_print(bool quick_print)~
+  bool snmp_set_quick_print(bool quick_print)~
 
 Sets the value of {quick_print} within the UCD SNMP library. When this is set
 (1), the SNMP library will return 'quick printed' values. This means that just

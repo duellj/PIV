@@ -1,4 +1,4 @@
-imagealphablending -- Set the blending mode for an image
+*imagealphablending* -- Set the blending mode for an image
 
   bool imagealphablending(resource image, bool blendmode)~
 
@@ -15,9 +15,10 @@ available when drawing on palette images.
 { image}An image resource, returned by one of the image creation functions,
 such as |imagecreatetruecolor|.
 
-{blendmode} Whether to enable the blending mode or not. Default to FALSE.
+{blendmode} Whether to enable the blending mode or not. On true color images
+the default value is TRUE otherwise the default value is FALSE
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagealphablending| usage example
 

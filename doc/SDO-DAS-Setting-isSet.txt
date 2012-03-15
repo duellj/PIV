@@ -1,4 +1,4 @@
-SDO_DAS_Setting::isSet -- Test whether a property was set prior to being
+*SDO_DAS_Setting::isSet* -- Test whether a property was set prior to being
 modified
 
   bool SDO_DAS_Setting::isSet()~

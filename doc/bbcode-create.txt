@@ -1,4 +1,4 @@
-bbcode_create -- Create a BBCode Resource
+*bbcode_create* -- Create a BBCode Resource
 
   resource bbcode_create([array bbcode_initial_tags])~
 
@@ -27,11 +27,11 @@ param_handling optional - Gives the callback used for modification of the
 argument. Object Oriented Notation supported only since 0.10.1 callback
 prototype is string name(string $content, string $argument)
 
-childs optional - List of accepted child for the tag. The format of the list
-is a comma separated string. If the list starts with ! it will be the list of
-rejected child for the tag.
+childs optional - List of accepted children for the tag. The format of the
+list is a comma separated string. If the list starts with ! it will be the
+list of rejected children for the tag.
 
-parent optional - List of accepted child for the tag. The format of the list
+parent optional - List of accepted parents for the tag. The format of the list
 is a comma separated string.
 
 Returns a BBCode_Container
@@ -70,7 +70,7 @@ Returns a BBCode_Container
 The above example will output:
 
   <b>Bold Text</b>
-  <i>Italic Text</i>
+  [i]Italic Text[/i]
   <a href="http://www.php.net/">http://www.php.net/</a>
   <a href="http://pecl.php.net/"><b>Content Text</b></a>
   <img src="http://static.php.net/www.php.net/images/php.gif" />

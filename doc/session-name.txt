@@ -1,8 +1,9 @@
-session_name -- Get and/or set the current session name
+*session_name* -- Get and/or set the current session name
 
   string session_name([string name])~
 
-|session_name| returns the name of the current session.
+|session_name| returns the name of the current session. If {name} is given,
+|session_name| will update the session name and return the old session name.
 
 The session name is reset to the default value stored in session.name at
 request startup time. Thus, you need to call |session_name| for every request

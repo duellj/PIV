@@ -1,4 +1,4 @@
-SDO_Model_Property::getContainingType -- Get the SDO_Model_Type which contains
+*SDO_Model_Property::getContainingType* -- Get the SDO_Model_Type which contains
 this property
 
   SDO_Model_Type SDO_Model_Property::getContainingType()~

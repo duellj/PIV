@@ -1,4 +1,4 @@
-fbsql_free_result -- Free result memory
+*fbsql_free_result* -- Free result memory
 
   bool fbsql_free_result(resource result)~
 
@@ -11,6 +11,6 @@ execution.
 
 { result}A result identifier returned by |fbsql_query| or |fbsql_db_query|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

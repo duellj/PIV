@@ -1,4 +1,4 @@
-hw_api->user -- Returns the own user object
+*hw_api->user* -- Returns the own user object
 
   hw_api_object user(array parameter)~
 

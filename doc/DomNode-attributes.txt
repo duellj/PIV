@@ -1,4 +1,4 @@
-DomNode->attributes -- Returns list of attributes
+*DomNode->attributes* -- Returns list of attributes
 
   array DomNode->attributes()~
 

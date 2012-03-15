@@ -1,9 +1,9 @@
-px_timestamp2string -- Converts the timestamp into a string.
+*px_timestamp2string* -- Converts the timestamp into a string.
 
   string px_timestamp2string(resource pxdoc, float value, string format)~
 
 Turns a timestamp as it stored in the paradox file into human readable format.
-Paradox timestamps are the number of milliseconds since 1.1.0000. This
+Paradox timestamps are the number of miliseconds since 0001-01-02. This
 function is just for convenience. It can be easily replaced by some math and
 the calendar functions as demonstrated in the following example.
 
@@ -16,7 +16,7 @@ PX_FIELD_TIMESTAMP.
 support by this function is a subset of those supported by |date| (Y, y, m, n,
 d, j, H, h, G, g, i, s, A, a, L).
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Turn a paradox timestamp into a human readable form
 
@@ -33,7 +33,7 @@ Turn a paradox timestamp into a human readable form
   echo jdtogregorian($days+1721425)."\n";
   
   /* Turn it into a timestamp as it stored in a paradox database */
-  /* Timestamps are stored in milli seconds since 1.1.0000 */
+  /* Timestamps are stored in miliseconds since 0001-01-02 */
   $stamp = $days * 86400.0 * 1000.0;
   /* Add one hour */
   $stamp += 3600000.0;
@@ -53,7 +53,7 @@ The above example will output:
 The Julian day count as passed to |jdtogregorian| has a different base of
 1.1.4714 b.c. and must therefore be calculated by adding 1721425 to the day
 count used in the paradox file. Turning the day count into a timestamp is
-easily done by multiplying with 86400000.0 to obtain milli seconds.
+easily done by multiplying with 86400000.0 to obtain miliseconds.
 
 |px_date2string| |jdtogregorian|
 

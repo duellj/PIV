@@ -1,4 +1,4 @@
-fbsql_list_dbs -- List databases available on a FrontBase server
+*fbsql_list_dbs* -- List databases available on a FrontBase server
 
   resource fbsql_list_dbs([resource link_identifier])~
 
@@ -16,12 +16,14 @@ Returns a result pointer or FALSE on error.
 
 |fbsql_list_dbs| example
 
+<?php >
   $link = fbsql_connect('localhost', 'myname', 'secret');
   $db_list = fbsql_list_dbs($link);
   
   while ($row = fbsql_fetch_object($db_list)) {
       echo $row->Database . "\n";
   }
+?>
 
 The above example will output something similar to:
 

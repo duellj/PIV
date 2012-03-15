@@ -1,4 +1,4 @@
-imagesetthickness -- Set the thickness for line drawing
+*imagesetthickness* -- Set the thickness for line drawing
 
   bool imagesetthickness(resource image, int thickness)~
 
@@ -10,7 +10,7 @@ such as |imagecreatetruecolor|.
 
 {thickness} Thickness, in pixels.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagesetthickness| example
 
@@ -37,6 +37,8 @@ Returns TRUE on success or FALSE on failure.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagesetthickness()
 
 
 

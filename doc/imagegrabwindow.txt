@@ -1,11 +1,11 @@
-imagegrabwindow -- Captures a window
+*imagegrabwindow* -- Captures a window
 
-  resource imagegrabwindow(int window [, int client_area])~
+  resource imagegrabwindow(int window_handle [, int client_area])~
 
 Grabs a window or its client area using a windows handle (HWND property in COM
 instance)
 
-{window} The HWND window ID.
+{window_handle} The HWND window ID.
 
 {client_area} Include the client area of the application window.
 

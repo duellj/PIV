@@ -1,4 +1,4 @@
-SCA_SoapProxy::createDataObject -- create an SDO
+*SCA_SoapProxy::createDataObject* -- create an SDO
 
   SDO_DataObject SCA_SoapProxy::createDataObject(string type_namespace_uri, string type_name)~
 

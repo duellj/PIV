@@ -1,4 +1,4 @@
-define_syslog_variables -- Initializes all syslog related variables
+*define_syslog_variables* -- Initializes all syslog related variables
 
   void define_syslog_variables()~
 
@@ -6,13 +6,16 @@ Initializes all variables used in the syslog functions.
 
 No value is returned.
 
+This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
+highly discouraged.
+
 |define_syslog_variables| example
 
 <?php >
   // Check if syslog variables already is defined
   if(!get_cfg_var('define_syslog_variables'))
   {
-  	define_syslog_variables();
+      define_syslog_variables();
   }
   
   // Open the log
@@ -25,8 +28,7 @@ No value is returned.
 
 
 
-Version Description 6.0.0 This function was removed from PHP. 5.3.0 This
-function now throws an E_DEPRECATED notice.
+Version Description 5.3.0 This function now throws an E_DEPRECATED notice.
 
 |openlog| |syslog| |closelog|
 

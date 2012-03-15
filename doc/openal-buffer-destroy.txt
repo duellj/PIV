@@ -1,10 +1,10 @@
-openal_buffer_destroy -- Destroys an OpenAL buffer
+*openal_buffer_destroy* -- Destroys an OpenAL buffer
 
   bool openal_buffer_destroy(resource buffer)~
 
 An Open AL(Buffer) resource (previously created by |openal_buffer_create|).
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |openal_buffer_create|
 

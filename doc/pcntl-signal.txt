@@ -1,4 +1,4 @@
-pcntl_signal -- Installs a signal handler
+*pcntl_signal* -- Installs a signal handler
 
   bool pcntl_signal(int signo, callback handler [, bool restart_syscalls])~
 
@@ -15,9 +15,9 @@ count is increased which makes it persist until you either change the handler
 to something else, or your script ends.
 
 {restart_syscalls} Specifies whether system call restarting should be used
-when this signal arrives and defaults to TRUE.
+when this signal arrives.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 4.3.0 The {restart_syscalls} parameter was added. 4.3.0
 The ability to use an object method as a callback became available. 4.3.0 As

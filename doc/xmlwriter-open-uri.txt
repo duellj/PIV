@@ -1,6 +1,6 @@
-XMLWriter::openURI -- Create new xmlwriter using source uri for output
+*XMLWriter::openURI* -- Create new xmlwriter using source uri for output
 
-Oriented object style
+Object oriented style
 
   bool openURI(string uri)~
 
@@ -12,7 +12,7 @@ Creates a new XMLWriter using {uri} for the output.
 
 {uri} The URI of the resource for the output.
 
-Oriented object style: Returns TRUE on success or FALSE on failure.
+Object oriented style: Returns TRUE on success or &false; on failure.
 
 Procedural style: Returns a new xmlwriter resource for later use with the
 xmlwriter functions on success, FALSE on error.

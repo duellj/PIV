@@ -1,4 +1,4 @@
-curl_multi_info_read -- Get information about the current transfers
+*curl_multi_info_read* -- Get information about the current transfers
 
   array curl_multi_info_read(resource mh [, int msgs_in_queue])~
 
@@ -19,6 +19,74 @@ The data the returned resource points to will not survive calling
 {msgs_in_queue} Number of messages that are still in the queue
 
 On success, returns an associative array for the message, FALSE on failure.
+
+Contents of the returned array Key: Value: msg The CURLMSG_DONE constant.
+Other return values are currently not available. result One of the CURLE_*
+constants. If everything is OK, the CURLE_OK will be the result. handle
+Resource of type curl indicates the handle which it concerns.
+
+A |curl_multi_info_read| example
+
+<?php >
+  $urls = array(
+     "http://www.cnn.com/",
+     "http://www.bbc.co.uk/",
+     "http://www.yahoo.com/"
+  );
+  
+  $mh = curl_multi_init();
+  
+  foreach ($urls as $i => $url) {
+      $conn[$i] = curl_init($url);
+      curl_setopt($conn[$i], CURLOPT_RETURNTRANSFER, 1);
+      curl_multi_add_handle($mh, $conn[$i]);
+  }
+  
+  do {
+      $status = curl_multi_exec($mh, $active);
+      $info = curl_multi_info_read($mh);
+      if (false !== $info) {
+          var_dump($info);
+      }
+  } while ($status === CURLM_CALL_MULTI_PERFORM || $active);
+  
+  foreach ($urls as $i => $url) {
+      $res[$i] = curl_multi_getcontent($conn[$i]);
+      curl_close($conn[$i]);
+  }
+  
+  var_dump(curl_multi_info_read($mh));
+?>
+
+The above example will output something similar to:
+
+  array(3) {
+    ["msg"]=>
+    int(1)
+    ["result"]=>
+    int(0)
+    ["handle"]=>
+    resource(5) of type (curl)
+  }
+  array(3) {
+    ["msg"]=>
+    int(1)
+    ["result"]=>
+    int(0)
+    ["handle"]=>
+    resource(7) of type (curl)
+  }
+  array(3) {
+    ["msg"]=>
+    int(1)
+    ["result"]=>
+    int(0)
+    ["handle"]=>
+    resource(6) of type (curl)
+  }
+  bool(false)
+
+
 
 Version Description 5.2.0 {msgs_in_queue} was added.
 

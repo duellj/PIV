@@ -1,4 +1,4 @@
-socket_create -- Create a socket (endpoint for communication)
+*socket_create* -- Create a socket (endpoint for communication)
 
   resource socket_create(int domain, int type, int protocol)~
 
@@ -28,13 +28,13 @@ data transmission path for datagrams of fixed maximum length; a consumer is
 required to read an entire packet with each read call. SOCK_RAW Provides raw
 network protocol access. This special type of socket can be used to manually
 construct any type of protocol. A common use for this socket type is to
-perform ICMP requests (like ping, traceroute, etc). SOCK_RDM Provides a
-reliable datagram layer that does not guarantee ordering. This is most likely
-not implemented on your operating system. {protocol} The {protocol} parameter
-sets the specific protocol within the specified {domain} to be used when
-communicating on the returned socket. The proper value can be retrieved by
-name by using |getprotobyname|. If the desired protocol is TCP, or UDP the
-corresponding constants SOL_TCP, and SOL_UDP can also be used.
+perform ICMP requests (like ping). SOCK_RDM Provides a reliable datagram layer
+that does not guarantee ordering. This is most likely not implemented on your
+operating system. {protocol} The {protocol} parameter sets the specific
+protocol within the specified {domain} to be used when communicating on the
+returned socket. The proper value can be retrieved by name by using
+|getprotobyname|. If the desired protocol is TCP, or UDP the corresponding
+constants SOL_TCP, and SOL_UDP can also be used.
 
 Common protocols Name Description icmp The Internet Control Message Protocol
 is used primarily by gateways and hosts to report errors in datagram

@@ -1,4 +1,4 @@
-override_function -- Overrides built-in functions
+*override_function* -- Overrides built-in functions
 
   bool override_function(string function_name, string function_args, string function_code)~
 
@@ -6,7 +6,7 @@ Overrides built-in functions by replacing them in the symbol table.
 
 {function_name} The function to override.
 
-{function_args} The function arguments, as a coma separated string.
+{function_args} The function arguments, as a comma separated string.
 
 Usually you will want to pass this parameter, as well as the {function_code}
 parameter, as a single quote delimited string. The reason for using single
@@ -16,7 +16,7 @@ you use double quotes there will be a need to escape the variable names, e.g.
 
 {function_code} The new code for the function.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |override_function| example
 

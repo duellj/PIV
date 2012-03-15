@@ -1,4 +1,4 @@
-get_class_vars -- Get the default properties of the class
+*get_class_vars* -- Get the default properties of the class
 
   array get_class_vars(string class_name)~
 
@@ -6,8 +6,9 @@ Get the default properties of the given class.
 
 {class_name} The class name
 
-Returns an associative array of default public properties of the class. The
-resulting array elements are in the form of varname => value.
+Returns an associative array of declared properties visible from the current
+scope, with their default value. The resulting array elements are in the form
+of varname => value.
 
 Version Description 5.0.3 Depending on the scope, |get_class_vars| will only
 return the properties that can be accessed from the current scope. 5.0.2
@@ -64,19 +65,19 @@ The above example will output:
 <?php >
   function format($array)
   {
-  	return implode('|', array_keys($array)) . "\r\n";
+      return implode('|', array_keys($array)) . "\r\n";
   }
   
   class TestCase
   {
-  	public $a	= 1;
-  	protected $b	= 2;
-  	private $c	= 3;
+      public $a    = 1;
+      protected $b = 2;
+      private $c   = 3;
   
-  	public static function expose()
-  	{
-  		echo format(get_class_vars(__CLASS__));
-  	}
+      public static function expose()
+      {
+          echo format(get_class_vars(__CLASS__));
+      }
   }
   
   TestCase::expose();

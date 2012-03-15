@@ -1,4 +1,4 @@
-hw_api_attribute->langdepvalue -- Returns value for a given language
+*hw_api_attribute->langdepvalue* -- Returns value for a given language
 
   string langdepvalue(string language)~
 

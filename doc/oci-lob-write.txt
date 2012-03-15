@@ -1,4 +1,4 @@
-OCI-Lob->write -- Writes data to the large object
+*OCI-Lob->write* -- Writes data to the large object
 
   int write(string data [, int length])~
 
@@ -10,6 +10,6 @@ internal pointer.
 {length} If this parameter is given, writing will stop after {length} bytes
 have been written or the end of {data} is reached, whichever comes first.
 
-Returns the number of bytes written or FALSE in case of error.
+Returns the number of bytes written or FALSE on failure.
 
 vim:ft=help:

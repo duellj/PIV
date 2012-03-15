@@ -1,4 +1,4 @@
-gmp_init -- Create GMP number
+*gmp_init* -- Create GMP number
 
   resource gmp_init(mixed number [, int base])~
 
@@ -7,7 +7,7 @@ Creates a GMP number from an integer or string.
 {number} An integer or a string. The string representation can be decimal,
 hexadecimal or octal.
 
-{base} The base. Defaults to 0.
+{base} The base.
 
 The base may vary from 2 to 36. If base is 0 (default value), the actual base
 is determined from the leading characters: if the first two characters are 0x
@@ -16,7 +16,11 @@ is assumed, otherwise decimal is assumed.
 
 A GMP number resource.
 
-Version Description 4.1.0 The optional {base} parameter was added.
+Version Description 5.3.2 The {base} was extended from 2 to 36, to 2 to 62 and
+-2 to -36. 4.1.0 The optional {base} parameter was added.
+
+To use the extended base introduced in PHP 5.3.2, then PHP must be compiled
+against GMP 4.2.0 or greater.
 
 Creating GMP number
 

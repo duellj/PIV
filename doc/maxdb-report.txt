@@ -1,10 +1,10 @@
-maxdb_report -- Enables or disables internal report functions
+*maxdb_report* -- Enables or disables internal report functions
 
   bool maxdb_report(int flags)~
 
 {flags} One of the MAXDB_REPORT_XXX constants.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Procedural style
 

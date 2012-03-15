@@ -1,4 +1,4 @@
-openssl_sign -- Generate signature
+*openssl_sign* -- Generate signature
 
   bool openssl_sign(string data, string signature, mixed priv_key_id [, int signature_alg])~
 
@@ -13,10 +13,9 @@ hashing followed by encryption using the private key associated with
 
 {priv_key_id}
 
-{signature_alg} Defaults to OPENSSL_ALGO_SHA1. For more information see the
-list of Signature Algorithms.
+{signature_alg} For more information see the list of Signature Algorithms.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 5.0.0 The {signature_alg} parameter was added.
 

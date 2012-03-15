@@ -1,10 +1,10 @@
-maxdb->thread_id -- Returns the thread ID for the current connection
+*maxdb->thread_id* -- Returns the thread ID for the current connection
 
-Procedural style:
+Procedural style
 
   int maxdb_thread_id(resource link)~
 
-Object oriented style (property):
+Object oriented style
 
 The |maxdb_thread_id| function returns the thread ID for the current
 connection which can then be killed using the |maxdb_kill| function. If the

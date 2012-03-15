@@ -1,4 +1,4 @@
-ps_circle -- Draws a circle
+*ps_circle* -- Draws a circle
 
   bool ps_circle(resource psdoc, float x, float y, float radius)~
 
@@ -16,7 +16,7 @@ a subpath. If the last drawing operation does not end in point ({x}+{radius},
 
 {radius} The radius of the circle
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_arc| |ps_arcn|
 

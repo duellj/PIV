@@ -1,4 +1,4 @@
-openssl_csr_export_to_file -- Exports a CSR to a file
+*openssl_csr_export_to_file* -- Exports a CSR to a file
 
   bool openssl_csr_export_to_file(resource csr, string outfilename [, bool notext])~
 
@@ -14,7 +14,7 @@ by {csr} and saves it as ascii-armoured text into the file named by
 if it is FALSE, then additional human-readable information is included in the
 output. The default value of {notext} is TRUE.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |openssl_csr_export| |openssl_csr_new| |openssl_csr_sign|
 

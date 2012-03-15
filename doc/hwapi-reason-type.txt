@@ -1,4 +1,4 @@
-hw_api_reason->type -- Returns type of reason
+*hw_api_reason->type* -- Returns type of reason
 
   HW_API_Reason type()~
 

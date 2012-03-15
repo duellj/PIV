@@ -1,12 +1,12 @@
-maxdb->options -- Set options
+*maxdb::options* -- Set options
 
-Procedural style:
+Procedural style
 
   bool maxdb_options(resource link, int option, mixed value)~
 
-Object oriented style (method)
+Object oriented style
 
-  bool options(resource link, int option, mixed value, int option, mixed value)~
+  bool maxdb::options(resource link, int option, mixed value, int option, mixed value)~
 
 |maxdb_options| can be used to set extra connect options and affect behavior
 for a connection.
@@ -32,7 +32,7 @@ connection. MAXDB_STATEMENTCACHESIZE The number of prepared statements to be
 cached for the connection for re-use. MAXDB_CURSORPREFIX The prefix to use for
 result tables that are automatically named.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 See |maxdb_real_connect|.
 

@@ -1,4 +1,4 @@
-SCA::createDataObject -- create an SDO
+*SCA::createDataObject* -- create an SDO
 
   SDO_DataObject SCA::createDataObject(string type_namespace_uri, string type_name)~
 

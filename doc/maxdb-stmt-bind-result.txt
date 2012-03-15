@@ -1,13 +1,13 @@
-stmt->bind_result -- Binds variables to a prepared statement for result
+*maxdb_stmt::bind_result* -- Binds variables to a prepared statement for result
 storage
 
-Procedural style:
+Procedural style
 
   bool maxdb_stmt_bind_result(resource stmt, mixed var1 [, mixed ...])~
 
-Object oriented style (method):
+Object oriented style
 
-  bool bind_result(resource stmt, mixed var1 [, mixed ..., mixed var1 [, mixed ...]])~
+  bool maxdb_stmt::bind_result(resource stmt, mixed var1 [, mixed ..., mixed var1 [, mixed ...]])~
 
 |maxdb_stmt_bind_result| is used to associate (bind) columns in the result set
 to variables. When |maxdb_stmt_fetch| is called to fetch data, the MaxDB
@@ -22,7 +22,7 @@ A column can be bound or rebound at any time, even after a result set has been
 partially retrieved. The new binding takes effect the next time
 |maxdb_stmt_fetch| is called.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

@@ -1,4 +1,4 @@
-imap_renamemailbox -- Rename an old mailbox to new mailbox
+*imap_renamemailbox* -- Rename an old mailbox to new mailbox
 
   bool imap_renamemailbox(resource imap_stream, string old_mbox, string new_mbox)~
 
@@ -11,7 +11,7 @@ format of {mbox} names).
 
 {new_mbox} The new mailbox name, see |imap_open| for more information
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imap_createmailbox| |imap_deletemailbox|
 

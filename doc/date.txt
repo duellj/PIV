@@ -1,4 +1,4 @@
-date -- Format a local time/date
+*date* -- Format a local time/date
 
   string date(string format [, int timestamp])~
 
@@ -39,7 +39,7 @@ through 999 g 12-hour format of an hour without leading zeros 1 through 12 G
 of an hour with leading zeros 01 through 12 H 24-hour format of an hour with
 leading zeros 00 through 23 i Minutes with leading zeros 00 to 59 s Seconds,
 with leading zeros 00 through 59 u Microseconds (added in PHP 5.2.2) Example:
-54321 Timezone --- --- e Timezone identifier (added in PHP 5.1.0) Examples:
+654321 Timezone --- --- e Timezone identifier (added in PHP 5.1.0) Examples:
 UTC, GMT, Atlantic/Azores I (capital i) Whether or not the date is in daylight
 saving time 1 if Daylight Saving Time, 0 otherwise. O Difference to Greenwich
 time (GMT) in hours Example: +0200 P Difference to Greenwich time (GMT) with
@@ -171,6 +171,7 @@ function).
 Timestamp of the start of the request is available in $_SERVER['REQUEST_TIME']
 since PHP 5.1.
 
-|getlastmod| |gmdate| |mktime| |strftime| |time| Predefined DateTime Constants
+|gmdate| |idate| |getdate| |getlastmod| |mktime| |strftime| |time| Predefined
+DateTime Constants
 
 vim:ft=help:

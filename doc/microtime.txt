@@ -1,4 +1,4 @@
-microtime -- Return current Unix timestamp with microseconds
+*microtime* -- Return current Unix timestamp with microseconds
 
   mixed microtime([bool get_as_float])~
 
@@ -6,14 +6,17 @@ microtime -- Return current Unix timestamp with microseconds
 function is only available on operating systems that support the
 gettimeofday() system call.
 
-{get_as_float} When called without the optional argument, this function
-returns the string "msec sec" where sec is the current time measured in the
-number of seconds since the Unix Epoch (0:00:00 January 1, 1970 GMT), and msec
-is the microseconds part. Both portions of the string are returned in units of
-seconds.
+{get_as_float} If used and set to TRUE, |microtime| will return a float
+instead of a string, as described in the return values section below.
 
-If the optional {get_as_float} is set to TRUE then a float (in seconds) is
-returned.
+By default, |microtime| returns a string in the form "msec sec", where sec is
+the current time measured in the number of seconds since the Unix epoch
+(0:00:00 January 1, 1970 GMT), and msec is the number of microseconds that
+have elapsed since sec expressed in seconds.
+
+If {get_as_float} is set to TRUE, then |microtime| returns a float, which
+represents the current time in seconds since the Unix epoch accurate to the
+nearest microsecond.
 
 Version Description 5.0.0 The {get_as_float} parameter was added.
 

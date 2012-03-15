@@ -1,4 +1,4 @@
-imagegd -- Output GD image to browser or file
+*imagegd* -- Output GD image to browser or file
 
   bool imagegd(resource image [, string filename])~
 
@@ -10,7 +10,7 @@ such as |imagecreatetruecolor|.
 {filename} The path to save the file to. If not set or NULL, the raw image
 stream will be outputted directly.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Outputting a GD image
 

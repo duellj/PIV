@@ -1,4 +1,4 @@
-asort -- Sort an array and maintain index association
+*asort* -- Sort an array and maintain index association
 
   bool asort(array array [, int sort_flags])~
 
@@ -12,7 +12,7 @@ significant.
 {sort_flags} You may modify the behavior of the sort using the optional
 parameter {sort_flags}, for details see |sort|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |asort| example
 

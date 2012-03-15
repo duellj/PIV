@@ -1,4 +1,4 @@
-imagecreate -- Create a new palette based image
+*imagecreate* -- Create a new palette based image
 
   resource imagecreate(int width, int height)~
 
@@ -27,6 +27,8 @@ Creating a new GD image stream and outputting an image.
 ?>
 
 The above example will output something similar to:
+
+Output of example : Creating a new GD image stream and outputting an image.
 
 
 

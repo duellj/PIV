@@ -1,4 +1,4 @@
-ssh2_scp_recv -- Request a file via SCP
+*ssh2_scp_recv* -- Request a file via SCP
 
   bool ssh2_scp_recv(resource session, string remote_file, string local_file)~
 
@@ -12,7 +12,7 @@ protocol.
 
 {local_file} Path to the local file.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Downloading a file via SCP
 

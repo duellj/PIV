@@ -1,4 +1,4 @@
-xml_set_start_namespace_decl_handler -- Set up start namespace declaration
+*xml_set_start_namespace_decl_handler* -- Set up start namespace declaration
 handler
 
   bool xml_set_start_namespace_decl_handler(resource parser, callback handler)~
@@ -13,20 +13,19 @@ that start tag.
 {handler} {handler} is a string containing the name of a function that must
 exist when |xml_parse| is called for {parser}.
 
-  bool (resource parser, callback handler, resource parser, string user_data, string prefix, string uri)~
+  bool (resource parser, callback handler, resource parser, string prefix, string uri)~
 
-The function named by {handler} must accept four parameters, and should return
-an integer value. If the value returned from the handler is FALSE (which it
-will be if no value is returned), the XML parser will stop parsing and
-|xml_get_error_code| will return XML_ERROR_EXTERNAL_ENTITY_HANDLING. {parser}
-The first parameter, parser, is a reference to the XML parser calling the
-handler.
+The function named by {handler} must accept three parameters, and should
+return an integer value. If the value returned from the handler is FALSE
+(which it will be if no value is returned), the XML parser will stop parsing
+and |xml_get_error_code| will return XML_ERROR_EXTERNAL_ENTITY_HANDLING.
+{parser} The first parameter, parser, is a reference to the XML parser calling
+the handler.
 
-{user_data}
+{prefix} The prefix is a string used to reference the namespace within an XML
+object.
 
-{prefix}
-
-{uri}
+{uri} Uniform Resource Identifier (URI) of namespace.
 
 If a handler function is set to an empty string, or FALSE, the handler in
 question is disabled.
@@ -34,7 +33,7 @@ question is disabled.
 Instead of a function name, an array containing an object reference and a
 method name can also be supplied.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |xml_set_end_namespace_decl_handler|
 

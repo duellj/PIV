@@ -1,4 +1,4 @@
-hw_api->content -- Returns content of an object
+*hw_api->content* -- Returns content of an object
 
   HW_API_Content content(array parameter)~
 

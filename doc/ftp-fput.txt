@@ -1,4 +1,4 @@
-ftp_fput -- Uploads from an open file to the FTP server
+*ftp_fput* -- Uploads from an open file to the FTP server
 
   bool ftp_fput(resource ftp_stream, string remote_file, resource handle, int mode [, int startpos])~
 
@@ -13,9 +13,9 @@ server.
 
 {mode} The transfer mode. Must be either FTP_ASCII or FTP_BINARY.
 
-{startpos}
+{startpos} The position in the remote file to start uploading to.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ftp_fput| example
 

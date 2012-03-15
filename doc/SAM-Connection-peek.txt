@@ -1,4 +1,4 @@
-SAMConnection->peek -- Read a message from a queue without removing it from
+*SAMConnection->peek* -- Read a message from a queue without removing it from
 the queue.
 
   SAMMessage peek(string target [, array properties])~

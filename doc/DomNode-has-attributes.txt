@@ -1,4 +1,4 @@
-DomNode->has_attributes -- Checks if node has attributes
+*DomNode->has_attributes* -- Checks if node has attributes
 
   bool DomNode->has_attributes()~
 

@@ -1,6 +1,6 @@
-XMLWriter::endPI -- End current PI
+*XMLWriter::endPI* -- End current PI
 
-Oriented object style
+Object oriented style
 
   bool endPI()~
 
@@ -14,7 +14,7 @@ Ends the current processing instruction.
 modified. This resource comes from a call to |xmlwriter_open_uri| or
 |xmlwriter_open_memory|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 XMLWriter::startPI XMLWriter::writePI
 

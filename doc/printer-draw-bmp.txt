@@ -1,4 +1,4 @@
-printer_draw_bmp -- Draw a bmp
+*printer_draw_bmp* -- Draw a bmp
 
   bool printer_draw_bmp(resource printer_handle, string filename, int x, int y [, int width, int height])~
 
@@ -16,7 +16,7 @@ The function draws an bmp.
 
 {height} The bitmap height.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |printer_draw_bmp| example
 

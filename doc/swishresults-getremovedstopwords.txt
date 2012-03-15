@@ -1,4 +1,4 @@
-SwishResults->getRemovedStopwords -- Get an array of stopwords removed from
+*SwishResults->getRemovedStopwords* -- Get an array of stopwords removed from
 the query
 
   array SwishResults->getRemovedStopwords(string index_name)~

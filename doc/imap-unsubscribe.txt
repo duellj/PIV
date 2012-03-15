@@ -1,4 +1,4 @@
-imap_unsubscribe -- Unsubscribe from a mailbox
+*imap_unsubscribe* -- Unsubscribe from a mailbox
 
   bool imap_unsubscribe(resource imap_stream, string mailbox)~
 
@@ -8,7 +8,7 @@ Unsubscribe from the specified {mailbox}.
 
 {mailbox} The mailbox name, see |imap_open| for more information
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imap_subscribe|
 

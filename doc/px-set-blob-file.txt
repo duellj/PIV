@@ -1,4 +1,4 @@
-px_set_blob_file -- Sets the file where blobs are read from
+*px_set_blob_file* -- Sets the file where blobs are read from
 
   bool px_set_blob_file(resource pxdoc, string filename)~
 
@@ -19,6 +19,6 @@ one.
 
 {filename} The name of the file. Its extension should be .MB.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

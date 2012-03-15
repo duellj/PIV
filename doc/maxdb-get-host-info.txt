@@ -1,11 +1,11 @@
-maxdb->get_host_info -- Returns a string representing the type of connection
+*maxdb->get_host_info* -- Returns a string representing the type of connection
 used
 
-Procdural style:
+Procedural style
 
   string maxdb_get_host_info(resource link)~
 
-Object oriented style (property):
+Object oriented style
 
 The |maxdb_get_host_info| function returns a string describing the connection
 represented by the {link} parameter is using.

@@ -1,4 +1,4 @@
-libxml_get_errors -- Retrieve array of errors
+*libxml_get_errors* -- Retrieve array of errors
 
   array libxml_get_errors()~
 
@@ -68,10 +68,10 @@ libxml error handler.
 The above example will output:
 
   <titles>PHP: Behind the Parser</title>
-  ^
+  ----------------------------------------------^
   Fatal Error 76: Opening and ending tag mismatch: titles line 4 and title
     Line: 4
-    Column: 0
+    Column: 46
   
   --------------------------------------------
 

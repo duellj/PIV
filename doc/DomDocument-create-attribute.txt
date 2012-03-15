@@ -1,4 +1,4 @@
-DomDocument->create_attribute -- Create new attribute
+*DomDocument->create_attribute* -- Create new attribute
 
   domattribute DomDocument->create_attribute(string name, string value)~
 

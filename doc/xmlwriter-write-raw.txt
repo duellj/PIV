@@ -1,6 +1,6 @@
-XMLWriter::writeRaw -- Write a raw XML text
+*XMLWriter::writeRaw* -- Write a raw XML text
 
-Oriented object style
+Object oriented style
 
   bool writeRaw(string content)~
 
@@ -16,7 +16,7 @@ modified. This resource comes from a call to |xmlwriter_open_uri| or
 
 {content} The text string to write.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 XMLWriter::text
 

@@ -1,4 +1,4 @@
-imagecreatefromgif -- Create a new image from file or URL
+*imagecreatefromgif* -- Create a new image from file or URL
 
   resource imagecreatefromgif(string filename)~
 
@@ -6,8 +6,10 @@ imagecreatefromgif -- Create a new image from file or URL
 obtained from the given filename.
 
 A URL can be used as a filename with this function if the fopen wrappers have
-been enabled. See |fopen| for more details on how to specify the filename and
-for a list of supported URL protocols.
+been enabled. See |fopen| for more details on how to specify the filename. See
+the for links to information about what abilities the various wrappers have,
+notes on their usage, and information on any predefined variables they may
+provide.
 
 {filename} Path to the GIF image.
 
@@ -47,6 +49,8 @@ Example to handle an error during loading of a GIF
 ?>
 
 The above example will output something similar to:
+
+Output of example : Example to handle an error during loading of a GIF
 
 GIF support was removed from the GD library in Version 1.6, and added back in
 Version 2.0.28. This function is not available between these versions.

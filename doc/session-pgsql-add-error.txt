@@ -1,4 +1,4 @@
-session_pgsql_add_error -- Increments error counts and sets last error message
+*session_pgsql_add_error* -- Increments error counts and sets last error message
 
   bool session_pgsql_add_error(int error_level [, string error_message])~
 
@@ -9,7 +9,7 @@ available.
 
 {error_message}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |session_pgsql_get_error|
 

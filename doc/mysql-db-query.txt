@@ -1,18 +1,23 @@
-mysql_db_query -- Send a MySQL query
+*mysql_db_query* -- Send a MySQL query
 
   resource mysql_db_query(string database, string query [, resource link_identifier])~
 
 |mysql_db_query| selects a database, and executes a query on it.
 
+This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
+highly discouraged.
+
 {database} The name of the database that will be selected.
 
 {query} The MySQL query.
 
+Data inside the query should be properly escaped.
+
 { link_identifier}The MySQL connection. If the link identifier is not
 specified, the last link opened by |mysql_connect| is assumed. If no such link
 is found, it will try to create one as if |mysql_connect| was called with no
-arguments. If by chance no connection is found or established, an E_WARNING
-level error is generated.
+arguments. If no connection is found or established, an E_WARNING level error
+is generated.
 
 Returns a positive MySQL result resource to the query result, or FALSE on
 error. The function also returns TRUE/FALSE for INSERT/UPDATE/DELETE queries

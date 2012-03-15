@@ -1,4 +1,4 @@
-hw_api_reason->description -- Returns description of reason
+*hw_api_reason->description* -- Returns description of reason
 
   string description()~
 

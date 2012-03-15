@@ -1,4 +1,4 @@
-spliti -- Split string into array by regular expression case insensitive
+*spliti* -- Split string into array by regular expression case insensitive
 
   array spliti(string pattern, string string [, int limit])~
 
@@ -6,6 +6,9 @@ Splits a {string} into array by regular expression.
 
 This function is identical to |split| except that this ignores case
 distinction when matching alphabetic characters.
+
+This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
+highly discouraged.
 
 {pattern} Case insensitive regular expression.
 
@@ -51,8 +54,9 @@ The above example will output:
 
 
 
-As of PHP 5.3.0 the regex extension is deprecated, calling this function will
-issue an E_DEPRECATED notice.
+As of PHP 5.3.0, the regex extension is deprecated in favor of the PCRE
+extension. Calling this function will issue an E_DEPRECATED notice. See the
+list of differences for help on converting to PCRE.
 
 |preg_split| |split| |explode| |implode|
 

@@ -1,4 +1,4 @@
-msql_data_seek -- Move internal row pointer
+*msql_data_seek* -- Move internal row pointer
 
   bool msql_data_seek(resource result, int row_number)~
 
@@ -11,7 +11,7 @@ call to |msql_query|.
 
 {row_number} The seeked row number.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |msql_fetch_array| |msql_fetch_object| |msql_fetch_row| |msql_result|
 

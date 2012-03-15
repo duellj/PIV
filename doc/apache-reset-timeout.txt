@@ -1,4 +1,4 @@
-apache_reset_timeout -- Reset the Apache write timer
+*apache_reset_timeout* -- Reset the Apache write timer
 
   bool apache_reset_timeout()~
 
@@ -8,7 +8,7 @@ seconds. With set_time_limit(0); ignore_user_abort(true) and periodic
 
 This function requires Apache 1.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 This function is disabled when PHP is running in safe mode.
 

@@ -1,4 +1,4 @@
-imap_createmailbox -- Create a new mailbox
+*imap_createmailbox* -- Create a new mailbox
 
   bool imap_createmailbox(resource imap_stream, string mailbox)~
 
@@ -9,7 +9,7 @@ Creates a new mailbox specified by {mailbox}.
 {mailbox} The mailbox name, see |imap_open| for more information. Names
 containing international characters should be encoded by |imap_utf7_encode|
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imap_createmailbox| example
 

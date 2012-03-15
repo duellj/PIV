@@ -1,4 +1,4 @@
-imap_errors -- Returns all of the IMAP errors that have occured
+*imap_errors* -- Returns all of the IMAP errors that have occured
 
   array imap_errors()~
 

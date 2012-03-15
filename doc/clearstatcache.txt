@@ -1,4 +1,4 @@
-clearstatcache -- Clears file status cache
+*clearstatcache* -- Clears file status cache
 
   void clearstatcache([bool clear_realpath_cache [, string filename]])~
 
@@ -28,10 +28,9 @@ Affected functions include |stat|, |lstat|, |file_exists|, |is_writable|,
 |fileatime|, |filemtime|, |fileinode|, |filegroup|, |fileowner|, |filesize|,
 |filetype|, and |fileperms|.
 
-{clear_realpath_cache} Whenever to clear realpath cache or not (defaults to
-FALSE).
+{clear_realpath_cache} Whether to clear the realpath cache or not.
 
-{filename} Clear realpath cache on a specific filename, only used if
+{filename} Clear the realpath cache for a specific filename; only used if
 {clear_realpath_cache} is TRUE.
 
 No value is returned.
@@ -55,7 +54,7 @@ parameters.
   
   printf($format, date('r'), get_owner($file));
   
-  chown($path, 'ross');
+  chown($file, 'ross');
   printf($format, date('r'), get_owner($file));
   
   clearstatcache();

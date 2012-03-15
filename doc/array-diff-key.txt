@@ -1,4 +1,4 @@
-array_diff_key -- Computes the difference of arrays using keys for comparison
+*array_diff_key* -- Computes the difference of arrays using keys for comparison
 
   array array_diff_key(array array1, array array2 [, array ...])~
 
@@ -12,8 +12,8 @@ on the keys instead of the values.
 
 {...} More arrays to compare against
 
-Returns an array containing all the entries from {array1} that are not present
-in any of the other arrays.
+Returns an array containing all the entries from {array1} whose keys are not
+present in any of the other arrays.
 
 |array_diff_key| example The two keys from the key => value pairs are
 considered equal only if (string) $key1 === (string) $key2 . In other words a

@@ -1,4 +1,4 @@
-dbx_sort -- Sort a result from a dbx_query by a custom sort function
+*dbx_sort* -- Sort a result from a dbx_query by a custom sort function
 
   bool dbx_sort(object result, string user_compare_function)~
 
@@ -11,7 +11,7 @@ two arguments and return an integer less than, equal to, or greater than zero
 if the first argument is considered to be respectively less than, equal to, or
 greater than the second.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |dbx_sort| example
 

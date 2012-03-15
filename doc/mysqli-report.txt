@@ -1,4 +1,4 @@
-mysqli_report -- Enables or disables internal report functions
+*mysqli_report* -- Enables or disables internal report functions
 
   bool mysqli_report(int flags)~
 
@@ -9,11 +9,14 @@ index).
 
 {flags} Supported flags Name Description MYSQLI_REPORT_OFF Turns reporting off
 MYSQLI_REPORT_ERROR Report errors from mysqli function calls
-MYSQLI_REPORT_STRICT Report warnings from mysqli function calls
+MYSQLI_REPORT_STRICT Throw mysqli_sql_exception for errors instead of warnings
 MYSQLI_REPORT_INDEX Report if no index or bad index was used in a query
 MYSQLI_REPORT_ALL Set all options (report all)
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
+
+Version Description 5.2.15 & 5.3.4 Changing the reporting mode is now be
+per-request, rather than per-process.
 
 Object oriented style
 
@@ -32,7 +35,7 @@ Object oriented style
   /* this query should report an error */
   $result = $mysqli->query("SELECT Name FROM Nonexistingtable WHERE population > 50000");
   
-  /* this query should report a warning */
+  /* this query should report a bad index */
   $result = $mysqli->query("SELECT Name FROM City WHERE population > 50000");
   $result->close();
   
@@ -41,8 +44,6 @@ Object oriented style
 
 
 
-
-
-|mysqli_debug| |mysqli_dump_debug_info|
+MySQLi_Driver::$report_mode |mysqli_debug| |mysqli_dump_debug_info|
 
 vim:ft=help:

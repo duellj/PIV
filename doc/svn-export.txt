@@ -1,6 +1,6 @@
-svn_export -- Export the contents of a SVN directory
+*svn_export* -- Export the contents of a SVN directory
 
-  bool svn_export(string frompath, string topath [, bool working_copy])~
+  bool svn_export(string frompath, string topath [, bool working_copy [, int revision_no]])~
 
 Export the contents of either a working copy or repository into a 'clean'
 directory.
@@ -10,9 +10,9 @@ directory.
 {topath} The path to the new repository.
 
 {working_copy} If TRUE, it will export uncommitted files from the working
-copy. Default value is TRUE
+copy.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |svn_export| example
 

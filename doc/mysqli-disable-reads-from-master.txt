@@ -1,12 +1,12 @@
-mysqli->disable_reads_from_master -- Disable reads from master
+*mysqli->disable_reads_from_master* -- Disable reads from master
 
-Procedural style:
+Object oriented style
+
+  void mysqli::disable_reads_from_master()~
+
+Procedural style
 
   bool mysqli_disable_reads_from_master(mysqli link)~
-
-Object oriented style (method):
-
-  void disable_reads_from_master(mysqli link)~
 
 This function is currently not documented; only its argument list is
 available.

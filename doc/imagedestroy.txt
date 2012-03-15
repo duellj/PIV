@@ -1,4 +1,4 @@
-imagedestroy -- Destroy an image
+*imagedestroy* -- Destroy an image
 
   bool imagedestroy(resource image)~
 
@@ -7,7 +7,7 @@ imagedestroy -- Destroy an image
 { image}An image resource, returned by one of the image creation functions,
 such as |imagecreatetruecolor|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Using |imagedestroy| example
 

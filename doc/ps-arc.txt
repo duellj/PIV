@@ -1,4 +1,4 @@
-ps_arc -- Draws an arc counterclockwise
+*ps_arc* -- Draws an arc counterclockwise
 
   bool ps_arc(resource psdoc, float x, float y, float radius, float alpha, float beta)~
 
@@ -20,7 +20,7 @@ current path starts on the arc at angle {alpha} and ends on the arc at angle
 
 {beta} The end angle given in degrees.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_arcn|
 

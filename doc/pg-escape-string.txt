@@ -1,4 +1,4 @@
-pg_escape_string -- Escape a string for insertion into a text field
+*pg_escape_string* -- Escape a string for insertion into a text field
 
   string pg_escape_string([resource connection, string data])~
 

@@ -1,4 +1,4 @@
-stream_socket_client -- Open Internet or Unix domain socket connection
+*stream_socket_client* -- Open Internet or Unix domain socket connection
 
   resource stream_socket_client(string remote_socket [, int errno [, string errstr [, float timeout [, int flags [, resource context]]]]])~
 
@@ -85,7 +85,7 @@ to establish a link for the socket until it actually needs to send or receive
 data.
 
 When specifying a numerical IPv6 address (e.g. fe80::1), you must enclose the
-IP in square bracketsâfor example, tcp://[fe80::1]:80.
+IP in square brackets—for example, tcp://[fe80::1]:80.
 
 Depending on the environment, the Unix domain or the optional connect timeout
 may not be available. A list of available transports can be retrieved using

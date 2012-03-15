@@ -1,4 +1,4 @@
-SDO_Model_Type::isAbstractType -- Test to see if this SDO_Model_Type is an
+*SDO_Model_Type::isAbstractType* -- Test to see if this SDO_Model_Type is an
 abstract data type
 
   bool SDO_Model_Type::isAbstractType()~

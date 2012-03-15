@@ -1,4 +1,4 @@
-PDO::sqliteCreateFunction -- Registers a User Defined Function for use in SQL
+*PDO::sqliteCreateFunction* -- Registers a User Defined Function for use in SQL
 statements
 
   bool sqliteCreateFunction(string function_name, callback callback [, int num_args])~
@@ -23,7 +23,7 @@ type).
 {num_args} Hint to the SQLite parser if the callback function accepts a
 predetermined number of arguments.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |PDO::sqliteCreateFunction| example
 

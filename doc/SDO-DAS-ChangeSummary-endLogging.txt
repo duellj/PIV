@@ -1,4 +1,4 @@
-SDO_DAS_ChangeSummary::endLogging -- End change logging
+*SDO_DAS_ChangeSummary::endLogging* -- End change logging
 
   void SDO_DAS_ChangeSummary::endLogging()~
 

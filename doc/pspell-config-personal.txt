@@ -1,4 +1,4 @@
-pspell_config_personal -- Set a file that contains personal wordlist
+*pspell_config_personal* -- Set a file that contains personal wordlist
 
   bool pspell_config_personal(int dictionary_link, string file)~
 
@@ -15,7 +15,7 @@ will save personal wordlist to.
 {file} The personal wordlist. If the file does not exist, it will be created.
 The file should be writable by whoever PHP runs as (e.g. nobody).
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |pspell_config_personal|
 

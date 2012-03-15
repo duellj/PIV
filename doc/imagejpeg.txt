@@ -1,4 +1,4 @@
-imagejpeg -- Output image to browser or file
+*imagejpeg* -- Output image to browser or file
 
   bool imagejpeg(resource image [, string filename [, int quality]])~
 
@@ -16,7 +16,7 @@ To skip this argument in order to provide the {quality} parameter, use NULL.
 file) to 100 (best quality, biggest file). The default is the default IJG
 quality value (about 75).
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Outputting a JPEG image
 
@@ -37,6 +37,8 @@ Outputting a JPEG image
 ?>
 
 The above example will output something similar to:
+
+Output of example : Outputting a JPEG image
 
 
 

@@ -1,4 +1,4 @@
-posix_setegid -- Set the effective GID of the current process
+*posix_setegid* -- Set the effective GID of the current process
 
   bool posix_setegid(int gid)~
 
@@ -8,7 +8,7 @@ able to perform this function.
 
 {gid} The group id.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |posix_setegid| example This example will print out the effective group id,
 once changed.
@@ -22,8 +22,6 @@ once changed.
 
 
 
-|posix_getgrgid| for information on how to convert a group id into a useable
-group name |posix_getgid| get real group id. |posix_setgid| change the
-effective group id
+|posix_getgrgid| |posix_getgid| |posix_setgid|
 
 vim:ft=help:

@@ -1,10 +1,10 @@
-apache_response_headers -- Fetch all HTTP response headers
+*apache_response_headers* -- Fetch all HTTP response headers
 
   array apache_response_headers()~
 
 Fetch all HTTP response headers.
 
-An array of all Apache response headers on success, or FALSE on failure.
+An array of all Apache response headers on success or FALSE on failure.
 
 |apache_response_headers| example
 

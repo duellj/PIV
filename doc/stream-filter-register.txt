@@ -1,4 +1,4 @@
-stream_filter_register -- Register a user defined stream filter
+*stream_filter_register* -- Register a user defined stream filter
 
   bool stream_filter_register(string filtername, string classname)~
 
@@ -57,10 +57,10 @@ the closing parameter is set to FALSE.
 
 This method is called upon filter shutdown (typically, this is also during
 stream shutdown), and is executed after the flush method is called. If any
-resources were allocated or initialzed during onCreate() this would be the
+resources were allocated or initialized during onCreate() this would be the
 time to destroy or dispose of them.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |stream_filter_register| will return FALSE if the {filtername} is already
 defined.

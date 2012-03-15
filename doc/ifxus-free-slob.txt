@@ -1,4 +1,4 @@
-ifxus_free_slob -- Deletes the slob object
+*ifxus_free_slob* -- Deletes the slob object
 
   bool ifxus_free_slob(int bid)~
 
@@ -6,7 +6,7 @@ Deletes the slob object.
 
 {bid} An existing slob id.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ifxus_close_slob|
 

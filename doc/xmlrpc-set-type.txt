@@ -1,4 +1,4 @@
-xmlrpc_set_type -- Sets xmlrpc type, base64 or datetime, for a PHP string
+*xmlrpc_set_type* -- Sets xmlrpc type, base64 or datetime, for a PHP string
 value
 
   bool xmlrpc_set_type(string value, string type)~
@@ -13,7 +13,7 @@ PHP. This function should be used at your own risk.
 
 {type} 'base64' or 'datetime'
 
-Returns TRUE on success or FALSE on failure. If successful, {value} is
+Returns TRUE on success or &false; on failure. If successful, {value} is
 converted to an object.
 
 A |xmlrpc_set_type| example

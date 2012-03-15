@@ -1,4 +1,4 @@
-mysql_data_seek -- Move internal result pointer
+*mysql_data_seek* -- Move internal result pointer
 
   bool mysql_data_seek(resource result, int row_number)~
 
@@ -17,7 +17,7 @@ call to |mysql_query|.
 
 {row_number} The desired row number of the new result pointer.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |mysql_data_seek| example
 

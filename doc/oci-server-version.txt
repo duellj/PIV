@@ -1,4 +1,4 @@
-oci_server_version -- Returns server version
+*oci_server_version* -- Returns server version
 
   string oci_server_version(resource connection)~
 

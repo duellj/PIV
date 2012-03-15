@@ -1,8 +1,8 @@
-posix_getpgid -- Get process group id for job control
+*posix_getpgid* -- Get process group id for job control
 
   int posix_getpgid(int pid)~
 
-Returns the process group identifier of the process {pid}.
+Returns the process group identifier of the process {pid} or FALSE on failure.
 
 {pid} The process id.
 

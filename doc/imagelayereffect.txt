@@ -1,4 +1,4 @@
-imagelayereffect -- Set the alpha blending flag to use the bundled libgd
+*imagelayereffect* -- Set the alpha blending flag to use the bundled libgd
 layering effects
 
   bool imagelayereffect(resource image, int effect)~
@@ -20,7 +20,7 @@ IMG_EFFECT_OVERLAY Overlay has the effect that black background pixels will
 remain black, white background pixels will remain white, but grey background
 pixels will take the colour of the foreground pixel.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagelayereffect| example
 
@@ -47,6 +47,8 @@ Returns TRUE on success or FALSE on failure.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagelayereffect()
 
 This function is only available if PHP is compiled with the bundled version of
 the GD library.

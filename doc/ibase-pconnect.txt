@@ -1,4 +1,4 @@
-ibase_pconnect -- Open a persistent connection to an InterBase database
+*ibase_pconnect* -- Open a persistent connection to an InterBase database
 
   resource ibase_pconnect([string database [, string username [, string password [, string charset [, int buffers [, int dialect [, string role [, int sync]]]]]]]])~
 
@@ -41,9 +41,6 @@ libraries. Functional only with InterBase 6 and up.
 {sync}
 
 Returns an InterBase link identifier on success, or FALSE on error.
-
-Version Description 4.0.0 The {buffers}, {dialect} and {role} parameters were
-added
 
 |ibase_close| |ibase_connect|
 

@@ -1,4 +1,4 @@
-pspell_new -- Load a new dictionary
+*pspell_new* -- Load a new dictionary
 
   int pspell_new(string language [, string spelling [, string jargon [, string encoding [, int mode]]]])~
 
@@ -41,7 +41,7 @@ Mode is a bitmask constructed from different constants listed above. However,
 PSPELL_FAST, PSPELL_NORMAL and PSPELL_BAD_SPELLERS are mutually exclusive, so
 you should select only one of them.
 
-Returns the dictionary link identifier on success, or FALSE on failure.
+Returns the dictionary link identifier on success or FALSE on failure.
 
 |pspell_new|
 

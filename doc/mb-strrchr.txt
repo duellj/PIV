@@ -1,4 +1,4 @@
-mb_strrchr -- Finds the last occurrence of a character in a string within
+*mb_strrchr* -- Finds the last occurrence of a character in a string within
 another
 
   string mb_strrchr(string haystack, string needle [, bool part [, string encoding]])~
@@ -13,7 +13,7 @@ the portion of {haystack}. If {needle} is not found, it returns FALSE.
 {part} Determines which portion of {haystack} this function returns. If set to
 TRUE, it returns all of {haystack} from the beginning to the last occurrence
 of {needle}. If set to FALSE, it returns all of {haystack} from the last
-occurrence of {needle} to the end, Default value is FALSE.
+occurrence of {needle} to the end,
 
 {encoding} Character encoding name to use. If it is omitted, internal
 character encoding is used.

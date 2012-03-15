@@ -1,4 +1,4 @@
-mssql_init -- Initializes a stored procedure or a remote stored procedure
+*mssql_init* -- Initializes a stored procedure or a remote stored procedure
 
   resource mssql_init(string sp_name [, resource link_identifier])~
 
@@ -14,9 +14,9 @@ Returns a resource identifier "statement", used in subsequent calls to
 |mssql_init| example
 
 <?php >
-  // Connect to MSSQL
-  mssql_connect('KALLESPC\SQLEXPRESS', 'sa', 'phpfi');
-  mssql_select_db('php');
+  // Connect to MSSQL and select the database
+  $link = mssql_connect('KALLESPC\SQLEXPRESS', 'sa', 'phpfi');
+  mssql_select_db('php', $link);
   
   // Create a new statement
   $stmt = mssql_init('StatementTest', $link);

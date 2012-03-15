@@ -1,4 +1,4 @@
-SCA::getService -- Obtain a proxy for a service
+*SCA::getService* -- Obtain a proxy for a service
 
   mixed SCA::getService(string target [, string binding [, array config]])~
 

@@ -1,4 +1,4 @@
-mysql_field_flags -- Get the flags associated with the specified field in a
+*mysql_field_flags* -- Get the flags associated with the specified field in a
 result
 
   string mysql_field_flags(resource result, int field_offset)~
@@ -13,7 +13,7 @@ call to |mysql_query|.
 { field_offset}The numerical field offset. The {field_offset} starts at 0. If
 {field_offset} does not exist, an error of level E_WARNING is also issued.
 
-Returns a string of flags associated with the result, or FALSE on failure.
+Returns a string of flags associated with the result or FALSE on failure.
 
 The following flags are reported, if your version of MySQL is current enough
 to support them: "not_null", "primary_key", "unique_key", "multiple_key",

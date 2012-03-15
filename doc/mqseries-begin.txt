@@ -1,4 +1,4 @@
-mqseries_begin -- MQseries MQBEGIN
+*mqseries_begin* -- MQseries MQBEGIN
 
   void mqseries_begin(resource hconn, array beginOptions, resource compCode, resource reason)~
 
@@ -22,7 +22,7 @@ No value is returned.
 
 <?php >
       $mqbo = array();
-      mqseries_begin(	$conn, 
+      mqseries_begin( $conn, 
                       $mqbo,
                       $comp_code,
                       $reason);

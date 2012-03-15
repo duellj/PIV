@@ -1,4 +1,4 @@
-trigger_error -- Generates a user-level error/warning/notice message
+*trigger_error* -- Generates a user-level error/warning/notice message
 
   bool trigger_error(string error_msg [, int error_type])~
 
@@ -21,12 +21,15 @@ otherwise.
 |trigger_error| example See |set_error_handler| for a more extensive example.
 
 <?php >
-  if (assert($divisor == 0)) {
+  if ($divisor == 0) {
       trigger_error("Cannot divide by zero", E_USER_ERROR);
   }
 ?>
 
 
+
+HTML entities in {error_msg} are not escaped. Use |htmlentities| on the
+message if the error is to be displayed in a browser.
 
 |error_reporting| |set_error_handler| |restore_error_handler| The error level
 constants

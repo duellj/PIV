@@ -1,4 +1,4 @@
-curl_version -- Gets cURL version information
+*curl_version* -- Gets cURL version information
 
   array curl_version([int age])~
 
@@ -24,17 +24,17 @@ in cURL build by using the 'features' bitmask returned by |curl_version|.
   // These are the bitfields that can be used 
   // to check for features in the curl build
   $bitfields = Array(
-  			'CURL_VERSION_IPV6', 
-  			'CURL_VERSION_KERBEROS4', 
-  			'CURL_VERSION_SSL', 
-  			'CURL_VERSION_LIBZ'
-  			);
+              'CURL_VERSION_IPV6', 
+              'CURL_VERSION_KERBEROS4', 
+              'CURL_VERSION_SSL', 
+              'CURL_VERSION_LIBZ'
+              );
   
   
   foreach($bitfields as $feature)
   {
-  	echo $feature . ($version['features'] &amp; constant($feature) ? ' matches' : ' does not match');
-  	echo PHP_EOL;
+      echo $feature . ($version['features'] &amp; constant($feature) ? ' matches' : ' does not match');
+      echo PHP_EOL;
   }
 ?>
 

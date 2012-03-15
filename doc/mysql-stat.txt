@@ -1,4 +1,4 @@
-mysql_stat -- Get current system status
+*mysql_stat* -- Get current system status
 
   string mysql_stat([resource link_identifier])~
 
@@ -7,8 +7,8 @@ mysql_stat -- Get current system status
 { link_identifier}The MySQL connection. If the link identifier is not
 specified, the last link opened by |mysql_connect| is assumed. If no such link
 is found, it will try to create one as if |mysql_connect| was called with no
-arguments. If by chance no connection is found or established, an E_WARNING
-level error is generated.
+arguments. If no connection is found or established, an E_WARNING level error
+is generated.
 
 Returns a string with the status for uptime, threads, queries, open tables,
 flush tables and queries per second. For a complete list of other status
@@ -43,7 +43,7 @@ Alternative |mysql_stat| example
 
 <?php >
   $link   = mysql_connect('localhost', 'mysql_user', 'mysql_password');
-  $result = mysql_query('SHOW VARIABLES', $link);
+  $result = mysql_query('SHOW STATUS', $link);
   while ($row = mysql_fetch_assoc($result)) {
       echo $row['Variable_name'] . ' = ' . $row['Value'] . "\n";
   }
@@ -57,7 +57,7 @@ The above example will output something similar to:
   bdb_log_buffer_size = 32768
   bdb_home = /var/db/mysql/
   bdb_max_lock = 10000
-  bdb_logdir = 
+  bdb_logdir =
   bdb_shared_data = OFF
   bdb_tmpdir = /var/tmp/
   ...

@@ -1,4 +1,4 @@
-bzread -- Binary safe bzip2 file read
+*bzread* -- Binary safe bzip2 file read
 
   string bzread(resource bz [, int length])~
 
@@ -11,7 +11,7 @@ reached, whichever comes first.
 opened by |bzopen|.
 
 {length} If not specified, |bzread| will read 1024 (uncompressed) bytes at a
-time.
+time. A maximum of 8192 uncompressed bytes will be read at a time.
 
 Returns the uncompressed data, or FALSE on error.
 

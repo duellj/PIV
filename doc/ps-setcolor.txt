@@ -1,4 +1,4 @@
-ps_setcolor -- Sets current color
+*ps_setcolor* -- Sets current color
 
   bool ps_setcolor(resource psdoc, string type, string colorspace, float c1, float c2, float c3, float c4)~
 
@@ -28,6 +28,6 @@ component.
 The second parameter is currently not always evaluated. The color is sometimes
 set for filling and drawing just as if fillstroke were passed.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

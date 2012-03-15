@@ -1,4 +1,4 @@
-ncurses_slk_init -- Initializes soft label key functions
+*ncurses_slk_init* -- Initializes soft label key functions
 
   bool ncurses_slk_init(int format)~
 
@@ -19,6 +19,6 @@ screen.
 and 2 indicates the PC like 4-4-4 mode, but in addition an index line will be
 created.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-openssl_verify -- Verify signature
+*openssl_verify* -- Verify signature
 
   int openssl_verify(string data, string signature, mixed pub_key_id [, int signature_alg])~
 
@@ -12,12 +12,11 @@ public key corresponding to the private key used for signing.
 
 {pub_key_id}
 
-{signature_alg} Defaults to OPENSSL_ALGO_SHA1. For more information see the
-list of Signature Algorithms.
+{signature_alg} For more information see the list of Signature Algorithms.
 
 Returns 1 if the signature is correct, 0 if it is incorrect, and -1 on error.
 
-Version Description 5.0.0 The {signature_alg} parameter was added.
+Version Description 5.2.0 The {signature_alg} parameter was added.
 
 |openssl_verify| example
 

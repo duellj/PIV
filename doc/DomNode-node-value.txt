@@ -1,4 +1,4 @@
-DomNode->node_value -- Returns value of a node
+*DomNode->node_value* -- Returns value of a node
 
   string DomNode->node_value()~
 

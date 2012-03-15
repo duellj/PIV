@@ -1,4 +1,4 @@
-pg_lo_read -- Read a large object
+*pg_lo_read* -- Read a large object
 
   string pg_lo_read(resource large_object [, int len])~
 
@@ -13,7 +13,7 @@ This function used to be called |pg_loread|.
 {large_object} PostgreSQL large object (LOB) resource, returned by
 |pg_lo_open|.
 
-{len} An optional maximum number of bytes to return. Defaults to 8192.
+{len} An optional maximum number of bytes to return.
 
 A string containing {len} bytes from the large object, or FALSE on error.
 

@@ -1,4 +1,4 @@
-hw_api->insertcollection -- Inserts a new object of type collection
+*hw_api->insertcollection* -- Inserts a new object of type collection
 
   hw_api_object insertcollection(array parameter)~
 

@@ -1,4 +1,4 @@
-SDO_Model_Type::isDataType -- Test to see if this SDO_Model_Type is a
+*SDO_Model_Type::isDataType* -- Test to see if this SDO_Model_Type is a
 primitive data type
 
   bool SDO_Model_Type::isDataType()~

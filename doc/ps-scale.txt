@@ -1,4 +1,4 @@
-ps_scale -- Sets scaling factor
+*ps_scale* -- Sets scaling factor
 
   bool ps_scale(resource psdoc, float x, float y)~
 
@@ -10,7 +10,7 @@ Sets horizontal and vertical scaling of the coordinate system.
 
 {y} Scaling factor in vertical direction.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_rotate| |ps_translate|
 

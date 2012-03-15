@@ -1,4 +1,4 @@
-DomDocumentType->system_id -- Returns the system id of document type
+*DomDocumentType->system_id* -- Returns the system id of document type
 
   string system_id()~
 

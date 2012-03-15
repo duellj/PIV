@@ -1,4 +1,4 @@
-rpm_is_valid -- Tests a filename for validity as an RPM file
+*rpm_is_valid* -- Tests a filename for validity as an RPM file
 
   bool rpm_is_valid(string filename)~
 
@@ -8,7 +8,7 @@ return a file pointer to be used by further functions.
 
 {filename} The filename of the RPM file you wish to check for validity.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |rpm_is_valid| example
 

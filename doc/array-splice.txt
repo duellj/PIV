@@ -1,4 +1,4 @@
-array_splice -- Remove a portion of the array and replace it with something
+*array_splice* -- Remove a portion of the array and replace it with something
 else
 
   array array_splice(array input, int offset [, int length [, mixed replacement]])~
@@ -10,8 +10,8 @@ supplied.
 Note that numeric keys in {input} are not preserved.
 
 If {replacement} is not an array, it will be typecast to one (i.e. (array)
-$parameter). This may result in unexpected behavior when using an object
-{replacement}.
+$parameter). This may result in unexpected behavior when using an object or
+NULL {replacement}.
 
 {input} The input array.
 
@@ -34,7 +34,7 @@ from the {replacement} array are inserted in the place specified by the
 {offset}. Note that keys in replacement array are not preserved.
 
 If {replacement} is just one element it is not necessary to put array() around
-it, unless the element is an array itself.
+it, unless the element is an array itself, an object or NULL.
 
 Returns the array consisting of the extracted elements.
 

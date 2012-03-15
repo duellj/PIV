@@ -1,4 +1,4 @@
-OCI-Lob->flush -- Flushes/writes buffer of the LOB to the server
+*OCI-Lob->flush* -- Flushes/writes buffer of the LOB to the server
 
   bool flush([int flag])~
 
@@ -10,7 +10,7 @@ operation to the same part of LOB will involve a round-trip to the server and
 initialize new buffer resources. It is recommended to use OCI_LOB_BUFFER_FREE
 flag only when you are not going to work with the LOB anymore.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Returns FALSE if buffering was not enabled or an error occurred.
 

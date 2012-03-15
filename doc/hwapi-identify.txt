@@ -1,4 +1,4 @@
-hw_api->identify -- Log into Hyperwave Server
+*hw_api->identify* -- Log into Hyperwave Server
 
   bool identify(array parameter)~
 

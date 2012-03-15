@@ -1,4 +1,4 @@
-dba_open -- Open database
+*dba_open* -- Open database
 
   resource dba_open(string path, string mode [, string handler [, mixed ...]])~
 
@@ -9,7 +9,9 @@ dba_open -- Open database
 
 {mode} It is r for read access, w for read/write access to an already existing
 database, c for read/write access and database creation if it doesn't
-currently exist, and n for create, truncate and read/write access.
+currently exist, and n for create, truncate and read/write access. The
+database is created in BTree mode, other modes (like Hash or Queue) are not
+supported.
 
 Additionally you can set the database lock method with the next char. Use l to
 lock the database with a .lck file or d to lock the databasefile itself. It is
@@ -38,7 +40,7 @@ for {mode} parameter.
 is passed all optional parameters given to |dba_open| and can act on behalf of
 them.
 
-Returns a positive handle on success, or FALSE on failure.
+Returns a positive handle on success or FALSE on failure.
 
 Version Description 4.3.0 It's possible to open database files over network
 connection. However in cases a socket connection will be used (as with http or

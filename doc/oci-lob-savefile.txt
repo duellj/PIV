@@ -1,4 +1,4 @@
-OCI-Lob->saveFile -- Alias of oci_lob_import
+*OCI-Lob->saveFile* -- Alias of oci_lob_import
 
 This function is an alias of: |oci_lob_import|.
 

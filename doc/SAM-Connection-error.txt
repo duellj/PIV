@@ -1,4 +1,4 @@
-SAMConnection->error -- Contains the text description of the last failed SAM
+*SAMConnection->error* -- Contains the text description of the last failed SAM
 operation.
 
 Contains the text description of the last failed SAM operation on this

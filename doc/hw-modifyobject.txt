@@ -1,4 +1,4 @@
-hw_Modifyobject -- Modifies object record
+*hw_Modifyobject* -- Modifies object record
 
   bool hw_modifyobject(int connection, int object_to_change, array remove, array add [, int mode])~
 
@@ -121,6 +121,6 @@ recursively. 1 means recursive modification. If some of the objects cannot be
 modified they will be skipped without notice. |hw_error| may not indicate an
 error though some of the objects could not be modified.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

@@ -1,9 +1,12 @@
-ereg_replace -- Replace regular expression
+*ereg_replace* -- Replace regular expression
 
   string ereg_replace(string pattern, string replacement, string string)~
 
 This function scans {string} for matches to {pattern}, then replaces the
 matched text with {replacement}.
+
+This function has been DEPRECATED as of PHP 5.3.0. Relying on this feature is
+highly discouraged.
 
 {pattern} A POSIX extended regular expression.
 
@@ -69,8 +72,9 @@ Replace URLs with links
 
 
 
-As of PHP 5.3.0 the regex extension is deprecated, calling this function will
-issue an E_DEPRECATED notice.
+As of PHP 5.3.0, the regex extension is deprecated in favor of the PCRE
+extension. Calling this function will issue an E_DEPRECATED notice. See the
+list of differences for help on converting to PCRE.
 
 |preg_replace|, which uses a Perl-compatible regular expression syntax, is
 often a faster alternative to |ereg_replace|.

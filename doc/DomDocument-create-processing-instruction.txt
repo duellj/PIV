@@ -1,4 +1,4 @@
-DomDocument->create_processing_instruction -- Creates new PI node
+*DomDocument->create_processing_instruction* -- Creates new PI node
 
   domprocessinginstruction DomDocument->create_processing_instruction(string content)~
 

@@ -1,4 +1,4 @@
-shm_put_var -- Inserts or updates a variable in shared memory
+*shm_put_var* -- Inserts or updates a variable in shared memory
 
   bool shm_put_var(resource shm_identifier, int variable_key, mixed variable)~
 
@@ -12,9 +12,11 @@ complete your request.
 
 {variable_key} The variable key.
 
-{variable} The variable. All variable-types are supported.
+{variable} The variable. All variable types that |serialize| supports may be
+used: generally this means all types except for resources and some internal
+objects that cannot be serialized.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |shm_get_var| |shm_has_var|
 

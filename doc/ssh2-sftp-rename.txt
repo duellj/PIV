@@ -1,4 +1,4 @@
-ssh2_sftp_rename -- Rename a remote file
+*ssh2_sftp_rename* -- Rename a remote file
 
   bool ssh2_sftp_rename(resource sftp, string from, string to)~
 
@@ -10,7 +10,7 @@ Renames a file on the remote filesystem.
 
 {to} The new file name that replaces {from}.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Renaming a file via sftp
 

@@ -1,6 +1,6 @@
-XMLWriter::openMemory -- Create new xmlwriter using memory for string output
+*XMLWriter::openMemory* -- Create new xmlwriter using memory for string output
 
-Oriented object style
+Object oriented style
 
   bool openMemory()~
 
@@ -12,7 +12,7 @@ Creates a new XMLWriter using memory for string output.
 
 
 
-Oriented object style: Returns TRUE on success or FALSE on failure.
+Object oriented style: Returns TRUE on success or &false; on failure.
 
 Procedural style: Returns a new xmlwriter resource for later use with the
 xmlwriter functions on success, FALSE on error.

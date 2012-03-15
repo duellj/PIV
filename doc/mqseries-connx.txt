@@ -1,4 +1,4 @@
-mqseries_connx -- MQSeries MQCONNX
+*mqseries_connx* -- MQSeries MQCONNX
 
   void mqseries_connx(string qManagerName, array connOptions, resource hconn, resource compCode, resource reason)~
 
@@ -36,7 +36,7 @@ No value is returned.
       );
   
       mqseries_connx('MQNX9420', $mqcno, $conn, $comp_code,$reason);
-      if ($comp_code !== MQSERIES_MQCC_OK) {		
+      if ($comp_code !== MQSERIES_MQCC_OK) {
           printf("Connx CompCode:%d Reason:%d Text:%s<br>\n", $comp_code, $reason, mqseries_strerror($reason));
           exit;
       }

@@ -1,4 +1,4 @@
-imagepsencodefont -- Change the character encoding vector of a font
+*imagepsencodefont* -- Change the character encoding vector of a font
 
   bool imagepsencodefont(resource font_index, string encodingfile)~
 
@@ -18,7 +18,7 @@ have the right encoding.
 documentation. T1lib comes with two ready-to-use files, IsoLatin1.enc and
 IsoLatin2.enc.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagepsencodefont| example
 

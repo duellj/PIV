@@ -1,4 +1,4 @@
-md5_file -- Calculates the md5 hash of a given file
+*md5_file* -- Calculates the md5 hash of a given file
 
   string md5_file(string filename [, bool raw_output])~
 
@@ -9,7 +9,7 @@ that hash. The hash is a 32-character hexadecimal number.
 {filename} The filename
 
 {raw_output} When TRUE, returns the digest in raw binary format with a length
-of 16. Defaults to FALSE.
+of 16.
 
 Returns a string on success, FALSE otherwise.
 

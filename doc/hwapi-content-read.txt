@@ -1,4 +1,4 @@
-hw_api_content->read -- Read content
+*hw_api_content->read* -- Read content
 
   string read(string buffer, int len)~
 

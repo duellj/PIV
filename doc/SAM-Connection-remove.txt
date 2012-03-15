@@ -1,4 +1,4 @@
-SAMConnection->remove -- Remove a message from a queue.
+*SAMConnection->remove* -- Remove a message from a queue.
 
   SAMMessage remove(string target [, array properties])~
 

@@ -1,4 +1,4 @@
-sem_get -- Get a semaphore id
+*sem_get* -- Get a semaphore id
 
   resource sem_get(int key [, int max_acquire [, int perm [, int auto_release]]])~
 
@@ -11,11 +11,10 @@ identifier, but both identifiers access the same underlying semaphore.
 {key}
 
 {max_acquire} The number of processes that can acquire the semaphore
-simultaneously is set to {max_acquire} (defaults to 1).
+simultaneously is set to {max_acquire}.
 
-{perm} The semaphore permissions. Defaults to 0666. Actually this value is set
-only if the process finds it is the only process currently attached to the
-semaphore.
+{perm} The semaphore permissions. Actually this value is set only if the
+process finds it is the only process currently attached to the semaphore.
 
 {auto_release} Specifies if the semaphore should be automatically released on
 request shutdown.

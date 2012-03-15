@@ -1,4 +1,4 @@
-stream_context_get_default -- Retreive the default streams context
+*stream_context_get_default* -- Retreive the default streams context
 
   resource stream_context_get_default([array options])~
 

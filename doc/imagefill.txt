@@ -1,4 +1,4 @@
-imagefill -- Flood fill
+*imagefill* -- Flood fill
 
   bool imagefill(resource image, int x, int y, int color)~
 
@@ -14,7 +14,7 @@ such as |imagecreatetruecolor|.
 
 {color} The fill color. A color identifier created with |imagecolorallocate|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagefill| example
 
@@ -31,6 +31,8 @@ Returns TRUE on success or FALSE on failure.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagefill()
 
 
 

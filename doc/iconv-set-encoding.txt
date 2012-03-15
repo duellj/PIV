@@ -1,4 +1,4 @@
-iconv_set_encoding -- Set current setting for character encoding conversion
+*iconv_set_encoding* -- Set current setting for character encoding conversion
 
   bool iconv_set_encoding(string type, string charset)~
 
@@ -10,7 +10,7 @@ output_encoding internal_encoding
 
 {charset} The character set.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |iconv_set_encoding| example
 

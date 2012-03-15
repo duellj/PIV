@@ -1,11 +1,11 @@
-sqlite_open -- Opens a SQLite database and create the database if it does not
+*sqlite_open* -- Opens an SQLite database and create the database if it does not
 exist
 
   resource sqlite_open(string filename [, int mode [, string error_message]])~
 
 Object oriented style (constructor):
 
-Opens a SQLite database or creates the database if it does not exist.
+Opens an SQLite database or creates the database if it does not exist.
 
 {filename} The filename of the SQLite database. If the file does not exist,
 SQLite will attempt to create it. PHP must have write permissions to the file

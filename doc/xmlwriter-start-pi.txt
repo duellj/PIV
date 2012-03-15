@@ -1,6 +1,6 @@
-XMLWriter::startPI -- Create start PI tag
+*XMLWriter::startPI* -- Create start PI tag
 
-Oriented object style
+Object oriented style
 
   bool startPI(string target)~
 
@@ -16,7 +16,7 @@ modified. This resource comes from a call to |xmlwriter_open_uri| or
 
 {target} The target of the processing instruction.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 XMLWriter::endPI XMLWriter::writePI
 

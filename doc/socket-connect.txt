@@ -1,4 +1,4 @@
-socket_connect -- Initiates a connection on a socket
+*socket_connect* -- Initiates a connection on a socket
 
   bool socket_connect(resource socket, string address [, int port])~
 
@@ -16,7 +16,7 @@ Unix domain socket, if the socket family is AF_UNIX.
 an AF_INET or an AF_INET6 socket, and designates the port on the remote host
 to which a connection should be made.
 
-Returns TRUE on success or FALSE on failure. The error code can be retrieved
+Returns TRUE on success or &false; on failure. The error code can be retrieved
 with |socket_last_error|. This code may be passed to |socket_strerror| to get
 a textual explanation of the error.
 

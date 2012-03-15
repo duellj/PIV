@@ -1,13 +1,17 @@
-ftp_ssl_connect -- Opens an Secure SSL-FTP connection
+*ftp_ssl_connect* -- Opens an Secure SSL-FTP connection
 
   resource ftp_ssl_connect(string host [, int port [, int timeout]])~
 
-|ftp_ssl_connect| opens a SSL-FTP connection to the specified {host}.
+|ftp_ssl_connect| opens an explicit SSL-FTP connection to the specified
+{host}.
 
 |ftp_ssl_connect| is only available if both the ftp module and the OpenSSL
 support is built statically into php, this means that on Windows this function
 will be undefined in the official PHP builds. To make this function available
 on Windows you must compile your own PHP binaries.
+
+|ftp_ssl_connect| is not intended for use with sFTP. To use sFTP with PHP,
+please see |ssh2_sftp|.
 
 {host} The FTP server address. This parameter shouldn't have any trailing
 slashes and shouldn't be prefixed with ftp://.

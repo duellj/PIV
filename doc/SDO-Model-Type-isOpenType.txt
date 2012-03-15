@@ -1,4 +1,4 @@
-SDO_Model_Type::isOpenType -- Test to see if this type is an open type
+*SDO_Model_Type::isOpenType* -- Test to see if this type is an open type
 
   bool SDO_Model_Type::isOpenType()~
 

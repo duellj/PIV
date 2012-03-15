@@ -1,4 +1,4 @@
-ssh2_scp_send -- Send a file via SCP
+*ssh2_scp_send* -- Send a file via SCP
 
   bool ssh2_scp_send(resource session, string local_file, string remote_file [, int create_mode])~
 
@@ -15,7 +15,7 @@ protocol.
 {create_mode} The file will be created with the mode specified by
 {create_mode}.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Uploading a file via SCP
 

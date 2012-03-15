@@ -1,4 +1,4 @@
-DomXsltStylesheet->process -- Applies the XSLT-Transformation on a DomDocument
+*DomXsltStylesheet->process* -- Applies the XSLT-Transformation on a DomDocument
 Object
 
   DomDocument process(DomDocument xml_doc [, array xslt_params [, bool is_xpath_param [, string profile_filename]]])~

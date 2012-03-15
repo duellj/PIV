@@ -1,4 +1,4 @@
-strstr -- Find first occurrence of a string
+*strstr* -- Find first occurrence of a string
 
   string strstr(string haystack, mixed needle [, bool before_needle])~
 
@@ -16,8 +16,8 @@ instead.
 {needle} If {needle} is not a string, it is converted to an integer and
 applied as the ordinal value of a character.
 
-{before_needle} If TRUE (the default is FALSE), |strstr| returns the part of
-the {haystack} before the first occurrence of the {needle}.
+{before_needle} If TRUE, |strstr| returns the part of the {haystack} before
+the first occurrence of the {needle}.
 
 Returns the portion of string, or FALSE if {needle} is not found.
 

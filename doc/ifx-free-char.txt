@@ -1,4 +1,4 @@
-ifx_free_char -- Deletes the char object
+*ifx_free_char* -- Deletes the char object
 
   bool ifx_free_char(int bid)~
 
@@ -6,7 +6,7 @@ Deletes the charobject for the given char object-id.
 
 {bid} The char object id.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ifx_create_char|
 

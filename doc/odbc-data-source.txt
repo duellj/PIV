@@ -1,8 +1,8 @@
-odbc_data_source -- Returns information about a current connection
+*odbc_data_source* -- Returns information about a current connection
 
   array odbc_data_source(resource connection_id, int fetch_type)~
 
-This function will return the list of available DNS (after calling it several
+This function will return the list of available DSN (after calling it several
 times).
 
 {connection_id} The ODBC connection identifier, see |odbc_connect| for

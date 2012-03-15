@@ -1,4 +1,4 @@
-SDO_DAS_XML::createDocument -- Creates an XML Document object from scratch,
+*SDO_DAS_XML::createDocument* -- Creates an XML Document object from scratch,
 without the need to load a document from a file or string.
 
   SDO_DAS_XML_Document SDO_DAS_XML::createDocument([string document_element_name])~

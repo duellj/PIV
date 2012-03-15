@@ -1,4 +1,4 @@
-DomAttribute->name -- Returns the name of attribute
+*DomAttribute->name* -- Returns the name of attribute
 
   string name()~
 

@@ -1,4 +1,4 @@
-SDO_DAS_XML_Document::setXMLDeclaration -- Sets the xml declaration
+*SDO_DAS_XML_Document::setXMLDeclaration* -- Sets the xml declaration
 
   void SDO_DAS_XML_Document::setXMLDeclaration(bool xmlDeclatation)~
 

@@ -1,4 +1,4 @@
-quoted_printable_decode -- Convert a quoted-printable string to an 8 bit
+*quoted_printable_decode* -- Convert a quoted-printable string to an 8 bit
 string
 
   string quoted_printable_decode(string str)~
@@ -14,5 +14,7 @@ the IMAP module to work.
 {str} The input string.
 
 Returns the 8-bit binary string.
+
+|quoted_printable_encode|
 
 vim:ft=help:

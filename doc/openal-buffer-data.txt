@@ -1,4 +1,4 @@
-openal_buffer_data -- Load a buffer with data
+*openal_buffer_data* -- Load a buffer with data
 
   bool openal_buffer_data(resource buffer, int format, string data, int freq)~
 
@@ -11,7 +11,7 @@ Block of binary audio data in the {format} and {freq} specified.
 
 Frequency of {data} given in Hz.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |openal_buffer_loadwav| |openal_stream|
 

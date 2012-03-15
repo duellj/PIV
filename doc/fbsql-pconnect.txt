@@ -1,4 +1,4 @@
-fbsql_pconnect -- Open a persistent connection to a FrontBase Server
+*fbsql_pconnect* -- Open a persistent connection to a FrontBase Server
 
   resource fbsql_pconnect([string hostname [, string username [, string password]]])~
 
@@ -19,11 +19,11 @@ of the script ends. Instead, the link will remain open for future use.
 
 This type of links is therefore called 'persistent'.
 
-{hostname} The server host name. Defaults to localhost.
+{hostname} The server host name.
 
-{username} The user name for the connection. Defaults to _SYSTEM.
+{username} The user name for the connection.
 
-{password} The password for the connection. Defaults to the empty string.
+{password} The password for the connection.
 
 Returns a positive FrontBase persistent link identifier on success, or FALSE
 on error.

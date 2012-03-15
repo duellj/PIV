@@ -1,4 +1,4 @@
-DomDocumentType->name -- Returns name of document type
+*DomDocumentType->name* -- Returns name of document type
 
   string name()~
 

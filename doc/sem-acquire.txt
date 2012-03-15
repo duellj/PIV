@@ -1,4 +1,4 @@
-sem_acquire -- Acquire a semaphore
+*sem_acquire* -- Acquire a semaphore
 
   bool sem_acquire(resource sem_identifier)~
 
@@ -14,7 +14,7 @@ generated.
 {sem_identifier} {sem_identifier} is a semaphore resource, obtained from
 |sem_get|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |sem_get| |sem_release|
 

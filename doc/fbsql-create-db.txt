@@ -1,4 +1,4 @@
-fbsql_create_db -- Create a FrontBase database
+*fbsql_create_db* -- Create a FrontBase database
 
   bool fbsql_create_db(string database_name [, resource link_identifier [, string database_options]])~
 
@@ -15,7 +15,7 @@ if |fbsql_connect| was called with no arguments.
 
 {database_options}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |fbsql_create_db| example
 

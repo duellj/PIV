@@ -1,4 +1,4 @@
-Swish->getMetaList -- Get the list of meta entries for the index
+*Swish->getMetaList* -- Get the list of meta entries for the index
 
   array Swish->getMetaList(string index_name)~
 

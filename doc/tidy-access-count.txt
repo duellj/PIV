@@ -1,4 +1,4 @@
-tidy_access_count -- Returns the Number of Tidy accessibility warnings
+*tidy_access_count* -- Returns the Number of Tidy accessibility warnings
 encountered for specified document
 
   int tidy_access_count(tidy object)~
@@ -27,7 +27,7 @@ Returns the number of warnings.
   
   $tidy = new tidy();
   $tidy->parseString($html, $config);
-  $tidy->CleanRepair();
+  $tidy->cleanRepair();
   
   /* Never forget to call this! */
   $tidy->diagnose();

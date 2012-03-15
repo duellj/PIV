@@ -1,4 +1,4 @@
-DomNode->set_content -- Sets content of node
+*DomNode->set_content* -- Sets content of node
 
   bool DomNode->set_content(string content)~
 

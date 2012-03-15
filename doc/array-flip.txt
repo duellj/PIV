@@ -1,4 +1,4 @@
-array_flip -- Exchanges all keys with their associated values in an array
+*array_flip* -- Exchanges all keys with their associated values in an array
 
   array array_flip(array trans)~
 
@@ -14,7 +14,7 @@ and all others will be lost.
 
 {trans} An array of key/value pairs to be flipped.
 
-Returns the flipped array on success and FALSE on failure.
+Returns the flipped array on success and NULL on failure.
 
 |array_flip| example
 

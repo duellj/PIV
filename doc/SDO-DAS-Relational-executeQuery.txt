@@ -1,4 +1,4 @@
-SDO_DAS_Relational::executeQuery -- Executes a given SQL query against a
+*SDO_DAS_Relational::executeQuery* -- Executes a given SQL query against a
 relational database and returns the results as a normalised data graph.
 
   SDODataObject SDO_DAS_Relational::executeQuery(PDO database_handle, string SQL_statement [, array column_specifier])~
@@ -8,8 +8,8 @@ surrounding documentation may change without notice in a future release of
 PHP. This function should be used at your own risk.
 
 Executes a given query against the relational database, using the supplied PDO
-database handle. Uses the model that it built from the the metadata to
-interpret the result set. Returns a data graph.
+database handle. Uses the model that it built from the metadata to interpret
+the result set. Returns a data graph.
 
 PDO_database_handle Constructed using the PDO extension. A typical line to
 construct a PDO database handle might look like this:

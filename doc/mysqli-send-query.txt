@@ -1,12 +1,12 @@
-mysqli->send_query -- Send the query and return
+*mysqli->send_query* -- Send the query and return
 
-Procedural style:
+Object oriented style
 
-  bool mysqli_send_query(mysqli link, string query)~
+  bool send_query(string query)~
 
-Object oriented style (method)
+Procedural style
 
-  bool send_query(mysqli link, string query, string query)~
+  bool mysqli_send_query(string query, mysqli link, string query)~
 
 This function is currently not documented; only its argument list is
 available.

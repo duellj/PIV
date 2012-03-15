@@ -1,4 +1,4 @@
-SwishSearch->setSort -- Set the sort order
+*SwishSearch->setSort* -- Set the sort order
 
   void SwishSearch->setSort(string sort)~
 

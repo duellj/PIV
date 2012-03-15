@@ -1,4 +1,4 @@
-DomNode->set_name -- Sets name of node
+*DomNode->set_name* -- Sets name of node
 
   bool DomNode->set_name()~
 

@@ -1,4 +1,4 @@
-ps_set_parameter -- Sets certain parameters
+*ps_set_parameter* -- Sets certain parameters
 
   bool ps_set_parameter(resource psdoc, string name, string value)~
 
@@ -11,7 +11,7 @@ definition string values.
 
 {value} The value of the parameter.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_get_parameters| |ps_set_value|
 

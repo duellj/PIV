@@ -1,4 +1,4 @@
-ps_show_xy -- Output text at given position
+*ps_show_xy* -- Output text at given position
 
   bool ps_show_xy(resource psdoc, string text, float x, float y)~
 
@@ -12,7 +12,7 @@ Output a text at the given text position.
 
 {y} y-coordinate of the lower left corner of the box surrounding the text.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_continue_text| |ps_show|
 

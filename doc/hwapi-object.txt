@@ -1,4 +1,4 @@
-hw_api->object -- Retrieve attribute information
+*hw_api->object* -- Retrieve attribute information
 
   hw_api_object object(array parameter)~
 

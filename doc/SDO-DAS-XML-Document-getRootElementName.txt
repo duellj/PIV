@@ -1,4 +1,4 @@
-SDO_DAS_XML_Document::getRootElementName -- Returns root element's name
+*SDO_DAS_XML_Document::getRootElementName* -- Returns root element's name
 
   string SDO_DAS_XML_Document::getRootElementName()~
 

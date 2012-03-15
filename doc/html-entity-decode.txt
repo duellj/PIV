@@ -1,4 +1,4 @@
-html_entity_decode -- Convert all HTML entities to their applicable characters
+*html_entity_decode* -- Convert all HTML entities to their applicable characters
 
   string html_entity_decode(string string [, int quote_style [, string charset]])~
 
@@ -9,19 +9,19 @@ HTML entities to their applicable characters from {string}.
 
 {quote_style} The optional second {quote_style} parameter lets you define what
 will be done with 'single' and "double" quotes. It takes on one of three
-constants with the default being ENT_COMPAT: Available {quote_style} constants
-Constant Name Description ENT_COMPAT Will convert double-quotes and leave
-single-quotes alone. ENT_QUOTES Will convert both double and single quotes.
-ENT_NOQUOTES Will leave both double and single quotes unconverted.
+constants: Available {quote_style} constants Constant Name Description
+ENT_COMPAT Will convert double-quotes and leave single-quotes alone.
+ENT_QUOTES Will convert both double and single quotes. ENT_NOQUOTES Will leave
+both double and single quotes unconverted.
 
-{charset} The ISO-8859-1 character set is used as default for the optional
-third {charset}. This defines the character set used in conversion.
+{charset} This defines the character set used in conversion.
 
 &reference.strings.charsets;
 
 Returns the decoded string.
 
-Version Description 5.0.0 Support for multi-byte character sets was added.
+Version Description 5.3.3 Default charset changed from ISO-8859-1 to UTF-8.
+5.0.0 Support for multi-byte character sets was added.
 
 Decoding HTML entities
 

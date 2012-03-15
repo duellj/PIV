@@ -1,4 +1,4 @@
-classkit_method_remove -- Dynamically removes the given method
+*classkit_method_remove* -- Dynamically removes the given method
 
   bool classkit_method_remove(string classname, string methodname)~
 
@@ -13,7 +13,7 @@ PHP. This function should be used at your own risk.
 
 {methodname} The name of the method to remove
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |classkit_method_remove| example
 

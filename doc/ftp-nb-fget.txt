@@ -1,4 +1,4 @@
-ftp_nb_fget -- Retrieves a file from the FTP server and writes it to an open
+*ftp_nb_fget* -- Retrieves a file from the FTP server and writes it to an open
 file (non-blocking)
 
   int ftp_nb_fget(resource ftp_stream, resource handle, string remote_file, int mode [, int resumepos])~
@@ -17,7 +17,7 @@ operations while the file is being downloaded.
 
 {mode} The transfer mode. Must be either FTP_ASCII or FTP_BINARY.
 
-{resumepos}
+{resumepos} The position in the remote file to start downloading from.
 
 Returns FTP_FAILED or FTP_FINISHED or FTP_MOREDATA.
 

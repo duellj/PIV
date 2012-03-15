@@ -1,4 +1,4 @@
-apd_continue -- Restarts the interpreter
+*apd_continue* -- Restarts the interpreter
 
   bool apd_continue(int debug_level)~
 
@@ -13,7 +13,7 @@ to be accurate. ASSIGNMENT_TRACE is not implemented yet.
 To turn on all functional traces (TIMING, FUNCTIONS, ARGS SUMMARY (like strace
 -c)) use the value 99
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |apd_continue| example
 

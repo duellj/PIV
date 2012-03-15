@@ -1,4 +1,4 @@
-ssh2_publickey_init -- Initialize Publickey subsystem
+*ssh2_publickey_init* -- Initialize Publickey subsystem
 
   resource ssh2_publickey_init(resource session)~
 
@@ -12,7 +12,7 @@ publickey subsystem, the |ssh2_publickey_init| function will return FALSE.
 {session}
 
 Returns an SSH2 Publickey Subsystem resource for use with all other
-ssh2_publickey_*() methods, or FALSE on failure.
+ssh2_publickey_*() methods or FALSE on failure.
 
 The public key subsystem is used for managing public keys on a server to which
 the client is already authenticated. To authenticate to a remote system using

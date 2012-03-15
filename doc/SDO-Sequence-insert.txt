@@ -1,4 +1,4 @@
-SDO_Sequence::insert -- Insert into a sequence
+*SDO_Sequence::insert* -- Insert into a sequence
 
   void SDO_Sequence::insert(mixed value [, int sequenceIndex [, mixed propertyIdentifier]])~
 

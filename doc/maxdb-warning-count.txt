@@ -1,11 +1,11 @@
-maxdb->warning_count -- Returns the number of warnings from the last query for
+*maxdb->warning_count* -- Returns the number of warnings from the last query for
 the given link
 
-Procedural style:
+Procedural style
 
   int maxdb_warning_count(resource link)~
 
-Object oriented style (property):
+Object oriented style
 
 |maxdb_warning_count| returns the number of warnings from the last query in
 the connection represented by the {link} parameter.

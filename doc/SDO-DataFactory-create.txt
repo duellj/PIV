@@ -1,4 +1,4 @@
-SDO_DataFactory::create -- Create an SDO_DataObject
+*SDO_DataFactory::create* -- Create an SDO_DataObject
 
   void SDO_DataFactory::create(string type_namespace_uri, string type_name)~
 

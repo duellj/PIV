@@ -1,4 +1,4 @@
-ssh2_connect -- Connect to an SSH server
+*ssh2_connect* -- Connect to an SSH server
 
   resource ssh2_connect(string host [, int port [, array methods [, array callbacks]]])~
 
@@ -24,7 +24,7 @@ client_to_server Associative array containing crypt, compression, and message
 authentication code (MAC) method preferences for messages sent from client to
 server. server_to_client Associative array containing crypt, compression, and
 message authentication code (MAC) method preferences for messages sent from
-client to server.
+server to client.
 
 * - Supported Values are dependent on methods supported by underlying library.
 See libssh2 documentation for additional information.

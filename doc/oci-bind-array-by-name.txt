@@ -1,9 +1,10 @@
-oci_bind_array_by_name -- Binds PHP array to Oracle PL/SQL array by name
+*oci_bind_array_by_name* -- Binds a PHP array to an Oracle PL/SQL array
+parameter
 
   bool oci_bind_array_by_name(resource statement, string name, array var_array, int max_table_length [, int max_item_length [, int type]])~
 
 Binds the PHP array {var_array} to the Oracle placeholder {name}, which points
-to Oracle PL/SQL array. Whether it will be used for input or output will be
+to an Oracle PL/SQL array. Whether it will be used for input or output will be
 determined at run-time.
 
 {statement} A valid OCI statement identifier.
@@ -16,8 +17,8 @@ determined at run-time.
 arrays.
 
 {max_item_length} Sets maximum length for array items. If not specified or
-equals to -1, |oci_bind_array_by_name| will use find the longest element in
-the incoming array and will use it as maximum length for array items.
+equals to -1, |oci_bind_array_by_name| will find the longest element in the
+incoming array and will use it as the maximum length.
 
 {type} Should be used to set the type of PL/SQL array items. See list of
 available types below:
@@ -44,7 +45,7 @@ SQLT_LVC - for arrays of LONG VARCHAR.
 
 SQLT_ODT - for arrays of DATE.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |oci_bind_array_by_name| example
 

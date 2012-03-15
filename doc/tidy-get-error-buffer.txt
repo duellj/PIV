@@ -1,4 +1,4 @@
-tidy_get_error_buffer -- Return warnings and errors which occurred parsing the
+*tidy_get_error_buffer* -- Return warnings and errors which occurred parsing the
 specified document
 
 Procedural style:

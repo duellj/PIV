@@ -1,4 +1,4 @@
-posix_mknod -- Create a special or ordinary file (POSIX.1)
+*posix_mknod* -- Create a special or ordinary file (POSIX.1)
 
   bool posix_mknod(string pathname, int mode [, int major [, int minor]])~
 
@@ -13,9 +13,9 @@ POSIX_S_IFIFO or POSIX_S_IFSOCK) and permissions.
 {major} The major device kernel identifier (required to pass when using
 S_IFCHR or S_IFBLK).
 
-{minor} The minor device kernel identifier (defaults to 0).
+{minor} The minor device kernel identifier.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 A |posix_mknod| example
 

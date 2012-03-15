@@ -1,4 +1,4 @@
-DomDocument->create_cdata_section -- Create new cdata node
+*DomDocument->create_cdata_section* -- Create new cdata node
 
   domcdata DomDocument->create_cdata_section(string content)~
 

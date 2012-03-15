@@ -1,4 +1,4 @@
-filemtime -- Gets file modification time
+*filemtime* -- Gets file modification time
 
   int filemtime(string filename)~
 
@@ -7,9 +7,8 @@ written to, that is, the time when the content of the file was changed.
 
 {filename} Path to the file.
 
-Returns the time the file was last modified, or FALSE in case of an error. The
-time is returned as a Unix timestamp, which is suitable for the |date|
-function.
+Returns the time the file was last modified, or FALSE on failure. The time is
+returned as a Unix timestamp, which is suitable for the |date| function.
 
 |filemtime| example
 
@@ -25,6 +24,8 @@ function.
 
 
 
+
+Upon failure, an E_WARNING is emitted.
 
 Note that time resolution may differ from one file system to another.
 

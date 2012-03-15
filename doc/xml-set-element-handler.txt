@@ -1,4 +1,4 @@
-xml_set_element_handler -- Set up start and end element handlers
+*xml_set_element_handler* -- Set up start and end element handlers
 
   bool xml_set_element_handler(resource parser, callback start_element_handler, callback end_element_handler)~
 
@@ -6,7 +6,8 @@ Sets the element handler functions for the XML {parser}.
 {start_element_handler} and {end_element_handler} are strings containing the
 names of functions that must exist when |xml_parse| is called for {parser}.
 
-{parser}
+{parser} A reference to the XML parser to set up start and end element handler
+functions.
 
   bool (resource parser, callback start_element_handler, callback end_element_handler, resource parser, string name, array attribs)~
 
@@ -43,6 +44,6 @@ element name will be in uppercase letters.
 If a handler function is set to an empty string, or FALSE, the handler in
 question is disabled.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

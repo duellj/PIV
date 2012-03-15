@@ -1,4 +1,4 @@
-ldap_mod_del -- Delete attribute values from current attributes
+*ldap_mod_del* -- Delete attribute values from current attributes
 
   bool ldap_mod_del(resource link_identifier, string dn, array entry)~
 
@@ -12,7 +12,7 @@ Object-level deletions are done by the |ldap_delete| function.
 
 {entry}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ldap_mod_add| |ldap_mod_replace|
 

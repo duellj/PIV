@@ -1,4 +1,4 @@
-SwishResults->nextResult -- Get the next search result
+*SwishResults->nextResult* -- Get the next search result
 
   object SwishResults->nextResult()~
 

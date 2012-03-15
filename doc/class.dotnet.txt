@@ -1,4 +1,4 @@
-DOTNET -- DOTNET class
+*DOTNET* -- DOTNET class
 
 The DOTNET class allows you to instantiate a class from a .Net assembly and
 call its methods and access its properties.

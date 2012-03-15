@@ -1,4 +1,4 @@
-jpeg2wbmp -- Convert JPEG image file to WBMP image file
+*jpeg2wbmp* -- Convert JPEG image file to WBMP image file
 
   bool jpeg2wbmp(string jpegname, string wbmpname, int dest_height, int dest_width, int threshold)~
 
@@ -14,7 +14,7 @@ Converts a JPEG file into a WBMP file.
 
 {threshold} Threshold value, between 0 and 8 (inclusive).
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |jpeg2wbmp| example
 

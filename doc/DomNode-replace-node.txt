@@ -1,4 +1,4 @@
-DomNode->replace_node -- Replaces node
+*DomNode->replace_node* -- Replaces node
 
   domelement DomNode->replace_node(domelement newnode)~
 

@@ -1,4 +1,4 @@
-px_set_value -- Sets a value
+*px_set_value* -- Sets a value
 
   bool px_set_value(resource pxdoc, string name, float value)~
 
@@ -13,7 +13,7 @@ numprimkeys fields for the primary index.
 
 {value}
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |px_set_parameter|
 

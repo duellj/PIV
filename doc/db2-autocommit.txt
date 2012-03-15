@@ -1,4 +1,4 @@
-db2_autocommit -- Returns or sets the AUTOCOMMIT state for a database
+*db2_autocommit* -- Returns or sets the AUTOCOMMIT state for a database
 connection
 
   mixed db2_autocommit(resource connection [, bool value])~
@@ -21,7 +21,7 @@ that AUTOCOMMIT is on.
 When |db2_autocommit| receives both the {connection} parameter and
 {autocommit} parameter, it attempts to set the AUTOCOMMIT state of the
 requested connection to the corresponding state. Returns TRUE on success or
-FALSE on failure.
+&false; on failure.
 
 Retrieving the AUTOCOMMIT value for a connection In the following example, a
 connection which has been created with AUTOCOMMIT turned off is tested with

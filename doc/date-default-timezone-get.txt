@@ -1,4 +1,4 @@
-date_default_timezone_get -- Gets the default timezone used by all date/time
+*date_default_timezone_get* -- Gets the default timezone used by all date/time
 functions in a script
 
   string date_default_timezone_get()~
@@ -6,7 +6,7 @@ functions in a script
 In order of preference, this function returns the default timezone by: Reading
 the timezone set using the |date_default_timezone_set| function (if any)
 
-Reading the TZ environment variable (if non empty)
+Reading the TZ environment variable (if non empty) (Prior to PHP 5.3.0)
 
 Reading the value of the date.timezone ini option (if set)
 
@@ -16,6 +16,9 @@ If none of the above succeed, date_default_timezone_get will return a default
 timezone of UTC.
 
 Returns a string.
+
+Version Description 5.3.0 The TZ environment variable is no longer used to
+guess the timezone.
 
 Getting the default timezone
 

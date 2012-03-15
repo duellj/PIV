@@ -1,4 +1,4 @@
-imagesettile -- Set the tile image for filling
+*imagesettile* -- Set the tile image for filling
 
   bool imagesettile(resource image, resource tile)~
 
@@ -20,7 +20,7 @@ such as |imagecreatetruecolor|.
 
 {tile} The image resource to be used as a tile.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagesettile| example
 
@@ -46,6 +46,8 @@ Returns TRUE on success or FALSE on failure.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imagesettile()
 
 
 

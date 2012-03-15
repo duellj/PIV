@@ -1,4 +1,4 @@
-mb_internal_encoding -- Set/Get internal character encoding
+*mb_internal_encoding* -- Set/Get internal character encoding
 
   mixed mb_internal_encoding([string encoding])~
 
@@ -9,7 +9,7 @@ character encoding conversion, HTTP output character encoding conversion, and
 the default character encoding for string functions defined by the mbstring
 module.
 
-If {encoding} is set, then Returns TRUE on success or FALSE on failure. If
+If {encoding} is set, then Returns TRUE on success or &false; on failure. If
 {encoding} is omitted, then the current character encoding name is returned.
 
 |mb_internal_encoding| example

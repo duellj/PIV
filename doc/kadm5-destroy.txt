@@ -1,4 +1,4 @@
-kadm5_destroy -- Closes the connection to the admin server and releases all
+*kadm5_destroy* -- Closes the connection to the admin server and releases all
 related resources
 
   bool kadm5_destroy(resource handle)~
@@ -7,7 +7,7 @@ Closes the connection to the admin server and releases all related resources.
 
 {handle} A KADM5 handle.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |kadm5_init_with_password|
 

@@ -1,4 +1,4 @@
-SDO_DAS_DataObject::getChangeSummary -- Get a data object's change summary
+*SDO_DAS_DataObject::getChangeSummary* -- Get a data object's change summary
 
   SDO_DAS_ChangeSummary SDO_DAS_DataObject::getChangeSummary()~
 

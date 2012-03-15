@@ -1,4 +1,4 @@
-getdate -- Get date/time information
+*getdate* -- Get date/time information
 
   array getdate([int timestamp])~
 
@@ -52,6 +52,6 @@ The above example will output something similar to:
 
 
 
-|date| |time| |setlocale|
+|date| |idate| |time| |setlocale|
 
 vim:ft=help:

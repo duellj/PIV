@@ -1,4 +1,4 @@
-svn_revert -- Revert changes to the working copy
+*svn_revert* -- Revert changes to the working copy
 
   bool svn_revert(string path [, bool recursive])~
 
@@ -6,9 +6,9 @@ Revert any local changes to the path in a working copy.
 
 {path} The path to the working repository.
 
-{recursive} Optionally make recursive changes. Defaults to FALSE
+{recursive} Optionally make recursive changes.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |svn_delete| |svn_export|
 

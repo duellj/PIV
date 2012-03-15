@@ -1,4 +1,4 @@
-mb_detect_encoding -- Detect character encoding
+*mb_detect_encoding* -- Detect character encoding
 
   string mb_detect_encoding(string str [, mixed encoding_list [, bool strict]])~
 
@@ -14,7 +14,8 @@ If {encoding_list} is omitted, detect_order is used.
 {strict} {strict} specifies whether to use the strict encoding detection or
 not. Default is FALSE.
 
-The detected character encoding.
+The detected character encoding or FALSE if the encoding cannot be detected
+from the given string.
 
 |mb_detect_encoding| example
 
@@ -22,7 +23,7 @@ The detected character encoding.
   /* Detect character encoding with current detect_order */
   echo mb_detect_encoding($str);
   
-  /* "auto" is expanded to "ASCII,JIS,UTF-8,EUC-JP,SJIS" */
+  /* "auto" is expanded according to mbstring.language */
   echo mb_detect_encoding($str, "auto");
   
   /* Specify encoding_list character encoding by comma separated list */

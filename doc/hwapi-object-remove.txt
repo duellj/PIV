@@ -1,4 +1,4 @@
-hw_api_object->remove -- Removes attribute
+*hw_api_object->remove* -- Removes attribute
 
   bool remove(string name)~
 
@@ -6,6 +6,6 @@ Removes the attribute with the given name.
 
 {name} The attribute name.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

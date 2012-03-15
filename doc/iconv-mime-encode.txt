@@ -1,4 +1,4 @@
-iconv_mime_encode -- Composes a MIME header field
+*iconv_mime_encode* -- Composes a MIME header field
 
   string iconv_mime_encode(string field_name, string field_value [, array preferences])~
 
@@ -27,13 +27,12 @@ first parameter {field_name} and the second parameter {field_value} are
 presented. If not given, |iconv_mime_encode| assumes those parameters are
 presented to it in the iconv.internal_encoding ini setting.
 iconv.internal_encoding ISO-8859-1 output-charset string Specifies the
-character set to use to compose the MIME header. If not given, the same value
-as input-charset will be used. iconv.internal_encoding UTF-8 line-length
-integer Specifies the maximum length of the header lines. The resulting header
-is "folded" to a set of multiple lines in case the resulting header field
-would be longer than the value of this parameter, according to RFC2822 -
-Internet Message Format. If not given, the length will be limited to 76
-characters. 76 996 line-break-chars string Specifies the sequence of
+character set to use to compose the MIME header. iconv.internal_encoding UTF-8
+line-length integer Specifies the maximum length of the header lines. The
+resulting header is "folded" to a set of multiple lines in case the resulting
+header field would be longer than the value of this parameter, according to
+RFC2822 - Internet Message Format. If not given, the length will be limited to
+76 characters. 76 996 line-break-chars string Specifies the sequence of
 characters to append to each line as an end-of-line sign when "folding" is
 performed on a long header field. If not given, this defaults to "\r\n" (CR
 LF). Note that this parameter is always treated as an ASCII string regardless
@@ -52,7 +51,7 @@ the encoding.
       "line-break-chars" => "\n"
   );
   $preferences["scheme"] = "Q";
-  // This yields "Subject: =?UTF-8?Q?Pr=C3=BCfung_Pr=C3=BCfung?="
+  // This yields "Subject: =?UTF-8?Q?Pr=C3=BCfung=20Pr=C3=BCfung?="
   echo iconv_mime_encode("Subject", "Prüfung Prüfung", $preferences);
   
   $preferences["scheme"] = "B";
@@ -64,6 +63,6 @@ the encoding.
 
 
 
-|imap_binary| |mb_encode_mimeheader| |imap_8bit|
+|imap_binary| |mb_encode_mimeheader| |imap_8bit| |quoted_printable_encode|
 
 vim:ft=help:

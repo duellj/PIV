@@ -1,4 +1,4 @@
-file_exists -- Checks whether a file or directory exists
+*file_exists* -- Checks whether a file or directory exists
 
   bool file_exists(string filename)~
 
@@ -35,6 +35,8 @@ Testing whether a file exists
 
 
 
+
+Upon failure, an E_WARNING is emitted.
 
 The results of this function are cached. See |clearstatcache| for more
 details.

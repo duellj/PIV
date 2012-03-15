@@ -1,4 +1,4 @@
-DomNode->child_nodes -- Returns children of node
+*DomNode->child_nodes* -- Returns children of node
 
   array DomNode->child_nodes()~
 

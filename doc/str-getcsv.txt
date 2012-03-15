@@ -1,4 +1,4 @@
-str_getcsv -- Parse a CSV string into an array
+*str_getcsv* -- Parse a CSV string into an array
 
   array str_getcsv(string input [, string delimiter [, string enclosure [, string escape]]])~
 
@@ -7,10 +7,9 @@ Similar to |fgetcsv| this functions parses a string as its input unlike
 
 {input} The string to parse.
 
-{delimiter} Set the field delimiter (one character only). Defaults as a comma.
+{delimiter} Set the field delimiter (one character only).
 
-{enclosure} Set the field enclosure character (one character only). Defaults
-as a double quotation mark.
+{enclosure} Set the field enclosure character (one character only).
 
 {escape} Set the escape character (one character only). Defaults as a
 backslash (\)

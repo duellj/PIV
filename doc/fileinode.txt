@@ -1,4 +1,4 @@
-fileinode -- Gets file inode
+*fileinode* -- Gets file inode
 
   int fileinode(string filename)~
 
@@ -6,7 +6,7 @@ Gets the file inode.
 
 {filename} Path to the file.
 
-Returns the inode number of the file, or FALSE in case of an error.
+Returns the inode number of the file, or FALSE on failure.
 
 Comparing the inode of a file with the current file
 
@@ -20,6 +20,8 @@ Comparing the inode of a file with the current file
 
 
 
+
+Upon failure, an E_WARNING is emitted.
 
 The results of this function are cached. See |clearstatcache| for more
 details.

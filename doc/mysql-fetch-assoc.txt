@@ -1,4 +1,4 @@
-mysql_fetch_assoc -- Fetch a result row as an associative array
+*mysql_fetch_assoc* -- Fetch a result row as an associative array
 
   array mysql_fetch_assoc(resource result)~
 

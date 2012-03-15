@@ -1,4 +1,4 @@
-preg_replace_callback -- Perform a regular expression search and replace using
+*preg_replace_callback* -- Perform a regular expression search and replace using
 a callback
 
   mixed preg_replace_callback(mixed pattern, callback callback, mixed subject [, int limit [, int count]])~
@@ -15,11 +15,11 @@ elements in the {subject} string. The callback should return the replacement
 string.
 
 You'll often need the {callback} function for a |preg_replace_callback| in
-just one place. In this case you can use |create_function| to declare an
-anonymous function as callback within the call to |preg_replace_callback|. By
-doing it this way you have all information for the call in one place and do
-not clutter the function namespace with a callback function's name not used
-anywhere else.
+just one place. In this case you can use an anonymous function (since PHP
+5.3.0) or |create_function| to declare an anonymous function as callback
+within the call to |preg_replace_callback|. By doing it this way you have all
+information for the call in one place and do not clutter the function
+namespace with a callback function's name not used anywhere else.
 
 |preg_replace_callback| and |create_function|
 
@@ -57,7 +57,7 @@ string. Defaults to -1 (no limit).
 replacements done.
 
 |preg_replace_callback| returns an array if the {subject} parameter is an
-array, or a string otherwise.
+array, or a string otherwise. On errors the return value is NULL
 
 If matches are found, the new subject will be returned, otherwise {subject}
 will be returned unchanged.
@@ -119,6 +119,7 @@ code
 
 
 
-|preg_replace| |create_function| information about the callback type
+PCRE Patterns |preg_replace| |preg_last_error| |create_function| Anonymous
+functions information about the callback type
 
 vim:ft=help:

@@ -1,20 +1,19 @@
-xdiff_string_diff -- Make unified diff of two strings
+*xdiff_string_diff* -- Make unified diff of two strings
 
   string xdiff_string_diff(string old_data, string new_data [, int context [, bool minimal]])~
 
 Makes an unified diff containing differences between {old_data} string and
 {new_data} string and returns it. The resulting diff is human-readable. An
 optional {context} parameter specifies how many lines of context should be
-added around each change (with default value of 3). Setting {minimal}
-parameter to true will result in outputting the shortest patch file possible
-(can take a long time).
+added around each change. Setting {minimal} parameter to true will result in
+outputting the shortest patch file possible (can take a long time).
 
 {old_data} First string with data. It acts as "old" data.
 
 {new_data} Second string with data. It acts as "new" data.
 
 {context} Indicates how many lines of context you want to include in the diff
-result. Default is 3.
+result.
 
 {minimal} Set this parameter to TRUE if you want to minimalize the size of the
 result (can take a long time).

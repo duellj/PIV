@@ -1,4 +1,4 @@
-session_decode -- Decodes session data from a string
+*session_decode* -- Decodes session data from a string
 
   bool session_decode(string data)~
 
@@ -7,7 +7,7 @@ in the session.
 
 {data} The encoded data to be stored.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |session_encode|
 

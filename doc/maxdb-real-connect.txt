@@ -1,12 +1,12 @@
-maxdb->real_connect -- Opens a connection to a MaxDB server
+*maxdb::real_connect* -- Opens a connection to a MaxDB server
 
 Procedural style
 
   bool maxdb_real_connect(resource link [, string hostname [, string username [, string passwd [, string dbname [, int port [, string socket]]]]]])~
 
-Object oriented style (method)
+Object oriented style
 
-  bool real_connect(resource link [, string hostname [, string username [, string passwd [, string dbname [, int port [, string socket [, string hostname [, string username [, string passwd [, string dbname [, int port [, string socket]]]]]]]]]]]])~
+  bool maxdb::real_connect(resource link [, string hostname [, string username [, string passwd [, string dbname [, int port [, string socket [, string hostname [, string username [, string passwd [, string dbname [, int port [, string socket]]]]]]]]]]]])~
 
 |maxdb_real_connect| attempts to establish a connection to a MaxDB database
 engine running on {hostname}.
@@ -18,7 +18,7 @@ function |maxdb_init|
 
 With function |maxdb_options| you can set various options for connection.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

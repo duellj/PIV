@@ -1,4 +1,4 @@
-mysql_fetch_row -- Get a result row as an enumerated array
+*mysql_fetch_row* -- Get a result row as an enumerated array
 
   array mysql_fetch_row(resource result)~
 

@@ -1,4 +1,4 @@
-array_keys -- Return all the keys of an array
+*array_keys* -- Return all the keys or a subset of the keys of an array
 
   array array_keys(array input [, mixed search_value [, bool strict]])~
 
@@ -54,6 +54,6 @@ The above example will output:
 
 
 
-|array_values| |array_key_exists|
+|array_values| |array_key_exists| |array_search|
 
 vim:ft=help:

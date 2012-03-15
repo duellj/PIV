@@ -1,4 +1,4 @@
-pg_version -- Returns an array with client, protocol and server version (when
+*pg_version* -- Returns an array with client, protocol and server version (when
 available)
 
   array pg_version([resource connection])~
@@ -13,7 +13,7 @@ For more detailed server information, use |pg_parameter_status|.
 present, the default connection is used. The default connection is the last
 connection made by |pg_connect| or |pg_pconnect|.
 
-Returns an array with client, protocol and server_version keys and values (if
+Returns an array with client, protocol and server keys and values (if
 available). Returns FALSE on error or invalid connection.
 
 |pg_version| example

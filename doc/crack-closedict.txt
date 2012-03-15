@@ -1,4 +1,4 @@
-crack_closedict -- Closes an open CrackLib dictionary
+*crack_closedict* -- Closes an open CrackLib dictionary
 
   bool crack_closedict([resource dictionary])~
 
@@ -8,10 +8,10 @@ This function is EXPERIMENTAL. The behaviour of this function, its name, and
 surrounding documentation may change without notice in a future release of
 PHP. This function should be used at your own risk.
 
-{dictionary} The dictionary to close. If not specified, the current directory
+{dictionary} The dictionary to close. If not specified, the current dictionary
 is closed.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |crack_opendict|
 

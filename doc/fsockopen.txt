@@ -1,4 +1,4 @@
-fsockopen -- Open Internet or Unix domain socket connection
+*fsockopen* -- Open Internet or Unix domain socket connection
 
   resource fsockopen(string hostname [, int port [, int errno [, string errstr [, float timeout]]]])~
 
@@ -10,9 +10,9 @@ of supported transports can also be retrieved using |stream_get_transports|.
 The socket will by default be opened in blocking mode. You can switch it to
 non-blocking mode by using |stream_set_blocking|.
 
-{hostname} If you have compiled in OpenSSL support, you may prefix the
-{hostname} with either ssl:// or tls:// to use an SSL or TLS client connection
-over TCP/IP to connect to the remote host.
+{hostname} If OpenSSL support is installed, you may prefix the {hostname} with
+either ssl:// or tls:// to use an SSL or TLS client connection over TCP/IP to
+connect to the remote host.
 
 {port} The port number.
 
@@ -38,7 +38,7 @@ the call fails, it will return FALSE
 Throws E_WARNING if {hostname} is not a valid domain.
 
 Version Description 4.3.0 Added support for the {timeout} parameter on win32.
-4.3.0 SSL and TLS over TCP/IP support was added. 4.0.0 UDP support was added.
+4.3.0 SSL and TLS over TCP/IP support was added.
 
 |fsockopen| Example
 
@@ -89,7 +89,7 @@ to establish a link for the socket until it actually needs to send or receive
 data.
 
 When specifying a numerical IPv6 address (e.g. fe80::1), you must enclose the
-IP in square bracketsâfor example, tcp://[fe80::1]:80.
+IP in square brackets—for example, tcp://[fe80::1]:80.
 
 |pfsockopen| |stream_set_blocking| |stream_set_timeout| |fgets| |fgetss|
 |fwrite| |fclose| |feof| The Curl extension

@@ -1,4 +1,4 @@
-parse_ini_file -- Parse a configuration file
+*parse_ini_file* -- Parse a configuration file
 
   array parse_ini_file(string filename [, bool process_sections [, int scanner_mode]])~
 
@@ -19,13 +19,15 @@ If INI_SCANNER_RAW is supplied, then option values will not be parsed.
 The settings are returned as an associative array on success, and FALSE on
 failure.
 
-Version Description 5.3.0 Added optional {scanner_mode} parameter. 5.2.7 On
-syntax error this function will return FALSE rather then an empty array. 5.2.4
-Keys and section names consisting of numbers are now evaluated as PHP integers
-thus numbers starting by 0 are evaluated as octals and numbers starting by 0x
-are evaluated as hexadecimals. 5.0.0 Values enclosed in double quotes can
-contain new lines. 4.2.1 This function is now affected by safe mode and
-open_basedir.
+Version Description 5.3.0 Added optional {scanner_mode} parameter. Single
+quotes may now be used around variable assignments. Hash marks (#) may no
+longer be used as comments and will throw a deprecation warning if used. 5.2.7
+On syntax error this function will return FALSE rather then an empty array.
+5.2.4 Keys and section names consisting of numbers are now evaluated as PHP
+integers thus numbers starting by 0 are evaluated as octals and numbers
+starting by 0x are evaluated as hexadecimals. 5.0.0 Values enclosed in double
+quotes can contain new lines. 4.2.1 This function is now affected by safe mode
+and open_basedir.
 
 Contents of sample.ini
 
@@ -120,7 +122,7 @@ The above example will output something similar to:
   // A simple function used for comparing the results below
   function yesno($expression)
   {
-  	return($expression ? 'Yes' : 'No');
+      return($expression ? 'Yes' : 'No');
   }
   
   // Get the path to php.ini using the php_ini_loaded_file() 

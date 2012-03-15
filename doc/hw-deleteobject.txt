@@ -1,4 +1,4 @@
-hw_Deleteobject -- Deletes object
+*hw_Deleteobject* -- Deletes object
 
   bool hw_deleteobject(int connection, int object_to_delete)~
 
@@ -9,7 +9,7 @@ delete all instances of the object.
 
 {object_to_delete} The object identifier.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |hw_mv|
 

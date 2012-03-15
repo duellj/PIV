@@ -1,4 +1,4 @@
-imagepsslantfont -- Slant a font
+*imagepsslantfont* -- Slant a font
 
   bool imagepsslantfont(resource font_index, float slant)~
 
@@ -8,7 +8,7 @@ Slant a given font given.
 
 {slant} Slant level.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imagepsslantfont| example
 

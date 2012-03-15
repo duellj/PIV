@@ -1,4 +1,4 @@
-gnupg_adddecryptkey -- Add a key for decryption
+*gnupg_adddecryptkey* -- Add a key for decryption
 
   bool gnupg_adddecryptkey(resource identifier, string fingerprint, string passphrase)~
 
@@ -8,7 +8,7 @@ gnupg_adddecryptkey -- Add a key for decryption
 
 {passphrase} The pass phrase.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Procedural |gnupg_adddecryptkey| example
 

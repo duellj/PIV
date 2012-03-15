@@ -1,4 +1,4 @@
-PDO::sqliteCreateAggregate -- Registers an aggregating User Defined Function
+*PDO::sqliteCreateAggregate* -- Registers an aggregating User Defined Function
 for use in SQL statements
 
   bool sqliteCreateAggregate(string function_name, callback step_func, callback finalize_func [, int num_args])~
@@ -49,7 +49,7 @@ aggregate.
 {num_args} Hint to the SQLite parser if the callback function accepts a
 predetermined number of arguments.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 max_length aggregation function example
 
@@ -79,7 +79,7 @@ max_length aggregation function example
       if (strlen($string) > $context) {
           $context = strlen($string);
       }
-  	return $context;
+      return $context;
   }
   
   function max_len_finalize(&amp;$context, $rownumber) 

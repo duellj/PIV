@@ -1,4 +1,4 @@
-mb_convert_case -- Perform case folding on a string
+*mb_convert_case* -- Perform case folding on a string
 
   string mb_convert_case(string str, int mode [, string encoding])~
 
@@ -31,6 +31,20 @@ http://www.unicode.org/unicode/reports/tr21/.
   echo $str; // Prints MARY HAD A LITTLE LAMB AND SHE LOVED IT SO
   $str = mb_convert_case($str, MB_CASE_TITLE, "UTF-8");
   echo $str; // Prints Mary Had A Little Lamb And She Loved It So
+?>
+
+
+
+
+
+|mb_convert_case| example with non-Latin UTF-8 text
+
+<?php >
+  $str = "Τάχιστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός";
+  $str = mb_convert_case($str, MB_CASE_UPPER, "UTF-8");
+  echo $str; // Prints ΤΆΧΙΣΤΗ ΑΛΏΠΗΞ ΒΑΦΉΣ ΨΗΜΈΝΗ ΓΗ, ΔΡΑΣΚΕΛΊΖΕΙ ΥΠΈΡ ΝΩΘΡΟΎ ΚΥΝΌΣ
+  $str = mb_convert_case($str, MB_CASE_TITLE, "UTF-8");
+  echo $str; // Prints Τάχιστη Αλώπηξ Βαφήσ Ψημένη Γη, Δρασκελίζει Υπέρ Νωθρού Κυνόσ
 ?>
 
 

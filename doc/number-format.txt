@@ -1,4 +1,4 @@
-number_format -- Format a number with grouped thousands
+*number_format* -- Format a number with grouped thousands
 
   string number_format(float number [, int decimals])~
 
@@ -25,35 +25,9 @@ A formatted version of {number}.
 
 {dec_point} Sets the separator for the decimal point.
 
+This function only takes the first byte for the separator. This means that
+multibyte characters will NOT work, resulting in a broken multibyte sequence.
+
 {thousands_sep} Sets the thousands separator.
-
-Only the first character of {thousands_sep} is used. For example, if you use
-bar as {thousands_sep} on the number 1000, |number_format| will return 1b000.
-
-|number_format| Example For instance, French notation usually use two
-decimals, comma (',') as decimal separator, and space (' ') as thousand
-separator. This is achieved with this line :
-
-<?php >
-  $number = 1234.56;
-  
-  // english notation (default)
-  $english_format_number = number_format($number);
-  // 1,235
-  
-  // French notation
-  $nombre_format_francais = number_format($number, 2, ',', ' ');
-  // 1 234,56
-  
-  $number = 1234.5678;
-  
-  // english notation without thousands seperator
-  $english_format_number = number_format($number, 2, '.', '');
-  // 1234.57
-?>
-
-
-
-|money_format| |sprintf| |printf| |sscanf|
 
 vim:ft=help:

@@ -1,4 +1,4 @@
-db2_pclose -- Closes a persistent database connection
+*db2_pclose* -- Closes a persistent database connection
 
   bool db2_pclose(resource resource)~
 
@@ -14,7 +14,7 @@ connection will not be needed for a long period of time.
 
 {connection} Specifies an active DB2 client connection.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Closing a persistent connection The following example demonstrates a
 successful attempt to close a connection to an IBM DB2 i5/OS database.

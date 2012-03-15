@@ -1,4 +1,4 @@
-SDO_DAS_Setting::getListIndex -- Get the list index for a changed many-valued
+*SDO_DAS_Setting::getListIndex* -- Get the list index for a changed many-valued
 property
 
   int SDO_DAS_Setting::getListIndex()~

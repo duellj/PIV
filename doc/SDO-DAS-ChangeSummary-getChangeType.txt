@@ -1,4 +1,4 @@
-SDO_DAS_ChangeSummary::getChangeType -- Get the type of change made to an
+*SDO_DAS_ChangeSummary::getChangeType* -- Get the type of change made to an
 SDO_DataObject
 
   int SDO_DAS_ChangeSummary::getChangeType(SDO_DataObject dataObject)~

@@ -1,4 +1,4 @@
-ncurses_doupdate -- Write all prepared refreshes to terminal
+*ncurses_doupdate* -- Write all prepared refreshes to terminal
 
   bool ncurses_doupdate()~
 
@@ -9,6 +9,6 @@ PHP. This function should be used at your own risk.
 Compares the virtual screen to the physical screen and updates the physical
 screen. This way is more effective than using multiple refresh calls.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

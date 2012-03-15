@@ -1,4 +1,4 @@
-dba_optimize -- Optimize database
+*dba_optimize* -- Optimize database
 
   bool dba_optimize(resource handle)~
 
@@ -6,7 +6,7 @@ dba_optimize -- Optimize database
 
 {handle} The database handler, returned by |dba_open| or |dba_popen|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |dba_sync|
 

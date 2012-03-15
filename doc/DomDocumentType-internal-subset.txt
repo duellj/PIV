@@ -1,4 +1,4 @@
-DomDocumentType->internal_subset -- Returns internal subset
+*DomDocumentType->internal_subset* -- Returns internal subset
 
   bool internal_subset()~
 

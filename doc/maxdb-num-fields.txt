@@ -1,10 +1,10 @@
-result->field_count -- Get the number of fields in a result
+*maxdb_result->field_count* -- Get the number of fields in a result
 
-Procedural style:
+Procedural style
 
   int maxdb_num_fields(resource result)~
 
-Object oriented style (property):
+Object oriented style
 
 |maxdb_num_fields| returns the number of fields from specified result set.
 

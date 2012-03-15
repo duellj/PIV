@@ -1,4 +1,4 @@
-mysql_fetch_object -- Fetch a result row as an object
+*mysql_fetch_object* -- Fetch a result row as an object
 
   object mysql_fetch_object(resource result [, string class_name [, array params]])~
 
@@ -16,10 +16,6 @@ return. If not specified, a stdClass object is returned.
 
 Returns an object with string properties that correspond to the fetched row,
 or FALSE if there are no more rows.
-
-|mysql_fetch_row| fetches one row of data from the result associated with the
-specified result identifier. The row is returned as an array. Each result
-column is stored in an array offset, starting at offset 0.
 
 Version Description 5.0.0 Added the ability to return as a different object.
 

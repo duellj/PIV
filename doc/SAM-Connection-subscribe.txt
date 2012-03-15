@@ -1,4 +1,4 @@
-SAMConnection->subscribe -- Create a subscription to a specified topic.
+*SAMConnection->subscribe* -- Create a subscription to a specified topic.
 
   string subscribe(string targetTopic)~
 

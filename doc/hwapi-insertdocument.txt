@@ -1,4 +1,4 @@
-hw_api->insertdocument -- Inserts a new object of type document
+*hw_api->insertdocument* -- Inserts a new object of type document
 
   hw_api_object insertdocument(array parameter)~
 

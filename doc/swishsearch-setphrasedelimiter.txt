@@ -1,4 +1,4 @@
-SwishSearch->setPhraseDelimiter -- Set the phrase delimiter
+*SwishSearch->setPhraseDelimiter* -- Set the phrase delimiter
 
   void SwishSearch->setPhraseDelimiter(string delimiter)~
 

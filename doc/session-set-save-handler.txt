@@ -1,4 +1,4 @@
-session_set_save_handler -- Sets user-level session storage functions
+*session_set_save_handler* -- Sets user-level session storage functions
 
   bool session_set_save_handler(callback open, callback close, callback read, callback write, callback destroy, callback gc)~
 
@@ -19,7 +19,9 @@ as expected. Return empty string if there is no data to read. Return values
 from other handlers are converted to boolean expression. TRUE for success,
 FALSE for failure.
 
-{write} The "write" handler is not executed until after the output stream is
+{write} Write function that is called when session data is to be saved. This
+function expects two parameters: an identifier and the data associated with
+it. The "write" handler is not executed until after the output stream is
 closed. Thus, output from debugging statements in the "write" handler will
 never be seen in the browser. If debugging output is necessary, it is
 suggested that the debug output be written to a file instead.
@@ -31,7 +33,7 @@ with |session_destroy| and takes the session id as its only parameter.
 collector is executed and takes the max session lifetime as its only
 parameter.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |session_set_save_handler| example The following example provides file based
 session storage similar to the PHP sessions default save handler {files}. This

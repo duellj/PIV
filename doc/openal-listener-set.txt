@@ -1,4 +1,4 @@
-openal_listener_set -- Set a listener property
+*openal_listener_set* -- Set a listener property
 
   bool openal_listener_set(int property, mixed setting)~
 
@@ -8,7 +8,7 @@ AL_ORIENTATION (array(float,float,float)).
 
 Value to set, either float, or an array of floats as appropriate.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |openal_listener_get|
 

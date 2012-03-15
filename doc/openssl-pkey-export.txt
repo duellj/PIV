@@ -1,4 +1,4 @@
-openssl_pkey_export -- Gets an exportable representation of a key into a
+*openssl_pkey_export* -- Gets an exportable representation of a key into a
 string
 
   bool openssl_pkey_export(mixed key, string out [, string passphrase [, array configargs]])~
@@ -19,6 +19,6 @@ correctly. See the notes under the installation section for more information.
 specifying and/or overriding options for the openssl configuration file. See
 |openssl_csr_new| for more information about {configargs}.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

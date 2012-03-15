@@ -1,17 +1,17 @@
-maxdb->query -- Performs a query on the database
+*maxdb::query* -- Performs a query on the database
 
-Procedural style:
+Procedural style
 
   mixed maxdb_query(resource link, string query [, int resultmode])~
 
-Object oriented style (method):
+Object oriented style
 
-  mixed query(resource link, string query [, int resultmode, string query])~
+  mixed maxdb::query(resource link, string query [, int resultmode, string query])~
 
 The |maxdb_query| function is used to simplify the act of performing a query
 against the database represented by the {link} parameter.
 
-Returns TRUE on success or FALSE on failure. For SELECT, SHOW, DESCRIBE or
+Returns TRUE on success or &false; on failure. For SELECT, SHOW, DESCRIBE or
 EXPLAIN |maxdb_query| will return a result resource.
 
 Object oriented style

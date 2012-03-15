@@ -1,4 +1,4 @@
-SDO_DAS_XML::create -- To create SDO_DAS_XML object for a given schema file
+*SDO_DAS_XML::create* -- To create SDO_DAS_XML object for a given schema file
 
   SDO_DAS_XML SDO_DAS_XML::create([mixed xsd_file [, string key]])~
 

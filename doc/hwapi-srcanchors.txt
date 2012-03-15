@@ -1,4 +1,4 @@
-hw_api->srcanchors -- Returns a list of all source anchors
+*hw_api->srcanchors* -- Returns a list of all source anchors
 
   array srcanchors(array parameter)~
 

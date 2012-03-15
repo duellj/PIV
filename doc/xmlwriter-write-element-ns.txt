@@ -1,6 +1,6 @@
-XMLWriter::writeElementNS -- Write full namespaced element tag
+*XMLWriter::writeElementNS* -- Write full namespaced element tag
 
-Oriented object style
+Object oriented style
 
   bool writeElementNS(string prefix, string name, string uri [, string content])~
 
@@ -22,7 +22,7 @@ modified. This resource comes from a call to |xmlwriter_open_uri| or
 
 {content} The element contents.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description PHP 5.2.3 The {content} parameter became optional.
 

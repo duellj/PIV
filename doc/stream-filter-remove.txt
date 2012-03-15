@@ -1,4 +1,4 @@
-stream_filter_remove -- Remove a filter from a stream
+*stream_filter_remove* -- Remove a filter from a stream
 
   bool stream_filter_remove(resource stream_filter)~
 
@@ -9,7 +9,7 @@ removing it.
 
 {stream_filter} The stream filter to be removed.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Dynamicly refiltering a stream
 

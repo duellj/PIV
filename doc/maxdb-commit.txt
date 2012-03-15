@@ -1,17 +1,17 @@
-maxdb->commit -- Commits the current transaction
+*maxdb::commit* -- Commits the current transaction
 
-Procedural style:
+Procedural style
 
   bool maxdb_commit(resource link)~
 
-Object oriented style (method)
+Object oriented style
 
-  bool commit(resource link)~
+  bool maxdb::commit(resource link)~
 
 Commits the current transaction for the database connection specified by the
 {link} parameter.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Object oriented style
 

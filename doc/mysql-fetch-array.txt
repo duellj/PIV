@@ -1,4 +1,4 @@
-mysql_fetch_array -- Fetch a result row as an associative array, a numeric
+*mysql_fetch_array* -- Fetch a result row as an associative array, a numeric
 array, or both
 
   array mysql_fetch_array(resource result [, int result_type])~
@@ -10,8 +10,7 @@ data pointer ahead.
 call to |mysql_query|.
 
 {result_type} The type of array that is to be fetched. It's a constant and can
-take the following values: MYSQL_ASSOC, MYSQL_NUM, and the default value of
-MYSQL_BOTH.
+take the following values: MYSQL_ASSOC, MYSQL_NUM, and MYSQL_BOTH.
 
 Returns an array of strings that corresponds to the fetched row, or FALSE if
 there are no more rows. The type of returned array depends on how

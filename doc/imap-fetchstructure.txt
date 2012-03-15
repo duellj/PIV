@@ -1,4 +1,4 @@
-imap_fetchstructure -- Read the structure of a particular message
+*imap_fetchstructure* -- Read the structure of a particular message
 
   object imap_fetchstructure(resource imap_stream, int msg_number [, int options])~
 
@@ -29,10 +29,11 @@ objects where each object has an "attribute" and a "value" property. parts An
 array of objects identical in structure to the top-level object, each of which
 corresponds to a MIME body part.
 
-Primary body type 0text 1multipart 2message 3application 4audio 5image 6video
-7other
+Primary body type (may vary with used library) 0text 1multipart 2message
+3application 4audio 5image 6video 7other
 
-Transfer encodings 07BIT 18BIT 2BINARY 3BASE64 4QUOTED-PRINTABLE 5OTHER
+Transfer encodings (may vary with used library) 07BIT 18BIT 2BINARY 3BASE64
+4QUOTED-PRINTABLE 5OTHER
 
 |imap_fetchbody| |imap_bodystruct|
 

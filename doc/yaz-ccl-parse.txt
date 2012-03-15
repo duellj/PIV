@@ -1,4 +1,4 @@
-yaz_ccl_parse -- Invoke CCL Parser
+*yaz_ccl_parse* -- Invoke CCL Parser
 
   bool yaz_ccl_parse(resource id, string query, array result)~
 
@@ -24,7 +24,7 @@ errorstring - the CCL error string
 errorpos - approximate position in query of failure (integer is character
 position)
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 CCL Parsing We will try to search using CCL. In the example below, $ccl is a
 CCL query.

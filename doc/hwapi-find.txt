@@ -1,4 +1,4 @@
-hw_api->find -- Search for objects
+*hw_api->find* -- Search for objects
 
   array find(array parameter)~
 

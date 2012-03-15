@@ -1,12 +1,12 @@
-maxdb->stat -- Gets the current system status
+*maxdb::stat* -- Gets the current system status
 
-Procedural style:
+Procedural style
 
   string maxdb_stat(resource link)~
 
-Object oriented style (method):
+Object oriented style
 
-  string maxdb->stat(resource link)~
+  string maxdb::stat(resource link)~
 
 |maxdb_stat| returns a string containing several information about the MaxDB
 server running.

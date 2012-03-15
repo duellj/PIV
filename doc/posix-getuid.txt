@@ -1,4 +1,4 @@
-posix_getuid -- Return the real user ID of the current process
+*posix_getuid* -- Return the real user ID of the current process
 
   int posix_getuid()~
 
@@ -16,7 +16,6 @@ Example use of |posix_getuid|
 
 
 
-|posix_getpwuid| for information on how to convert this into a useable
-username POSIX man page GETUID(2)
+|posix_getpwuid| POSIX man page GETUID(2)
 
 vim:ft=help:

@@ -1,6 +1,6 @@
-XMLWriter::writeDTDEntity -- Write full DTD Entity tag
+*XMLWriter::writeDTDEntity* -- Write full DTD Entity tag
 
-Oriented object style
+Object oriented style
 
   bool writeDTDEntity(string name, string content, bool pe, string pubid, string sysid, string ndataid)~
 
@@ -18,7 +18,7 @@ modified. This resource comes from a call to |xmlwriter_open_uri| or
 
 {content} The content of the entity.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 XMLWriter::startDTDEntity XMLWriter::endDTDEntity
 

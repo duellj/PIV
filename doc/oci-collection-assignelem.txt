@@ -1,4 +1,4 @@
-OCI-Collection->assignElem -- Assigns a value to the element of the collection
+*OCI-Collection->assignElem* -- Assigns a value to the element of the collection
 
   bool assignElem(int index, mixed value)~
 
@@ -8,6 +8,6 @@ Assigns a value to the element with index {index}.
 
 {value} Can be a string or a number.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

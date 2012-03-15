@@ -1,4 +1,4 @@
-xslt_set_object -- Sets the object in which to resolve callback functions
+*xslt_set_object* -- Sets the object in which to resolve callback functions
 
   bool xslt_set_object(resource processor, object obj)~
 
@@ -13,7 +13,7 @@ methods of {object}.
 
 {obj} An object.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Using your own error handler as a method
 

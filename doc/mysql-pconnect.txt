@@ -1,4 +1,4 @@
-mysql_pconnect -- Open a persistent connection to a MySQL server
+*mysql_pconnect* -- Open a persistent connection to a MySQL server
 
   resource mysql_pconnect([string server [, string username [, string password [, int client_flags]]]])~
 

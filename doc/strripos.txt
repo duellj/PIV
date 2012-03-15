@@ -1,4 +1,4 @@
-strripos -- Find position of last occurrence of a case-insensitive string in a
+*strripos* -- Find position of last occurrence of a case-insensitive string in a
 string
 
   int strripos(string haystack, string needle [, int offset])~

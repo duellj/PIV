@@ -1,4 +1,4 @@
-hw_api->parents -- Returns parents of an object
+*hw_api->parents* -- Returns parents of an object
 
   array parents(array parameter)~
 

@@ -1,4 +1,4 @@
-hw_api_content -- Create new instance of class hw_api_content
+*hw_api_content* -- Create new instance of class hw_api_content
 
   HW_API_Content hw_api_content(string content, string mimetype)~
 

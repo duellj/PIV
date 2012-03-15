@@ -1,4 +1,4 @@
-socket_write -- Write to a socket
+*socket_write* -- Write to a socket
 
   int socket_write(resource socket, string buffer [, int length])~
 
@@ -12,9 +12,9 @@ The function |socket_write| writes to the {socket} from the given {buffer}.
 bytes written to the socket. If this length is greater then the buffer length,
 it is silently truncated to the length of the buffer.
 
-Returns the number of bytes successfully written to the socket or FALSE one
-error. The error code can be retrieved with |socket_last_error|. This code may
-be passed to |socket_strerror| to get a textual explanation of the error.
+Returns the number of bytes successfully written to the socket or FALSE on
+failure. The error code can be retrieved with |socket_last_error|. This code
+may be passed to |socket_strerror| to get a textual explanation of the error.
 
 It is perfectly valid for |socket_write| to return zero which means no bytes
 have been written. Be sure to use the === operator to check for FALSE in case

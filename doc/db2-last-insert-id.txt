@@ -1,7 +1,7 @@
-db2_last_insert_id -- Returns the auto generated ID of the last insert query
+*db2_last_insert_id* -- Returns the auto generated ID of the last insert query
 that successfully executed on this connection
 
-  int db2_last_insert_id(resource resource)~
+  string db2_last_insert_id(resource resource)~
 
 Returns the auto generated ID of the last insert query that successfully
 executed on this connection.

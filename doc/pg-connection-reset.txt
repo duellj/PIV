@@ -1,4 +1,4 @@
-pg_connection_reset -- Reset connection (reconnect)
+*pg_connection_reset* -- Reset connection (reconnect)
 
   bool pg_connection_reset(resource connection)~
 
@@ -6,7 +6,7 @@ pg_connection_reset -- Reset connection (reconnect)
 
 {connection} PostgreSQL database connection resource.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |pg_connection_reset| example
 

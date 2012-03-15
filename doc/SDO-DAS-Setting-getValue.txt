@@ -1,4 +1,4 @@
-SDO_DAS_Setting::getValue -- Get the old value for the changed property
+*SDO_DAS_Setting::getValue* -- Get the old value for the changed property
 
   mixed SDO_DAS_Setting::getValue()~
 

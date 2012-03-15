@@ -1,4 +1,4 @@
-SDO_Model_ReflectionDataObject::__construct -- Construct an
+*SDO_Model_ReflectionDataObject::__construct* -- Construct an
 SDO_Model_ReflectionDataObject
 
   SDO_Model_ReflectionDataObject SDO_Model_ReflectionDataObject::__construct(SDO_DataObject data_object)~

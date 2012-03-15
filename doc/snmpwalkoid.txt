@@ -1,4 +1,4 @@
-snmpwalkoid -- Query for a tree of information about a network entity
+*snmpwalkoid* -- Query for a tree of information about a network entity
 
   array snmpwalkoid(string hostname, string community, string object_id [, int timeout [, int retries]])~
 
@@ -18,9 +18,9 @@ and all objects under that tree are returned as an array.
 If {object_id} is specified, all the SNMP objects below that {object_id} are
 returned.
 
-{timeout}
+{timeout} The number of microseconds until the first timeout.
 
-{retries}
+{retries} The number of retries in case timeouts occur.
 
 Returns an associative array with object ids and their respective object value
 starting from the {object_id} as root or FALSE on error.

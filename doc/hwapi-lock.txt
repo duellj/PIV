@@ -1,4 +1,4 @@
-hw_api->lock -- Locks an object
+*hw_api->lock* -- Locks an object
 
   bool lock(array parameter)~
 
@@ -14,6 +14,6 @@ collection and locks all objects within the collection and possible
 subcollections. HW_API_LOCK_SESSION means, an object is locked only as long as
 the session is valid.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

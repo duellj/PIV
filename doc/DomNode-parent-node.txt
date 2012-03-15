@@ -1,4 +1,4 @@
-DomNode->parent_node -- Returns the parent of the node
+*DomNode->parent_node* -- Returns the parent of the node
 
   domnode DomNode->parent_node()~
 

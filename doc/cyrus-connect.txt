@@ -1,4 +1,4 @@
-cyrus_connect -- Connect to a Cyrus IMAP server
+*cyrus_connect* -- Connect to a Cyrus IMAP server
 
   resource cyrus_connect([string host [, string port [, int flags]]])~
 
@@ -10,6 +10,6 @@ Connects to a Cyrus IMAP server.
 
 {flags}
 
-Returns a connection handler on success, or FALSE on failure.
+Returns a connection handler on success or FALSE on failure.
 
 vim:ft=help:

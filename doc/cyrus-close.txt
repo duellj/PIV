@@ -1,4 +1,4 @@
-cyrus_close -- Close connection to a Cyrus IMAP server
+*cyrus_close* -- Close connection to a Cyrus IMAP server
 
   bool cyrus_close(resource connection)~
 
@@ -6,6 +6,6 @@ Closes the connection to a Cyrus IMAP server.
 
 {connection} The connection handle.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

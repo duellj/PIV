@@ -1,4 +1,4 @@
-ps_symbol -- Output a glyph
+*ps_symbol* -- Output a glyph
 
   bool ps_symbol(resource psdoc, int ord)~
 
@@ -10,7 +10,7 @@ font. The font encoding for a font can be set when loading the font with
 
 {ord} The position of the glyph in the font encoding vector.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_symbol_name| |ps_symbol_width|
 

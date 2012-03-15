@@ -1,4 +1,4 @@
-hw_api->setcommittedversion -- Commits version other than last version
+*hw_api->setcommittedversion* -- Commits version other than last version
 
   hw_api_object setcommittedversion(array parameter)~
 

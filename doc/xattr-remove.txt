@@ -1,4 +1,4 @@
-xattr_remove -- Remove an extended attribute
+*xattr_remove* -- Remove an extended attribute
 
   bool xattr_remove(string filename, string name [, int flags])~
 
@@ -17,7 +17,7 @@ default, but this can be changed with the {flags} parameter.
 but operate on symbolic link itself. XATTR_ROOT Set attribute in root
 (trusted) namespace. Requires root privileges.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Removes all extended attributes of a file
 

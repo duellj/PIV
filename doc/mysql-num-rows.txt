@@ -1,4 +1,4 @@
-mysql_num_rows -- Get number of rows in result
+*mysql_num_rows* -- Get number of rows in result
 
   int mysql_num_rows(resource result)~
 
@@ -10,7 +10,7 @@ the number of rows affected by a INSERT, UPDATE, REPLACE or DELETE query, use
 { result}The result resource that is being evaluated. This result comes from a
 call to |mysql_query|.
 
-The number of rows in a result set on success, or FALSE on failure.
+The number of rows in a result set on success or FALSE on failure.
 
 |mysql_num_rows| example
 

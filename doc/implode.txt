@@ -1,4 +1,4 @@
-implode -- Join array elements with a string
+*implode* -- Join array elements with a string
 
   string implode(string glue, array pieces)~
 
@@ -28,6 +28,9 @@ Version Description 4.3.0 The {glue} parameter became optional.
   $comma_separated = implode(",", $array);
   
   echo $comma_separated; // lastname,email,phone
+  
+  // Empty string when using an empty array:
+  var_dump(implode('hello', array())); // string(0) ""
 ?>
 
 
@@ -36,6 +39,6 @@ Version Description 4.3.0 The {glue} parameter became optional.
 
 This function is binary-safe.
 
-|explode| |split|
+|explode| |preg_split|
 
 vim:ft=help:

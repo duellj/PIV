@@ -1,4 +1,4 @@
-SDO_DAS_Relational::executePreparedQuery -- Executes an SQL query passed as a
+*SDO_DAS_Relational::executePreparedQuery* -- Executes an SQL query passed as a
 prepared statement, with a list of values to substitute for placeholders, and
 return the results as a normalised data graph.
 
@@ -13,7 +13,7 @@ database handle. Differs from the simpler |executeQuery| in that it takes a
 prepared statement and a list of values. This is the appropriate call to use
 either when the statement is to executed a number of times with different
 arguments, and there is therefore a performance benefit to be had from
-preparing the statement only once, or when the the SQL statement is to contain
+preparing the statement only once, or when the SQL statement is to contain
 varying values taken from a source that cannot be completely trusted. In this
 latter case it may be unsafe to construct the SQL statement by simply
 concatenating the parts of the statement together, since the values may
@@ -21,8 +21,8 @@ contain pieces of SQL. To guard against this, a so-called SQL injection
 attack, it is safer to prepare the SQL statement with placeholders (also known
 as parameter markers, denoted by '?') and supply a list of the values to be
 substituted as a separate argument. Otherwise this function is the same as
-|executeQuery| in that it uses the model that it built from the the metadata
-to interpret the result set and returns a data graph.
+|executeQuery| in that it uses the model that it built from the metadata to
+interpret the result set and returns a data graph.
 
 PDO_database_handle Constructed using the PDO extension. A typical line to
 construct a PDO database handle might look like this:
@@ -86,7 +86,7 @@ there is more than one company called 'Acme'. For each company returned, the
 name and id properties are echoed.
 
 Other examples of the use of |executePreparedQuery| can be found in the
-example code supplied in sdo/DAS/Relational/Scenarios .
+example code supplied in sdo/DAS/Relational/Scenarios.
 
 <?php >
   require_once 'SDO/DAS/Relational.php';

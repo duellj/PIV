@@ -1,4 +1,4 @@
-wordwrap -- Wraps a string to a given number of characters
+*wordwrap* -- Wraps a string to a given number of characters
 
   string wordwrap(string str [, int width [, string break [, bool cut]]])~
 
@@ -6,10 +6,9 @@ Wraps a string to a given number of characters using a string break character.
 
 {str} The input string.
 
-{width} The column width. Defaults to 75.
+{width} The column width.
 
-{break} The line is broken using the optional {break} parameter. Defaults to
-'\n'.
+{break} The line is broken using the optional {break} parameter.
 
 {cut} If the {cut} is set to TRUE, the string is always wrapped at or before
 the specified width. So if you have a word that is larger than the given

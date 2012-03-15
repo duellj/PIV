@@ -1,4 +1,4 @@
-Swish->getPropertyList -- Get the list of properties for the index
+*Swish->getPropertyList* -- Get the list of properties for the index
 
   array Swish->getPropertyList(string index_name)~
 

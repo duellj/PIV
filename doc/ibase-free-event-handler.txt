@@ -1,4 +1,4 @@
-ibase_free_event_handler -- Cancels a registered event handler
+*ibase_free_event_handler* -- Cancels a registered event handler
 
   bool ibase_free_event_handler(resource event)~
 
@@ -8,7 +8,7 @@ was registered to handle.
 
 {event} An event resource, created by |ibase_set_event_handler|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ibase_set_event_handler|
 

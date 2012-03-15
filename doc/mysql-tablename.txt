@@ -1,17 +1,17 @@
-mysql_tablename -- Get table name of field
+*mysql_tablename* -- Get table name of field
 
   string mysql_tablename(resource result, int i)~
 
 Retrieves the table name from a {result}.
 
-This function deprecated. It is preferable to use |mysql_query| to issue a SQL
-SHOW TABLES [FROM db_name] [LIKE 'pattern'] statement instead.
+This function is deprecated. It is preferable to use |mysql_query| to issue an
+SQL SHOW TABLES [FROM db_name] [LIKE 'pattern'] statement instead.
 
 {result} A result pointer resource that's returned from |mysql_list_tables|.
 
 {i} The integer index (row/table number)
 
-The name of the table on success, or FALSE on failure.
+The name of the table on success or FALSE on failure.
 
 Use the |mysql_tablename| function to traverse this result pointer, or any
 function for result tables, such as |mysql_fetch_array|.

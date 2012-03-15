@@ -1,4 +1,4 @@
-openssl_pkcs7_encrypt -- Encrypt an S/MIME message
+*openssl_pkcs7_encrypt* -- Encrypt an S/MIME message
 
   bool openssl_pkcs7_encrypt(string infile, string outfile, mixed recipcerts, array headers [, int flags [, int cipherid]])~
 
@@ -24,7 +24,7 @@ process - see PKCS7 constants.
 
 {cipherid} Cipher can be selected with {cipherid}.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Version Description 5.0.0 The {cipherid} parameter was added.
 

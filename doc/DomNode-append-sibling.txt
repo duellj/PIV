@@ -1,4 +1,4 @@
-DomNode->append_sibling -- Adds new sibling to a node
+*DomNode->append_sibling* -- Adds new sibling to a node
 
   domelement DomNode->append_sibling(domelement newnode)~
 

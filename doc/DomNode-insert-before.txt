@@ -1,4 +1,4 @@
-DomNode->insert_before -- Inserts new node as child
+*DomNode->insert_before* -- Inserts new node as child
 
   domelement DomNode->insert_before(domelement newnode, domelement refnode)~
 

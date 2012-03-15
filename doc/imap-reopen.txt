@@ -1,4 +1,4 @@
-imap_reopen -- Reopen IMAP stream to new mailbox
+*imap_reopen* -- Reopen IMAP stream to new mailbox
 
   bool imap_reopen(resource imap_stream, string mailbox [, int options [, int n_retries]])~
 
@@ -23,7 +23,7 @@ CL_EXPUNGE - Expunge mailbox automatically upon mailbox close (see also
 
 {n_retries} Number of maximum connect attempts
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE if the stream is reopened, FALSE otherwise.
 
 Version Description 5.2.0 {n_retries} added
 

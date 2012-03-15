@@ -1,4 +1,4 @@
-SwishSearch->setStructure -- Set the structure flag in the search object
+*SwishSearch->setStructure* -- Set the structure flag in the search object
 
   void SwishSearch->setStructure(int structure)~
 

@@ -1,4 +1,4 @@
-imageellipse -- Draw an ellipse
+*imageellipse* -- Draw an ellipse
 
   bool imageellipse(resource image, int cx, int cy, int width, int height, int color)~
 
@@ -18,7 +18,7 @@ such as |imagecreatetruecolor|.
 {color} The color of the ellipse. A color identifier created with
 |imagecolorallocate|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |imageellipse| example
 
@@ -44,6 +44,8 @@ Returns TRUE on success or FALSE on failure.
 ?>
 
 The above example will output something similar to:
+
+Output of example : imageellipse()
 
 
 

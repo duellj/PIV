@@ -1,4 +1,4 @@
-imagecreatetruecolor -- Create a new true color image
+*imagecreatetruecolor* -- Create a new true color image
 
   resource imagecreatetruecolor(int width, int height)~
 
@@ -32,11 +32,11 @@ Creating a new GD image stream and outputting an image.
 
 The above example will output something similar to:
 
+Output of example : Creating a new GD image stream and outputting an image.
+
 
 
 This function requires GD 2.0.1 or later (2.0.28 or later is recommended).
-
-This function will not work with GIF file formats.
 
 |imagedestroy| |imagecreate|
 

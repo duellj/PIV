@@ -1,4 +1,4 @@
-ps_closepath_stroke -- Closes and strokes path
+*ps_closepath_stroke* -- Closes and strokes path
 
   bool ps_closepath_stroke(resource psdoc)~
 
@@ -7,7 +7,7 @@ closed line.
 
 {psdoc} Resource identifier of the postscript file as returned by |ps_new|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |ps_closepath|
 

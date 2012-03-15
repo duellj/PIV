@@ -1,4 +1,4 @@
-runkit_method_add -- Dynamically adds a new method to a given class
+*runkit_method_add* -- Dynamically adds a new method to a given class
 
   bool runkit_method_add(string classname, string methodname, string args, string code [, int flags])~
 
@@ -20,7 +20,7 @@ RUNKIT_ACC_PROTECTED or RUNKIT_ACC_PRIVATE
 This parameter is only used as of PHP 5, because, prior to this, all methods
 were public.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |runkit_method_add| example
 

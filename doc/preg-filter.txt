@@ -1,26 +1,16 @@
-preg_filter -- Perform a regular expression search and replace
+*preg_filter* -- Perform a regular expression search and replace
 
   mixed preg_filter(mixed pattern, mixed replacement, mixed subject [, int limit [, int count]])~
 
 |preg_filter| is identical to |preg_replace| except it only returns the
-matches. For details about how this function works, read the |preg_replace|
-documentation.
-
-{pattern}
-
-{replacement}
-
-{subject}
-
-{limit}
-
-{count}
+(possibly transformed) subjects where there was a match. For details about how
+this function works, read the |preg_replace| documentation.
 
 Returns an array if the {subject} parameter is an array, or a string
 otherwise.
 
-If matches are found, the new {subject} will be returned, otherwise {subject}
-will be returned unchanged or NULL if an error occurred.
+If no matches are found or an error occurred, an empty array is returned when
+{subject} is an array or NULL otherwise.
 
 Example comparing |preg_filter| with |preg_replace|
 
@@ -63,6 +53,7 @@ The above example will output:
 
 
 
-|preg_replace| |preg_replace_callback| |preg_match| |preg_split|
+PCRE Patterns |preg_replace| |preg_replace_callback| |preg_grep|
+|preg_last_error|
 
 vim:ft=help:

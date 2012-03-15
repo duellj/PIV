@@ -1,11 +1,11 @@
-mhash_count -- Get the highest available hash id
+*mhash_count* -- Gets the highest available hash ID
 
   int mhash_count()~
 
-Gets the highest available hash id.
+Gets the highest available hash ID.
 
-Returns the highest available hash id. Hashes are numbered from 0 to this hash
-id.
+Returns the highest available hash ID. Hashes are numbered from 0 to this hash
+ID.
 
 Traversing all hashes
 

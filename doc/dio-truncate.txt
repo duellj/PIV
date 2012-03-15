@@ -1,4 +1,4 @@
-dio_truncate -- Truncates file descriptor fd to offset bytes
+*dio_truncate* -- Truncates file descriptor fd to offset bytes
 
   bool dio_truncate(resource fd, int offset)~
 
@@ -13,7 +13,7 @@ bytes.
 
 {offset} The offset in bytes.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 This function is not implemented on Windows platforms.
 

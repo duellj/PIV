@@ -1,4 +1,4 @@
-hw_api->unlock -- Unlocks a locked object
+*hw_api->unlock* -- Unlocks a locked object
 
   bool unlock(array parameter)~
 

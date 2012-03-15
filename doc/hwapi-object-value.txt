@@ -1,4 +1,4 @@
-hw_api_object->value -- Returns value of attribute
+*hw_api_object->value* -- Returns value of attribute
 
   string value(string name)~
 

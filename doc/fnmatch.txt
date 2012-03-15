@@ -1,4 +1,4 @@
-fnmatch -- Match filename against a pattern
+*fnmatch* -- Match filename against a pattern
 
   bool fnmatch(string pattern, string string [, int flags])~
 
@@ -15,7 +15,12 @@ form to '?' and '*' wildcards so using |fnmatch| instead of |preg_match| for
 frontend search expression input may be way more convenient for
 non-programming users.
 
-{flags} One of the FNM_XXX constants.
+{flags} The value of {flags} can be any combination of the following flags,
+joined with the binary OR (|) operator. A list of possible flags for |fnmatch|
+{Flag} Description FNM_NOESCAPE Disable backslash escaping. FNM_PATHNAME Slash
+in string only matches slash in the given pattern. FNM_PERIOD Leading period
+in string must be exactly matched by period in the given pattern. FNM_CASEFOLD
+Caseless match. Part of the GNU extension.
 
 Returns TRUE if there is a match, FALSE otherwise.
 

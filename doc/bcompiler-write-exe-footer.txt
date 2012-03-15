@@ -1,4 +1,4 @@
-bcompiler_write_exe_footer -- Writes the start pos, and sig to the end of a
+*bcompiler_write_exe_footer* -- Writes the start pos, and sig to the end of a
 exe type file
 
   bool bcompiler_write_exe_footer(resource filehandle, int startpos)~
@@ -17,7 +17,7 @@ in the examples/embed directory on bcompiler's CVS.
 {startpos} The file position at which the Bytecodes start, and can be obtained
 using |ftell|.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |bcompiler_write_exe_footer| example
 

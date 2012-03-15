@@ -1,4 +1,4 @@
-SQLiteDatabase->query -- Executes a query against a given database and returns
+*SQLiteDatabase->query* -- Executes a query against a given database and returns
 a result handle
 
   resource sqlite_query(resource dbhandle, string query [, int result_type [, string error_msg]])~
@@ -17,6 +17,8 @@ procedurally. This parameter is not required when using the object-oriented
 method.
 
 {query} The query to be executed.
+
+Data inside the query should be properly escaped.
 
 {result_type} The optional {result_type} parameter accepts a constant and
 determines how the returned array will be indexed. Using SQLITE_ASSOC will

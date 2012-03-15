@@ -1,11 +1,11 @@
-runkit_class_emancipate -- Convert an inherited class to a base class, removes
+*runkit_class_emancipate* -- Convert an inherited class to a base class, removes
 any method whose scope is ancestral
 
   bool runkit_class_emancipate(string classname)~
 
 {classname} Name of class to emancipate
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 A |runkit_class_emancipate| example
 

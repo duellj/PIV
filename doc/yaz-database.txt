@@ -1,4 +1,4 @@
-yaz_database -- Specifies the databases within a session
+*yaz_database* -- Specifies the databases within a session
 
   bool yaz_database(resource id, string databases)~
 
@@ -11,6 +11,6 @@ databases specified in call to |yaz_connect|.
 {databases} A string containing one or more databases. Multiple databases are
 separated by a plus sign +.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 vim:ft=help:

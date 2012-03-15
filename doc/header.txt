@@ -1,4 +1,4 @@
-header -- Send a raw HTTP header
+*header* -- Send a raw HTTP header
 
   void header(string string [, bool replace [, int http_response_code]])~
 
@@ -31,9 +31,15 @@ the proper status code.
   header("HTTP/1.0 404 Not Found");
 ?>
 
+For FastCGI you must use the following for a 404 response:
+
+<?php >
+  header("Status: 404 Not Found");
+?>
+
 The second special case is the "Location:" header. Not only does it send this
 header back to the browser, but it also returns a REDIRECT (302) status code
-to the browser unless some 3xx status code has already been set.
+to the browser unless the 201 or a 3xx status code has already been set.
 
 <?php >
   header("Location: http://www.example.com/"); /* Redirect browser */
@@ -53,6 +59,7 @@ can force multiple headers of the same type. For example:
 ?>
 
 {http_response_code} Forces the HTTP response code to the specified value.
+Note that this parameter only has an effect if the {string} is not empty.
 
 No value is returned.
 
@@ -103,11 +110,11 @@ caching-related headers when sessions are being used.
 
 
 
-As of PHP 4, you can use output buffering to get around this problem, with the
-overhead of all of your output to the browser being buffered in the server
-until you send it. You can do this by calling |ob_start| and |ob_end_flush| in
-your script, or setting the output_buffering configuration directive on in
-your php.ini or server configuration files.
+You can use output buffering to get around this problem, with the overhead of
+all of your output to the browser being buffered in the server until you send
+it. You can do this by calling |ob_start| and |ob_end_flush| in your script,
+or setting the output_buffering configuration directive on in your php.ini or
+server configuration files.
 
 The HTTP status header line will always be the first sent to the client,
 regardless of the actual |header| call being the first or not. The status may

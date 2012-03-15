@@ -1,4 +1,4 @@
-imagewbmp -- Output image to browser or file
+*imagewbmp* -- Output image to browser or file
 
   bool imagewbmp(resource image [, string filename [, int foreground]])~
 
@@ -14,7 +14,7 @@ stream will be outputted directly.
 an identifier obtained from |imagecolorallocate|. The default foreground color
 is black.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Outputting a WBMP image
 
@@ -60,6 +60,7 @@ Saving the WBMP image
 
 Outputting the image with a different foreground
 
+<?php >
   // Create a blank image and add some text
   $im = imagecreatetruecolor(120, 20);
   $text_color = imagecolorallocate($im, 233, 14, 91);
@@ -76,6 +77,7 @@ Outputting the image with a different foreground
   
   // Free up memory
   imagedestroy($im);
+?>
 
 
 

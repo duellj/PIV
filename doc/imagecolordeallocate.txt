@@ -1,4 +1,4 @@
-imagecolordeallocate -- De-allocate a color for an image
+*imagecolordeallocate* -- De-allocate a color for an image
 
   bool imagecolordeallocate(resource image, int color)~
 
@@ -10,7 +10,7 @@ such as |imagecreatetruecolor|.
 
 {color} The color identifier.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 Using |imagecolordeallocate|
 

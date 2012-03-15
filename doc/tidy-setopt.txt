@@ -1,4 +1,4 @@
-tidy_setopt -- Updates the configuration settings for the specified tidy
+*tidy_setopt* -- Updates the configuration settings for the specified tidy
 document
 
   bool tidy_setopt(string option, mixed value)~
@@ -10,7 +10,7 @@ be found at: http://tidy.sourceforge.net/docs/quickref.html.
 
 {value} The tidy option name.
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |tidy_setopt| example
 

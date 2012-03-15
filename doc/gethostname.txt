@@ -1,4 +1,4 @@
-gethostname -- Gets the host name
+*gethostname* -- Gets the host name
 
   string gethostname()~
 
@@ -10,12 +10,15 @@ A simple |gethostname| example
 
 <?php >
   echo gethostname(); // may output e.g,: sandie
+  
+  // Or, an option that also works before PHP 5.3
+  echo php_uname('n'); // may output e.g,: sandie
 ?>
 
 
 
 
 
-|gethostbyname|
+|gethostbyname| |gethostbyaddr| |php_uname|
 
 vim:ft=help:

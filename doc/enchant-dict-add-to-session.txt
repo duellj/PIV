@@ -1,4 +1,4 @@
-enchant_dict_add_to_session -- add 'word' to this spell-checking session
+*enchant_dict_add_to_session* -- add 'word' to this spell-checking session
 
   void enchant_dict_add_to_session(resource dict, string word)~
 
@@ -9,7 +9,7 @@ spell-checking session.
 
 {word} The word to add
 
-Returns TRUE on success or FALSE on failure.
+Returns TRUE on success or &false; on failure.
 
 |enchant_broker_request_dict|
 
