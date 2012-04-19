@@ -170,6 +170,9 @@ function! s:PHPCustomFolds() " {{{
 
 	" Fold class without PhpDoc (class foo {})
 	call s:PHPFoldPureBlock('^\s*\(abstract\s*\)\?class', s:FOLD_WITHOUT_PHPDOC)
+
+	" Fold interface without PhpDoc (class foo {})
+	call s:PHPFoldPureBlock('^\s*\(abstract\s*\)\?interface', s:FOLD_WITHOUT_PHPDOC)
 	
 	" Fold define()'s with their PhpDoc
 	call s:PHPFoldProperties('^\s*define\s*(', ";", s:FOLD_WITH_PHPDOC)
