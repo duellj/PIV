@@ -89,22 +89,6 @@ inoremap <buffer> <C-H> <ESC>:!phpm <C-R>=expand("<cword>")<CR><CR>
 
 " }}}
 
-" {{{ Automatic close char mapping
-if g:PIVAutoClose
-    if g:PIVPearStyle
-        inoremap <buffer>  { {<CR>}<C-O>O
-        inoremap <buffer> ( (  )<LEFT><LEFT>
-    else
-        inoremap  { {<CR>}<C-O>O
-        inoremap ( ()<LEFT>
-    endif
-
-    inoremap <buffer> [ []<LEFT>
-    inoremap <buffer> " ""<LEFT>
-    inoremap <buffer> ' ''<LEFT>
-endif
-" }}} Automatic close char mapping
-
 " {{{ Dictionary completion
 setlocal dictionary-=$VIMRUNTIME/bundle/PIV/misc/funclist.txt dictionary+=$VIMRUNTIME/bundle/PIV/misc/funclist.txt
 

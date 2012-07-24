@@ -166,7 +166,7 @@ function! s:PHPCustomFolds() " {{{
 	call s:PHPFoldPureBlock('\<function\>.*(', s:FOLD_WITHOUT_PHPDOC)
 
 	" Fold class properties with PhpDoc (var $foo = NULL;)
-	call s:PHPFoldProperties('^\s*var\s\$', ";", s:FOLD_WITH_PHPDOC, 1, 1)
+	call s:PHPFoldProperties('^\s*\(\(private\)\|\(public\)\|\(protected\)\|\(var\)\)\s\$', ";", s:FOLD_WITH_PHPDOC, 1, 1)
 
 	" Fold class without PhpDoc (class foo {})
 	call s:PHPFoldPureBlock('^\s*\(abstract\s*\)\?class', s:FOLD_WITHOUT_PHPDOC)
@@ -175,11 +175,11 @@ function! s:PHPCustomFolds() " {{{
 	call s:PHPFoldPureBlock('^\s*\(abstract\s*\)\?interface', s:FOLD_WITHOUT_PHPDOC)
 	
 	" Fold define()'s with their PhpDoc
-	call s:PHPFoldProperties('^\s*define\s*(', ";", s:FOLD_WITH_PHPDOC)
+	" call s:PHPFoldProperties('^\s*define\s*(', ";", s:FOLD_WITH_PHPDOC)
 
 	" Fold includes with their PhpDoc
-	call s:PHPFoldProperties('^\s*require\s*', ";", s:FOLD_WITH_PHPDOC)
-	call s:PHPFoldProperties('^\s*include\s*', ";", s:FOLD_WITH_PHPDOC)
+	" call s:PHPFoldProperties('^\s*require\s*', ";", s:FOLD_WITH_PHPDOC)
+	" call s:PHPFoldProperties('^\s*include\s*', ";", s:FOLD_WITH_PHPDOC)
 
 	" Fold GLOBAL Arrays with their PhpDoc (some PEAR packages use these)
 	call s:PHPFoldProperties('^\s*\$GLOBALS.*array\s*(', ";", s:FOLD_WITH_PHPDOC)
@@ -383,9 +383,9 @@ function! s:FindPureBlockStart(startPattern) " {{{
 	" This function can match the line its on *again* if the cursor was
 	" restored.. hence we search twice if needed..
 	let currentLine = line('.')
-	let line = search(a:startPattern . '.*\%[\n].*\%[\n].*{', 'bW')
+	let line = search(a:startPattern . '.*\(\%[\n].*\)\{,10\}{', 'bW')
 	if currentLine == line
-		let line = search(a:startPattern . '.*\%[\n].*\%[\n].*{', 'bW')
+		let line = search(a:startPattern . '.*\(\%[\n].*\)\{,10\}{', 'bW')
 	endif
 	return line
 endfunction
