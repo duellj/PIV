@@ -64,7 +64,7 @@ set formatoptions=qrocb
 
 " Correct indentation after opening a phpdocblock and automatic * on every
 " line
-setlocal formatoptions=qroct
+setlocal formatoptions=qrocj
 
 " Use php syntax check when doing :make
 setlocal makeprg=php\ -l\ %
